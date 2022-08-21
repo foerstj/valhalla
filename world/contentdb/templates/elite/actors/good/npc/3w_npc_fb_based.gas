@@ -119,8 +119,8 @@
 	[mind]
 	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
-    }
+		actor_may_be_attacked = false;
+	}
 }
 [t:template,n:3W_base_npc_fb_multiplayer]
 {
@@ -192,8 +192,6 @@
 					max = 6;
 					min = 6;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/14-68;
@@ -212,8 +210,6 @@
 					max = 6;
 					min = 6;
 				}
-
-
 				[all*]
 				{
 					il_main = #helm/14-68;
@@ -232,7 +228,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/14-68;
@@ -312,7 +307,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -324,7 +318,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/208-264;
 					max = 6;
@@ -439,7 +433,7 @@
 	{
 		draw_selection_indicator = true;
 		is_collidable = true;
-        [textures]
+		[textures]
 		{
 			0 = b_c_gah_fb_skin_02;
 		}
@@ -466,7 +460,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 	[guts_manager]
@@ -493,7 +487,7 @@
 	{
 		draw_selection_indicator = true;
 		is_collidable = true;
-        [textures]
+		[textures]
 		{
 			0 = b_c_gah_fb_skin_12;
 		}
@@ -524,7 +518,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -547,7 +541,7 @@
 	{
 		draw_selection_indicator = true;
 		is_collidable = true;
-        [textures]
+		[textures]
 		{
 			0 = b_c_gah_fb_skin_004;
 		}
@@ -577,7 +571,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -610,7 +604,6 @@
 			es_chest = bd_un_pl_f_g_c_fun;
 			es_feet = bo_bo_ch_f_g_c_avg;
 			es_forearms = gl_ga_bl_f_g_c_avg;
-			//es_head = he_op_pl_eyes;
 			es_shield_hand = sh_m_g_c_r_s_avg;
 			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
 		}
@@ -618,8 +611,8 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
-    }
+		actor_may_be_attacked = true;
+	}
 }
 [t:template,n:3W_mp_guard_02]
 {
@@ -635,7 +628,9 @@
 			1 = b_c_pos_a1_003;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Legionnaire Guard";
@@ -654,7 +649,6 @@
 			es_chest = bd_un_pl_f_g_c_fun;
 			es_feet = bo_bo_ch_f_g_c_avg;
 			es_forearms = gl_ga_bl_f_g_c_avg;
-			//es_head = he_op_pl_eyes;
 			es_shield_hand = sh_m_g_c_r_s_avg;
 			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
 		}
@@ -662,7 +656,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -695,15 +689,14 @@
 			es_chest = bd_un_pl_f_g_c_fun;
 			es_feet = bo_bo_ch_f_g_c_avg;
 			es_forearms = gl_ga_bl_f_g_c_avg;
-			//es_head = he_op_pl_eyes;
 			es_shield_hand = sh_m_g_c_r_s_avg;
 			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
 		}
 	}
-    [mind]
-    {
+	[mind]
+	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 	}
 }
 [t:template,n:3W_mp_guard_03]
@@ -720,7 +713,9 @@
 			1 = b_c_pos_a1_009;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Legionnaire Guard";
@@ -735,7 +730,6 @@
 			es_chest = bd_un_pl_f_g_c_fun;
 			es_feet = bo_bo_ch_f_g_c_avg;
 			es_forearms = gl_ga_bl_f_g_c_avg;
-			//es_head = he_op_pl_eyes;
 			es_shield_hand = sh_m_g_c_r_s_avg;
 			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
 		}
@@ -747,7 +741,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -883,7 +877,7 @@
 	}
 	[inventory]
 	{
-		[equipment] //needs empty block to remove boots -MM
+		[equipment]
 		{
 		}
 		[store_pcontent]
@@ -897,7 +891,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/303-370;
@@ -916,8 +909,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/40-269;
@@ -936,8 +927,6 @@
 					max = 4;
 					min = 4;
 				}
-
-
 				[all*]
 				{
 					il_main = #helm/135-364;
@@ -956,7 +945,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/40-269;
@@ -1053,7 +1041,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/141-267;
 					max = 4;
@@ -1082,14 +1070,12 @@
 			potion_mana_medium = 9;
 			potion_rejuvenation_small = 2;
 			potion_rejuvenation_medium = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -1133,7 +1119,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/74-92;
@@ -1152,8 +1137,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/18-92;
@@ -1172,8 +1155,6 @@
 					max = 6;
 					min = 6;
 				}
-
-
 				[all*]
 				{
 					il_main = #helm/18-92;
@@ -1192,7 +1173,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/18-92;
@@ -1274,7 +1254,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -1321,7 +1303,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/489-568;
@@ -1340,8 +1321,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/66-568;
@@ -1360,7 +1339,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/66-568;
@@ -1379,7 +1357,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/66-568;
@@ -1440,7 +1417,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/220-254;
@@ -1462,7 +1438,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -1510,7 +1488,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/498-573;
@@ -1529,8 +1506,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/67-573;
@@ -1549,7 +1524,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/67-573;
@@ -1568,7 +1542,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/67-573;
@@ -1629,7 +1602,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/223-255;
@@ -1649,7 +1621,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -1667,7 +1638,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/174-260;
 					max = 4;
@@ -1688,7 +1659,6 @@
 	[store]
 	{
 		item_markup = 2;
-
 		[item_restock]
 		{
 			potion_health_large = 9;
@@ -1697,14 +1667,12 @@
 			potion_mana_super = 9;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -1713,7 +1681,10 @@
 	category_name = "3W_shopkeep";
 	doc = "magician, fallraen (MP)";
 	specializes = 3W_base_npc_fb;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_nong; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_nong;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -1755,7 +1726,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/148-260;
 					max = 6;
@@ -1787,14 +1758,12 @@
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 3;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -1847,7 +1816,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/164-260;
 					max = 6;
@@ -1879,14 +1848,12 @@
 			potion_rejuvenation_small = 2;
 			potion_rejuvenation_medium = 2;
 			potion_rejuvenation_large = 3;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -1920,7 +1887,6 @@
 	}
 	[inventory]
 	{
-
 		[equipment]
 		{
 			es_shield_hand = bw_g_c_s_l_c_avg;
@@ -1937,7 +1903,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/286-401;
@@ -1956,8 +1921,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/38-401;
@@ -1976,8 +1939,6 @@
 					max = 4;
 					min = 4;
 				}
-
-
 				[all*]
 				{
 					il_main = #helm/38-401;
@@ -1996,7 +1957,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/38-401;
@@ -2076,7 +2036,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -2094,7 +2053,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/185-260;
 					max = 4;
@@ -2126,14 +2085,12 @@
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 1;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -2167,7 +2124,6 @@
 	}
 	[inventory]
 	{
-
 		[equipment]
 		{
 			es_shield_hand = bw_g_c_s_l_c_avg;
@@ -2184,7 +2140,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/265-371;
@@ -2203,8 +2158,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/35-371;
@@ -2223,7 +2176,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/35-371;
@@ -2242,7 +2194,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/35-371;
@@ -2303,7 +2254,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/130-173;
@@ -2323,7 +2273,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -2341,7 +2290,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/152-260;
 					max = 4;
@@ -2372,14 +2321,12 @@
 			potion_mana_super = 6;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -2436,13 +2383,15 @@
 	}
 	[aspect]
 	{
-        is_collidable = true;
+		is_collidable = true;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_02;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Legionnaire Guard";
@@ -2466,7 +2415,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -2493,7 +2442,9 @@
 			0 = b_c_gah_fb_skin_12;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Legionnaire Captain";
@@ -2517,7 +2468,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -2526,7 +2477,6 @@
 	category_name = "3W_character";
 	doc = "3W_mp_guard_captain_elddim";
 	specializes = 3W_base_npc_fb_multiplayer;
-
 	[actor]
 	{
 		[skills]
@@ -2546,7 +2496,9 @@
 			0 = b_c_gah_fb_skin_12;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Guard Captain of Elddim";
@@ -2566,20 +2518,20 @@
 			es_shield_hand = sh_w_g_c_r_m_avg;
 			es_weapon_hand = #sd_g_c_st_1h_avg:o_fin;
 		}
-        [pcontent]
-        {
+		[pcontent]
+		{
 			[gold*]
 			{
 				chance = 1.0;
 				max = 21494645;
 				min = 21494645;
 			}
-        }
+		}
 	}
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -2606,7 +2558,9 @@
 			0 = b_c_gah_fb_skin_004;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Legionnaire Archer";
@@ -2629,7 +2583,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -2812,13 +2766,13 @@
 			es_chest = bd_ro_m_g_c_084;
 			es_feet = bo_bo_le_light;
 		}
-        [pcontent]
-        {
+		[pcontent]
+		{
 			[all*]
 			{
-    	        il_main = 3W_emitter_flessan_reward_mp;
+				il_main = 3W_emitter_flessan_reward_mp;
 			}
-        }
+		}
 	}
 	[common]
 	{
@@ -2886,13 +2840,13 @@
 			es_chest = bd_ra_ro_m_g_c_084;
 			es_feet = bo_bo_le_light;
 		}
-        [pcontent]
-        {
+		[pcontent]
+		{
 			[all*]
 			{
-    	        il_main = 3W_emitter_ferdl_reward_mp;
+				il_main = 3W_emitter_ferdl_reward_mp;
 			}
-        }
+		}
 	}
 	[common]
 	{
@@ -3012,7 +2966,10 @@
 	category_name = "3W_character";
 	doc = "3W_nong";
 	specializes = 3W_base_npc_fb;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_nong; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_nong;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -3099,7 +3056,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/518-555;
@@ -3118,8 +3074,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/71-555;
@@ -3138,7 +3092,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/71-555;
@@ -3157,7 +3110,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/71-555;
@@ -3218,7 +3170,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/235-252;
@@ -3238,7 +3189,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -3256,7 +3206,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/155-260;
 					max = 4;
@@ -3285,14 +3235,12 @@
 			potion_mana_super = 9;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -3337,7 +3285,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/501-582;
@@ -3356,8 +3303,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/68-582;
@@ -3376,7 +3321,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/68-582;
@@ -3395,7 +3339,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/68-582;
@@ -3456,7 +3399,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/225-260;
@@ -3476,7 +3418,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -3494,7 +3435,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/166-260;
 					max = 4;
@@ -3523,14 +3464,12 @@
 			potion_mana_super = 9;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -3668,7 +3607,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/354-471;
@@ -3687,8 +3625,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/47-471;
@@ -3707,7 +3643,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/47-471;
@@ -3726,7 +3661,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/47-471;
@@ -3787,7 +3721,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/168-214;
@@ -3809,7 +3742,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -3881,7 +3816,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/462-495;
@@ -3900,8 +3834,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/63-495;
@@ -3920,7 +3852,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/63-495;
@@ -3939,7 +3870,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/63-495;
@@ -4000,7 +3930,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/210-225;
@@ -4020,7 +3949,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -4036,10 +3964,9 @@
 					min = 5;
 				}
 			}
-
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/158-260;
 					max = 4;
@@ -4071,14 +3998,12 @@
 			potion_rejuvenation_small = 1;
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -4319,7 +4244,7 @@
 	}
 	[aspect]
 	{
-        is_collidable = true;
+		is_collidable = true;
 		mana = 250000;
 		max_mana = 250000;
 		[textures]
@@ -4360,7 +4285,7 @@
 		actor_auto_switches_to_melee = TRUE;
 		actor_weapon_preference = wp_magic;
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14;
@@ -4427,7 +4352,7 @@
 		actor_auto_switches_to_melee = TRUE;
 		actor_weapon_preference = wp_magic;
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14;
@@ -4481,7 +4406,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/286-401;
@@ -4500,8 +4424,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/38-286;
@@ -4520,7 +4442,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/38-286;
@@ -4539,7 +4460,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/38-286;
@@ -4600,7 +4520,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/140-186;
@@ -4620,7 +4539,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -4638,7 +4556,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/157-260;
 					max = 4;
@@ -4669,14 +4587,12 @@
 			potion_mana_super = 9;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -4738,7 +4654,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/300-420;
@@ -4757,8 +4672,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/40-420;
@@ -4777,7 +4690,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/40-420;
@@ -4796,7 +4708,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/40-420;
@@ -4857,7 +4768,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/146-195;
@@ -4879,7 +4789,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -4893,13 +4805,12 @@
 	[actor]
 	{
 		portrait_icon = b_gui_ig_i_ic_c_prison-01;
-
 		[skills]
 		{
-			strength =   33.3, 0;
+			strength = 33.3, 0;
 			intelligence = 15.8, 0;
-			dexterity =   23.6, 0;
-			melee =  91,  0;
+			dexterity = 23.6, 0;
+			melee = 91,  0;
 		}
 	}
 	[aspect]
@@ -4922,15 +4833,21 @@
 		damage_max = 585.6;
 		damage_min = 435.6;
 	}
-	[common] { screen_name="Prisoner"; }
+	[common]
+	{
+		screen_name = "Prisoner";
+	}
 	[conversation]
 	{
 	}
-	[defend] { defense=773.2; }
-    [mind]
-    {
+	[defend]
+	{
+		defense = 773.2;
+	}
+	[mind]
+	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 	}
 }
 [t:template,n:3W_prisoner_02]
@@ -4941,13 +4858,12 @@
 	[actor]
 	{
 		portrait_icon = b_gui_ig_i_ic_c_prison-02;
-
 		[skills]
 		{
-			strength =   33.3, 0;
+			strength = 33.3, 0;
 			intelligence = 15.8, 0;
-			dexterity =   20, 0;
-			melee =  91,  0;
+			dexterity = 20, 0;
+			melee = 91,  0;
 		}
 	}
 	[aspect]
@@ -4970,15 +4886,21 @@
 		damage_max = 585.6;
 		damage_min = 435.6;
 	}
-	[common] { screen_name="Prisoner"; }
+	[common]
+	{
+		screen_name = "Prisoner";
+	}
 	[conversation]
 	{
 	}
-	[defend] { defense=756.3; }
-    [mind]
-    {
+	[defend]
+	{
+		defense = 756.3;
+	}
+	[mind]
+	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 	}
 }
 [t:template,n:3W_prisoner_03]
@@ -4989,13 +4911,12 @@
 	[actor]
 	{
 		portrait_icon = b_gui_ig_i_ic_c_prison-03;
-
 		[skills]
 		{
-			strength =   33.3, 0;
+			strength = 33.3, 0;
 			intelligence = 15.8, 0;
-			dexterity =   20, 0;
-			melee =  91,  0;
+			dexterity = 20, 0;
+			melee = 91,  0;
 		}
 	}
 	[aspect]
@@ -5018,15 +4939,21 @@
 		damage_max = 585.6;
 		damage_min = 435.6;
 	}
-	[common] { screen_name="Prisoner"; }
+	[common]
+	{
+		screen_name = "Prisoner";
+	}
 	[conversation]
 	{
 	}
-	[defend] { defense=756.3; }
-    [mind]
-    {
+	[defend]
+	{
+		defense = 756.3;
+	}
+	[mind]
+	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 	}
 }
 [t:template,n:3W_mp_townfolk_male_06]
@@ -5055,4 +4982,3 @@
 	{
 	}
 }
-

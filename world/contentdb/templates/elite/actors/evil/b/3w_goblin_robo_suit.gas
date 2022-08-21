@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  	75.6, 0;
-			intelligence =  27.5, 0;
-			dexterity =  	18.6, 0;
-			ranged =  		101, 0;
+			strength = 75.6, 0;
+			intelligence = 27.5, 0;
+			dexterity = 18.6, 0;
+			ranged = 101, 0;
 		}
 	}
 	[aspect]
@@ -25,7 +25,11 @@
 		material = wood;
 		[voice]
 		{
-			[die]	{ priority = high; * = s_e_die_robo_suit; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_robo_suit;
+			}
 		}
 	}
 	[body]
@@ -57,13 +61,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -71,22 +81,25 @@
 				skrit = select_fidget;
 				[anim_files]
 				{
-					00=dff;
-					01=dff-2;
+					00 = dff;
+					01 = dff-2;
 				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Goblin Robo Suit";
-		membership=monster,coil,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Goblin Robo Suit";
+		membership = monster,coil,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -106,9 +119,13 @@
 			}
 		}
 	}
-	[defend] { defense=2185.6; }
-	[follower]	{  }
-
+	[defend]
+	{
+		defense = 2185.6;
+	}
+	[follower]
+	{
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -119,40 +136,39 @@
 				{
 					il_main = #*/291-307;
 					il_main = #armor/140-685;
-                	il_main = #nmagic/111-127;
-                	il_main = #cmagic/111-127;
-                	min = 1;
-                	max = 3;
-                }
+					il_main = #nmagic/111-127;
+					il_main = #cmagic/111-127;
+					min = 1;
+					max = 3;
+				}
 				[oneof*]
 				{
-                	min = 2;
-                	max = 2;
-	                il_main = #weapon/-rare(1)/357-388;
-	                il_main = #armor/-rare(1)/825-983;
-                    il_main = #*/-rare(1)/357-388;
-                }
+					min = 2;
+					max = 2;
+					il_main = #weapon/-rare(1)/357-388;
+					il_main = #armor/-rare(1)/825-983;
+					il_main = #*/-rare(1)/357-388;
+				}
 				[oneof*]
 				{
-	                il_main = #weapon/-unique(2)/357-388;
-	                il_main = #armor/-unique(2)/825-983;
-                    il_main = #*/-unique(2)/357-388;
-	            }
+					il_main = #weapon/-unique(2)/357-388;
+					il_main = #armor/-unique(2)/825-983;
+					il_main = #*/-unique(2)/357-388;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_move    		= world\ai\jobs\common\job_move.skrit;
-		jat_brain 			= world\ai\jobs\actors\evil\brain_rbs_legs.skrit
+		jat_move = world\ai\jobs\common\job_move.skrit;
+		jat_brain = world\ai\jobs\actors\evil\brain_rbs_legs.skrit
 			?ttorso			= "3W_goblin_robo_suit_torso_01"
 			&tlightning		= "3W_goblin_robo_suit_lightning"
 			&tminigun		= "3W_goblin_robo_suit_minigun"
 			&tflamethrower	= "3W_goblin_robo_suit_flamethrower";
-		jat_die 			= world\ai\jobs\actors\evil\job_die_explode.skrit;
-		jat_fidget			= world\ai\jobs\common\job_fidget.skrit;
-		jat_stop			= world\ai\jobs\common\job_stop.skrit;
-
+		jat_die = world\ai\jobs\actors\evil\job_die_explode.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		jat_stop = world\ai\jobs\common\job_stop.skrit;
 		actor_auto_fidgets = true;
 		melee_engage_range = 13;
 		on_engaged_lost_consciousness_abort_attack = true;
@@ -192,10 +208,10 @@
 	{
 		[skills]
 		{
-			strength =  		75.6, 0;
-			intelligence =  	27.5, 0;
-			dexterity =  		18.6, 0;
-			ranged =  			94, 0;
+			strength = 75.6, 0;
+			intelligence = 27.5, 0;
+			dexterity = 18.6, 0;
+			ranged = 94, 0;
 		}
 	}
 	[aspect]
@@ -239,36 +255,41 @@
 	}
 	[common]
 	{
-		screen_name="Goblin Robo Suit";
+		screen_name = "Goblin Robo Suit";
 	}
-	[defend] { defense=214.4; }
-	[follower]	{  }
+	[defend]
+	{
+		defense = 214.4;
+	}
+	[follower]
+	{
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_robo_suit_torso; }
-    }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_robo_suit_torso;
+		}
+	}
 	[mind]
 	{
-		jat_brain 			= world\ai\jobs\actors\evil\brain_rbs_torso.skrit;
-		jat_attack_object 	= world\ai\jobs\actors\evil\job_attack_torso.skrit;
-
+		jat_brain = world\ai\jobs\actors\evil\brain_rbs_torso.skrit;
+		jat_attack_object = world\ai\jobs\actors\evil\job_attack_torso.skrit;
 		actor_auto_fidgets = false;
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 20.0;
 		sight_range = 20.0;
-
 		actor_may_be_attacked = false;
-
 		sensor_scan_period = 2.0;
 	}
-	[attach_robo] 
+	[attach_robo]
 	{
-		ttorso			= "3W_goblin_robo_suit_torso_01";
-		tlightning		= "3W_goblin_robo_suit_lightning";
-		tminigun		= "3W_goblin_robo_suit_minigun";
-		tflamethrower	= "3W_goblin_robo_suit_flamethrower";
+		ttorso = "3W_goblin_robo_suit_torso_01";
+		tlightning = "3W_goblin_robo_suit_lightning";
+		tminigun = "3W_goblin_robo_suit_minigun";
+		tflamethrower = "3W_goblin_robo_suit_flamethrower";
 	}
 	[physics]
 	{
@@ -300,10 +321,10 @@
 	{
 		[skills]
 		{
-			strength =  		75.6, 0;
-			intelligence =  	27.5, 0;
-			dexterity =  		18.6, 0;
-			ranged =  			94, 0;
+			strength = 75.6, 0;
+			intelligence = 27.5, 0;
+			dexterity = 18.6, 0;
+			ranged = 94, 0;
 		}
 	}
 	[aspect]
@@ -321,44 +342,48 @@
 	[body]
 	{
 		initial_chore = chore_default;
-
 		[chore_dictionary]
 		{
 			[chore_default]
 			{
-				skrit=robo_suit_minigun;
+				skrit = robo_suit_minigun;
 			}
 			[chore_magic]
 			{
-				skrit=robo_suit_minigun;
+				skrit = robo_suit_minigun;
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Goblin Robo Suit";
+		screen_name = "Goblin Robo Suit";
 	}
-	[defend] { defense=214.4; }
-	[follower]	{  }
+	[defend]
+	{
+		defense = 214.4;
+	}
+	[follower]
+	{
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_robo_suit_minigun; }
-    }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_robo_suit_minigun;
+		}
+	}
 	[mind]
 	{
-		jat_brain 			= world\ai\jobs\actors\evil\brain_rbs_minigun.skrit;
-		jat_attack_object 	= world\ai\jobs\actors\evil\job_attack_torso.skrit;
-		jat_cast 			= world\ai\jobs\common\job_cast.skrit;
-
+		jat_brain = world\ai\jobs\actors\evil\brain_rbs_minigun.skrit;
+		jat_attack_object = world\ai\jobs\actors\evil\job_attack_torso.skrit;
+		jat_cast = world\ai\jobs\common\job_cast.skrit;
 		actor_may_be_attacked = false;
-
 		actor_auto_fidgets = false;
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 20.0;
-
 		sensor_scan_period = 2.0;
 	}
 	[physics]
@@ -375,7 +400,6 @@
 			frag_glb_robo-suit_08 = 1;
 			frag_glb_robo-suit_15 = 2;
 			frag_glb_robo-suit_17 = 3;
-
 		}
 	}
 }
@@ -388,10 +412,10 @@
 	{
 		[skills]
 		{
-			strength =  		75.6, 0;
-			intelligence =  	27.5, 0;
-			dexterity =  		18.6, 0;
-			ranged =  			94, 0;
+			strength = 75.6, 0;
+			intelligence = 27.5, 0;
+			dexterity = 18.6, 0;
+			ranged = 94, 0;
 		}
 	}
 	[aspect]
@@ -409,44 +433,48 @@
 	[body]
 	{
 		initial_chore = chore_default;
-
 		[chore_dictionary]
 		{
 			[chore_default]
 			{
-				skrit=robo_suit_flamethrower;
+				skrit = robo_suit_flamethrower;
 			}
 			[chore_magic]
 			{
-				skrit=robo_suit_flamethrower;
+				skrit = robo_suit_flamethrower;
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Goblin Robo Suit";
+		screen_name = "Goblin Robo Suit";
 	}
-	[defend] { defense=214.4; }
-	[follower]	{  }
+	[defend]
+	{
+		defense = 214.4;
+	}
+	[follower]
+	{
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_robo_suit_flamethrower; }
-    }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_robo_suit_flamethrower;
+		}
+	}
 	[mind]
 	{
-		jat_brain 			= world\ai\jobs\actors\evil\brain_rbs_flamethrower.skrit;
-		jat_attack_object 	= world\ai\jobs\actors\evil\job_attack_torso.skrit;
-		jat_cast 			= world\ai\jobs\common\job_cast.skrit;
-
+		jat_brain = world\ai\jobs\actors\evil\brain_rbs_flamethrower.skrit;
+		jat_attack_object = world\ai\jobs\actors\evil\job_attack_torso.skrit;
+		jat_cast = world\ai\jobs\common\job_cast.skrit;
 		actor_may_be_attacked = false;
-
 		actor_auto_fidgets = false;
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 20.0;
-
 		sensor_scan_period = 2.0;
 	}
 	[physics]
@@ -481,10 +509,10 @@
 	{
 		[skills]
 		{
-			strength =  		75.6, 0;
-			intelligence =  	27.5, 0;
-			dexterity =  		18.6, 0;
-			ranged =  			94, 0;
+			strength = 75.6, 0;
+			intelligence = 27.5, 0;
+			dexterity = 18.6, 0;
+			ranged = 94, 0;
 		}
 	}
 	[aspect]
@@ -496,44 +524,48 @@
 	[body]
 	{
 		initial_chore = chore_default;
-
 		[chore_dictionary]
 		{
 			[chore_default]
 			{
-				skrit=robo_suit_lightning;
+				skrit = robo_suit_lightning;
 			}
 			[chore_magic]
 			{
-				skrit=robo_suit_lightning;
+				skrit = robo_suit_lightning;
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Goblin Robo Suit";
+		screen_name = "Goblin Robo Suit";
 	}
-	[defend] { defense=214.4; }
-	[follower]	{  }
+	[defend]
+	{
+		defense = 214.4;
+	}
+	[follower]
+	{
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_robo_suit_lightning; }
-    }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_robo_suit_lightning;
+		}
+	}
 	[mind]
 	{
-		jat_brain 			= world\ai\jobs\actors\evil\brain_rbs_lightning.skrit;
-		jat_attack_object 	= world\ai\jobs\actors\evil\job_attack_torso.skrit;
-		jat_cast 			= world\ai\jobs\common\job_cast.skrit;
-
+		jat_brain = world\ai\jobs\actors\evil\brain_rbs_lightning.skrit;
+		jat_attack_object = world\ai\jobs\actors\evil\job_attack_torso.skrit;
+		jat_cast = world\ai\jobs\common\job_cast.skrit;
 		actor_may_be_attacked = false;
-
 		actor_auto_fidgets = false;
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 20.0;
-
 		sensor_scan_period = 2.0;
 	}
 	[physics]

@@ -26,9 +26,9 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] 
-				{ 
-					00 = at; 
+				[anim_files]
+				{
+					00 = at;
 					01 = at-02;
 				}
 			}
@@ -36,31 +36,43 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] 
-	{ 
-		screen_name="Fire Elemental";
+	[common]
+	{
+		screen_name = "Fire Elemental";
 		[template_triggers]
 		{
 			[*]
@@ -73,7 +85,7 @@
 	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -84,7 +96,7 @@
 		break_effect = fire_elemental_die;
 		explode_when_killed = true;
 		fire_resistance = 0.0;
-        fire_burn_threshold = 200;
+		fire_burn_threshold = 200;
 		gib_gore_good = true;
 	}
 }
@@ -97,10 +109,10 @@
 	{
 		[skills]
 		{
-			strength =  34.7, 0;
-			intelligence =  21.9, 0;
-			dexterity =  41.7, 0;
-            melee =         72, 0;
+			strength = 34.7, 0;
+			intelligence = 21.9, 0;
+			dexterity = 41.7, 0;
+			melee = 72, 0;
 		}
 	}
 	[aspect]
@@ -111,7 +123,10 @@
 		mana = 1092;
 		max_mana = 1092;
 	}
-    [defend] { defense=627.1; }
+	[defend]
+	{
+		defense = 627.1;
+	}
 	[attack]
 	{
 		attack_range = 0.5;
@@ -129,10 +144,10 @@
 	{
 		[skills]
 		{
-			strength =  34.7, 0;
-			intelligence =  18.3, 0;
-			dexterity =  41.7, 0;
-            melee =         66, 0;
+			strength = 34.7, 0;
+			intelligence = 18.3, 0;
+			dexterity = 41.7, 0;
+			melee = 66, 0;
 		}
 	}
 	[aspect]
@@ -143,7 +158,7 @@
 		mana = 11581.8;
 		max_mana = 11581.8;
 		force_no_render = true;
-		is_visible	= true;
+		is_visible = true;
 		scale_base = 0.65;
 	}
 	[attack]
@@ -154,7 +169,10 @@
 		reload_delay = 0;
 		area_damage_radius = 2.5;
 	}
-    [defend] { defense=627.1; }
+	[defend]
+	{
+		defense = 627.1;
+	}
 	[body]
 	{
 		avg_move_velocity = 6.140000;
@@ -165,9 +183,9 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] 
-				{ 
-					00 = at; 
+				[anim_files]
+				{
+					00 = at;
 					01 = at-02;
 				}
 				[anim_durations]
@@ -179,31 +197,43 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] 
-	{ 
-		screen_name="Blazing Elemental";
+	[common]
+	{
+		screen_name = "Blazing Elemental";
 		[template_triggers]
 		{
 			[*]
@@ -230,7 +260,7 @@
 		explode_when_killed = true;
 		explosion_magnitude = 6;
 	}
-	[self_destruct] 
+	[self_destruct]
 	{
 		delete_time = 15.0;
 		explode = true;

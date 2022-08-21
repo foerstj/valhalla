@@ -6,7 +6,11 @@
 	{
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_drake; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_drake;
+			}
 		}
 	}
 	[body]
@@ -30,8 +34,8 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at-02;
-					01=at-03;
+					00 = at-02;
+					01 = at-03;
 				}
 			}
 			[chore_magic]
@@ -40,7 +44,7 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
+					00 = at;
 				}
 			}
 			[chore_misc]
@@ -57,13 +61,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -71,43 +81,39 @@
 				skrit = select_fidget;
 				[anim_files]
 				{
-					00=dff;
-					00=dff-02;
-					00=dff-03;
+					00 = dff;
+					00 = dff-02;
+					00 = dff-03;
 				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Drake";
-		membership=monster,immune_freeze;
+		screen_name = "Drake";
+		membership = monster,immune_freeze;
 	}
-
 	[mind]
 	{
-		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander					= false
 			&still						= false;
-
-		jat_attack_object_melee			= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?persistence				= 0.0;
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= true;
-		actor_auto_switches_to_melee	= true;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = true;
+		actor_auto_switches_to_melee = true;
 		on_enemy_entered_icz_switch_to_melee = true;
-
-
-
 		melee_engage_range = 3;
 		personal_space_range = 1.0;
 		inner_comfort_zone_range = 3.0;
@@ -120,15 +126,15 @@
 	category_name = "2W_evil_d";
 	doc = "2W_drake_red";
 	specializes = 2W_base_drake;
-   	[actor]
+	[actor]
 	{
 		[skills]
 		{
-			strength =  	75, 0;
-			intelligence =  28.2, 0;
-			dexterity =  	66.1, 0;
-            melee =  		82, 0;
-            combat_magic =  82, 0;
+			strength = 75, 0;
+			intelligence = 28.2, 0;
+			dexterity = 66.1, 0;
+			melee = 82, 0;
+			combat_magic = 82, 0;
 		}
 	}
 	[aspect]
@@ -138,14 +144,16 @@
 		life = 2157;
 		max_life = 2157;
 		mana = 57.3;
-        max_mana = 57.3;
-		model=m_c_edm_dk_pos_1;
- 		[textures] { 0=b_c_edm_dk-01; }
-
+		max_mana = 57.3;
+		model = m_c_edm_dk_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_dk-01;
+		}
 	}
 	[attack]
 	{
-        attack_range = 0.5;
+		attack_range = 0.5;
 		damage_max = 463.4;
 		damage_min = 303.3;
 		damage_bonus_min_cmagic = 99;
@@ -153,7 +161,7 @@
 	}
 	[common]
 	{
-        screen_name="Red Drake";
+		screen_name = "Red Drake";
 		[template_triggers]
 		{
 			[*]
@@ -166,16 +174,19 @@
 				action* = call_sfx_script("drake_scream");
 				condition* = receive_world_message("we_anim_sfx",3);
 			}
-
 		}
-
 	}
-   	[defend] { defense=1177.1; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_red; }
-
+		defense = 1177.1;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_red;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -188,18 +199,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/243-273;
-	                il_main = #armor/-rare(1)/624-725;
-                    il_main = #*/-rare(1)/243-273;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/243-273;
+					il_main = #armor/-rare(1)/624-725;
+					il_main = #*/-rare(1)/243-273;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/243-273;
-	                il_main = #armor/-unique(2)/624-725;
-                    il_main = #*/-unique(2)/243-273;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/243-273;
+					il_main = #armor/-unique(2)/624-725;
+					il_main = #*/-unique(2)/243-273;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -218,30 +229,30 @@
 	doc = "2W_drake_red";
 	specializes = 2W_drake_red_base;
 }
-
 [t:template,n:2W_drake_red_reveal]
 {
 	category_name = "2W_evil_d";
 	doc = "[reveal] drake_red";
 	specializes = 2W_drake_red_base;
-
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 }
-
 [t:template,n:2W_drake_green_base]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_drake_green_sm";
 	specializes = 2W_base_drake;
-   	[actor]
+	[actor]
 	{
 		[skills]
 		{
-			strength =  	46.2, 0;
-			intelligence =  21.3, 0;
-			dexterity =  	26.7, 0;
-            melee =  		95, 0;
-            nature_magic =  95, 0;
+			strength = 46.2, 0;
+			intelligence = 21.3, 0;
+			dexterity = 26.7, 0;
+			melee = 95, 0;
+			nature_magic = 95, 0;
 		}
 	}
 	[aspect]
@@ -251,10 +262,13 @@
 		life = 2916.5;
 		max_life = 2916.5;
 		mana = 59.8;
-        max_mana = 59.8;
-		model=m_c_edm_dk_pos_1;
-        scale_base = 0.75;
- 		[textures] { 0=b_c_edm_dk; }
+		max_mana = 59.8;
+		model = m_c_edm_dk_pos_1;
+		scale_base = 0.75;
+		[textures]
+		{
+			0 = b_c_edm_dk;
+		}
 	}
 	[attack]
 	{
@@ -264,10 +278,9 @@
 		damage_bonus_min_cmagic = 160;
 		damage_bonus_max_cmagic = 206;
 	}
-
 	[common]
 	{
-        screen_name="Green Drake";
+		screen_name = "Green Drake";
 		[template_triggers]
 		{
 			[*]
@@ -280,42 +293,47 @@
 				action* = call_sfx_script("drake_scream_green");
 				condition* = receive_world_message("we_anim_sfx",3);
 			}
-
 		}
-
 	}
-   	[defend] { defense=1041.3; }
-    [mind] 	{ personal_space_range = 1.0; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_green; }
-
-    	[pcontent]
+		defense = 1041.3;
+	}
+	[mind]
+	{
+		personal_space_range = 1.0;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
 		{
-   			[oneof*]
+			il_active_primary_spell = spell_drake_breath_green;
+		}
+		[pcontent]
+		{
+			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.5;
 					il_main = #*/202-215;
-       				il_main = #armor/108-544;
+					il_main = #armor/108-544;
 				}
-
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/219-230;
-	                il_main = #armor/-rare(1)/636-705;
-                    il_main = #*/-rare(1)/219-230;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/219-230;
+					il_main = #armor/-rare(1)/636-705;
+					il_main = #*/-rare(1)/219-230;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/219-230;
-	                il_main = #armor/-unique(2)/636-705;
-                    il_main = #*/-unique(2)/219-230;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/219-230;
+					il_main = #armor/-unique(2)/636-705;
+					il_main = #*/-unique(2)/219-230;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -334,26 +352,32 @@
 	doc = "2W_drake_green";
 	specializes = 2W_drake_green_base;
 }
-
 [t:template,n:2W_drake_green_reveal]
 {
 	category_name = "2W_evil_d";
 	doc = "[reveal] drake_green";
 	specializes = 2W_drake_green_base;
-
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 }
-
 [t:template,n:2W_drake_green_summon]
 {
 	category_name = "2W_evil_d";
 	doc = "[summon] drake_green";
 	specializes = 2W_drake_green_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_green; }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_green;
+		}
 		[pcontent]
 		{
 			[gold*]
@@ -363,21 +387,20 @@
 		}
 	}
 }
-
 [t:template,n:2W_drake_white_base]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_drake_white";
 	specializes = 2W_base_drake;
-   	[actor]
+	[actor]
 	{
 		[skills]
 		{
-			strength =  57.3, 0;
-			intelligence =  18.5, 0;
-			dexterity =  24.2, 0;
-            melee =  73,  0;
-            combat_magic = 73, 0;
+			strength = 57.3, 0;
+			intelligence = 18.5, 0;
+			dexterity = 24.2, 0;
+			melee = 73,  0;
+			combat_magic = 73, 0;
 		}
 	}
 	[aspect]
@@ -387,13 +410,16 @@
 		life = 4243.2;
 		max_life = 4243.2;
 		mana = 117.9;
-        max_mana = 117.9;
-		model=m_c_edm_dk_pos_1;
-   		[textures] { 0=b_c_edm_dk-03; }
+		max_mana = 117.9;
+		model = m_c_edm_dk_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_dk-03;
+		}
 	}
 	[attack]
 	{
-        attack_range = 0.5;
+		attack_range = 0.5;
 		damage_max = 598.4;
 		damage_min = 408;
 		damage_bonus_min_cmagic = 223;
@@ -401,7 +427,7 @@
 	}
 	[common]
 	{
-        screen_name="Frost Drake";
+		screen_name = "Frost Drake";
 		[template_triggers]
 		{
 			[*]
@@ -414,16 +440,19 @@
 				action* = call_sfx_script("drake_scream_white");
 				condition* = receive_world_message("we_anim_sfx",3);
 			}
-
 		}
-
 	}
-   	[defend] { defense=534.9; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_white; }
-
+		defense = 534.9;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_white;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -440,30 +469,30 @@
 	doc = "2W_drake_white";
 	specializes = 2W_drake_white_base;
 }
-
 [t:template,n:2W_drake_white_reveal]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_revealing drake_white";
 	specializes = 2W_drake_white_base;
-
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 }
-
 [t:template,n:2W_drake_blue_base]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_drake_blue";
 	specializes = 2W_base_drake;
-   	[actor]
+	[actor]
 	{
 		[skills]
 		{
-			strength =  	43.9, 0;
-			intelligence =  20.4, 0;
-			dexterity =  	32.4, 0;
-       		melee =  		102, 0;
-            combat_magic =  102, 0;
+			strength = 43.9, 0;
+			intelligence = 20.4, 0;
+			dexterity = 32.4, 0;
+			melee = 102, 0;
+			combat_magic = 102, 0;
 		}
 	}
 	[aspect]
@@ -473,13 +502,16 @@
 		life = 3444;
 		max_life = 3444;
 		mana = 61.5;
-        max_mana = 61.5;
-		model=m_c_edm_dk_pos_1;
-   		[textures] { 0=b_c_edm_dk-02; }
+		max_mana = 61.5;
+		model = m_c_edm_dk_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_dk-02;
+		}
 	}
 	[attack]
 	{
-        attack_range = 0.5;
+		attack_range = 0.5;
 		damage_max = 428.5;
 		damage_min = 322.9;
 		damage_bonus_min_cmagic = 137;
@@ -487,7 +519,7 @@
 	}
 	[common]
 	{
-        screen_name="Blue Drake";
+		screen_name = "Blue Drake";
 		[template_triggers]
 		{
 			[*]
@@ -500,16 +532,19 @@
 				action* = call_sfx_script("drake_scream_blue");
 				condition* = receive_world_message("we_anim_sfx",3);
 			}
-
 		}
-
 	}
-   	[defend] { defense=1040.4; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_blue; }
-
+		defense = 1040.4;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_blue;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -519,25 +554,25 @@
 					chance = 0.7;
 					il_main = #*/197-213;
 					il_main = #armor/103-519;
-                	il_main = #nmagic/51-88;
-                	il_main = #cmagic/51-88;
+					il_main = #nmagic/51-88;
+					il_main = #cmagic/51-88;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/201-228;
-	                il_main = #armor/-rare(1)/615-717;
-                    il_main = #*/-rare(1)/201-228;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/201-228;
+					il_main = #armor/-rare(1)/615-717;
+					il_main = #*/-rare(1)/201-228;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/201-228;
-	                il_main = #armor/-unique(2)/615-717;
-                    il_main = #*/-unique(2)/201-228;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/201-228;
+					il_main = #armor/-unique(2)/615-717;
+					il_main = #*/-unique(2)/201-228;
+				}
 			}
-        }
+		}
 	}
 }
 [t:template,n:2W_drake_blue]
@@ -546,30 +581,30 @@
 	doc = "2W_drake_blue";
 	specializes = 2W_drake_blue_base;
 }
-
 [t:template,n:2W_drake_blue_reveal]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_revealing drake_blue";
 	specializes = 2W_drake_blue_base;
-
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 }
-
 [t:template,n:2W_drake_black_base]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_drake_black";
 	specializes = 2W_base_drake;
-   	[actor]
+	[actor]
 	{
 		[skills]
 		{
-			strength =  	83, 0;
-			intelligence =  29.2, 0;
-			dexterity =  	72.3, 0;
-            melee =  		85, 0;
-            combat_magic =  85, 0;
+			strength = 83, 0;
+			intelligence = 29.2, 0;
+			dexterity = 72.3, 0;
+			melee = 85, 0;
+			combat_magic = 85, 0;
 		}
 	}
 	[aspect]
@@ -579,11 +614,13 @@
 		life = 3242.9;
 		max_life = 3242.9;
 		mana = 56.3;
-        max_mana = 56.3;
-		model=m_c_edm_dk_pos_1;
-        scale_base = 0.65;
- 		[textures] { 0=b_c_edm_dk-04; }
-
+		max_mana = 56.3;
+		model = m_c_edm_dk_pos_1;
+		scale_base = 0.65;
+		[textures]
+		{
+			0 = b_c_edm_dk-04;
+		}
 	}
 	[attack]
 	{
@@ -595,7 +632,7 @@
 	}
 	[common]
 	{
-        screen_name="Black Drake";
+		screen_name = "Black Drake";
 		[template_triggers]
 		{
 			[*]
@@ -608,17 +645,23 @@
 				action* = call_sfx_script("drake_scream");
 				condition* = receive_world_message("we_anim_sfx",3);
 			}
-
 		}
-
 	}
-   	[defend] { defense=1174.7; }
-    [mind] 	{ personal_space_range = 0.9; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_black; }
-
+		defense = 1174.7;
+	}
+	[mind]
+	{
+		personal_space_range = 0.9;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_black;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -631,18 +674,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/255-280;
-	                il_main = #armor/-rare(1)/695-811;
-                    il_main = #*/-rare(1)/255-280;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/255-280;
+					il_main = #armor/-rare(1)/695-811;
+					il_main = #*/-rare(1)/255-280;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/255-280;
-	                il_main = #armor/-unique(2)/695-811;
-                    il_main = #*/-unique(2)/255-280;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/255-280;
+					il_main = #armor/-unique(2)/695-811;
+					il_main = #*/-unique(2)/255-280;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -659,26 +702,32 @@
 	doc = "2W_drake_black";
 	specializes = 2W_drake_black_base;
 }
-
 [t:template,n:2W_drake_black_reveal]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_revealing drake_black";
 	specializes = 2W_drake_black_base;
-
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 }
-
 [t:template,n:2W_drake_black_summon]
 {
 	category_name = "2W_evil_d";
 	doc = "[summon] drake_black";
 	specializes = 2W_drake_black_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_black; }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_black;
+		}
 		[pcontent]
 		{
 			[gold*]
@@ -688,21 +737,20 @@
 		}
 	}
 }
-
 [t:template,n:2W_drake_molten_base]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_drake_molten";
 	specializes = 2W_base_drake;
-   	[actor]
+	[actor]
 	{
 		[skills]
 		{
-			strength =  	102.7, 0;
-			intelligence =  21.9, 0;
-			dexterity =  	61.2, 0;
-            melee =  		75, 0;
-            combat_magic =  75, 0;
+			strength = 102.7, 0;
+			intelligence = 21.9, 0;
+			dexterity = 61.2, 0;
+			melee = 75, 0;
+			combat_magic = 75, 0;
 		}
 	}
 	[aspect]
@@ -712,12 +760,13 @@
 		life = 3441.5;
 		max_life = 3441.5;
 		mana = 56.3;
-        max_mana = 56.3;
-		model=m_c_edm_dk_pos_1;
- 		[textures] { 0=b_c_edm_dk-05; }
-
-        scale_base = 0.65;
-
+		max_mana = 56.3;
+		model = m_c_edm_dk_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_dk-05;
+		}
+		scale_base = 0.65;
 	}
 	[attack]
 	{
@@ -729,7 +778,7 @@
 	}
 	[common]
 	{
-        screen_name="Molten Drake";
+		screen_name = "Molten Drake";
 		[template_triggers]
 		{
 			[*]
@@ -742,17 +791,23 @@
 				action* = call_sfx_script("drake_scream");
 				condition* = receive_world_message("we_anim_sfx",3);
 			}
-
 		}
-
 	}
-   	[defend] { defense=1336.9; }
-    [mind] 	{ personal_space_range = 0.9; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_molten; }
-
+		defense = 1336.9;
+	}
+	[mind]
+	{
+		personal_space_range = 0.9;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_molten;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -765,18 +820,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/262-290;
-	                il_main = #armor/-rare(1)/695-811;
-                    il_main = #*/-rare(1)/262-290;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/262-290;
+					il_main = #armor/-rare(1)/695-811;
+					il_main = #*/-rare(1)/262-290;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/262-290;
-	                il_main = #armor/-unique(2)/695-811;
-                    il_main = #*/-unique(2)/262-290;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/262-290;
+					il_main = #armor/-unique(2)/695-811;
+					il_main = #*/-unique(2)/262-290;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -795,30 +850,30 @@
 	doc = "2W_drake_molten";
 	specializes = 2W_drake_molten_base;
 }
-
 [t:template,n:2W_drake_molten_reveal]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_revealing drake_molten";
 	specializes = 2W_drake_molten_base;
-
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 }
 [t:template,n:2W_drake_molten_boss_01]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_drake_molten boss 01";
 	specializes = 2W_drake_molten_base;
-
-   	[actor]
+	[actor]
 	{
 		[skills]
 		{
-			strength =  	105.7, 0;
-			intelligence =  23.1, 0;
-			dexterity =  	65.4, 0;
-            melee =  		88, 0;
-            combat_magic =  75, 0;
+			strength = 105.7, 0;
+			intelligence = 23.1, 0;
+			dexterity = 65.4, 0;
+			melee = 88, 0;
+			combat_magic = 75, 0;
 		}
 	}
 	[aspect]
@@ -828,12 +883,13 @@
 		life = 4202.5;
 		max_life = 4202.5;
 		mana = 56.3;
-        max_mana = 56.3;
-		model=m_c_edm_dk_pos_1;
- 		[textures] { 0=b_c_edm_dk-06; }
-
-        scale_base = 0.65;
-
+		max_mana = 56.3;
+		model = m_c_edm_dk_pos_1;
+		[textures]
+		{
+			0 = b_c_edm_dk-06;
+		}
+		scale_base = 0.65;
 	}
 	[attack]
 	{
@@ -845,8 +901,8 @@
 	}
 	[common]
 	{
-        screen_name="Molten Steel Drake";
-        membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Molten Steel Drake";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -866,17 +922,23 @@
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
 			}
-
 		}
-
 	}
-   	[defend] { defense=1602.4; }
-    [mind] 	{ personal_space_range = 0.9; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_drake_breath_molten; }
-
+		defense = 1602.4;
+	}
+	[mind]
+	{
+		personal_space_range = 0.9;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_drake_breath_molten;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -889,18 +951,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/296-346;
-	                il_main = #armor/-rare(1)/695-811;
-                    il_main = #*/-rare(1)/296-346;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/296-346;
+					il_main = #armor/-rare(1)/695-811;
+					il_main = #*/-rare(1)/296-346;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/296-346;
-	                il_main = #armor/-unique(2)/695-811;
-                    il_main = #*/-unique(2)/296-346;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/296-346;
+					il_main = #armor/-unique(2)/695-811;
+					il_main = #*/-unique(2)/296-346;
+				}
 				[gold*]
 				{
 					chance = 0.2;
@@ -913,4 +975,3 @@
 		}
 	}
 }
-

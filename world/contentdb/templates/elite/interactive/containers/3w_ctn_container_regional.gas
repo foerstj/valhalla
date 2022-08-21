@@ -3856,7 +3856,7 @@
 	[trapped]
 	{
 		trap = trp_generator_fireball_chest;
-		fire_event				= WE_REQ_USE;
+		fire_event = WE_REQ_USE;
 	}
 }
 [t:template,n:3W_chest_cav_01_dc_r0]
@@ -3948,7 +3948,7 @@
 	[trapped]
 	{
 		trap = trp_generator_star_chest;
-		fire_event	= WE_REQ_USE;
+		fire_event = WE_REQ_USE;
 	}
 }
 [t:template,n:3W_chest_cav_01_dc_r1]
@@ -4944,7 +4944,7 @@
 			{
 				[gold*]
 				{
-                	max = 402558;
+					max = 402558;
 					min = 322046;
 					min_pile = 3201;
 					piles = 2 - 3;
@@ -4985,10 +4985,13 @@
 	category_name = "dl_r1";
 	doc = "3W_chest_dl_r1_use_toggle";
 	specializes = base_chest_use_toggle;
-    [common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
-        material = wood;
+		material = wood;
 		model = m_i_glb_chest-03;
 		[textures]
 		{
@@ -5046,10 +5049,13 @@
 	category_name = "dl_r1";
 	doc = "3W_chest_dl_r1_use_toggle";
 	specializes = base_chest_use_toggle;
-    [common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
-        material = wood;
+		material = wood;
 		model = m_i_glb_chest-03;
 		[textures]
 		{
@@ -5059,9 +5065,9 @@
 	[inventory]
 	{
 		[other]
-        {
+		{
 			il_main = gen_stone_glb_quillrabe_01;
-       	}
+		}
 		[pcontent]
 		{
 			[all*]

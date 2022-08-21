@@ -6,17 +6,28 @@
 	[aspect]
 	{
 		model = m_c_edm_tl_pos_1;
-        [voice]
+		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_troll;		}
-			[enemy_spotted]	{ priority = high; * = s_e_call_troll_SED;	}
-            [hit_glance]	{ priority = low; * = s_e_hit_troll_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_troll;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_troll_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_troll_SED;
+			}
 		}
 	}
 	[body]
 	{
-
-		avg_move_velocity = 4.0000; //2.12
+		avg_move_velocity = 4.0000;
 		[bone_translator]
 		{
 			body_anterior = bip01_head;
@@ -46,14 +57,16 @@
 				[anim_files]
 				{
 					00 = ds;
-					// 01 = dfs;
 				}
 			}
 			[chore_die]
 			{
 				chore_stances = 1;
 				skrit = select_transition;
-				[anim_files] { 00 = di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -62,14 +75,16 @@
 				[anim_files]
 				{
 					00 = dsf;
-					// 01 = dff;
 				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 1;
 				skrit = select_walk;
-				[anim_files] { 00 = wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -81,7 +96,6 @@
 		sight_range = 14.0;
 	}
 }
-
 [t:template,n:2W_troll]
 {
 	category_name = "2W_evil_d";
@@ -91,10 +105,10 @@
 	{
 		[skills]
 		{
-			strength =  28.4, 0;
-			intelligence =  6.7, 0;
-			dexterity =  23.8, 0;
-			melee =  49,  0;
+			strength = 28.4, 0;
+			intelligence = 6.7, 0;
+			dexterity = 23.8, 0;
+			melee = 49,  0;
 		}
 	}
 	[aspect]
@@ -104,8 +118,8 @@
 		max_life = 51.3;
 		mana = 25.7;
 		max_mana = 25.7;
-        life_recovery_unit  = 1;
-        life_recovery_period = 8;
+		life_recovery_unit = 1;
+		life_recovery_period = 8;
 	}
 	[attack]
 	{
@@ -113,15 +127,21 @@
 		damage_max = 90.4;
 		damage_min = 56.5;
 	}
-	[common] { screen_name="Troll"; }
-	[defend] { defense=79.6; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Troll";
+	}
+	[defend]
+	{
+		defense = 79.6;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll;
+				es_weapon_hand = cb_un_2h_troll;
 			}
 			[oneof*]
 			{
@@ -147,10 +167,10 @@
 	{
 		[skills]
 		{
-			strength =  42, 0;
-			intelligence =  12.1, 0;
-			dexterity =  22.6, 0;
-			melee =  63,  0;
+			strength = 42, 0;
+			intelligence = 12.1, 0;
+			dexterity = 22.6, 0;
+			melee = 63,  0;
 		}
 	}
 	[aspect]
@@ -158,14 +178,17 @@
 		experience_value = 72500;
 		life = 1324.6;
 		life_recovery_period = 6;
-		life_recovery_unit	= 1;
+		life_recovery_unit = 1;
 		max_life = 1324.6;
 		mana = 27.1;
 		max_mana = 27.1;
 		scale_base = 0.6;
-		textures:0 = b_c_edm_tl-02;
-        life_recovery_unit  = 1;
-        life_recovery_period = 5;
+		[textures]
+		{
+			0 = b_c_edm_tl-02;
+		}
+		life_recovery_unit = 1;
+		life_recovery_period = 5;
 	}
 	[attack]
 	{
@@ -175,38 +198,40 @@
 	}
 	[body]
 	{
-		min_move_velocity =2.8;
+		min_move_velocity = 2.8;
 		max_move_velocity = 5.1;
 	}
 	[common]
 	{
-		screen_name="Swamp Troll";
+		screen_name = "Swamp Troll";
 		membership = party_troll_swamp_boss, monster;
 	}
-	[defend] { defense=595.8; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 595.8;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll_swamp;
+				es_weapon_hand = cb_un_2h_troll_swamp;
 			}
 			[oneof*]
 			{
 				chance = 0.2;
 				il_main = #*/176-211;
-			    il_main = potion_health_large;
-			    il_main = potion_mana_large;
+				il_main = potion_health_large;
+				il_main = potion_mana_large;
 			}
 		}
 	}
 	[mind]
 	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party			= true;
-
-		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social							= 0.7
 			&social_limit					= 2
 			&social_limit_dist				= 3
@@ -214,18 +239,16 @@
 			&friends						= party_troll_swamp_boss
 			&meander						= true
 			&still							= false;
-
-		jat_attack_object_melee 		= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?run_chance 					= 1.0;
-
-		actor_life_ratio_low_threshold 	= .33;
-		on_life_ratio_low_flee 			= true;
-		flee_count						= 1;
-		flee_distance					= 20;
-		melee_engage_range				= 14.0;
-		personal_space_range			= 0.7;
-		ranged_engage_range				= 14.0;
-		sight_range						= 14.0;
+		actor_life_ratio_low_threshold = .33;
+		on_life_ratio_low_flee = true;
+		flee_count = 1;
+		flee_distance = 20;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
 	}
 }
 [t:template,n:2W_troll_swamp_boss_01]
@@ -237,10 +260,10 @@
 	{
 		[skills]
 		{
-			strength =  44.1, 0;
-			intelligence =  12.1, 0;
-			dexterity =  27.8, 0;
-			melee =  64,  0;
+			strength = 44.1, 0;
+			intelligence = 12.1, 0;
+			dexterity = 27.8, 0;
+			melee = 64,  0;
 		}
 	}
 	[aspect]
@@ -248,14 +271,17 @@
 		experience_value = 93500;
 		life = 1900;
 		life_recovery_period = 7.75;
-		life_recovery_unit	= 1;
+		life_recovery_unit = 1;
 		max_life = 1900;
 		mana = 27.1;
 		max_mana = 27.1;
 		scale_base = 0.6;
-		textures:0 = b_c_edm_tl-07;
-        life_recovery_unit  = 1;
-        life_recovery_period = 5;
+		[textures]
+		{
+			0 = b_c_edm_tl-07;
+		}
+		life_recovery_unit = 1;
+		life_recovery_period = 5;
 	}
 	[attack]
 	{
@@ -265,13 +291,13 @@
 	}
 	[body]
 	{
-		min_move_velocity =2.8;
+		min_move_velocity = 2.8;
 		max_move_velocity = 5.1;
 	}
 	[common]
 	{
-		screen_name="Rotten Troll";
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Rotten Troll";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -283,14 +309,17 @@
 			}
 		}
 	}
-	[defend] { defense=1123.7; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 1123.7;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll_swamp;
+				es_weapon_hand = cb_un_2h_troll_swamp;
 			}
 			[oneof*]
 			{
@@ -301,30 +330,26 @@
 	}
 	[mind]
 	{
-		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social				= 0.8
 			&social_limit		= 3
 			&social_limit_dist	= 2
 			&friend_template	= false
 			&friends			= party_troll_swamp_boss
 			&still				= false;
-
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party			= true
 			&party_template						= "party_troll_swamp_boss";
-
-
-		actor_life_ratio_low_threshold 	= .33;
-		on_life_ratio_low_flee 			= true;
-		flee_count						= 1;
-		flee_distance					= 20;
-		melee_engage_range				= 14.0;
-		personal_space_range			= 0.7;
-		ranged_engage_range				= 14.0;
-		sight_range						= 14.0;
+		actor_life_ratio_low_threshold = .33;
+		on_life_ratio_low_flee = true;
+		flee_count = 1;
+		flee_distance = 20;
+		melee_engage_range = 14.0;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
 	}
 }
-
 [t:template,n:2W_troll_forest_base]
 {
 	category_name = "2W_evil_d";
@@ -334,10 +359,10 @@
 	{
 		[skills]
 		{
-			strength =  35.5, 0;
-			intelligence =  13.8, 0;
-			dexterity =  27.9, 0;
-			melee =  66,  0;
+			strength = 35.5, 0;
+			intelligence = 13.8, 0;
+			dexterity = 27.9, 0;
+			melee = 66,  0;
 		}
 	}
 	[aspect]
@@ -345,13 +370,16 @@
 		experience_value = 52716;
 		life = 1825.7;
 		life_recovery_period = 4;
-		life_recovery_unit	= 1;
+		life_recovery_unit = 1;
 		max_life = 1825.7;
 		mana = 33.8;
 		max_mana = 33.8;
-		textures:0 = b_c_edm_tl-03;
-        life_recovery_unit  = 1;
-        life_recovery_period = 7;
+		[textures]
+		{
+			0 = b_c_edm_tl-03;
+		}
+		life_recovery_unit = 1;
+		life_recovery_period = 7;
 	}
 	[attack]
 	{
@@ -359,29 +387,35 @@
 		damage_max = 191.5;
 		damage_min = 126.5;
 	}
-	[common] { screen_name="Forest Troll"; }
-	[defend] { defense=461.5; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Forest Troll";
+	}
+	[defend]
+	{
+		defense = 461.5;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll_forest;
+				es_weapon_hand = cb_un_2h_troll_forest;
 			}
 			[oneof*]
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_large;
-				   il_main = potion_mana_large;
+					chance = 0.05;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
 				}
 				[all*]
 				{
-       				chance = 0.02;
-	                il_main = #nmagic/17-57;
-	                il_main = #cmagic/17-57;
+					chance = 0.02;
+					il_main = #nmagic/17-57;
+					il_main = #cmagic/17-57;
 				}
 				[oneof*]
 				{
@@ -389,31 +423,30 @@
 					il_main = #*/159-198;
 					il_main = #armor/88-436;
 				}
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/178-225;
-	                il_main = #armor/-rare(1)/423-683;
-                    il_main = #*/-rare(1)/178-225;
-                }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/178-225;
-	                il_main = #armor/-unique(2)/609-683;
-                    il_main = #*/-unique(2)/178-225;
-	            }
-            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/178-225;
+					il_main = #armor/-rare(1)/423-683;
+					il_main = #*/-rare(1)/178-225;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/178-225;
+					il_main = #armor/-unique(2)/609-683;
+					il_main = #*/-unique(2)/178-225;
+				}
+			}
 		}
 	}
 	[mind]
 	{
-		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious							= 0.75
 			&interest							= interest
 			&meander							= false
 			&still								= false;
-
 		actor_life_ratio_low_threshold = .33;
 		on_life_ratio_low_flee = true;
 		flee_count = 1;
@@ -435,7 +468,10 @@
 	category_name = "2W_evil_d";
 	doc = "[summon] troll forest";
 	specializes = 2W_troll_forest_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		spew_equipped_kill_count = <ignore>;
@@ -443,11 +479,14 @@
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll_forest;
+				es_weapon_hand = cb_un_2h_troll_forest;
 			}
 		}
 	}
-	mind:on_life_ratio_low_flee = false;
+	[mind]
+	{
+		on_life_ratio_low_flee = false;
+	}
 }
 [t:template,n:2W_troll_forest_boss_01]
 {
@@ -458,10 +497,10 @@
 	{
 		[skills]
 		{
-			strength =  35.5, 0;
-			intelligence =  13.8, 0;
-			dexterity =  35.4, 0;
-			melee =  70,  0;
+			strength = 35.5, 0;
+			intelligence = 13.8, 0;
+			dexterity = 35.4, 0;
+			melee = 70,  0;
 		}
 	}
 	[aspect]
@@ -469,14 +508,16 @@
 		experience_value = 78260;
 		life = 2400.5;
 		life_recovery_period = 4.7;
-		life_recovery_unit	= 1;
+		life_recovery_unit = 1;
 		max_life = 2400.5;
 		mana = 33.8;
 		max_mana = 33.8;
-		textures:0 = b_c_edm_tl-06;
-        life_recovery_unit  = 1;
-        life_recovery_period = 5;
-
+		[textures]
+		{
+			0 = b_c_edm_tl-06;
+		}
+		life_recovery_unit = 1;
+		life_recovery_period = 5;
 	}
 	[attack]
 	{
@@ -486,7 +527,7 @@
 	}
 	[common]
 	{
-	screen_name="Muong Troll";
+		screen_name = "Muong Troll";
 		[template_triggers]
 		{
 			[*]
@@ -498,14 +539,17 @@
 			}
 		}
 	}
-	[defend] { defense=796.2; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 796.2;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll_forest;
+				es_weapon_hand = cb_un_2h_troll_forest;
 			}
 			[oneof*]
 			{
@@ -515,34 +559,30 @@
 					il_main = #*/198-215;
 					il_main = #armor/609-642;
 				}
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/211-258;
-	                il_main = #armor/-rare(1)/673-761;
-                    il_main = #*/-rare(1)/211-258;
-                }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/211-258;
-	                il_main = #armor/-unique(2)/673-761;
-                    il_main = #*/-unique(2)/211-258;
-	            }
-            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/211-258;
+					il_main = #armor/-rare(1)/673-761;
+					il_main = #*/-rare(1)/211-258;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/211-258;
+					il_main = #armor/-unique(2)/673-761;
+					il_main = #*/-unique(2)/211-258;
+				}
+			}
 		}
 	}
 	[mind]
 	{
-		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious							= 0.75
 			&interest							= interest
 			&meander							= false
 			&still								= false;
-
-//		jat_brain					= world\ai\jobs\common\brain_hero.skrit
-//			?heal_life_after_flee		= true;
-
 		actor_life_ratio_low_threshold = .33;
 		on_life_ratio_low_flee = true;
 		flee_count = 1;
@@ -553,7 +593,6 @@
 		sight_range = 14.0;
 	}
 }
-
 [t:template,n:2W_troll_rock]
 {
 	category_name = "2W_evil_d";
@@ -563,10 +602,10 @@
 	{
 		[skills]
 		{
-			strength =  28.4, 0;
-			intelligence =  6.7, 0;
-			dexterity =  23.8, 0;
-			melee =  49,  0;
+			strength = 28.4, 0;
+			intelligence = 6.7, 0;
+			dexterity = 23.8, 0;
+			melee = 49,  0;
 		}
 	}
 	[aspect]
@@ -576,9 +615,12 @@
 		max_life = 51.3;
 		mana = 25.7;
 		max_mana = 25.7;
-		textures:0 = b_c_edm_tl-04;
-        life_recovery_unit  = 1;
-        life_recovery_period = 8;
+		[textures]
+		{
+			0 = b_c_edm_tl-04;
+		}
+		life_recovery_unit = 1;
+		life_recovery_period = 8;
 	}
 	[attack]
 	{
@@ -586,15 +628,21 @@
 		damage_max = 90.4;
 		damage_min = 56.5;
 	}
-	[common] { screen_name="Rock Troll"; }
-	[defend] { defense=79.6; }
+	[common]
+	{
+		screen_name = "Rock Troll";
+	}
+	[defend]
+	{
+		defense = 79.6;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll;
+				es_weapon_hand = cb_un_2h_troll;
 			}
 			[oneof*]
 			{
@@ -620,10 +668,10 @@
 	{
 		[skills]
 		{
-			strength =  28.4, 0;
-			intelligence =  6.7, 0;
-			dexterity =  23.8, 0;
-			melee =  49,  0;
+			strength = 28.4, 0;
+			intelligence = 6.7, 0;
+			dexterity = 23.8, 0;
+			melee = 49,  0;
 		}
 	}
 	[aspect]
@@ -633,10 +681,12 @@
 		max_life = 51.3;
 		mana = 25.7;
 		max_mana = 25.7;
-		textures:0 = b_c_edm_tl-05;
-        life_recovery_unit  = 1;
-        life_recovery_period = 8;
-
+		[textures]
+		{
+			0 = b_c_edm_tl-05;
+		}
+		life_recovery_unit = 1;
+		life_recovery_period = 8;
 	}
 	[attack]
 	{
@@ -644,15 +694,21 @@
 		damage_max = 90.4;
 		damage_min = 56.5;
 	}
-	[common] { screen_name="Mountain Troll"; }
-	[defend] { defense=79.6; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Mountain Troll";
+	}
+	[defend]
+	{
+		defense = 79.6;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	es_weapon_hand = cb_un_2h_troll;
+				es_weapon_hand = cb_un_2h_troll;
 			}
 			[oneof*]
 			{

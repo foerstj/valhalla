@@ -7,27 +7,47 @@
 	{
 		[skills]
 		{
-			strength =  34.6, 0;
-			intelligence =  11.1, 0;
-			dexterity =  24.8, 0;
-            melee =  62,  0;
+			strength = 34.6, 0;
+			intelligence = 11.1, 0;
+			dexterity = 24.8, 0;
+			melee = 62,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 53889;
 		life = 1436.8;
-        max_life = 1436.8;
-        mana = 29.5;
+		max_life = 1436.8;
+		mana = 29.5;
 		max_mana = 29.5;
 		model = m_c_edm_sk_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_skick;			}
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;	}
-			[hit_critical]	{ priority = low; * = s_e_hit_skick_SED;		}
-			[hit_glance]	{ priority = low; * = s_e_hit_skick_SED;		}
-			[hit_solid]		{ priority = low; * = s_e_hit_skick_SED;		}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skick;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_skick_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skick_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_skick_SED;
+			}
 		}
 	}
 	[attack]
@@ -55,39 +75,60 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Skick"; }
-    [defend] { defense=624.5; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Skick";
+	}
+	[defend]
+	{
+		defense = 624.5;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -96,12 +137,10 @@
 			}
 		}
 	}
-
 	[mind]
 	{
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?still			= false;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -133,7 +172,10 @@
 	category_name = "2W_evil_d";
 	doc = "[summon] skick";
 	specializes = 2W_skick_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]

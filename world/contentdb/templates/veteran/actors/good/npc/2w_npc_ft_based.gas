@@ -6,7 +6,7 @@
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
-		model=m_c_gbn_ft_pos_1;
+		model = m_c_gbn_ft_pos_1;
 	}
 	[body]
 	{
@@ -27,39 +27,54 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 		}
 	}
 	[mind]
 	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
-    }
+		actor_may_be_attacked = false;
+	}
 }
 [t:template,n:2W_fortuneteller]
 {
@@ -68,9 +83,15 @@
 	specializes = 2W_base_npc_ft;
 	[aspect]
 	{
-		[textures] { 0=b_c_gbn_ft; }
+		[textures]
+		{
+			0 = b_c_gbn_ft;
+		}
 	}
-	[common] { screen_name="Fortuneteller"; }
+	[common]
+	{
+		screen_name = "Fortuneteller";
+	}
 	[conversation]
 	{
 	}
@@ -84,15 +105,26 @@
 	category_name = "2W_character";
 	doc = "2W_mother_zaod";
 	specializes = 2W_base_npc_ft;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_zaod; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_zaod;
+	}
 	[aspect]
 	{
-		[textures] { 0 = b_c_gbn_ft-02; }
+		[textures]
+		{
+			0 = b_c_gbn_ft-02;
+		}
 		is_ghost_usable = true;
 		use_range = 1.0;
 	}
-	[common] { screen_name="Mother Zaod"; }
-	[conversation]{}
+	[common]
+	{
+		screen_name = "Mother Zaod";
+	}
+	[conversation]
+	{
+	}
 	[inventory]
 	{
 		[store_pcontent]
@@ -115,7 +147,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/103-201;
 					max = 6;
@@ -136,7 +168,6 @@
 	[store]
 	{
 		item_markup = 2;
-
 		[item_restock]
 		{
 			potion_health_small = 10;
@@ -145,14 +176,12 @@
 			potion_mana_medium = 20;
 			potion_rejuvenation_small = 2;
 			potion_rejuvenation_medium = 4;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -164,9 +193,15 @@
 	[aspect]
 	{
 		draw_selection_indicator = FALSE;
-		[textures] { 0=b_c_gbn_pfb; }
+		[textures]
+		{
+			0 = b_c_gbn_pfb;
+		}
 	}
-	[common] { screen_name="Peasant"; }
+	[common]
+	{
+		screen_name = "Peasant";
+	}
 	[conversation]
 	{
 	}

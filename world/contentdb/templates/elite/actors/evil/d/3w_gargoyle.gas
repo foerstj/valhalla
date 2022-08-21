@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  39.7, 0;
-			intelligence =  21.1, 0;
-			dexterity =  15.9, 0;
-            melee =  89,  0;
+			strength = 39.7, 0;
+			intelligence = 21.1, 0;
+			dexterity = 15.9, 0;
+			melee = 89,  0;
 		}
 	}
 	[aspect]
@@ -20,12 +20,20 @@
 		material = stone;
 		max_life = 240;
 		mana = 780;
-        max_mana = 780;
+		max_mana = 780;
 		model = m_c_edm_ga_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_gargoyle;  }
-			[enemy_spotted]	{ priority = high; * = s_e_call_gargoyle_small_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_gargoyle;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_gargoyle_small_SED;
+			}
 		}
 	}
 	[attack]
@@ -34,9 +42,10 @@
 		damage_max = 253;
 		damage_min = 149;
 	}
-
-    [defend] { defense=320; }
-
+	[defend]
+	{
+		defense = 320;
+	}
 	[body]
 	{
 		avg_move_velocity = 4.990000;
@@ -58,7 +67,7 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-                    00 = at;
+					00 = at;
 					01 = at-02;
 				}
 			}
@@ -68,26 +77,35 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-                    00 = mg;
+					00 = mg;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_misc]
 			{
@@ -103,13 +121,16 @@
 			{
 				chore_stances = 0;
 				skrit = basic_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Gargoyle";
+		screen_name = "Gargoyle";
 		membership = gargoyle, monster;
 		[template_triggers]
 		{
@@ -117,26 +138,22 @@
 			{
 				condition* = receive_world_message("we_anim_sfx",1);
 				action* = call_sfx_script("gargoyle_hand_glow");
-
 			}
 			[*]
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				action* = call_sfx_script("gargoyle_eye_glow");
-
 			}
-
 		}
 	}
 	[mind]
 	{
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-
-		melee_engage_range 		= 14;
-		personal_space_range 	= 0.5;
-		ranged_engage_range 	= 14.0;
-		sight_range 			= 14.0;
+		melee_engage_range = 14;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
 	}
 	[physics]
 	{
@@ -144,8 +161,8 @@
 		explosion_magnitude = .05;
 		fire_effect = human_physics_fire;
 		fire_resistance = 0.0;
-        fire_burn_threshold = 20;
-        gib_gore_good = true;
+		fire_burn_threshold = 20;
+		gib_gore_good = true;
 		[break_particulate]
 		{
 			frag_glb_gargoyle_01 = 1;
@@ -162,14 +179,13 @@
 	category_name = "3W_evil_d";
 	doc = "3W_gargoyle";
 	specializes = 3W_base_gargoyle;
-
 	[common]
 	{
 		membership = gargoyle,gargoyle_friend,monster;
 	}
 	[mind]
 	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?get_friends 					= true
 			&friends	 					= gargoyle_friend
 			&form_party_on_getting_friends	= true
@@ -178,7 +194,6 @@
 			&party_template					= "party_gargoyle";
 	}
 }
-
 [t:template,n:3W_gargoyle_ranged_base]
 {
 	category_name = "3W_evil_d";
@@ -188,10 +203,10 @@
 	{
 		[skills]
 		{
-			strength =  28.4, 0;
-			intelligence =  22.9, 0;
-			dexterity =  19, 0;
-            ranged =  89,  0;
+			strength = 28.4, 0;
+			intelligence = 22.9, 0;
+			dexterity = 19, 0;
+			ranged = 89,  0;
 		}
 	}
 	[aspect]
@@ -199,13 +214,20 @@
 		experience_value = 595467;
 		life = 210;
 		max_life = 210;
-        Mana = 300;
-   		max_mana = 300;
-   		[voice]
-   		{
-   			[cast]		{ * = s_e_attack_gargoyle;	}
-   			[die]		{ priority = high; * = s_e_die_gargoyle;		}
-   		}
+		Mana = 300;
+		max_mana = 300;
+		[voice]
+		{
+			[cast]
+			{
+				* = s_e_attack_gargoyle;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_gargoyle;
+			}
+		}
 	}
 	[attack]
 	{
@@ -215,24 +237,28 @@
 		damage_bonus_min_cmagic = 45;
 		damage_bonus_max_cmagic = 91;
 	}
-   	[common]
+	[common]
 	{
-		screen_name="Jade Gargoyle";
+		screen_name = "Jade Gargoyle";
 	}
-
-
-    [defend] { defense=310; }
+	[defend]
+	{
+		defense = 310;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_gargoyle_spear; }
+		[other]
+		{
+			il_active_primary_spell = spell_gargoyle_spear;
+		}
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 }
 [t:template,n:3W_gargoyle_ranged]
@@ -246,11 +272,17 @@
 	category_name = "3W_evil_d";
 	doc = "[summon] gargoyle ranged";
 	specializes = 3W_gargoyle_ranged_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_gargoyle_spear; }
+		[other]
+		{
+			il_active_primary_spell = spell_gargoyle_spear;
+		}
 		[pcontent]
 		{
 			[gold*]
@@ -269,10 +301,10 @@
 	{
 		[skills]
 		{
-			strength =  69.6, 0;
-			intelligence =  7.9, 0;
-			dexterity =  24.9, 0;
-            combat_magic = 94, 0;
+			strength = 69.6, 0;
+			intelligence = 7.9, 0;
+			dexterity = 24.9, 0;
+			combat_magic = 94, 0;
 		}
 	}
 	[aspect]
@@ -280,10 +312,13 @@
 		experience_value = 2293442;
 		life = 680;
 		max_life = 680;
-        Mana = 40;
-   		max_mana = 40;
-   		scale_base = 1.25;
-   		[textures] { 0 = b_c_edm_ga-03; }
+		Mana = 40;
+		max_mana = 40;
+		scale_base = 1.25;
+		[textures]
+		{
+			0 = b_c_edm_ga-03;
+		}
 	}
 	[attack]
 	{
@@ -297,9 +332,9 @@
 	{
 		min_move_velocity = 2.0;
 	}
-   	[common]
+	[common]
 	{
-		screen_name="Bronze Gargoyle";
+		screen_name = "Bronze Gargoyle";
 		[template_triggers]
 		{
 			[*]
@@ -307,29 +342,30 @@
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				action* = call_sfx_script("gargoyle_eye_glow_bronze");
-
 			}
 		}
 	}
-
-
-    [defend] { defense=1090; }
+	[defend]
+	{
+		defense = 1090;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_gargoyle_zap_bronze; }
+		[other]
+		{
+			il_active_primary_spell = spell_gargoyle_zap_bronze;
+		}
 	}
 	[mind]
 	{
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander	= true
 			&still		= false;
-
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 	[physics]
 	{
@@ -344,27 +380,23 @@
 		}
 	}
 }
-
 [t:template,n:3W_gargoyle_reveal]
 {
 	category_name = "3W_evil_d";
 	doc = "3W_gargoyle reveal";
 	specializes = 3W_base_gargoyle;
-
 	[mind]
-    {
-    	jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
-    	melee_engage_range 		= 5;
-		personal_space_range 	= 0.5;
-		sight_range 			= 5.5;
-		com_range 				= 4.0;
-		ranged_engage_range 	= 5.1;
-        outer_comfort_zone_range= 5.0;
-		actor_auto_fidgets		= false;
-    }
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+		melee_engage_range = 5;
+		personal_space_range = 0.5;
+		sight_range = 5.5;
+		com_range = 4.0;
+		ranged_engage_range = 5.1;
+		outer_comfort_zone_range = 5.0;
+		actor_auto_fidgets = false;
+	}
 }
-
-
 [t:template,n:3W_gargoyle_large]
 {
 	category_name = "3W_evil_d";
@@ -374,36 +406,50 @@
 	{
 		[skills]
 		{
-			strength =  	70, 0;
-			intelligence =  17.5, 0;
-			dexterity =  	12.4, 0;
-            ranged =  		90,  0;
+			strength = 70, 0;
+			intelligence = 17.5, 0;
+			dexterity = 12.4, 0;
+			ranged = 90,  0;
 		}
 	}
 	[aspect]
 	{
-        experience_value = 700302;
+		experience_value = 700302;
 		scale_base = 3.0;
-		textures:0	= b_c_edm_ga-02;
+		[textures]
+		{
+			0 = b_c_edm_ga-02;
+		}
 		life = 1012.5;
 		max_life = 1012.5;
 		Mana = 225;
-   		max_mana = 225;
-   		[voice]
+		max_mana = 225;
+		[voice]
 		{
-			[cast]			{ * = s_e_attack_gargoyle_large; }
-			[die]			{ priority = high; * = s_e_explode_rockbeast;  }
-			[enemy_spotted]	{ priority = high; * = s_e_call_gargoyle_large_SED; }
+			[cast]
+			{
+				* = s_e_attack_gargoyle_large;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_explode_rockbeast;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_gargoyle_large_SED;
+			}
 		}
 	}
-
 	[common]
 	{
-		[template_triggers] { }
+		[template_triggers]
+		{
+		}
 		membership = gargoyle,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
-		screen_name="Ruby Gargoyle";
+		screen_name = "Ruby Gargoyle";
 	}
-
 	[body]
 	{
 		avg_move_velocity = 4.990000;
@@ -425,21 +471,27 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-                    00 = mg-02;
-                    qffg = dff-02;
+					00 = mg-02;
+					qffg = dff-02;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds-02; }
+				[anim_files]
+				{
+					00 = ds-02;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=dfs-02; }
+				[anim_files]
+				{
+					00 = dfs-02;
+				}
 			}
 			[chore_misc]
 			{
@@ -455,58 +507,62 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff-02; }
+				[anim_files]
+				{
+					00 = dff-02;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = basic_walk;
-				[anim_files] { 00=fl-02; }
+				[anim_files]
+				{
+					00 = fl-02;
+				}
 			}
 		}
 	}
-   	[defend] { defense=1267.5; }
-
+	[defend]
+	{
+		defense = 1267.5;
+	}
 	[effect_manager_server]
 	{
-		effect_name	= "gargoyle_eye_glow_large";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "gargoyle_eye_glow_large";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_gargoyle_zap; }
-
-   		[pcontent]
+		[other]
+		{
+			il_active_primary_spell = spell_gargoyle_zap;
+		}
+		[pcontent]
 		{
 			[all*]
 			{
-                il_main = bw_ra_g_c_s_s_c_stopper;
+				il_main = bw_ra_g_c_s_s_c_stopper;
 			}
 		}
-
 	}
-
 	[mind]
 	{
-		jat_startup 					= world\ai\jobs\common\job_startup_reveal.skrit;
-
-    	actor_weapon_preference      	= wp_magic;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-		actor_auto_switches_to_ranged	= false;
-		actor_auto_fidgets          	= false;
-
-		melee_engage_range 				= 11;
-		personal_space_range 			= 1.0;
-		ranged_engage_range 			= 11.0;
-		sight_range 					= 11.0;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+		actor_weapon_preference = wp_magic;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		actor_auto_switches_to_ranged = false;
+		actor_auto_fidgets = false;
+		melee_engage_range = 11;
+		personal_space_range = 1.0;
+		ranged_engage_range = 11.0;
+		sight_range = 11.0;
 	}
-
 	[physics]
 	{
 		[break_particulate]

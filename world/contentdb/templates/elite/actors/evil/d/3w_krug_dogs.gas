@@ -5,14 +5,34 @@
 	[aspect]
 	{
 		material = teeth;
-		selection_indicator_scale=0.85;
+		selection_indicator_scale = 0.85;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_krug_dog;	 }
-			[enemy_spotted]	{ priority = high; * = s_e_call_krug_dog_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_krug_dog_SED;	 }
-			[hit_solid]		{ priority = low; * = s_e_hit_krug_dog_SED;	 }
-			[hit_critical]	{ priority = low; * = s_e_hit_krug_dog_SED;	 }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_krug_dog;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_krug_dog_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_krug_dog_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_krug_dog_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_krug_dog_SED;
+			}
 		}
 	}
 	[body]
@@ -46,13 +66,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -68,7 +94,10 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
@@ -83,16 +112,14 @@
 	}
 	[common]
 	{
-		// $ removed blood effect, it is now controlled with the guts manager. -ET
 	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social = 0.30
 			&wander = 0.50
 			&approach_dist = 1.35
 			&still = false;
-
 		com_channels = dyn_party, krug_dog;
 		com_range = 8.0;
 	}
@@ -104,7 +131,7 @@
 		[break_particulate]
 		{
 			frag_glb_generic_01 = 1;
-			frag_glb_generic_02	= 1;
+			frag_glb_generic_02 = 1;
 			frag_glb_generic_03 = 1;
 			frag_glb_generic_06 = 1;
 			frag_glb_generic_08 = 1;
@@ -124,10 +151,10 @@
 	{
 		[skills]
 		{
-			strength =  18.9, 0;
-			intelligence =  1.8, 0;
-			dexterity =  19.9, 0;
-			melee =  89,  0;
+			strength = 18.9, 0;
+			intelligence = 1.8, 0;
+			dexterity = 19.9, 0;
+			melee = 89,  0;
 		}
 	}
 	[aspect]
@@ -144,8 +171,14 @@
 		damage_max = 246.3;
 		damage_min = 186.4;
 	}
-	[common] { screen_name="Krug Dog"; }
-	[defend] { defense=1024; }
+	[common]
+	{
+		screen_name = "Krug Dog";
+	}
+	[defend]
+	{
+		defense = 1024;
+	}
 	[mind]
 	{
 		on_enemy_spotted_alert_friends = true;
@@ -164,10 +197,10 @@
 	{
 		[skills]
 		{
-			strength =  40.8, 0;
-			intelligence =  5.2, 0;
-			dexterity =  23.1, 0;
-			melee =  91,  0;
+			strength = 40.8, 0;
+			intelligence = 5.2, 0;
+			dexterity = 23.1, 0;
+			melee = 91,  0;
 		}
 	}
 	[aspect]
@@ -179,15 +212,24 @@
 		max_mana = 64;
 		model = m_c_edm_kd_pos_1;
 		scale_base = 1.25;
-		[textures] { 0=b_c_edm_kd-02; }
+		[textures]
+		{
+			0 = b_c_edm_kd-02;
+		}
 	}
 	[attack]
 	{
 		damage_max = 375.5;
 		damage_min = 268.8;
 	}
-	[common] { screen_name="Krug Killer Dog"; }
-	[defend] { defense=391.1; }
+	[common]
+	{
+		screen_name = "Krug Killer Dog";
+	}
+	[defend]
+	{
+		defense = 391.1;
+	}
 	[mind]
 	{
 		on_enemy_spotted_alert_friends = true;
@@ -206,10 +248,10 @@
 	{
 		[skills]
 		{
-			strength =  41.1, 0;
-			intelligence =  5.9, 0;
-			dexterity =  25.2, 0;
-			melee =  95,  0;
+			strength = 41.1, 0;
+			intelligence = 5.9, 0;
+			dexterity = 25.2, 0;
+			melee = 95,  0;
 		}
 	}
 	[aspect]
@@ -220,22 +262,29 @@
 		mana = 610.4;
 		max_mana = 610.4;
 		model = m_c_edm_kd_pos_sk;
-		[textures] { 0=b_c_edm_kd-sk; }
+		[textures]
+		{
+			0 = b_c_edm_kd-sk;
+		}
 	}
 	[attack]
 	{
 		damage_max = 407.1;
 		damage_min = 323.1;
 	}
-	[common] { screen_name="Krug Dog Skeleton"; }
-	[defend] { defense=1020.5; }
+	[common]
+	{
+		screen_name = "Krug Dog Skeleton";
+	}
+	[defend]
+	{
+		defense = 1020.5;
+	}
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?guard = true
 			&friends = krug_guard;
-
-
 		melee_engage_range = 10.0;
 		outer_comfort_zone_range = 4.0;
 		personal_space_range = 0.7;
@@ -254,20 +303,21 @@
 		}
 	}
 }
-
 [t:template,n:3W_krug_dog_skeleton]
 {
 	category_name = "3W_evil_d";
 	doc = "3W_krug_dog_skeleton";
 	specializes = 3W_krug_dog_skeleton_base;
 }
-
 [t:template,n:3W_krug_dog_skeleton_summon]
 {
 	category_name = "3W_evil_d";
 	doc = "[summon] krug_dog_skeleton";
 	specializes = 3W_krug_dog_skeleton_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]

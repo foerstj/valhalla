@@ -2,7 +2,10 @@
 {
 	doc = "2W_Base template for all ambient cow.";
 	specializes = actor_ambient;
-	[actor] { race=other; }
+	[actor]
+	{
+		race = other;
+	}
 	[aspect]
 	{
 		model = m_c_na_cw_pos_1;
@@ -26,36 +29,53 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=gz; }
+				[anim_files]
+				{
+					00 = gz;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=gz; }
+				[anim_files]
+				{
+					00 = gz;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="cow"; }
-
+	[common]
+	{
+		screen_name = "cow";
+	}
 	[mind]
 	{
 		on_enemy_spotted_alert_friends = false;
@@ -79,6 +99,9 @@
 	specializes = 2W_base_cow;
 	[aspect]
 	{
-		[textures] { 0=b_c_na_cw; }
+		[textures]
+		{
+			0 = b_c_na_cw;
+		}
 	}
 }

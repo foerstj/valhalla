@@ -6,10 +6,34 @@
 	[aspect]
 	{
 		model = m_c_edm_mn_pos_1;
-		voice:die:			* = s_e_die_mangler;
-		voice:hit_glance:	* = s_e_hit_mangler_SED;
-		voice:hit_solid:	* = s_e_hit_mangler_SED;
-		voice:hit_critical:	* = s_e_hit_mangler_SED;
+		[voice]
+		{
+			[die]
+			{
+							* = s_e_die_mangler;
+			}
+		}
+		[voice]
+		{
+			[hit_glance]
+			{
+					* = s_e_hit_mangler_SED;
+			}
+		}
+		[voice]
+		{
+			[hit_solid]
+			{
+					* = s_e_hit_mangler_SED;
+			}
+		}
+		[voice]
+		{
+			[hit_critical]
+			{
+					* = s_e_hit_mangler_SED;
+			}
+		}
 	}
 	[body]
 	{
@@ -41,25 +65,37 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -77,9 +113,9 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 10.0;
 		sight_range = 10.0;
-   		job_travel_distance_limit = 10;
+		job_travel_distance_limit = 10;
 		on_job_reached_travel_distance_abort_attack = true;
-		sight_origin_height	= 1;
+		sight_origin_height = 1;
 	}
 }
 [t:template,n:3W_mangler]
@@ -90,10 +126,10 @@
 	{
 		[skills]
 		{
-			strength = 		48.3, 0;
-			intelligence = 	8, 0;
-			dexterity = 	20.9, 0;
-			melee =  		94,  0;
+			strength = 48.3, 0;
+			intelligence = 8, 0;
+			dexterity = 20.9, 0;
+			melee = 94,  0;
 		}
 	}
 	[aspect]
@@ -110,11 +146,17 @@
 		damage_max = 470.8;
 		damage_min = 346.7;
 	}
-	[common] { screen_name="Mangler"; }
-	[defend] { defense=753.3; }
+	[common]
+	{
+		screen_name = "Mangler";
+	}
+	[defend]
+	{
+		defense = 753.3;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -132,10 +174,10 @@
 	{
 		[skills]
 		{
-			strength = 	23.7, 0;
-			intelligence = 	3.5, 0;
-			dexterity = 	9.7, 0;
-			melee =  		89,  0;
+			strength = 23.7, 0;
+			intelligence = 3.5, 0;
+			dexterity = 9.7, 0;
+			melee = 89,  0;
 		}
 	}
 	[aspect]
@@ -146,7 +188,10 @@
 		mana = 178;
 		max_mana = 178;
 		scale_base = 0.60;
-		[textures]	{0=b_c_edm_mn-02;}
+		[textures]
+		{
+			0 = b_c_edm_mn-02;
+		}
 	}
 	[attack]
 	{
@@ -154,15 +199,20 @@
 		damage_max = 153.7;
 		damage_min = 120.2;
 	}
-	[common] { screen_name="Snapper"; }
-	[defend] { defense=528.5; }
-	[mind] 
-	{ 
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
-        personal_space_range = 0.2;
+	[common]
+	{
+		screen_name = "Snapper";
+	}
+	[defend]
+	{
+		defense = 528.5;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		personal_space_range = 0.2;
 	}
 }
-
 [t:template,n:3W_mangler_sea]
 {
 	doc = "3W_mangler_sea";
@@ -171,10 +221,10 @@
 	{
 		[skills]
 		{
-			strength = 		45.4, 0;
-			intelligence = 	6.1, 0;
-			dexterity = 	22.8, 0;
-			melee =  		97, 0;
+			strength = 45.4, 0;
+			intelligence = 6.1, 0;
+			dexterity = 22.8, 0;
+			melee = 97, 0;
 		}
 	}
 	[aspect]
@@ -185,8 +235,10 @@
 		mana = 12.8;
 		material = teeth;
 		max_mana = 12.8;
-		//scale_base = 0.60; // $$ What should his scale be? -CarlosN
-		[textures]	{0=b_c_edm_mn-03;}
+		[textures]
+		{
+			0 = b_c_edm_mn-03;
+		}
 	}
 	[attack]
 	{
@@ -194,17 +246,21 @@
 		damage_max = 415.4;
 		damage_min = 299.5;
 	}
-	[common] { screen_name="Sea Mangler"; }
-	[defend] { defense=1256; }
+	[common]
+	{
+		screen_name = "Sea Mangler";
+	}
+	[defend]
+	{
+		defense = 1256;
+	}
 	[mind]
 	{
-		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?cautious_chance	= 0.75
 			&min_cautious_distance = 3.00
 			&cautious_approach_distance = 1.0
 			&cautious_down_time = 1.1;
-
-
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social 		= 0.35
 			&approach_dist 	= 2.00

@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  	81.4, 0;
-			intelligence =  18.6, 0;
-			dexterity =  	28.6, 0;
-			melee =  		135, 0;
+			strength = 81.4, 0;
+			intelligence = 18.6, 0;
+			dexterity = 28.6, 0;
+			melee = 135, 0;
 		}
 	}
 	[aspect]
@@ -21,13 +21,32 @@
 		mana = 211.2;
 		max_mana = 211.2;
 		model = m_c_gbn_bs_pos_1;
-		[textures]	{0=b_c_edm_mj;}
+		[textures]
+		{
+			0 = b_c_edm_mj;
+		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_mad_jailer; }
-			[hit_critical]	{ priority = low; * = s_e_hit_mad_jailer_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_mad_jailer_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_mad_jailer_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_mad_jailer;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_mad_jailer_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_mad_jailer_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_mad_jailer_SED;
+			}
 		}
 	}
 	[attack]
@@ -48,12 +67,10 @@
 			shield_bone = shield_grip;
 			weapon_bone = weapon_grip;
 		}
-
 		[weapon_scales]
 		{
-			as_single_melee	= 1.35, 1.35, 1.35;
+			as_single_melee = 1.35, 1.35, 1.35;
 		}
-
 		[chore_dictionary]
 		{
 			chore_prefix = a_c_edm_mj_fs;
@@ -71,25 +88,37 @@
 			{
 				chore_stances = 1;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 1;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 1;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 1;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_misc]
 			{
@@ -104,8 +133,8 @@
 	}
 	[common]
 	{
-		screen_name="Swanny the Mad Jailer";
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Swanny the Mad Jailer";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -114,53 +143,55 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_red(sgx)");
-
 			}
-
 		}
 	}
-	[conversation] { }
-	[defend] { defense=1266.9; }
+	[conversation]
+	{
+	}
+	[defend]
+	{
+		defense = 1266.9;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
-				  es_weapon_hand = cb_un_1h_swanny;
+				es_weapon_hand = cb_un_1h_swanny;
 			}
 			[all*]
 			{
 				[all*]
 				{
 					il_main = #*/244-292;
-	                il_main = #armor/139-687;
+					il_main = #armor/139-687;
 				}
 				[oneof*]
 				{
-	            	chance = 0.01;
-	                il_main = #weapon/-rare(1)/297-328;
-	                il_main = #armor/-rare(1)/1046-1078;
-                    il_main = #*/-rare(1)/297-328;
-                }
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/297-328;
+					il_main = #armor/-rare(1)/1046-1078;
+					il_main = #*/-rare(1)/297-328;
+				}
 				[oneof*]
 				{
-	                il_main = #weapon/-unique(2)/297-328;
-	                il_main = #armor/-unique(2)/1046-1078;
-                    il_main = #*/-unique(2)/297-328;
-	            }
+					il_main = #weapon/-unique(2)/297-328;
+					il_main = #armor/-unique(2)/1046-1078;
+					il_main = #*/-unique(2)/297-328;
+				}
 				[gold*]
 				{
 					max = 895896;
 					min = 723900;
 				}
 			}
-        }
+		}
 	}
 	[mind]
 	{
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;

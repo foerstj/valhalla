@@ -7,10 +7,26 @@
 		model = m_c_ebb_gom_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_gom;  }
-			[hit_critical]	{ priority = low; * = s_e_hit_gom_SED;  }
-			[hit_glance]	{ priority = low; * = s_e_hit_gom_SED;  }
-			[hit_solid]		{ priority = low; * = s_e_hit_gom_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_gom;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_gom_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_gom_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_gom_SED;
+			}
 		}
 	}
 	[body]
@@ -34,8 +50,8 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
+					00 = at;
+					01 = at-02;
 				}
 			}
 			[chore_magic]
@@ -44,30 +60,39 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=mg;
-					01=mg-02;
-					02=mg-03;
-					03=mg-04;
-					04=mg-05;
+					00 = mg;
+					01 = mg-02;
+					02 = mg-03;
+					03 = mg-04;
+					04 = mg-05;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 5;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 5;
 				skrit = select_transition;
-				[anim_files] { 00=di-02; }
+				[anim_files]
+				{
+					00 = di-02;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 5;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_misc]
 			{
@@ -83,7 +108,10 @@
 			{
 				chore_stances = 5;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
@@ -98,12 +126,12 @@
 		alignment = aa_good;
 		[skills]
 		{
-			strength =  	90.6, 0;
-			intelligence =  62.1, 0;
-			dexterity =  	32, 0;
-			melee =  		121, 0;
-			ranged =  		121, 0;
-            combat_magic =  121, 0;
+			strength = 90.6, 0;
+			intelligence = 62.1, 0;
+			dexterity = 32, 0;
+			melee = 121, 0;
+			ranged = 121, 0;
+			combat_magic = 121, 0;
 		}
 	}
 	[aspect]
@@ -111,8 +139,8 @@
 		experience_value = 510000;
 		life = 14085;
 		max_life = 14085;
-        life_recovery_unit  = 1;
-        life_recovery_period = 30;
+		life_recovery_unit = 1;
+		life_recovery_period = 30;
 		mana = 4301.8;
 		max_mana = 4301.8;
 	}
@@ -120,7 +148,7 @@
 	{
 		[weapon_scales]
 		{
-			as_staff	= 1.4, 1.4, 1.4;
+			as_staff = 1.4, 1.4, 1.4;
 		}
 	}
 	[attack]
@@ -131,12 +159,13 @@
 		damage_bonus_min_cmagic = 106;
 		damage_bonus_max_cmagic = 158;
 	}
-
-	[conversation] { }
+	[conversation]
+	{
+	}
 	[common]
 	{
-		screen_name="Gom";
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Gom";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -146,17 +175,20 @@
 			}
 		}
 	}
-	[defend] { defense=1391; }
-   	[alignment_switcher]
+	[defend]
 	{
-		trigger_msg			= WE_REQ_TALK_END;
-		trigger_msg2		= WE_DAMAGED;
-		selectable_on_spawn	= true;
+		defense = 1391;
 	}
-   	[inventory]
+	[alignment_switcher]
 	{
-    	spew_equipped_kill_count = ;
-    	[pcontent]
+		trigger_msg = WE_REQ_TALK_END;
+		trigger_msg2 = WE_DAMAGED;
+		selectable_on_spawn = true;
+	}
+	[inventory]
+	{
+		spew_equipped_kill_count = ;
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -166,43 +198,38 @@
 		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=spell_gom_force;
-			il_spell_1=spell_gom_flamethrower;
-			il_spell_2=spell_skull_rain;
-			il_spell_3=2w_spell_gom_summon;
-			il_spell_4=spell_gom_icesnake;
-			il_spell_5=spell_gom_ground_lightning;
+			il_active_primary_spell = spell_gom_force;
+			il_spell_1 = spell_gom_flamethrower;
+			il_spell_2 = spell_skull_rain;
+			il_spell_3 = 2w_spell_gom_summon;
+			il_spell_4 = spell_gom_icesnake;
+			il_spell_5 = spell_gom_ground_lightning;
 		}
 	}
 	[mind]
 	{
-		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+		jat_cast = world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true
 			&use_base_duration			= false
 			&spell_chances				= "0.17,            0.17,                   0.17,             0.17, 			0.16, 				0.16"
 			&spells						= "spell_gom_force, spell_gom_flamethrower, spell_skull_rain, 2w_spell_gom_summon, spell_gom_icesnake, spell_gom_ground_lightning";
-		jat_die 						= world\ai\jobs\actors\evil\job_die_explode.skrit;
-//		jat_fidget						= world\ai\jobs\common\job_fidget.skrit;
-		jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+		jat_die = world\ai\jobs\actors\evil\job_die_explode.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious=1.0
 			&interest=interest
 			&still=false
 			&approach_dist=1.5;
-
 		melee_engage_range = 10;
 		on_engaged_lost_consciousness_abort_attack = false;
 		personal_space_range = 0.7;
 		ranged_engage_range = 20.0;
 		sight_range = 20.0;
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
 		actor_auto_fidgets = false;
-		
-		job_travel_distance_limit = 60; //$ #10784 MONSTERS: Gom will not pursue party if they run away, he will turn around and run back to throne. -MM
+		job_travel_distance_limit = 60;
 	}
-	// watch Eric be bad.... Bad Eric Bad... Should find a different way to do this. -ET
-	[generator_in_object] // This switches gom to super gom when gom runs out of life.
+	[generator_in_object]
 	{
 		spawn_event = WE_KILLED;
 		child_template_name = emitter_gom_die;

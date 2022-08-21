@@ -33,8 +33,7 @@
 					loww = at-03;
 					qffg = dff;
 				}
-
-		 	  	[anim_durations]
+				[anim_durations]
 				{
 					fs0 = 1.250;
 					fs1 = 0.830;
@@ -46,7 +45,6 @@
 					fs7 = 0.125;
 					fs8 = 1.000;
 				}
-
 			}
 			[chore_default]
 			{
@@ -131,7 +129,10 @@
 			es_feet = bo_bo_le_light;
 		}
 	}
-    mind:sight_origin_height = 1.6;
+	[mind]
+	{
+		sight_origin_height = 1.6;
+	}
 	[physics]
 	{
 		fire_effect = human_physics_fire;
@@ -142,7 +143,10 @@
 	category_name = "3W_shopkeep";
 	doc = "blacksmith, meren (MP)";
 	specializes = 3W_base_dwarf;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_go; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_go;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -174,7 +178,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/312-437;
@@ -193,8 +196,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/42-437;
@@ -213,7 +214,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/42-437;
@@ -232,7 +232,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/42-437;
@@ -293,7 +292,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/152-202;
@@ -315,12 +313,14 @@
 			}
 		}
 	}
-    [mind]
-    {
+	[mind]
+	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -331,7 +331,10 @@
 	category_name = "3W_shopkeep";
 	doc = "conjurer, crystwind (MP)";
 	specializes = 3W_base_dwarf;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_orkin; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_orkin;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -351,9 +354,9 @@
 	{
 	}
 	[mind]
-    {
+	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 	}
 	[inventory]
 	{
@@ -377,7 +380,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/145-264;
 					max = 6;
@@ -392,7 +395,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -407,14 +412,12 @@
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 3;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_zap = 4;
-            spell_fireshot = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_zap = 4;
+			spell_fireshot = 4;
 		}
 	}
 }
@@ -524,7 +527,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/133-231;
@@ -543,8 +545,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/17-231;
@@ -563,7 +563,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/17-231;
@@ -582,7 +581,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/17-231;
@@ -643,7 +641,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/78-200;
@@ -663,7 +660,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -681,7 +677,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/145-260;
 					max = 4;
@@ -696,7 +692,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -711,14 +709,12 @@
 			potion_rejuvenation_medium = 2;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_zap = 2;
-            spell_fireshot = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_zap = 2;
+			spell_fireshot = 2;
 		}
 	}
 }
@@ -729,8 +725,8 @@
 	specializes = 3W_base_dwarf;
 	[aspect]
 	{
-		is_collidable		= true;
-		is_invincible		= false;
+		is_collidable = true;
+		is_invincible = false;
 		is_selectable = false;
 		life = 26.9;
 		mana = 13.4;
@@ -743,8 +739,16 @@
 		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_dwarf; }
-			[hit_glance]	{ priority = low; * = s_e_hit_dwarf; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_dwarf;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_dwarf;
+			}
 		}
 	}
 	[common]
@@ -766,16 +770,16 @@
 	[inventory]
 	{
 		spew_equipped_kill_count = <ignore>;
-    	[equipment]
+		[equipment]
 		{
 			es_forearms = gl_gl_le_f_g_c_avg;
 			es_feet = bo_bo_le_light;
 		}
 	}
-    [mind]
-    {
-        actor_may_attack = true;
-        actor_may_be_attacked = true;
+	[mind]
+	{
+		actor_may_attack = true;
+		actor_may_be_attacked = true;
 	}
 }
 [t:template,n:3W_mp_dwarf]
@@ -826,13 +830,13 @@
 			es_chest = bd_ra_ro_m_g_c_084;
 			es_feet = bo_bo_le_light;
 		}
-        [pcontent]
-        {
+		[pcontent]
+		{
 			[all*]
 			{
-    	        il_main = 3W_emitter_sarden_reward_mp;
+				il_main = 3W_emitter_sarden_reward_mp;
 			}
-        }
+		}
 	}
 }
 [t:template,n:3W_mp_dwarf_legionnaire_archer]
@@ -849,7 +853,9 @@
 			1 = b_c_pos_a1_006;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Legionnaire Archer";
@@ -884,7 +890,9 @@
 			1 = b_c_pos_a1_006;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Legionnaire Guard";
@@ -918,7 +926,9 @@
 			1 = b_c_pos_a1_006;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Guard Captain of Crystwind";
@@ -941,15 +951,15 @@
 			il_main = ax_g_c_2h1b_avg;
 			il_shield = sh_w_g_c_r_m_avg;
 		}
-        [pcontent]
-        {
+		[pcontent]
+		{
 			[gold*]
 			{
 				chance = 1.0;
 				max = 3746617;
 				min = 3746617;
 			}
-        }
+		}
 	}
 }
 [t:template,n:3W_mp_dwarf_worker]
@@ -979,7 +989,10 @@
 	category_name = "3W_character";
 	doc = "3W_mp_npc_dwarf_01";
 	specializes = 3W_base_dwarf;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_orkin; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_orkin;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -999,9 +1012,9 @@
 	{
 	}
 	[mind]
-    {
+	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 	}
 }
 [t:template,n:3W_mp_npc_dwarf_02]
@@ -1009,7 +1022,10 @@
 	category_name = "3W_character";
 	doc = "3W_mp_npc_dwarf_02";
 	specializes = 3W_base_dwarf;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_go; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_go;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -1026,9 +1042,9 @@
 	[conversation]
 	{
 	}
-    [mind]
-    {
+	[mind]
+	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 	}
 }

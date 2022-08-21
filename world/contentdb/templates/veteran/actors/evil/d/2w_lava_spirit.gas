@@ -8,22 +8,38 @@
 		model = m_c_edm_ls_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_lava_spirit; }
-			[hit_critical]	{ priority = low; * = s_e_hit_lava_spirit_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_lava_spirit_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_lava_spirit_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_lava_spirit;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_lava_spirit_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_lava_spirit_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_lava_spirit_SED;
+			}
 		}
 	}
 	[body]
 	{
 		[bone_translator]
 		{
-			body_anterior 	= head_bone;
-			body_mid 		= Mid_torso;
-			body_posterior 	= Spine_end;
-			kill_bone 		= Mid_torso;
-			shield_bone 	= shield_grip;
-			weapon_bone 	= weapon_grip;
+			body_anterior = head_bone;
+			body_mid = Mid_torso;
+			body_posterior = Spine_end;
+			kill_bone = Mid_torso;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
 		}
 		[chore_dictionary]
 		{
@@ -34,28 +50,37 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
-					02=at-05;
+					00 = at;
+					01 = at-02;
+					02 = at-05;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_misc]
 			{
@@ -71,7 +96,10 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_magic]
 			{
@@ -79,26 +107,31 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=mg;
-					01=mg-02;
+					00 = mg;
+					01 = mg-02;
 				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Lava Spirit";
+		screen_name = "Lava Spirit";
 	}
 	[effect_manager_server]
 	{
-		effect_name	= "lava_spirit_flames";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "lava_spirit_flames";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
-	mind:actor_auto_fidgets = false;
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		actor_auto_fidgets = false;
+	}
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 	[physics]
 	{
 		explode_when_killed = true;
@@ -127,10 +160,10 @@
 	{
 		[skills]
 		{
-			strength = 		80, 0;
-			intelligence = 	19, 0;
-			dexterity = 	31, 0;
-			melee =  		91, 0;
+			strength = 80, 0;
+			intelligence = 19, 0;
+			dexterity = 31, 0;
+			melee = 91, 0;
 		}
 	}
 	[aspect]
@@ -147,10 +180,13 @@
 		damage_max = 440.6;
 		damage_min = 384.2;
 	}
-	[defend] { defense=1383.7; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 1383.7;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -159,22 +195,22 @@
 					chance = 0.45;
 					il_main = #*/175-265;
 					il_main = #armor/112-552;
-	                il_main = #cmagic/45-59;
+					il_main = #cmagic/45-59;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/262-290;
-	                il_main = #armor/-rare(1)/570-712;
-                    il_main = #*/-rare(1)/262-290;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/262-290;
+					il_main = #armor/-rare(1)/570-712;
+					il_main = #*/-rare(1)/262-290;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/262-290;
-	                il_main = #armor/-unique(2)/570-712;
-                    il_main = #*/-unique(2)/262-290;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/262-290;
+					il_main = #armor/-unique(2)/570-712;
+					il_main = #*/-unique(2)/262-290;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -201,10 +237,10 @@
 	{
 		[skills]
 		{
-			strength = 		78.1, 0;
-			intelligence = 	19.9, 0;
-			dexterity = 	37.7, 0;
-			combat_magic = 	92, 0;
+			strength = 78.1, 0;
+			intelligence = 19.9, 0;
+			dexterity = 37.7, 0;
+			combat_magic = 92, 0;
 		}
 	}
 	[aspect]
@@ -223,16 +259,18 @@
 		damage_bonus_min_cmagic = 144;
 		damage_bonus_max_cmagic = 210;
 	}
-	[defend] { defense=1183.7; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
+		defense = 1183.7;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=spell_lava_spirit_fire;
+			il_active_primary_spell = spell_lava_spirit_fire;
 		}
-
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -241,22 +279,22 @@
 					chance = 0.45;
 					il_main = #*/175-265;
 					il_main = #armor/112-552;
-	                il_main = #cmagic/45-59;
+					il_main = #cmagic/45-59;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/262-290;
-	                il_main = #armor/-rare(1)/570-712;
-                    il_main = #*/-rare(1)/262-290;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/262-290;
+					il_main = #armor/-rare(1)/570-712;
+					il_main = #*/-rare(1)/262-290;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/262-290;
-	                il_main = #armor/-unique(2)/570-712;
-                    il_main = #*/-unique(2)/262-290;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/262-290;
+					il_main = #armor/-unique(2)/570-712;
+					il_main = #*/-unique(2)/262-290;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -268,35 +306,38 @@
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14;
 	}
 }
-
 [t:template,n:2W_lava_spirit_magic]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_lava_spirit magic";
 	specializes = 2W_lava_spirit_magic_base;
 }
-
 [t:template,n:2W_lava_spirit_magic_summon]
 {
 	category_name = "2W_evil_d";
 	doc = "[summon] lava_spirit";
 	specializes = 2W_lava_spirit_magic_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_lava_spirit_fire; }
+		[other]
+		{
+			il_active_primary_spell = spell_lava_spirit_fire;
+		}
 		[pcontent]
 		{
 			[gold*]
@@ -305,6 +346,12 @@
 			}
 		}
 	}
-	mind:jat_startup = jat_none;
-	mind:actor_auto_fidgets = true;
+	[mind]
+	{
+		jat_startup = jat_none;
+	}
+	[mind]
+	{
+		actor_auto_fidgets = true;
+	}
 }

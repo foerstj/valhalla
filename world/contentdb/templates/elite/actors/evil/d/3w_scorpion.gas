@@ -7,11 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  57.1, 0;
-			intelligence =  5.2, 0;
-			dexterity =  25.6, 0;
-			melee =  92,  0;
-
+			strength = 57.1, 0;
+			intelligence = 5.2, 0;
+			dexterity = 25.6, 0;
+			melee = 92,  0;
 		}
 	}
 	[aspect]
@@ -24,11 +23,31 @@
 		model = m_c_edm_sc_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_scorpion; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
-			[hit_critical]	{ priority = low; * = s_e_hit_scorpion_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_scorpion_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_scorpion_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_scorpion;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_scorpion_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_scorpion_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_scorpion_SED;
+			}
 		}
 	}
 	[attack]
@@ -59,56 +78,68 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
+					00 = at;
+					01 = at-02;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Scorpion";
+		screen_name = "Scorpion";
 		membership = party_scorpion_boss, monster;
 	}
-	[defend] 
-	{ 
-		defense=630.5; 
+	[defend]
+	{
+		defense = 630.5;
 	}
 	[inventory]
 	{
-   		[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
 				[oneof*]
 				{
-				   	chance = 0.05;
-				   	il_main = potion_health_super;
-				   	il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 			}
 		}
@@ -120,13 +151,10 @@
 			&min_distance		= 3.5
 			&wander_limit_dist	= 2.1
 			&still				= false;
-
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party			= true;
-
-		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?run_chance 					= 1.0;
-
 		melee_engage_range = 14.0;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -158,7 +186,10 @@
 	category_name = "3W_evil_d";
 	doc = "[summon] scorpion";
 	specializes = 3W_scorpion_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -170,7 +201,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_scorpion_boss_01]
 {
 	category_name = "3W_evil_d";
@@ -180,11 +210,10 @@
 	{
 		[skills]
 		{
-			strength 		=  70.3, 0;
-			intelligence	=  5.2, 0;
-			dexterity 		=  34.2, 0;
-			melee 			=  92,  0;
-
+			strength = 70.3, 0;
+			intelligence = 5.2, 0;
+			dexterity = 34.2, 0;
+			melee = 92,  0;
 		}
 	}
 	[aspect]
@@ -195,14 +224,37 @@
 		mana = 58.2;
 		max_mana = 58.2;
 		model = m_c_edm_sc_pos_1;
-		textures:0 = b_c_edm_sc-02;
+		[textures]
+		{
+			0 = b_c_edm_sc-02;
+		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_scorpion; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_spider;  }
-			[hit_critical]	{ priority = low; * = s_e_hit_scorpion; }
-			[hit_glance]	{ priority = low; * = s_e_hit_scorpion; }
-			[hit_solid]		{ priority = low; * = s_e_hit_scorpion; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_scorpion;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_spider;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_scorpion;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_scorpion;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_scorpion;
+			}
 		}
 	}
 	[attack]
@@ -233,40 +285,52 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
+					00 = at;
+					01 = at-02;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Venom Fiend";
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Venom Fiend";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -278,10 +342,13 @@
 			}
 		}
 	}
-	[defend] { defense=1073.7; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 1073.7;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -289,15 +356,15 @@
 				{
 					chance = 0.8;
 					il_main = #weapon/246-264;
-                    il_main = #body,f/641-751;
+					il_main = #body,f/641-751;
 				}
-                [oneof*]
+				[oneof*]
 				{
-	                   chance = 0.004;
-	                   il_main = #weapon/-rare(1)/328-383;
-	                   il_main = #armor/-rare(1)/815-912;
-                       il_main = #*/-rare(1)/328-383;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/328-383;
+					il_main = #armor/-rare(1)/815-912;
+					il_main = #*/-rare(1)/328-383;
+				}
 				[gold*]
 				{
 					chance = 0.196;
@@ -309,16 +376,13 @@
 			}
 		}
 	}
-
 	[mind]
 	{
-		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?run_chance 					= 1.0;
-
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party			= true
 			&party_template						= "party_scorpion_boss";
-
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social				= 0.8
 			&social_limit		= 2
@@ -327,7 +391,6 @@
 			&friend_template	= false
 			&friends			= "party_scorpion_boss"
 			&still				= false;
-
 		melee_engage_range = 14.0;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;

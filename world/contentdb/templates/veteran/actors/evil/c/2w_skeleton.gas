@@ -4,19 +4,39 @@
 	specializes = actor_evil;
 	[actor]
 	{
-		portrait_icon=b_gui_ig_i_ic_c_sk_e;
+		portrait_icon = b_gui_ig_i_ic_c_sk_e;
 	}
 	[aspect]
 	{
 		material = stone;
-		model=m_c_ecm_sk_pos_1;
+		model = m_c_ecm_sk_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_skeleton; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_skeleton_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_skeleton_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_skeleton_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_skeleton_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skeleton;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skeleton_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
 		}
 	}
 	[body]
@@ -51,13 +71,19 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -96,11 +122,17 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { membership = skeleton, monster; }
+	[common]
+	{
+		membership = skeleton, monster;
+	}
 	[guts_manager]
 	{
 		effect_name = melee_hit_1;
@@ -142,10 +174,10 @@
 	{
 		[skills]
 		{
-			strength =  	29.1, 0;
-			intelligence =  11.4, 0;
-			dexterity =  	12.1, 0;
-			melee =  		78,  0;
+			strength = 29.1, 0;
+			intelligence = 11.4, 0;
+			dexterity = 12.1, 0;
+			melee = 78,  0;
 		}
 	}
 	[aspect]
@@ -164,27 +196,26 @@
 	}
 	[common]
 	{
-		screen_name="Skeleton Mercenary";
+		screen_name = "Skeleton Mercenary";
 		membership = monster, party_skeleton_mercenary_archer;
 	}
-	[defend] { defense=953.8; }
-
-   	[mind]
+	[defend]
 	{
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		defense = 953.8;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious		= 0.65
 			&interest		= interest
 			&still			= false;
-
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		 = true;
-
-		sight_origin_height	= 1.3;
+		sight_origin_height = 1.3;
 		melee_engage_range = 14.0;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
 	}
-
 	[inventory]
 	{
 		[pcontent]
@@ -193,7 +224,7 @@
 			{
 				[oneof*]
 				{
-    				es_weapon_hand = sd_g_c_st_1h_avg;
+					es_weapon_hand = sd_g_c_st_1h_avg;
 					es_weapon_hand = ss_g_c_sd_1h_avg;
 				}
 				es_shield_hand = #shield/-no_mod/150-180;
@@ -206,23 +237,23 @@
 					chance = 0.25;
 					il_main = #*/174-206;
 					il_main = #armor/105-526;
-        	        il_main = #nmagic/30-57;
-            	    il_main = #cmagic/30-55;
+					il_main = #nmagic/30-57;
+					il_main = #cmagic/30-55;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/186-221;
-	                il_main = #armor/-rare(1)/510-557;
-                    il_main = #*/-rare(1)/186-221;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/186-221;
+					il_main = #armor/-rare(1)/510-557;
+					il_main = #*/-rare(1)/186-221;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/186-221;
-	                il_main = #armor/-unique(2)/510-557;
-                    il_main = #*/-unique(2)/186-221;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/186-221;
+					il_main = #armor/-unique(2)/510-557;
+					il_main = #*/-unique(2)/186-221;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -238,15 +269,14 @@
 	category_name = "2W_evil_c";
 	doc = "2W_skeleton mercenary_boss";
 	specializes = 2W_skeleton_mercenary_base;
-
 	[actor]
 	{
 		[skills]
 		{
-			strength =  	32.5, 0;
-			intelligence =  16.5, 0;
-			dexterity =  	22.8, 0;
-			melee =  		81,  0;
+			strength = 32.5, 0;
+			intelligence = 16.5, 0;
+			dexterity = 22.8, 0;
+			melee = 81,  0;
 		}
 	}
 	[aspect]
@@ -265,7 +295,7 @@
 	}
 	[common]
 	{
-		screen_name="Skeleton Captain";
+		screen_name = "Skeleton Captain";
 		membership = monster, party_skeleton_mercenary_archer;
 		[template_triggers]
 		{
@@ -278,16 +308,17 @@
 			}
 		}
 	}
-	[defend] { defense=1172.9; }
-
-   	[mind]
+	[defend]
 	{
-		sight_origin_height	= 1.3;
+		defense = 1172.9;
+	}
+	[mind]
+	{
+		sight_origin_height = 1.3;
 		melee_engage_range = 14.0;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
 	}
-
 	[inventory]
 	{
 		[pcontent]
@@ -296,7 +327,7 @@
 			{
 				[oneof*]
 				{
-    				es_weapon_hand = sd_g_c_st_1h_avg;
+					es_weapon_hand = sd_g_c_st_1h_avg;
 					es_weapon_hand = ss_g_c_sd_1h_avg;
 				}
 				es_shield_hand = #shield/-no_mod/150-180;
@@ -312,18 +343,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/270-294;
-	                il_main = #armor/-rare(1)/814-873;
-                    il_main = #*/-rare(1)/270-294;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/270-294;
+					il_main = #armor/-rare(1)/814-873;
+					il_main = #*/-rare(1)/270-294;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/270-294;
-	                il_main = #armor/-unique(2)/814-873;
-                    il_main = #*/-unique(2)/270-294;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/270-294;
+					il_main = #armor/-unique(2)/814-873;
+					il_main = #*/-unique(2)/270-294;
+				}
 				[gold*]
 				{
 					chance = 0.2;
@@ -345,10 +376,10 @@
 	{
 		[skills]
 		{
-			strength =  27.4, 0;
-			intelligence =  11.4, 0;
-			dexterity =  16.7, 0;
-			ranged =  77,  0;
+			strength = 27.4, 0;
+			intelligence = 11.4, 0;
+			dexterity = 16.7, 0;
+			ranged = 77,  0;
 		}
 	}
 	[aspect]
@@ -369,31 +400,30 @@
 	}
 	[common]
 	{
-		screen_name= "Skeleton Ranger";
+		screen_name = "Skeleton Ranger";
 		membership = monster, party_skeleton_mercenary_archer;
 	}
-	[defend] { defense=641.3; }
-
-   	[mind]
+	[defend]
 	{
-		sight_origin_height	= 1.3;
+		defense = 641.3;
+	}
+	[mind]
+	{
+		sight_origin_height = 1.3;
 		melee_engage_range = 14.0;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party		= true
 			&actor_joins_existing_party		= true
 			&party_template					= "party_skeleton_mercenary_archer";
-
-		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander						= false
 			&still							= false;
 	}
-
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[all*]
@@ -401,7 +431,6 @@
 				es_shield_hand = bw_g_c_c_l_4_avg;
 				es_chest = #body,r/-no_mod/95-122;
 			}
-
 			[oneof*]
 			{
 				[oneof*]
@@ -409,23 +438,23 @@
 					chance = 0.25;
 					il_main = #*/174-206;
 					il_main = #armor/105-514;
-        	        il_main = #nmagic/30-57;
-            	    il_main = #cmagic/30-55;
+					il_main = #nmagic/30-57;
+					il_main = #cmagic/30-55;
 				}
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/186-221;
-	                il_main = #armor/-rare(1)/510-557;
-                    il_main = #*/-rare(1)/186-221;
-                }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/186-221;
-	                il_main = #armor/-unique(2)/510-557;
-                    il_main = #*/-unique(2)/186-221;
-	            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/186-221;
+					il_main = #armor/-rare(1)/510-557;
+					il_main = #*/-rare(1)/186-221;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/186-221;
+					il_main = #armor/-unique(2)/510-557;
+					il_main = #*/-unique(2)/186-221;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -445,10 +474,10 @@
 	{
 		[skills]
 		{
-			strength =  41.7, 0;
-			intelligence =  1.5, 0;
-			dexterity =  6.9, 0;
-			melee =  53,  0;
+			strength = 41.7, 0;
+			intelligence = 1.5, 0;
+			dexterity = 6.9, 0;
+			melee = 53,  0;
 		}
 	}
 	[aspect]
@@ -458,7 +487,10 @@
 		max_life = 326.7;
 		mana = 36.7;
 		max_mana = 36.7;
-		[textures]	{0=b_c_ecm_sk-02;}
+		[textures]
+		{
+			0 = b_c_ecm_sk-02;
+		}
 	}
 	[attack]
 	{
@@ -481,30 +513,38 @@
 			frag_glb_bone_dirty_06 = 1;
 		}
 	}
-	[common] { screen_name="Skeleton"; }
-	[defend] { defense=550; }
+	[common]
+	{
+		screen_name = "Skeleton";
+	}
+	[defend]
+	{
+		defense = 550;
+	}
 	[inventory]
 	{
 		[pcontent]
 		{
-			[oneof*] { es_weapon_hand=#mace/9; }
-
+			[oneof*]
+			{
+				es_weapon_hand = #mace/9;
+			}
 			[oneof*]
 			{
 				[all*]
 				{
-       				chance = 0.05;
-            	    il_main = #spell/18-55;
+					chance = 0.05;
+					il_main = #spell/18-55;
 				}
 				[oneof*]
 				{
 					chance = 0.30;
 					il_main = #weapon/120-165;
 					il_main = #armor/55-293;
-   				    il_main = potion_health_large;
-				    il_main = potion_mana_large;
-	    		}
-    			[gold*]
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[gold*]
 				{
 					chance = 0.5;
 					max = 43269;
@@ -515,41 +555,46 @@
 	}
 	[mind]
 	{
-		jat_brain									= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party					= true;
-
 		job_travel_distance_limit = 10;
 		melee_engage_range = 8.0;
 		on_job_reached_travel_distance_abort_attack = true;
-		ranged_engage_range							= 8.0;
-		sight_range									= 14.0;
-		jat_fidget									= world\ai\jobs\common\job_fidget.skrit;
+		ranged_engage_range = 8.0;
+		sight_range = 14.0;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 	}
-
-
 }
 [t:template,n:2W_skeleton]
 {
 	category_name = "2W_evil_c";
 	doc = "2W_Skeleton";
 	specializes = 2W_skeleton_base;
-
 }
 [t:template,n:2W_skeleton_summon]
 {
 	category_name = "2W_evil_c";
 	doc = "[summon] Skeleton";
 	specializes = 2W_skeleton_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		spew_equipped_kill_count = <ignore>;
 		[pcontent]
 		{
-			[oneof*] { es_weapon_hand=#mace/9; }
+			[oneof*]
+			{
+				es_weapon_hand = #mace/9;
+			}
 		}
 	}
-	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	}
 }
 [t:template,n:2W_skeleton_archer]
 {
@@ -571,15 +616,20 @@
 		damage_bonus_min_ranged = 80;
 		damage_bonus_max_ranged = 160;
 	}
-	[common] { screen_name="Skeleton Archer"; }
-	[defend] { defense=280; }
+	[common]
+	{
+		screen_name = "Skeleton Archer";
+	}
+	[defend]
+	{
+		defense = 280;
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
-   		[pcontent]
+		[pcontent]
 		{
-       		[oneof*]
+			[oneof*]
 			{
 				es_shield_hand = bw_g_c_s_s_r_avg;
 			}
@@ -587,8 +637,8 @@
 			{
 				[all*]
 				{
-       				chance = 0.03;
-            	    il_main = #spell/40-62;
+					chance = 0.03;
+					il_main = #spell/40-62;
 				}
 				[oneof*]
 				{
@@ -596,14 +646,14 @@
 					il_main = #weapon/127-163;
 					il_main = #*/127-163;
 					il_main = #armor/80-410;
-    			    il_main = potion_health_large;
-				    il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
 				}
 				[oneof*]
 				{
 					chance = 0.20;
-    			    il_main = potion_health_large;
-				    il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
 				}
 				[gold*]
 				{
@@ -614,18 +664,16 @@
 			}
 		}
 	}
-
 	[mind]
 	{
 		melee_engage_range = 10.0;
 		ranged_engage_range = 16.0;
 		sight_range = 16.0;
-		jat_fidget							= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social							= 0.5
 			&meander						= false
 			&still							= false;
 	}
-
 }
 [t:template,n:2W_skeleton_guard]
 {
@@ -636,10 +684,10 @@
 	{
 		[skills]
 		{
-			strength =  51.1, 0;
-			intelligence =  2.9, 0;
-			dexterity =  13.6, 0;
-			melee =  55,  0;
+			strength = 51.1, 0;
+			intelligence = 2.9, 0;
+			dexterity = 13.6, 0;
+			melee = 55,  0;
 		}
 	}
 	[aspect]
@@ -658,23 +706,31 @@
 	}
 	[common]
 	{
-		screen_name="Skeleton Guard";
+		screen_name = "Skeleton Guard";
 		membership = skeleton, party_krug_shaman, monster;
 	}
-	[defend] { defense=495; }
+	[defend]
+	{
+		defense = 495;
+	}
 	[inventory]
 	{
 		[pcontent]
-        {
-			[oneof*] { es_shield_hand = sh_m_g_c_r_s_avg; }
-            [oneof*] { es_weapon_hand = ax_d_c_1h1b_avg; }
-
+		{
+			[oneof*]
+			{
+				es_shield_hand = sh_m_g_c_r_s_avg;
+			}
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_c_1h1b_avg;
+			}
 			[oneof*]
 			{
 				[all*]
 				{
-       				chance = 0.03;
-            	    il_main = #spell/28-56;
+					chance = 0.03;
+					il_main = #spell/28-56;
 				}
 				[oneof*]
 				{
@@ -693,9 +749,9 @@
 	}
 	[mind]
 	{
-		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party	= true;
-		jat_fidget					= world\ai\jobs\common\job_fidget.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 	}
 }
 [t:template,n:2W_skeleton_guard_boss_01]
@@ -707,10 +763,10 @@
 	{
 		[skills]
 		{
-			strength =  58.4, 0;
-			intelligence =  4.4, 0;
-			dexterity =  15.9, 0;
-			melee =  57,  0;
+			strength = 58.4, 0;
+			intelligence = 4.4, 0;
+			dexterity = 15.9, 0;
+			melee = 57,  0;
 		}
 	}
 	[aspect]
@@ -721,8 +777,11 @@
 		mana = 56;
 		max_mana = 56;
 		model = m_c_ecm_sk_pos_2;
-		textures:0 = b_c_ecm_skg-02;
-        scale_base = 1.2;
+		[textures]
+		{
+			0 = b_c_ecm_skg-02;
+		}
+		scale_base = 1.2;
 	}
 	[attack]
 	{
@@ -731,7 +790,7 @@
 	}
 	[common]
 	{
-		screen_name="Skeleton Captain";
+		screen_name = "Skeleton Captain";
 		membership = skeleton,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
@@ -744,14 +803,22 @@
 			}
 		}
 	}
-	[defend] { defense=540.7; }
+	[defend]
+	{
+		defense = 540.7;
+	}
 	[inventory]
 	{
 		[pcontent]
-        {
-			[oneof*] { es_shield_hand = sh_m_g_c_r_s_avg; }
-            [oneof*] { es_weapon_hand = ax_d_c_1h1b_avg; }
-
+		{
+			[oneof*]
+			{
+				es_shield_hand = sh_m_g_c_r_s_avg;
+			}
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_c_1h1b_avg;
+			}
 			[all*]
 			{
 				[oneof*]
@@ -771,13 +838,12 @@
 	}
 	[mind]
 	{
-		jat_fidget			= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social				= 0.8
 			&friend_template	= false
 			&friends			= party_skeleton_guard_boss
 			&still				= false;
-
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party	= true
 			&party_template				= "party_skeleton_guard_boss";
 	}
@@ -797,7 +863,11 @@
 	{
 		[voice]
 		{
-			[enemy_spotted]	{ priority = high; * = ; }
+			[enemy_spotted]
+			{
+				priority = high;
+				* = ;
+			}
 		}
 	}
 	[common]
@@ -813,7 +883,7 @@
 	}
 	[mind]
 	{
-		jat_brain	= world\ai\jobs\common\brain_hero.skrit;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible = true
 			&construct_anim = true
@@ -829,7 +899,7 @@
 	specializes = 2W_skeleton_mercenary_base;
 	[mind]
 	{
-		jat_brain 	= world\ai\jobs\common\brain_hero.skrit;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible = true
 			&construct_anim = true;
@@ -842,9 +912,11 @@
 	category_name = "2W_evil_c";
 	doc = "[summon] skeleton mercenary";
 	specializes = 2W_skeleton_mercenary_base;
-	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	}
 }
-
 [t:template,n:2W_skeleton_mercenary_archer]
 {
 	category_name = "2W_evil_c";
@@ -860,7 +932,11 @@
 	{
 		[voice]
 		{
-			[enemy_spotted]	{ priority = high; * = ; }
+			[enemy_spotted]
+			{
+				priority = high;
+				* = ;
+			}
 		}
 	}
 	[common]
@@ -876,7 +952,7 @@
 	}
 	[mind]
 	{
-		jat_brain 	= world\ai\jobs\common\brain_hero.skrit;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible = true
 			&construct_anim = true
@@ -892,7 +968,7 @@
 	specializes = 2W_skeleton_mercenary_archer_base;
 	[mind]
 	{
-		jat_brain 	= world\ai\jobs\common\brain_hero.skrit;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible = true
 			&construct_anim = true;
@@ -905,7 +981,10 @@
 	category_name = "2W_evil_c";
 	doc = "[summon] skeleton mercenary_archer";
 	specializes = 2W_skeleton_mercenary_archer_base;
-	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	}
 }
 [t:template,n:2W_skeleton_large]
 {
@@ -916,10 +995,10 @@
 	{
 		[skills]
 		{
-			strength =  	57, 0;
-			intelligence =  8.8, 0;
-			dexterity =  	13.2, 0;
-			melee =  		64,  0;
+			strength = 57, 0;
+			intelligence = 8.8, 0;
+			dexterity = 13.2, 0;
+			melee = 64,  0;
 		}
 	}
 	[aspect]
@@ -929,15 +1008,17 @@
 		max_life = 2200;
 		mana = 7.3;
 		max_mana = 7.3;
-		[textures]	{0=b_c_ecm_sk-02;}
-        scale_base = 1.5;
+		[textures]
+		{
+			0 = b_c_ecm_sk-02;
+		}
+		scale_base = 1.5;
 	}
 	[attack]
 	{
 		damage_max = 238.6;
 		damage_min = 131.5;
 	}
-
 	[body]
 	{
 		armor_version = ecm_sk;
@@ -970,13 +1051,19 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -993,11 +1080,13 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_walk;
-				[anim_files] { 00=wl-02; }
+				[anim_files]
+				{
+					00 = wl-02;
+				}
 			}
 		}
 	}
-
 	[physics]
 	{
 		[break_particulate]
@@ -1010,19 +1099,23 @@
 			frag_glb_bone_dirty_06 = 1;
 		}
 	}
-	[common] { screen_name="Giant Skeleton"; }
-	[defend] { defense=793.8; }
+	[common]
+	{
+		screen_name = "Giant Skeleton";
+	}
+	[defend]
+	{
+		defense = 793.8;
+	}
 	[inventory]
 	{
 		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
-  				es_weapon_hand = sd_g_c_sd_1h_avg;
-            }
-
+				es_weapon_hand = sd_g_c_sd_1h_avg;
+			}
 			es_shield_hand = #shield/-no_mod/150-380;
-
 			[oneof*]
 			{
 				[oneof*]
@@ -1033,18 +1126,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/222-262;
-	                il_main = #armor/-rare(1)/651-697;
-                    il_main = #*/-rare(1)/222-262;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/222-262;
+					il_main = #armor/-rare(1)/651-697;
+					il_main = #*/-rare(1)/222-262;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/222-262;
-	                il_main = #armor/-unique(2)/651-697;
-                    il_main = #*/-unique(2)/222-262;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/222-262;
+					il_main = #armor/-unique(2)/651-697;
+					il_main = #*/-unique(2)/222-262;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -1052,9 +1145,9 @@
 					min = 153614;
 				}
 			}
-        }
+		}
 	}
-    [mind]
+	[mind]
 	{
 		melee_engage_range = 14.0;
 		ranged_engage_range = 14.0;
@@ -1071,10 +1164,10 @@
 	{
 		[skills]
 		{
-			strength =  	57.4, 0;
-			intelligence =  8.8, 0;
-			dexterity =  	13.3, 0;
-			melee =  		64,  0;
+			strength = 57.4, 0;
+			intelligence = 8.8, 0;
+			dexterity = 13.3, 0;
+			melee = 64,  0;
 		}
 	}
 	[aspect]
@@ -1084,15 +1177,17 @@
 		max_life = 2221.3;
 		mana = 7.4;
 		max_mana = 7.4;
-		[textures]	{0=b_c_ecm_sk-02;}
-        scale_base = 1.5;
+		[textures]
+		{
+			0 = b_c_ecm_sk-02;
+		}
+		scale_base = 1.5;
 	}
 	[attack]
 	{
 		damage_max = 241.6;
 		damage_min = 133.3;
 	}
-
 	[body]
 	{
 		armor_version = ecm_sk;
@@ -1125,13 +1220,19 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -1148,11 +1249,13 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_walk;
-				[anim_files] { 00=wl-02; }
+				[anim_files]
+				{
+					00 = wl-02;
+				}
 			}
 		}
 	}
-
 	[physics]
 	{
 		[break_particulate]
@@ -1167,9 +1270,8 @@
 	}
 	[common]
 	{
-		screen_name="Giant Skeleton Stalker";
+		screen_name = "Giant Skeleton Stalker";
 		membership = skeleton, monster;
-
 		[template_triggers]
 		{
 			[*]
@@ -1181,18 +1283,19 @@
 			}
 		}
 	}
-	[defend] { defense=801.5; }
+	[defend]
+	{
+		defense = 801.5;
+	}
 	[inventory]
 	{
 		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
-  				es_weapon_hand = sd_g_c_sd_1h_avg;
-            }
-
+				es_weapon_hand = sd_g_c_sd_1h_avg;
+			}
 			es_shield_hand = #shield/-no_mod/150-380;
-
 			[oneof*]
 			{
 				[oneof*]
@@ -1210,13 +1313,12 @@
 					piles = 3 - 5;
 				}
 			}
-         }
-     }
-    [mind]
+		}
+	}
+	[mind]
 	{
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?still			= false;
-
 		melee_engage_range = 14.0;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
@@ -1232,10 +1334,10 @@
 	{
 		[skills]
 		{
-			strength =  31.8, 0;
-			intelligence =  7.8, 0;
-			dexterity =  18.7, 0;
-			melee =  50,  0;
+			strength = 31.8, 0;
+			intelligence = 7.8, 0;
+			dexterity = 18.7, 0;
+			melee = 50,  0;
 		}
 	}
 	[aspect]
@@ -1245,8 +1347,11 @@
 		max_life = 1270;
 		mana = 276;
 		max_mana = 276;
-		[textures]	{0=b_c_ecm_sk-02;}
-        scale_base = 1.25;
+		[textures]
+		{
+			0 = b_c_ecm_sk-02;
+		}
+		scale_base = 1.25;
 	}
 	[attack]
 	{
@@ -1256,15 +1361,14 @@
 	[common]
 	{
 		membership = skeleton, monster;
-
 		[template_triggers]
 		{
 			[*]
 			{
 				single_shot = true;
 				no_trig_bits = true;
-				condition*	= receive_world_message("we_enemy_spotted");
-				action* 	= call_sfx_script("unique_light_red(sgx)");
+				condition* = receive_world_message("we_enemy_spotted");
+				action* = call_sfx_script("unique_light_red(sgx)");
 			}
 		}
 	}
@@ -1280,8 +1384,14 @@
 			frag_glb_bone_dirty_06 = 1;
 		}
 	}
-	[common] { screen_name="Lord Hovart"; }
-	[defend] { defense=600.5; }
+	[common]
+	{
+		screen_name = "Lord Hovart";
+	}
+	[defend]
+	{
+		defense = 600.5;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -1289,23 +1399,22 @@
 			es_weapon_hand = ax_g_c_1h2b_avg;
 			es_shield_hand = #shield/-no_mod/50-70;
 			es_chest = gen_bd_un_bl_f_g_c_blood;
-
 			[all*]
 			{
 				[all*]
 				{
-       				chance = 0.05;
-            	    il_main = #spell/43-62;
+					chance = 0.05;
+					il_main = #spell/43-62;
 				}
 				[oneof*]
 				{
 					chance = 0.50;
 					il_main = #weapon/160-190;
 					il_main = #armor/370-400;
-   				    il_main = potion_health_large;
-				    il_main = potion_mana_large;
-	    		}
-    			[gold*]
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
+				}
+				[gold*]
 				{
 					max = 253824;
 					min = 212868;
@@ -1313,15 +1422,13 @@
 			}
 		}
 	}
-    [mind]
+	[mind]
 	{
 		job_travel_distance_limit = 10;
 		melee_engage_range = 8.0;
 		on_job_reached_travel_distance_abort_attack = true;
-		ranged_engage_range							= 8.0;
-		sight_range									= 14.0;
-		jat_fidget									= world\ai\jobs\common\job_fidget.skrit;
+		ranged_engage_range = 8.0;
+		sight_range = 14.0;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 	}
-
-
 }

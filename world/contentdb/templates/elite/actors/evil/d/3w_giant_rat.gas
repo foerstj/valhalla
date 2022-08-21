@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  31.7, 0;
-			intelligence =  3.4, 0;
-			dexterity =  26, 0;
-			melee =  93,  0;
+			strength = 31.7, 0;
+			intelligence = 3.4, 0;
+			dexterity = 26, 0;
+			melee = 93,  0;
 		}
 	}
 	[aspect]
@@ -20,7 +20,7 @@
 		max_life = 650.7;
 		mana = 42.7;
 		material = teeth;
-        max_mana = 42.7;
+		max_mana = 42.7;
 		model = m_c_edm_gr_pos_1;
 		[voice]
 		{
@@ -68,42 +68,61 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[common]
-	{	screen_name="Giant Rat";
+	{
+		screen_name = "Giant Rat";
 		membership = rat, monster;
 	}
-	[defend] { defense=405.3; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 405.3;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -114,12 +133,10 @@
 	}
 	[mind]
 	{
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true;
-
-		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?run_chance 					= 1.0;
-
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social				= 0.8
 			&social_limit		= 2
@@ -129,7 +146,6 @@
 			&approach_dist		= 1.75
 			&friends			= "rat"
 			&still				= false;
-
 		melee_engage_range = 14.0;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -152,9 +168,10 @@
 			frag_glb_generic_08 = 1;
 		}
 	}
-	[water_effects] {}
+	[water_effects]
+	{
+	}
 }
-
 [t:template,n:3W_giant_rat_boss_01]
 {
 	category_name = "3W_evil_d";
@@ -164,10 +181,10 @@
 	{
 		[skills]
 		{
-			strength 	 =  40.8, 0;
-			intelligence =  3.4, 0;
-			dexterity	 =  31.8, 0;
-			melee 	 	 =  95,  0;
+			strength = 40.8, 0;
+			intelligence = 3.4, 0;
+			dexterity = 31.8, 0;
+			melee = 95,  0;
 		}
 	}
 	[aspect]
@@ -177,9 +194,12 @@
 		max_life = 1013.3;
 		mana = 42.7;
 		material = teeth;
-        max_mana = 42.7;
+		max_mana = 42.7;
 		model = m_c_edm_gr_pos_1;
-		textures:0 = b_c_edm_gr-02;
+		[textures]
+		{
+			0 = b_c_edm_gr-02;
+		}
 		[voice]
 		{
 			[die]
@@ -226,36 +246,52 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[common]
-	{	screen_name="Monstrous Rat";
+	{
+		screen_name = "Monstrous Rat";
 		membership = rat,monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
@@ -268,10 +304,13 @@
 			}
 		}
 	}
-	[defend] { defense=598.7; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 598.7;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -282,9 +321,8 @@
 	}
 	[mind]
 	{
-		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?run_chance 					= 1.0;
-
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social				= 0.8
 			&move_distance		= 3.00
@@ -293,11 +331,9 @@
 			&approach_dist		= 1.75
 			&friends			= "rat"
 			&still				= false;
-
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party			= true
 			&party_template						= "party_giant_rat_boss";
-
 		melee_engage_range = 14.0;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -320,5 +356,7 @@
 			frag_glb_generic_08 = 1;
 		}
 	}
-	[water_effects] {}
+	[water_effects]
+	{
+	}
 }

@@ -7,22 +7,30 @@
 	{
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_lava_imp; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_lava_imp_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_lava_imp;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_lava_imp_SED;
+			}
 		}
 	}
 	[body]
 	{
-        min_move_velocity = 3.000000;
-        avg_move_velocity = 6.000000;
+		min_move_velocity = 3.000000;
+		avg_move_velocity = 6.000000;
 		[bone_translator]
 		{
-			body_anterior 	= bip01_head;
-			body_mid 		= bip01_spine2;
-			body_posterior 	= bip01_pelvis;
-			kill_bone 		= bip01_spine2;
-			shield_bone 	= Bip01_L_Hand;
-			weapon_bone 	= Bip01_R_Hand;
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
 		}
 		[chore_dictionary]
 		{
@@ -33,9 +41,9 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
-					02=at-03;
+					00 = at;
+					01 = at-02;
+					02 = at-03;
 				}
 			}
 			[chore_magic]
@@ -44,26 +52,35 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
+					00 = at;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_misc]
 			{
@@ -79,13 +96,16 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Lava Imp";
+		screen_name = "Lava Imp";
 	}
 	[mind]
 	{
@@ -103,10 +123,10 @@
 	{
 		[skills]
 		{
-			strength = 		57.8, 0;
-			intelligence = 	14.8, 0;
-			dexterity = 	22.8, 0;
-			melee =  		78, 0;
+			strength = 57.8, 0;
+			intelligence = 14.8, 0;
+			dexterity = 22.8, 0;
+			melee = 78, 0;
 		}
 	}
 	[aspect]
@@ -117,7 +137,10 @@
 		mana = 24.2;
 		max_mana = 24.2;
 		model = m_c_edm_li_pos_1;
-		[textures] { 0=b_c_edm_li; }
+		[textures]
+		{
+			0 = b_c_edm_li;
+		}
 	}
 	[attack]
 	{
@@ -127,13 +150,16 @@
 	}
 	[common]
 	{
-		screen_name="Lava Imp";
+		screen_name = "Lava Imp";
 		membership = monster, party_lava_imp_02;
 	}
-	[defend] { defense=917.3; }
+	[defend]
+	{
+		defense = 917.3;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -141,9 +167,9 @@
 				{
 					chance = 0.35;
 					il_main = #*/207-258;
-	                il_main = #spell/78-100;
-   				    il_main = potion_health_super;
-				    il_main = potion_mana_super;
+					il_main = #spell/78-100;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[gold*]
 				{
@@ -152,13 +178,12 @@
 					min = 137305;
 				}
 			}
-         }
+		}
 	}
 	[mind]
 	{
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		 = true;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -174,10 +199,10 @@
 	{
 		[skills]
 		{
-			strength = 		50, 0;
-			intelligence = 	18.5, 0;
-			dexterity = 	25.7, 0;
-			combat_magic = 	78, 0;
+			strength = 50, 0;
+			intelligence = 18.5, 0;
+			dexterity = 25.7, 0;
+			combat_magic = 78, 0;
 		}
 	}
 	[aspect]
@@ -188,13 +213,15 @@
 		mana = 27.7;
 		max_mana = 27.7;
 		model = m_c_edm_li_pos_2;
-		[textures] { 0=b_c_edm_li-02; }
+		[textures]
+		{
+			0 = b_c_edm_li-02;
+		}
 	}
 	[common]
 	{
-		screen_name="Lava Runner";
+		screen_name = "Lava Runner";
 	}
-
 	[attack]
 	{
 		attack_range = 0.5;
@@ -203,12 +230,18 @@
 		damage_bonus_min_cmagic = 112;
 		damage_bonus_max_cmagic = 153;
 	}
-	[defend] { defense=929.4; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_lava_imp_bullets; }
-    	[pcontent]
+		defense = 929.4;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_lava_imp_bullets;
+		}
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -221,9 +254,9 @@
 				{
 					chance = 0.35;
 					il_main = #*/207-258;
-	                il_main = #spell/78-100;
-   				    il_main = potion_health_super;
-				    il_main = potion_mana_super;
+					il_main = #spell/78-100;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[gold*]
 				{
@@ -236,11 +269,10 @@
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -252,21 +284,18 @@
 	category_name = "2W_evil_d";
 	doc = "2W_lava_imp_02";
 	specializes = 2W_lava_imp_02_base;
-
 	[common]
 	{
 		membership = monster, party_lava_imp_02;
 	}
 	[mind]
 	{
-		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party	= true
 			&actor_joins_existing_party	= true
 			&party_template				= "party_lava_imp_02";
 	}
-
 }
-
 [t:template,n:2W_lava_imp_02_reveal]
 {
 	category_name = "2W_evil_d";
@@ -292,7 +321,6 @@
 		}
 	}
 }
-
 [t:template,n:2W_lava_imp_02_reveal_act]
 {
 	category_name = "2W_evil_d";
@@ -300,11 +328,11 @@
 	specializes = 2W_lava_imp_02_base;
 	[mind]
 	{
-		jat_startup 					= world\ai\jobs\common\job_startup_reveal.skrit
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?activate					= true
 			&invisible					= true;
-    	sight_origin_height = 1;
-    	actor_auto_fidgets = false;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
 	}
 	[common]
 	{
@@ -319,9 +347,6 @@
 		}
 	}
 }
-
-
-
 [t:template,n:2W_lava_imp_03_base]
 {
 	category_name = "2W_evil_d";
@@ -331,10 +356,10 @@
 	{
 		[skills]
 		{
-			strength = 		61.6, 0;
-			intelligence = 	18.4, 0;
-			dexterity = 	28.2, 0;
-			combat_magic = 	80, 0;
+			strength = 61.6, 0;
+			intelligence = 18.4, 0;
+			dexterity = 28.2, 0;
+			combat_magic = 80, 0;
 		}
 	}
 	[aspect]
@@ -345,9 +370,11 @@
 		mana = 17;
 		max_mana = 17;
 		model = m_c_edm_li_pos_3;
-		[textures] { 0=b_c_edm_li-03; }
+		[textures]
+		{
+			0 = b_c_edm_li-03;
+		}
 	}
-
 	[attack]
 	{
 		attack_range = 0.5;
@@ -358,14 +385,19 @@
 	}
 	[common]
 	{
-		screen_name="Lava Mage";
+		screen_name = "Lava Mage";
 	}
-	[defend] { defense=962.8; }
+	[defend]
+	{
+		defense = 962.8;
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_lava_imp_ball; }
-
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_lava_imp_ball;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -374,9 +406,9 @@
 				{
 					chance = 0.35;
 					il_main = #*/203-253;
-	                il_main = #cmagic/76-107;
-   				    il_main = potion_health_super;
-				    il_main = potion_mana_super;
+					il_main = #cmagic/76-107;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[gold*]
 				{
@@ -389,11 +421,10 @@
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -405,21 +436,18 @@
 	category_name = "2W_evil_d";
 	doc = "2W_lava_imp_03";
 	specializes = 2W_lava_imp_03_base;
-
 	[common]
 	{
 		membership = monster, party_lava_imp_03;
 	}
 	[mind]
 	{
-		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party	= true
 			&actor_joins_existing_party	= true
 			&party_template				= "party_lava_imp_03";
 	}
-
 }
-
 [t:template,n:2W_lava_imp_03_reveal]
 {
 	category_name = "2W_evil_d";
@@ -452,11 +480,11 @@
 	specializes = 2W_lava_imp_03_base;
 	[mind]
 	{
-		jat_startup 					= world\ai\jobs\common\job_startup_reveal.skrit
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?activate					= true
 			&invisible					= true;
-    	sight_origin_height = 1;
-    	actor_auto_fidgets = false;
+		sight_origin_height = 1;
+		actor_auto_fidgets = false;
 	}
 	[common]
 	{
@@ -476,11 +504,17 @@
 	category_name = "2W_evil_d";
 	doc = "[summon] lava_imp_03";
 	specializes = 2W_lava_imp_03_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_lava_imp_ball; }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_lava_imp_ball;
+		}
 		[pcontent]
 		{
 			[gold*]
@@ -489,14 +523,17 @@
 			}
 		}
 	}
-	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	}
 	[physics]
 	{
 		explode_when_killed = true;
 		break_effect = fairy_explosion;
 		gib_gore_good = true;
 	}
-	[self_destruct] 
+	[self_destruct]
 	{
 		delete_time = 20.0;
 		explode = true;
@@ -511,10 +548,10 @@
 	{
 		[skills]
 		{
-			strength = 		52.1, 0;
-			intelligence = 	22, 0;
-			dexterity = 	28.1, 0;
-			melee =  		77, 0;
+			strength = 52.1, 0;
+			intelligence = 22, 0;
+			dexterity = 28.1, 0;
+			melee = 77, 0;
 		}
 	}
 	[aspect]
@@ -525,7 +562,10 @@
 		mana = 16.9;
 		max_mana = 16.9;
 		model = m_c_edm_li_pos_4;
-		[textures] { 0=b_c_edm_li-04; }
+		[textures]
+		{
+			0 = b_c_edm_li-04;
+		}
 	}
 	[attack]
 	{
@@ -535,23 +575,26 @@
 	}
 	[common]
 	{
-		screen_name="Lava Horror";
+		screen_name = "Lava Horror";
 		membership = monster, party_lava_imp_03;
 	}
-	[defend] { defense=1001; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 1001;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.25;
 					il_main = #*/201-251;
-	                il_main = #cmagic/76-106;
-   				    il_main = potion_health_super;
-				    il_main = potion_mana_super;
+					il_main = #cmagic/76-106;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[gold*]
 				{
@@ -561,12 +604,11 @@
 				}
 			}
 		}
-    }
+	}
 	[mind]
 	{
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		 = true;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -579,13 +621,15 @@
 	doc = "2W_lava_imp_04";
 	specializes = 2W_lava_imp_04_base;
 }
-	
 [t:template,n:2W_lava_imp_04_summon]
 {
 	category_name = "2W_evil_d";
 	doc = "[summon] lava_imp_04";
 	specializes = 2W_lava_imp_04_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -596,20 +640,22 @@
 			}
 		}
 	}
-	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	}
 	[physics]
 	{
 		explode_when_killed = true;
 		break_effect = fairy_explosion;
 		gib_gore_good = true;
 	}
-	[self_destruct] 
+	[self_destruct]
 	{
 		delete_time = 20.0;
 		explode = true;
 	}
 }
-
 [t:template,n:2W_sand_ripper]
 {
 	category_name = "2W_evil_d";
@@ -619,10 +665,10 @@
 	{
 		[skills]
 		{
-			strength = 		21.9, 0;
-			intelligence = 	12.6, 0;
-			dexterity = 	18.1, 0;
-			melee =  		70, 0;
+			strength = 21.9, 0;
+			intelligence = 12.6, 0;
+			dexterity = 18.1, 0;
+			melee = 70, 0;
 		}
 	}
 	[aspect]
@@ -633,10 +679,17 @@
 		mana = 27;
 		max_mana = 27;
 		model = m_c_edm_li_pos_1;
-		[textures] { 0=b_c_edm_li-05; }
+		[textures]
+		{
+			0 = b_c_edm_li-05;
+		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_sand_ripper; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_sand_ripper;
+			}
 		}
 	}
 	[attack]
@@ -645,25 +698,31 @@
 		damage_max = 297.5;
 		damage_min = 208.6;
 	}
-	[common] { screen_name="Sand Ripper"; }
-	[defend] { defense=610.5; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Sand Ripper";
+	}
+	[defend]
+	{
+		defense = 610.5;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.25;
 					il_main = #*/75-219;
-	                il_main = #nmagic/29-46;
-                	il_main = #cmagic/29-46;
-    			}
-                [gold*]
+					il_main = #nmagic/29-46;
+					il_main = #cmagic/29-46;
+				}
+				[gold*]
 				{
 					chance = 0.125;
-                    max = 187097;
+					max = 187097;
 					min = 161155;
 				}
 			}
@@ -672,7 +731,6 @@
 	[mind]
 	{
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -688,10 +746,10 @@
 	{
 		[skills]
 		{
-			strength = 		21.9, 0;
-			intelligence = 	15.2, 0;
-			dexterity = 	21.1, 0;
-			combat_magic = 	72, 0;
+			strength = 21.9, 0;
+			intelligence = 15.2, 0;
+			dexterity = 21.1, 0;
+			combat_magic = 72, 0;
 		}
 	}
 	[aspect]
@@ -702,7 +760,10 @@
 		mana = 30.9;
 		max_mana = 30.9;
 		model = m_c_edm_li_pos_2;
-		[textures] { 0=b_c_edm_li-06; }
+		[textures]
+		{
+			0 = b_c_edm_li-06;
+		}
 	}
 	[attack]
 	{
@@ -712,27 +773,36 @@
 		damage_bonus_min_cmagic = 111;
 		damage_bonus_max_cmagic = 156;
 	}
-	[common] { screen_name="Sand Mage"; }
-	[defend] { defense=709; }
-   	[inventory]
+	[common]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_sand_mage_blast; }
-    	[pcontent]
+		screen_name = "Sand Mage";
+	}
+	[defend]
+	{
+		defense = 709;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
 		{
-   			[oneof*]
+			il_active_primary_spell = spell_sand_mage_blast;
+		}
+		[pcontent]
+		{
+			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.25;
 					il_main = #*/150-219;
-               		il_main = #nmagic/87-106;
-               		il_main = #cmagic/87-106;
+					il_main = #nmagic/87-106;
+					il_main = #cmagic/87-106;
 				}
 				[gold*]
 				{
 					chance = 0.125;
-                    max = 187097;
+					max = 187097;
 					min = 161155;
 				}
 			}
@@ -740,17 +810,14 @@
 	}
 	[mind]
 	{
-		jat_brain					 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party = true
 			&party_template			 = "party_sand_mage";
-
-		jat_fidget					 = world\ai\jobs\common\job_fidget.skrit;
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -763,7 +830,6 @@
 	doc = "2W_sand mage";
 	specializes = 2W_sand_mage_base;
 }
-
 [t:template,n:2W_sand_mage_reveal]
 {
 	category_name = "2W_evil_d";
@@ -771,7 +837,7 @@
 	specializes = 2W_sand_mage_base;
 	[mind]
 	{
-		jat_brain	= world\ai\jobs\common\brain_hero.skrit;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible = true;
 		sight_origin_height = 1;
@@ -799,10 +865,10 @@
 	{
 		[skills]
 		{
-			strength = 		24.9, 0;
-			intelligence = 	12.6, 0;
-			dexterity = 	17.9, 0;
-			melee =  		70, 0;
+			strength = 24.9, 0;
+			intelligence = 12.6, 0;
+			dexterity = 17.9, 0;
+			melee = 70, 0;
 		}
 	}
 	[aspect]
@@ -813,7 +879,10 @@
 		mana = 18.9;
 		max_mana = 18.9;
 		model = m_c_edm_li_pos_3;
-		[textures] { 0=b_c_edm_li-07; }
+		[textures]
+		{
+			0 = b_c_edm_li-07;
+		}
 	}
 	[attack]
 	{
@@ -823,15 +892,18 @@
 	}
 	[common]
 	{
-		screen_name="Sand Basher";
+		screen_name = "Sand Basher";
 		membership = monster, party_sand_mage;
 	}
-	[defend] { defense=714; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 714;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
@@ -847,14 +919,11 @@
 			}
 		}
 	}
-
 	[mind]
 	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true;
-
-		jat_fidget							= world\ai\jobs\common\job_fidget.skrit;
-
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -866,13 +935,16 @@
 	category_name = "2W_evil_d";
 	doc = "2W_sand_basher";
 	specializes = 2W_sand_basher_base;
-}	
+}
 [t:template,n:2W_sand_basher_summon]
 {
 	category_name = "2W_evil_d";
 	doc = "[summon] sand_basher";
 	specializes = 2W_sand_basher_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -883,5 +955,8 @@
 			}
 		}
 	}
-	mind:jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	}
 }

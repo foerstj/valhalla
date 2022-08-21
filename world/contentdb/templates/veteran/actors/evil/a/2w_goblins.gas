@@ -8,10 +8,26 @@
 		model = m_c_eam_ggt_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_goblin_SED;	}
-			[hit_critical]	{ priority = low; * = s_e_hit_goblin_SED;	}
-			[hit_glance]	{ priority = low; * = s_e_hit_goblin_SED;	}
-			[hit_solid]		{ priority = low; * = s_e_hit_goblin_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_goblin_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_goblin_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_goblin_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_goblin_SED;
+			}
 		}
 	}
 	[body]
@@ -45,35 +61,47 @@
 			{
 				chore_stances = 1;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 1;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 1;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 1;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 		[weapon_scales]
 		{
-			as_single_melee	= 0.75, 0.75, 0.75;
+			as_single_melee = 0.75, 0.75, 0.75;
 		}
 	}
 	[mind]
 	{
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious	= 0.65
 			&meander	= true
 			&interest	= interest
@@ -89,10 +117,10 @@
 	{
 		[skills]
 		{
-			strength =  	14.2, 0;
-			intelligence =  	16, 0;
-			dexterity =  	18.7, 0;
-			melee =  		56,  0;
+			strength = 14.2, 0;
+			intelligence = 16, 0;
+			dexterity = 18.7, 0;
+			melee = 56,  0;
 		}
 	}
 	[aspect]
@@ -111,14 +139,22 @@
 		damage_max = 142.8;
 		damage_min = 99.6;
 	}
-	[common] { screen_name="Goblin Grunt"; }
-	[defend] { defense=391.4; }
+	[common]
+	{
+		screen_name = "Goblin Grunt";
+	}
+	[defend]
+	{
+		defense = 391.4;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
-            [oneof*] { es_weapon_hand = hm_g_c_1h1m_low; }
-
+			[oneof*]
+			{
+				es_weapon_hand = hm_g_c_1h1m_low;
+			}
 			[oneof*]
 			{
 				[oneof*]
@@ -126,26 +162,26 @@
 					chance = 0.2;
 					il_main = #*/127-202;
 					il_main = #armor/95-475;
-                	il_main = #nmagic/13-39;
+					il_main = #nmagic/13-39;
 					il_main = #cmagic/13-39;
-                }
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/142-223;
-	                il_main = #armor/-rare(1)/339-562;
-                    il_main = #*/-rare(1)/142-223;
-                }
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/142-223;
-	                il_main = #armor/-unique(2)/339-562;
-                    il_main = #*/-unique(2)/142-223;
-	            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/142-223;
+					il_main = #armor/-rare(1)/339-562;
+					il_main = #*/-rare(1)/142-223;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/142-223;
+					il_main = #armor/-unique(2)/339-562;
+					il_main = #*/-unique(2)/142-223;
+				}
 			}
 		}
-    }
+	}
 	[mind]
 	{
 		on_life_ratio_low_flee = true;
@@ -170,10 +206,10 @@
 	{
 		[skills]
 		{
-			strength =  	18.3, 0;
-			intelligence =  	14.7, 0;
-			dexterity =  	18.7, 0;
-			melee =  		59,  0;
+			strength = 18.3, 0;
+			intelligence = 14.7, 0;
+			dexterity = 18.7, 0;
+			melee = 59,  0;
 		}
 	}
 	[aspect]
@@ -185,7 +221,10 @@
 		max_mana = 56.5;
 		model = m_c_eam_ggt_pos_1;
 		scale_base = 1.2;
-		textures:0 = b_c_eam_ggd;
+		[textures]
+		{
+			0 = b_c_eam_ggd;
+		}
 	}
 	[attack]
 	{
@@ -193,57 +232,61 @@
 		damage_max = 300.2;
 		damage_min = 208.6;
 	}
-	[common] { screen_name="Goblin Guard"; }
-	[defend] { defense=519.8; }
+	[common]
+	{
+		screen_name = "Goblin Guard";
+	}
+	[defend]
+	{
+		defense = 519.8;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
 				es_weapon_hand = ss_g_c_bl_1h_avg;
-               	es_weapon_hand = mc_g_c_s_1h_avg;
-               	es_weapon_hand = sd_g_c_gl_1h_avg;
-               	es_weapon_hand = ax_g_c_1h2b_avg;
+				es_weapon_hand = mc_g_c_s_1h_avg;
+				es_weapon_hand = sd_g_c_gl_1h_avg;
+				es_weapon_hand = ax_g_c_1h2b_avg;
 			}
-
-            [oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = #*/127-207;
 					il_main = #armor/95-475;
-                	il_main = #nmagic/13-39;
-                	il_main = #cmagic/13-39;
+					il_main = #nmagic/13-39;
+					il_main = #cmagic/13-39;
 				}
-            	[oneof*]
-				{
-	        		chance = 0.004;
-	            	il_main = #weapon/-rare(1)/124-202;
-	            	il_main = #armor/-rare(1)/339-588;
-                	il_main = #*/-rare(1)/124-202;
-            	}
 				[oneof*]
 				{
-            		chance = 0.002;
-	            	il_main = #weapon/-unique(2)/124-202;
-	            	il_main = #armor/-unique(2)/339-588;
-                	il_main = #*/-unique(2)/124-202;
-                }
-	        }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/124-202;
+					il_main = #armor/-rare(1)/339-588;
+					il_main = #*/-rare(1)/124-202;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/124-202;
+					il_main = #armor/-unique(2)/339-588;
+					il_main = #*/-unique(2)/124-202;
+				}
+			}
 		}
-    }
+	}
 	[mind]
 	{
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious	= 0.4
 			&social		= 0.35
 			&meander	= true
 			&interest	= interest
 			&still		= false;
-
-		jat_attack_object_melee 			= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?run_chance 					= 1.0;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
@@ -251,4 +294,3 @@
 		sight_range = 14.0;
 	}
 }
-

@@ -8,9 +8,9 @@
 		portrait_icon = b_gui_ig_i_ic_c_bs;
 		[skills]
 		{
-			strength =  5, 0;
-			intelligence =  5, 0;
-			dexterity =  5, 0;
+			strength = 5, 0;
+			intelligence = 5, 0;
+			dexterity = 5, 0;
 		}
 	}
 	[aspect]
@@ -19,7 +19,10 @@
 		life = 1;
 		model = m_c_gbn_bk_pos_1;
 		scale_base = 0.85;
-		[textures] { 0=b_c_gbn_bs; }
+		[textures]
+		{
+			0 = b_c_gbn_bs;
+		}
 	}
 	[attack]
 	{
@@ -47,25 +50,37 @@
 			{
 				chore_stances = 0,2;
 				skrit = select_attack;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0,2;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,2;
 				skrit = select_transition;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0,2;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_misc]
 			{
@@ -80,13 +95,16 @@
 			{
 				chore_stances = 0,2;
 				skrit = select_walk;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Blacksmith";
+		screen_name = "Blacksmith";
 		[template_triggers]
 		{
 			[*]
@@ -96,7 +114,9 @@
 			}
 		}
 	}
-	[conversation]{}
+	[conversation]
+	{
+	}
 	[inventory]
 	{
 		[equipment]
@@ -108,7 +128,7 @@
 	[mind]
 	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 		melee_engage_range = 10;
 		personal_space_range = 0.7;
@@ -121,22 +141,29 @@
 	category_name = "2W_shopkeep";
 	doc = "2W_blacksmith, bt_r1";
 	specializes = 2W_base_npc_bs;
-	[actor]	{portrait_icon = b_gui_ig_i_ic_c_blacksmith;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_blacksmith;
+	}
 }
 [t:template,n:2W_blacksmith_moik_stourn]
 {
 	category_name = "2W_shopkeep";
 	doc = "blacksmith, hiroth (MP)";
 	specializes = 2W_base_npc_bs;
-	common:screen_name = "Blacksmith Moik Stourn";
+	[common]
+	{
+		screen_name = "Blacksmith Moik Stourn";
+	}
 	[aspect]
 	{
 		use_range = 1.0;
 		is_ghost_usable = TRUE;
 	}
-	
-	[actor]	{portrait_icon = b_gui_ig_i_ic_c_blacksmith;}
-
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_blacksmith;
+	}
 	[inventory]
 	{
 		[store_pcontent]
@@ -150,7 +177,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/444-510;
@@ -169,8 +195,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/59-445;
@@ -189,7 +213,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/59-445;
@@ -208,7 +231,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/59-445;
@@ -269,7 +291,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/198-227;
@@ -291,7 +312,7 @@
 			}
 		}
 	}
-    [respawn_shrine]
+	[respawn_shrine]
 	{
 	}
 	[store]
@@ -304,20 +325,28 @@
 	category_name = "2W_shopkeep";
 	doc = "blacksmith, elddim (MP)";
 	specializes = 2W_base_npc_bs;
-	[actor]	{portrait_icon = b_gui_ig_i_ic_c_foulton;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_foulton;
+	}
 	[aspect]
 	{
 		use_range = 1.0;
 		is_ghost_usable = TRUE;
 		model = m_c_gbn_bk_pos_1;
-		[textures] { 0=b_c_gbn_bs-02; }
+		[textures]
+		{
+			0 = b_c_gbn_bs-02;
+		}
 	}
-	common:screen_name = "Blacksmith Zabar Treseck";
+	[common]
+	{
+		screen_name = "Blacksmith Zabar Treseck";
+	}
 	[inventory]
 	{
 		[store_pcontent]
 		{
-
 			full_ratio = 1;
 			[armor]
 			{
@@ -390,7 +419,6 @@
 					max = 4;
 					min = 4;
 				}
-
 			}
 			[weapons]
 			{
@@ -434,16 +462,27 @@
 	category_name = "2W_shopkeep";
 	doc = "2W_blacksmith, nt_r1";
 	specializes = 2W_base_npc_bs;
-	[actor]	{portrait_icon = b_gui_ig_i_ic_c_foulton;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_foulton;
+	}
 	[aspect]
 	{
 		use_range = 1.0;
 		is_ghost_usable = TRUE;
 		model = m_c_gbn_bk_pos_1;
-		[textures] { 0=b_c_gbn_bs-02; }
+		[textures]
+		{
+			0 = b_c_gbn_bs-02;
+		}
 	}
-	[common] { screen_name = "Foulton"; }
-	[store] { }
+	[common]
+	{
+		screen_name = "Foulton";
+	}
+	[store]
+	{
+	}
 	[inventory]
 	{
 		[store_pcontent]
@@ -457,7 +496,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/138-240;
@@ -476,8 +514,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/18-240;
@@ -496,7 +532,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/18-240;
@@ -515,7 +550,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/18-240;
@@ -576,7 +610,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/80-103;
@@ -606,5 +639,3 @@
 		item_markup = 2;
 	}
 }
-
-

@@ -7,16 +7,16 @@
 	{
 		[skills]
 		{
-			strength =  	15, 0;
-			intelligence =  23.4, 0;
-			dexterity =  	17.7, 0;
-			combat_magic =  68, 0;
+			strength = 15, 0;
+			intelligence = 23.4, 0;
+			dexterity = 17.7, 0;
+			combat_magic = 68, 0;
 		}
 	}
 	[aspect]
 	{
-		is_invincible     = true;
-      	is_collidable   = false;
+		is_invincible = true;
+		is_collidable = false;
 		experience_value = 110000;
 		life = 352.1;
 		max_life = 352.1;
@@ -69,31 +69,46 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_misc]
 			{
@@ -107,16 +122,21 @@
 			}
 		}
 	}
-	[common] 
-	{ 
-		screen_name="Goblin Inventor"; 
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+	[common]
+	{
+		screen_name = "Goblin Inventor";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 	}
-	[conversation] { }
-	[defend] { defense=479.6; }
+	[conversation]
+	{
+	}
+	[defend]
+	{
+		defense = 479.6;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{

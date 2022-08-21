@@ -9,11 +9,31 @@
 		experience_value = 1035840;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_bandit; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_bandit_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_bandit_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_bandit_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_bandit_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_bandit;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_bandit_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_bandit_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_bandit_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_bandit_SED;
+			}
 		}
 	}
 	[guts_manager]
@@ -22,14 +42,16 @@
 	}
 	[common]
 	{
-		screen_name="Bandit";
-		// $ removed blood effect, it is now controlled with the guts manager. -ET
+		screen_name = "Bandit";
 	}
-	[defend] { defense=83; }
+	[defend]
+	{
+		defense = 83;
+	}
 	[inventory]
 	{
 		spew_equipped_kill_count = <ignore>;
-    	[pcontent]
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -68,7 +90,7 @@
 					extr = at-04;
 					qffg = dff;
 				}
-		 	  	[anim_durations]
+				[anim_durations]
 				{
 					fs0 = 1.250;
 					fs1 = 0.750;
@@ -85,13 +107,19 @@
 			{
 				chore_stances = 1;
 				skrit = simple_loop;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1,2,3,4,5,6,7,8;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -107,7 +135,10 @@
 			{
 				chore_stances = 0,5;
 				skrit = select_attack;
-				[anim_files] { 00=mg; }
+				[anim_files]
+				{
+					00 = mg;
+				}
 			}
 			[chore_misc]
 			{
@@ -125,7 +156,10 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6,7,8;
 				skrit = select_walk;
-				[anim_files] { 05=rl; }
+				[anim_files]
+				{
+					05 = rl;
+				}
 			}
 		}
 	}
@@ -136,11 +170,10 @@
 		melee_engage_range = 14.0;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
-        job_travel_distance_limit = 30;
-        on_job_reached_travel_distance_abort_attack = true;
+		job_travel_distance_limit = 30;
+		on_job_reached_travel_distance_abort_attack = true;
 	}
 }
-
 [t:template,n:3W_bandit_melee]
 {
 	doc = "3W_bandit_melee";
@@ -149,10 +182,10 @@
 	{
 		[skills]
 		{
-			strength =   47.2, 0;
-			intelligence =  16.2, 0;
-			dexterity =   26.2, 0;
-			melee =  98,  0;
+			strength = 47.2, 0;
+			intelligence = 16.2, 0;
+			dexterity = 26.2, 0;
+			melee = 98,  0;
 		}
 	}
 	[aspect]
@@ -161,8 +194,7 @@
 		max_life = 1659.1;
 		mana = 92.2;
 		max_mana = 92.2;
-   		experience_value = 1795300;
-
+		experience_value = 1795300;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_34;
@@ -180,20 +212,20 @@
 			[all*]
 			{
 				es_feet = bo_bo_le_light;
-                es_weapon_hand = sd_g_c_gl_1h_avg;
+				es_weapon_hand = sd_g_c_gl_1h_avg;
 			}
 			[oneof*]
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_super;
-				   il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[all*]
 				{
-       				chance = 0.02;
-	                il_main = #spell/37-55;
+					chance = 0.02;
+					il_main = #spell/37-55;
 				}
 				[oneof*]
 				{
@@ -201,20 +233,20 @@
 					il_main = #*/225-297;
 					il_main = #armor/134-677;
 				}
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/270-351;
-	                il_main = #armor/-rare(1)/664-1037;
-                    il_main = #*/-rare(1)/270-351;
-                }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/270-351;
-	                il_main = #armor/-unique(2)/664-1037;
-                    il_main = #*/-unique(2)/270-351;
-	            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/270-351;
+					il_main = #armor/-rare(1)/664-1037;
+					il_main = #*/-rare(1)/270-351;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/270-351;
+					il_main = #armor/-unique(2)/664-1037;
+					il_main = #*/-unique(2)/270-351;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -230,12 +262,15 @@
 		damage_max = 378.6;
 		damage_min = 258.1;
 	}
-   	[defend] { defense=864.1; }
-   	[mind]
-   	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+	[defend]
+	{
+		defense = 864.1;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party	= true;
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious		= 0.75
 			&interest		= interest
 			&meander		= true
@@ -250,10 +285,10 @@
 	{
 		[skills]
 		{
-			strength =   50.4, 0;
-			intelligence =  17.8, 0;
-			dexterity =   31, 0;
-			melee =  102,  0;
+			strength = 50.4, 0;
+			intelligence = 17.8, 0;
+			dexterity = 31, 0;
+			melee = 102,  0;
 		}
 	}
 	[aspect]
@@ -262,7 +297,7 @@
 		max_life = 1935.7;
 		mana = 92.2;
 		max_mana = 92.2;
-   		experience_value = 2323660;
+		experience_value = 2323660;
 		model = m_c_gah_fb_pos_a1;
 		[textures]
 		{
@@ -273,28 +308,26 @@
 	[common]
 	{
 		membership = monster, party_bandit_ranged, bandit;
-        screen_name = "Rogue Bandit";
+		screen_name = "Rogue Bandit";
 		[template_triggers]
 		{
 			[*]
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
-				no_trig_bits = true;		
+				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_blue(sgx)");
 			}
 		}
 	}
-
 	[inventory]
 	{
-
 		[pcontent]
 		{
 			[all*]
 			{
 				es_feet = bo_bo_le_light;
-                es_weapon_hand = sd_g_c_gl_1h_avg;
+				es_weapon_hand = sd_g_c_gl_1h_avg;
 			}
 			[oneof*]
 			{
@@ -304,20 +337,20 @@
 					il_main = #*/297-315;
 					il_main = #armor/922-1152;
 				}
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/338-401;
-	                il_main = #armor/-rare(1)/1042-1323;
-                    il_main = #*/-rare(1)/338-401;
-                }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/338-401;
-	                il_main = #armor/-unique(2)/1042-1323;
-                    il_main = #*/-unique(2)/338-401;
-	            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/338-401;
+					il_main = #armor/-rare(1)/1042-1323;
+					il_main = #*/-rare(1)/338-401;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/338-401;
+					il_main = #armor/-unique(2)/1042-1323;
+					il_main = #*/-unique(2)/338-401;
+				}
 				[gold*]
 				{
 					chance = 0.2;
@@ -335,24 +368,25 @@
 		damage_max = 459.7;
 		damage_min = 324.4;
 	}
-   	[defend] { defense=1495.5; }
-   	[mind]
-   	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+	[defend]
+	{
+		defense = 1495.5;
+	}
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party			= true
 			&actor_creates_own_party			= true
 			&form_party_on_friend_entered_ICZ	= true
 			&form_party_on_friend_entered_ICZ	= true
 			&party_template						= "party_bandit_ranged";
-
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious		= 0.75
 			&interest		= interest
 			&meander		= true
 			&still			= false;
 	}
 }
-
 [t:template,n:3W_bandit_ranged]
 {
 	doc = "3W_bandit_ranged";
@@ -361,10 +395,10 @@
 	{
 		[skills]
 		{
-			strength =   44.1, 0;
+			strength = 44.1, 0;
 			intelligence = 16.2, 0;
-			dexterity =   28.6, 0;
-			ranged =  97,  0;
+			dexterity = 28.6, 0;
+			ranged = 97,  0;
 		}
 	}
 	[aspect]
@@ -373,8 +407,7 @@
 		max_life = 1451.7;
 		mana = 92.2;
 		max_mana = 92.2;
-   		experience_value = 1571578;
-
+		experience_value = 1571578;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_34;
@@ -383,32 +416,32 @@
 	}
 	[common]
 	{
-        screen_name="Bandit Archer";
+		screen_name = "Bandit Archer";
 		membership = monster, party_bandit_ranged, bandit;
 	}
 	[inventory]
 	{
-        custom_head = m_c_gah_fb_hlmt_head-05;
-    	selected_active_location = IL_ACTIVE_RANGED_WEAPON;
+		custom_head = m_c_gah_fb_hlmt_head-05;
+		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
 		[pcontent]
 		{
 			[all*]
 			{
 				es_feet = bo_bo_le_light;
-                es_shield_hand = bw_g_c_c_l_r_avg;
+				es_shield_hand = bw_g_c_c_l_r_avg;
 			}
 			[oneof*]
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_super;
-				   il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[all*]
 				{
-	   				chance = 0.02;
-	                il_main = #spell/37-55;
+					chance = 0.02;
+					il_main = #spell/37-55;
 				}
 				[oneof*]
 				{
@@ -416,27 +449,27 @@
 					il_main = #*/225-297;
 					il_main = #armor/134-650;
 				}
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/270-351;
-	                il_main = #armor/-rare(1)/645-1037;
-                    il_main = #*/-rare(1)/270-351;
-                }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/270-351;
-	                il_main = #armor/-unique(2)/645-1037;
-                    il_main = #*/-unique(2)/270-351;
-	            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/270-351;
+					il_main = #armor/-rare(1)/645-1037;
+					il_main = #*/-rare(1)/270-351;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/270-351;
+					il_main = #armor/-unique(2)/645-1037;
+					il_main = #*/-unique(2)/270-351;
+				}
 				[gold*]
 				{
 					chance = 0.125;
 					max = 390784;
 					min = 326251;
 				}
-            }
+			}
 		}
 	}
 	[attack]
@@ -447,20 +480,21 @@
 		damage_bonus_min_ranged = 255;
 		damage_bonus_max_ranged = 403;
 	}
-	[defend] { defense=765; }
+	[defend]
+	{
+		defense = 765;
+	}
 	[mind]
-    {
-  		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party		= true
 			&actor_joins_existing_party		= true
 			&party_template					= "party_bandit_ranged";
-
-    	jat_fidget						= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
     		?social							= 0.35
     		&still							= false;
-    }
+	}
 }
-
 [t:template,n:3W_bandit_boss]
 {
 	doc = "3W_bandit_boss";
@@ -469,13 +503,12 @@
 	{
 		[skills]
 		{
-			strength =   66.1, 0;
+			strength = 66.1, 0;
 			intelligence = 24.3, 0;
-			dexterity =   33.4, 0;
-			melee =  108,  0;
+			dexterity = 33.4, 0;
+			melee = 108,  0;
 		}
 	}
-
 	[common]
 	{
 		screen_name = "Bandit Boss";
@@ -485,7 +518,7 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
-				no_trig_bits=true;
+				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
 			}
 		}
@@ -505,13 +538,13 @@
 	}
 	[inventory]
 	{
-        custom_head = m_c_gah_fb_hlmt_head-04;
+		custom_head = m_c_gah_fb_hlmt_head-04;
 		[pcontent]
 		{
 			[all*]
 			{
 				es_feet = bo_bo_le_light;
-                es_weapon_hand = ax_g_c_1h2b_avg;
+				es_weapon_hand = ax_g_c_1h2b_avg;
 			}
 			[all*]
 			{
@@ -520,18 +553,18 @@
 					il_main = #*/297-315;
 					il_main = #armor/922-1152;
 				}
-                [oneof*]
-				{
-	                il_main = #weapon/-rare(1)/338-401;
-	                il_main = #armor/-rare(1)/1042-1323;
-                    il_main = #*/-rare(1)/338-401;
-                }
 				[oneof*]
 				{
-	                il_main = #weapon/-unique(2)/338-401;
-	                il_main = #armor/-unique(2)/1042-1323;
-                    il_main = #*/-unique(2)/338-401;
-	            }
+					il_main = #weapon/-rare(1)/338-401;
+					il_main = #armor/-rare(1)/1042-1323;
+					il_main = #*/-rare(1)/338-401;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-unique(2)/338-401;
+					il_main = #armor/-unique(2)/1042-1323;
+					il_main = #*/-unique(2)/338-401;
+				}
 				[gold*]
 				{
 					max = 579902;
@@ -547,5 +580,8 @@
 		damage_max = 494.2;
 		damage_min = 371.2;
 	}
-	[defend] { defense=2179.9; }
+	[defend]
+	{
+		defense = 2179.9;
+	}
 }

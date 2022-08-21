@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  	57.3, 0;
-			intelligence =  7.3, 0;
-			dexterity =  	28.3, 0;
-            melee =         95, 0;
+			strength = 57.3, 0;
+			intelligence = 7.3, 0;
+			dexterity = 28.3, 0;
+			melee = 95, 0;
 		}
 	}
 	[aspect]
@@ -20,12 +20,20 @@
 		max_life = 3513.8;
 		mana = 26.2;
 		max_mana = 26.2;
-        scale_base = 1.45;
+		scale_base = 1.45;
 		model = m_c_edm_im_pos_1;
 		[voice]
 		{
-			[die]	{ priority = high; * = s_e_die_spider; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
 		}
 	}
 	[attack]
@@ -56,38 +64,56 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
+					00 = at;
+					01 = at-02;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Impaler"; }
-    [defend] { defense=1223.3; }
+	[common]
+	{
+		screen_name = "Impaler";
+	}
+	[defend]
+	{
+		defense = 1223.3;
+	}
 	[mind]
 	{
 		melee_engage_range = 14;
@@ -103,7 +129,7 @@
 		[break_particulate]
 		{
 			frag_glb_impaler_01 = 1;
-			frag_glb_impaler_02	= 1;
+			frag_glb_impaler_02 = 1;
 			frag_glb_impaler_03 = 3;
 			frag_glb_impaler_04 = 3;
 			frag_glb_impaler_05 = 4;
@@ -116,13 +142,15 @@
 	doc = "3W_impaler";
 	specializes = 3W_impaler_base;
 }
-
 [t:template,n:3W_impaler_summon]
 {
 	category_name = "3W_evil_d";
 	doc = "[summon] impaler";
 	specializes = 3W_impaler_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]

@@ -7,26 +7,42 @@
 	{
 		[skills]
 		{
-			strength =  60.5, 0;
-			intelligence =  6.7, 0;
-			dexterity =  28.2, 0;
-            melee =  101,  0;
+			strength = 60.5, 0;
+			intelligence = 6.7, 0;
+			dexterity = 28.2, 0;
+			melee = 101,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1663105;
 		life = 2374.7;
-        max_life = 2374.7;
-        mana = 46.2;
+		max_life = 2374.7;
+		mana = 46.2;
 		max_mana = 46.2;
 		model = m_c_edm_lt_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_lectar;		}
-			[hit_critical]	{ priority = low; * = s_e_hit_lectar_SED;	}
-			[hit_glance]	{ priority = low; * = s_e_hit_lectar_SED;	}
-			[hit_solid]		{ priority = low; * = s_e_hit_lectar_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_lectar;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_lectar_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_lectar_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_lectar_SED;
+			}
 		}
 	}
 	[attack]
@@ -64,39 +80,55 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Lectar"; }
-    [defend] { defense=765.6; }
+	[common]
+	{
+		screen_name = "Lectar";
+	}
+	[defend]
+	{
+		defense = 765.6;
+	}
 	[mind]
 	{
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-
 		melee_engage_range = 10;
 		personal_space_range = 0.7;
 		ranged_engage_range = 10.0;
 		sight_range = 10.0;
-		
 		sight_origin_height = 1.5;
 	}
 }

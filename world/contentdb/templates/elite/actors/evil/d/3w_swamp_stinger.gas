@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength = 		24.1, 0;
-			intelligence = 	6.4, 0;
-			dexterity = 	30.2, 0;
-			melee =  		87,  0;
+			strength = 24.1, 0;
+			intelligence = 6.4, 0;
+			dexterity = 30.2, 0;
+			melee = 87,  0;
 		}
 	}
 	[aspect]
@@ -23,8 +23,16 @@
 		model = m_c_edm_st_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_swamp_stinger; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_swamp_stinger;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
 		}
 	}
 	[attack]
@@ -62,47 +70,48 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Swamp Stinger";
-		//[template_triggers]
-		//{
-		//	[*]
-		//	{
-		//		action* = call_sfx_script("swamp_stinger_butt_propulsion");
-		//		condition* = receive_world_message("WE_ENTERED_WORLD");
-		//		single_shot = true;
-		//	}
-		//	[*]
-		//	{
-		//		action* = call_sfx_script("swamp_stinger_butt_puffs");
-		//		condition* = receive_world_message("we_anim_sfx",1);
-		//	}
-		//}
+		screen_name = "Swamp Stinger";
 	}
-	[defend] { defense=725.5; }
+	[defend]
+	{
+		defense = 725.5;
+	}
 	[mind]
 	{
 		melee_engage_range = 14;

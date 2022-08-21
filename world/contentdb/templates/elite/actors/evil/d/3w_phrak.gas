@@ -7,29 +7,52 @@
 	{
 		[skills]
 		{
-			strength =  6.3, 0;
-			intelligence =  1.8, 0;
-			dexterity =  33.1, 0;
-			melee =  88, 0;
+			strength = 6.3, 0;
+			intelligence = 1.8, 0;
+			dexterity = 33.1, 0;
+			melee = 88, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 242130;
 		life = 300;
-        max_life = 300;
-        mana = 178;
+		max_life = 300;
+		mana = 178;
 		max_mana = 178;
 		model = m_c_edm_st_pos_1;
 		scale_base = 0.55;
-		textures:0 = b_c_edm_ph;
-        [voice]
+		[textures]
 		{
-			[die]			{ priority = high; * = s_e_die_phrak; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_phrak_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_phrak_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_phrak_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_phrak_SED; }
+			0 = b_c_edm_ph;
+		}
+		[voice]
+		{
+			[die]
+			{
+				priority = high;
+				* = s_e_die_phrak;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_phrak_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_phrak_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_phrak_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_phrak_SED;
+			}
 		}
 	}
 	[attack]
@@ -77,40 +100,53 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Phrak"; }
+	[common]
+	{
+		screen_name = "Phrak";
+	}
 	[defend]
 	{
-		  defense = 890;
+		defense = 890;
 	}
-
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander	= true
 			&still		= false;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.4;
 		ranged_engage_range = 14.0;
@@ -131,27 +167,23 @@
 		}
 	}
 }
-
 [t:template,n:3W_phrak]
 {
 	category_name = "3W_evil_d";
 	doc = "3W_phrak";
 	specializes = 3W_base_phrak;
-
 	[common]
 	{
 		membership = phrak,monster;
 	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true
 			&guard							= true
 			&friends						= phrak;
 	}
-
 }
-
 [t:template,n:3W_phrak_large]
 {
 	category_name = "3W_evil_d";
@@ -161,17 +193,17 @@
 	{
 		[skills]
 		{
-			strength =  2.7, 0;
-			intelligence =  1.6, 0;
-			dexterity =  6.5, 0;
+			strength = 2.7, 0;
+			intelligence = 1.6, 0;
+			dexterity = 6.5, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 322840;
 		life = 7.3;
-        max_life = 7.3;
-        mana = 7.3;
+		max_life = 7.3;
+		mana = 7.3;
 		max_mana = 7.3;
 		scale_base = 1.05;
 	}
@@ -181,9 +213,11 @@
 		damage_max = 4;
 		damage_min = 3.3;
 	}
-	[common] { screen_name="Large Phrak"; }
+	[common]
+	{
+		screen_name = "Large Phrak";
+	}
 }
-
 [t:template,n:3W_phrak_piercer]
 {
 	category_name = "3W_evil_d";
@@ -193,21 +227,24 @@
 	{
 		[skills]
 		{
-			strength =  6.3, 0;
-			intelligence =  1.8, 0;
-			dexterity =  33.1, 0;
-			ranged =  88, 0;
+			strength = 6.3, 0;
+			intelligence = 1.8, 0;
+			dexterity = 33.1, 0;
+			ranged = 88, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 322840;
 		life = 180;
-        max_life = 180;
-        mana = 178;
+		max_life = 180;
+		mana = 178;
 		max_mana = 178;
 		scale_base = 0.55;
-		textures:0 = b_c_edm_ph-02;
+		[textures]
+		{
+			0 = b_c_edm_ph-02;
+		}
 	}
 	[attack]
 	{
@@ -219,29 +256,33 @@
 	}
 	[common]
 	{
-		screen_name="Phrak Piercer";
+		screen_name = "Phrak Piercer";
 		membership = phrak,monster;
 	}
-
-	[defend] { defense=890; }
+	[defend]
+	{
+		defense = 890;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_phrak_dart; }
+		[other]
+		{
+			il_active_primary_spell = spell_phrak_dart;
+		}
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true
 			&guard							= true
 			&friends						= phrak;
 	}
-		[physics]
+	[physics]
 	{
 		[break_particulate]
 		{
@@ -253,7 +294,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_phrak_piercer_boss_01]
 {
 	category_name = "3W_evil_d";
@@ -263,21 +303,24 @@
 	{
 		[skills]
 		{
-			strength =  25.2, 0;
-			intelligence =  1.8, 0;
-			dexterity =  63, 0;
-			ranged =  90, 0;
+			strength = 25.2, 0;
+			intelligence = 1.8, 0;
+			dexterity = 63, 0;
+			ranged = 90, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 448030;
 		life = 435;
-        max_life = 435;
-        mana = 178;
+		max_life = 435;
+		mana = 178;
 		max_mana = 178;
 		scale_base = 0.8;
-		textures:0 = b_c_edm_ph-03;
+		[textures]
+		{
+			0 = b_c_edm_ph-03;
+		}
 	}
 	[attack]
 	{
@@ -290,7 +333,7 @@
 	[common]
 	{
 		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
-		screen_name="Phrak Ballista";
+		screen_name = "Phrak Ballista";
 		[template_triggers]
 		{
 			[*]
@@ -302,37 +345,40 @@
 			}
 		}
 	}
-	[defend] { defense=1939.5; }
+	[defend]
+	{
+		defense = 1939.5;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_phrak_dart; }
-
+		[other]
+		{
+			il_active_primary_spell = spell_phrak_dart;
+		}
 		[pcontent]
 		{
 			[all*]
 			{
 				[gold*]
 				{
-					  max = 245697;
-					  min = 227624;
+					max = 245697;
+					min = 227624;
 				}
-                [all*]
+				[all*]
 				{
-                	il_main = #melee/204-250;
-                }
+					il_main = #melee/204-250;
+				}
 			}
 		}
 	}
-
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party		= true
 			&party_template					= "party_phrak_boss";
 	}
@@ -348,14 +394,11 @@
 		}
 	}
 }
-
-
 [t:template,n:3W_caged_phrak]
 {
 	category_name = "3W_bad";
 	doc = "3W_phrak caged";
 	specializes = 3W_base_phrak;
-
 	[body]
 	{
 		[chore_dictionary]
@@ -375,7 +418,10 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_misc]
 			{
@@ -391,19 +437,28 @@
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
@@ -423,18 +478,18 @@
 	{
 		[skills]
 		{
-			strength =  	14.9, 0;
-			intelligence =  3, 0;
-			dexterity =  	34.9, 0;
-            melee = 		89, 0;
+			strength = 14.9, 0;
+			intelligence = 3, 0;
+			dexterity = 34.9, 0;
+			melee = 89, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 2084000;
 		life = 565;
-        max_life = 565;
-        mana = 6.3;
+		max_life = 565;
+		mana = 6.3;
 		max_mana = 6.3;
 		scale_base = 0.40;
 	}
@@ -446,13 +501,16 @@
 	}
 	[common]
 	{
-		screen_name="Forest Phrak";
+		screen_name = "Forest Phrak";
 		membership = monster, party_spiked_dweller;
 	}
-    [defend] { defense=419; }
+	[defend]
+	{
+		defense = 419;
+	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true;
 	}
 }

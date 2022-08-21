@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  	18.9, 0;
-			intelligence =  	3.1, 0;
-			dexterity =  	6.5, 0;
-			melee =  		82,  0;
+			strength = 18.9, 0;
+			intelligence = 3.1, 0;
+			dexterity = 6.5, 0;
+			melee = 82,  0;
 		}
 	}
 	[aspect]
@@ -24,8 +24,16 @@
 		material = steel;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_proxo;				}
-			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_small_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_proxo;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_mechanoid_small_SED;
+			}
 		}
 	}
 	[attack]
@@ -54,31 +62,46 @@
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -87,23 +110,23 @@
 		start_msg = WE_ENTERED_WORLD;
 		stop_msg = WE_LEFT_WORLD;
 		stop_msg2 = WE_KILLED;
-
 		effect_name = "";
 		rep_effect_name = "proxo_blink";
-
 		repeat_rate = .3;
 		repeat_rate_max = .3;
-
 		run_once = true;
 	}
 	[common]
 	{
-		screen_name="Proxo";
+		screen_name = "Proxo";
 	}
-	[defend] { defense=181; }
+	[defend]
+	{
+		defense = 181;
+	}
 	[mind]
 	{
-		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander				= false
 			&still					= false;
 		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_suicide_bomb.skrit;

@@ -5,9 +5,12 @@
 	specializes = npc;
 	[aspect]
 	{
-		model=m_c_eam_dg_pos_1;
+		model = m_c_eam_dg_pos_1;
 	}
-	[actor] { portrait_icon=b_gui_ig_i_ic_c_fg_blonde; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_fg_blonde;
+	}
 	[body]
 	{
 		avg_move_velocity = 2.000000;
@@ -37,25 +40,37 @@
 			{
 				chore_stances = 0,1,6;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1,6;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0,1,6;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0,1,6;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_misc]
 			{
@@ -64,30 +79,39 @@
 				[anim_files]
 				{
 					tak1 = a_c_eam_dg_fs0_dsf-04;
-                    tak2 = a_c_eam_dg_fs0_dsf-05;
+					tak2 = a_c_eam_dg_fs0_dsf-05;
 				}
 			}
-    	}
-    }
+		}
+	}
 	[mind]
 	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
-    }
+		actor_may_be_attacked = false;
+	}
 }
 [t:template,n:2W_nonataya]
 {
-    category_name = "2W_shopkeep";
+	category_name = "2W_shopkeep";
 	doc = "2W_nonataya";
 	specializes = 2W_base_npc_dg;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_no; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_no;
+	}
 	[aspect]
 	{
 		use_range = 1.0;
 		is_ghost_usable = TRUE;
-		[textures] { 0 = b_c_eam_dg-04; }
+		[textures]
+		{
+			0 = b_c_eam_dg-04;
+		}
 	}
-	[common] { screen_name="Nonataya"; }
+	[common]
+	{
+		screen_name = "Nonataya";
+	}
 	[conversation]
 	{
 	}
@@ -104,7 +128,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/409-477;
@@ -123,8 +146,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/55-477;
@@ -143,7 +164,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/55-477;
@@ -162,7 +182,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/55-477;
@@ -223,7 +242,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/184-212;
@@ -243,7 +261,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -261,7 +278,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/128-242;
 					max = 4;
@@ -293,31 +310,40 @@
 			potion_rejuvenation_small = 1;
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
 [t:template,n:2W_craftsman_orelle]
 {
-    category_name = "2W_shopkeep";
+	category_name = "2W_shopkeep";
 	doc = "craftsman, quillrabe (MP)";
 	specializes = 2W_base_npc_dg;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_orellean; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_orellean;
+	}
 	[aspect]
 	{
 		use_range = 1.0;
 		is_ghost_usable = TRUE;
-		[textures] { 0=b_c_eam_dg-05; }
+		[textures]
+		{
+			0 = b_c_eam_dg-05;
+		}
 	}
-	[common] { screen_name="Craftsman Orellean"; }
-	[conversation] { }
+	[common]
+	{
+		screen_name = "Craftsman Orellean";
+	}
+	[conversation]
+	{
+	}
 	[inventory]
 	{
 		[store_pcontent]
@@ -331,7 +357,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/408-476;
@@ -350,8 +375,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/55-476;
@@ -370,7 +393,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/55-476;
@@ -389,7 +411,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/55-476;
@@ -450,7 +471,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/184-212;
@@ -472,7 +492,7 @@
 			}
 		}
 	}
-    [respawn_shrine]
+	[respawn_shrine]
 	{
 	}
 	[store]
@@ -482,18 +502,29 @@
 }
 [t:template,n:2W_shaman_dreven]
 {
-    category_name = "2W_shopkeep";
+	category_name = "2W_shopkeep";
 	doc = "shaman, quillrabe (MP)";
 	specializes = 2W_base_npc_dg;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_no; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_no;
+	}
 	[aspect]
 	{
-		[textures] { 0=b_c_eam_dg-04; }
+		[textures]
+		{
+			0 = b_c_eam_dg-04;
+		}
 		is_ghost_usable = true;
 		use_range = 1.0;
 	}
-	[common] { screen_name="Shaman Drevenus"; }
-	[conversation] { }
+	[common]
+	{
+		screen_name = "Shaman Drevenus";
+	}
+	[conversation]
+	{
+	}
 	[inventory]
 	{
 		[store_pcontent]
@@ -516,7 +547,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/124-237;
 					max = 6;
@@ -531,11 +562,12 @@
 			}
 		}
 	}
-	[respawn_shrine] { }
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
-
 		[item_restock]
 		{
 			potion_health_super = 5;
@@ -547,42 +579,60 @@
 			potion_rejuvenation_super = 1;
 			potion_rejuvenation_medium = 2;
 			potion_rejuvenation_large = 3;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
 [t:template,n:2W_mp_npc_droog_01]
 {
-    category_name = "2W_townsperson";
+	category_name = "2W_townsperson";
 	doc = "2W_mp_npc_droog_01";
 	specializes = 2W_base_npc_dg;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_no; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_no;
+	}
 	[aspect]
 	{
-		[textures] { 0 = b_c_eam_dg-04; }
+		[textures]
+		{
+			0 = b_c_eam_dg-04;
+		}
 	}
-	[common] { screen_name="Droog Villager"; }
+	[common]
+	{
+		screen_name = "Droog Villager";
+	}
 	[conversation]
 	{
 	}
 }
 [t:template,n:2W_mp_npc_droog_02]
 {
-    category_name = "2W_townsperson";
+	category_name = "2W_townsperson";
 	doc = "2W_mp_npc_droog_02";
 	specializes = 2W_base_npc_dg;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_orellean; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_orellean;
+	}
 	[aspect]
 	{
-		[textures] { 0=b_c_eam_dg-05; }
+		[textures]
+		{
+			0 = b_c_eam_dg-05;
+		}
 	}
-	[common] { screen_name="Droog Villager"; }
-	[conversation] { }
+	[common]
+	{
+		screen_name = "Droog Villager";
+	}
+	[conversation]
+	{
+	}
 }

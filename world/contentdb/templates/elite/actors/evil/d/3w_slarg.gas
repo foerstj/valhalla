@@ -8,10 +8,26 @@
 		model = m_c_edm_sl_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_slarg; }
-			[hit_critical]	{ priority = low; * = s_e_hit_slarg_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_slarg_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_slarg_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_slarg;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_slarg_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_slarg_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_slarg_SED;
+			}
 		}
 	}
 	[body]
@@ -52,25 +68,37 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -80,7 +108,7 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 10.0;
 		sight_range = 10.0;
-		sight_origin_height	= 1;
+		sight_origin_height = 1;
 	}
 	[water_effects]
 	{
@@ -99,18 +127,18 @@
 	{
 		[skills]
 		{
-			strength =  29.1, 0;
-			intelligence =  6.7, 0;
-			dexterity =  20.7, 0;
-            melee =  100,  0;
+			strength = 29.1, 0;
+			intelligence = 6.7, 0;
+			dexterity = 20.7, 0;
+			melee = 100,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1295567;
 		life = 1654.1;
-        max_life = 1654.1;
-        mana = 48.5;
+		max_life = 1654.1;
+		mana = 48.5;
 		max_mana = 48.5;
 	}
 	[attack]
@@ -119,11 +147,17 @@
 		damage_max = 359.9;
 		damage_min = 272.6;
 	}
-	[common] { screen_name="Slarg"; }
-    [defend] { defense=434.2; }
-    [mind]
-    {
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+	[common]
+	{
+		screen_name = "Slarg";
+	}
+	[defend]
+	{
+		defense = 434.2;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social		= 0.35
 			&meander	= false
 			&still		= false;
@@ -138,21 +172,24 @@
 	{
 		[skills]
 		{
-			strength =  	41.1, 0;
-			intelligence =  7.5, 0;
-			dexterity =  	24.2, 0;
-            ranged =  		106,  0;
+			strength = 41.1, 0;
+			intelligence = 7.5, 0;
+			dexterity = 24.2, 0;
+			ranged = 106,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 3593400;
 		life = 1305;
-        max_life = 1305;
-        mana = 24;
+		max_life = 1305;
+		mana = 24;
 		max_mana = 24;
 		scale_base = 1.20;
-		textures:0 = b_c_edm_sl-02;
+		[textures]
+		{
+			0 = b_c_edm_sl-02;
+		}
 	}
 	[attack]
 	{
@@ -162,23 +199,30 @@
 		damage_bonus_min_cmagic = 198;
 		damage_bonus_max_cmagic = 286;
 	}
-	[common] { screen_name="Spitter"; }
-    [defend] { defense=1248; }
-    [inventory]
+	[common]
+	{
+		screen_name = "Spitter";
+	}
+	[defend]
+	{
+		defense = 1248;
+	}
+	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_spitter_steam; }
+		[other]
+		{
+			il_active_primary_spell = spell_spitter_steam;
+		}
 	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander	= false
 			&still		= false;
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
-
 }

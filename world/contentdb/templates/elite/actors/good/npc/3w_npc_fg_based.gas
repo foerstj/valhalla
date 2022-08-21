@@ -83,10 +83,10 @@
 			}
 		}
 	}
-    [mind]
-    {
+	[mind]
+	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 	}
 }
 [t:template,n:3W_base_npc_fg_multiplayer]
@@ -151,7 +151,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/130-255;
 					max = 6;
@@ -177,14 +177,12 @@
 			potion_health_small = 30;
 			potion_mana_small = 30;
 			potion_rejuvenation_small = 5;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -242,7 +240,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/165-260;
 					max = 6;
@@ -271,14 +269,12 @@
 			potion_mana_super = 15;
 			potion_rejuvenation_large = 3;
 			potion_rejuvenation_super = 3;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -287,7 +283,10 @@
 	category_name = "3W_shopkeep";
 	doc = "priestess, meren (MP)";
 	specializes = 3W_base_npc_fg;
-	[actor] {portrait_icon = b_gui_ig_i_ic_c_prieve;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_prieve;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -334,7 +333,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/175-260;
 					max = 6;
@@ -355,7 +354,6 @@
 	[store]
 	{
 		item_markup = 2;
-
 		[item_restock]
 		{
 			potion_health_medium = 5;
@@ -366,14 +364,12 @@
 			potion_mana_super = 10;
 			potion_rejuvenation_large = 3;
 			potion_rejuvenation_super = 3;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -451,10 +447,10 @@
 			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
 		}
 	}
-    [mind]
-    {
+	[mind]
+	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 	}
 }
 [t:template,n:3W_guard_05]
@@ -491,10 +487,10 @@
 			es_weapon_hand = #sd_g_c_st_1h_avg:o_avg;
 		}
 	}
-    [mind]
-    {
+	[mind]
+	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 	}
 }
 [t:template,n:3W_gypsy_female_01]
@@ -593,7 +589,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/225-392;
@@ -612,8 +607,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/29-392;
@@ -632,7 +625,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/29-392;
@@ -651,7 +643,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/29-392;
@@ -712,7 +703,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/129-166;
@@ -732,7 +722,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -750,7 +739,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/145-260;
 					max = 4;
@@ -782,14 +771,12 @@
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 1;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -798,7 +785,10 @@
 	category_name = "3W_character";
 	doc = "3W_jewlynna";
 	specializes = 3W_base_npc_fg;
-	[actor]	{portrait_icon = b_gui_ig_i_ic_c_jewlynna;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_jewlynna;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -872,7 +862,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/74-92;
@@ -891,8 +880,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/18-92;
@@ -911,8 +898,6 @@
 					max = 4;
 					min = 4;
 				}
-
-
 				[all*]
 				{
 					il_main = #helm/18-92;
@@ -931,7 +916,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/18-92;
@@ -1011,7 +995,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -1023,7 +1006,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/200-260;
 					max = 4;
@@ -1055,14 +1038,12 @@
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 1;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -1071,7 +1052,10 @@
 	category_name = "3W_shopkeep";
 	doc = "mage, elddim (MP)";
 	specializes = 3W_base_npc_fg;
-	[actor]	{portrait_icon = b_gui_ig_i_ic_c_jewlynna;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_jewlynna;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -1148,7 +1132,6 @@
 			potion_rejuvenation_small = 2;
 			potion_rejuvenation_medium = 2;
 			potion_rejuvenation_large = 3;
-
 			spell_fireshot = 8;
 			spell_zap = 8;
 		}
@@ -1169,7 +1152,9 @@
 			1 = b_c_pos_a1_059;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Guard";
@@ -1195,8 +1180,8 @@
 	}
 	[mind]
 	{
-    	actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_attack = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -1216,7 +1201,9 @@
 			1 = b_c_pos_a1_059;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Barracks Guard";
@@ -1242,8 +1229,8 @@
 	}
 	[mind]
 	{
-    	actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_attack = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -1263,7 +1250,9 @@
 			1 = b_c_pos_b1_004;
 		}
 	}
-	[check_level] {}
+	[check_level]
+	{
+	}
 	[common]
 	{
 		screen_name = "Guard";
@@ -1288,7 +1277,7 @@
 	[mind]
 	{
 		actor_may_attack = true;
-        actor_may_be_attacked = true;
+		actor_may_be_attacked = true;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -1525,13 +1514,13 @@
 			es_feet = bo_bo_le_light;
 			es_chest = bd_ro_m_g_c_084;
 		}
-        [pcontent]
-        {
+		[pcontent]
+		{
 			[all*]
 			{
-    	        il_main = 3W_emitter_kylira_reward_mp;
+				il_main = 3W_emitter_kylira_reward_mp;
 			}
-        }
+		}
 	}
 }
 [t:template,n:3W_mp_townfolk_f_06]
@@ -1757,7 +1746,10 @@
 	category_name = "3W_character";
 	doc = "3W_mp_townfolk_female_08";
 	specializes = 3W_base_npc_fg;
-	[actor] {portrait_icon = b_gui_ig_i_ic_c_prieve;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_prieve;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -1851,7 +1843,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/510-595;
@@ -1870,8 +1861,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/68-595;
@@ -1890,7 +1879,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/68-595;
@@ -1909,7 +1897,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/68-595;
@@ -1970,7 +1957,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/229-265;
@@ -1990,7 +1976,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -2008,7 +1993,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/168-260;
 					max = 4;
@@ -2037,14 +2022,12 @@
 			potion_mana_super = 9;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 2;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -2120,7 +2103,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/201-345;
@@ -2139,8 +2121,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/94-345;
@@ -2159,8 +2139,6 @@
 					max = 4;
 					min = 4;
 				}
-
-
 				[all*]
 				{
 					il_main = #helm/94-345;
@@ -2179,7 +2157,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/94-345;
@@ -2276,7 +2253,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/155-261;
 					max = 4;
@@ -2308,14 +2285,12 @@
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 2;
 			potion_rejuvenation_super = 1;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
@@ -2364,7 +2339,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/312-543;
@@ -2383,8 +2357,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/41-543;
@@ -2403,7 +2375,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/41-543;
@@ -2422,7 +2393,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/41-543;
@@ -2483,7 +2453,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/174-223;
@@ -2518,7 +2487,10 @@
 	category_name = "3W_shopkeep";
 	doc = "sorceress, grescal (MP)";
 	specializes = 3W_base_npc_fg;
-	[actor]	{portrait_icon = b_gui_ig_i_ic_c_vielle;}
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_vielle;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -2565,7 +2537,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/175-260;
 					max = 6;
@@ -2586,7 +2558,6 @@
 	[store]
 	{
 		item_markup = 2;
-
 		[item_restock]
 		{
 			potion_health_large = 15;
@@ -2595,14 +2566,12 @@
 			potion_mana_super = 15;
 			potion_rejuvenation_large = 3;
 			potion_rejuvenation_super = 3;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -2986,7 +2955,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/157-260;
 					max = 6;
@@ -3017,14 +2986,12 @@
 			potion_mana_super = 10;
 			potion_rejuvenation_large = 3;
 			potion_rejuvenation_super = 3;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }

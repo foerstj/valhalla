@@ -8,10 +8,26 @@
 		model = m_c_edm_dc_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_dungeon_crawler;  }
-			[hit_critical]	{ priority = low; * = s_e_hit_dungeon_crawler_SED;  }
-			[hit_glance]	{ priority = low; * = s_e_hit_dungeon_crawler_SED;  }
-			[hit_solid]		{ priority = low; * = s_e_hit_dungeon_crawler_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_dungeon_crawler;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_dungeon_crawler_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_dungeon_crawler_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_dungeon_crawler_SED;
+			}
 		}
 	}
 	[effect_manager]
@@ -19,13 +35,10 @@
 		start_msg = WE_ENTERED_WORLD;
 		stop_msg = WE_LEFT_WORLD;
 		stop_msg2 = WE_KILLED;
-
 		effect_name = "";
 		rep_effect_name = "trailing_blood";
-
 		repeat_rate = 1.33;
 		repeat_rate_max = 1.75;
-
 		run_once = true;
 	}
 	[body]
@@ -47,40 +60,54 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander	= false
 			&still		= false;
-
 		melee_engage_range = 14.0;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -88,7 +115,6 @@
 		inner_comfort_zone_range = .1;
 		outer_comfort_zone_range = 3;
 		com_range = 8.0;
-		
 		sight_origin_height = 1.5;
 	}
 	[physics]
@@ -119,10 +145,10 @@
 	{
 		[skills]
 		{
-			strength =  	66.1, 0;
-			intelligence =  11.5, 0;
-			dexterity =  	21.7, 0;
-			melee =  		101, 0;
+			strength = 66.1, 0;
+			intelligence = 11.5, 0;
+			dexterity = 21.7, 0;
+			melee = 101, 0;
 		}
 	}
 	[aspect]
@@ -131,19 +157,25 @@
 		life = 5071.4;
 		max_life = 5071.4;
 		mana = 14.4;
-        max_mana = 14.4;
-    }
-    [attack]
+		max_mana = 14.4;
+	}
+	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 526.3;
 		damage_min = 335.9;
 	}
-	[common] { screen_name="Dungeon Crawler"; }
-	[defend] { defense=660.2; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Dungeon Crawler";
+	}
+	[defend]
+	{
+		defense = 660.2;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -155,18 +187,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/322-356;
-	                il_main = #armor/-rare(1)/1014-1040;
-                    il_main = #*/-rare(1)/322-356;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/322-356;
+					il_main = #armor/-rare(1)/1014-1040;
+					il_main = #*/-rare(1)/322-356;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/322-356;
-	                il_main = #armor/-unique(2)/1014-1040;
-                    il_main = #*/-unique(2)/322-356;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/322-356;
+					il_main = #armor/-unique(2)/1014-1040;
+					il_main = #*/-unique(2)/322-356;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -186,10 +218,10 @@
 	{
 		[skills]
 		{
-			strength =  60.8, 0;
-			intelligence =  5.3, 0;
-			dexterity =  9.1, 0;
-			melee =  90, 0;
+			strength = 60.8, 0;
+			intelligence = 5.3, 0;
+			dexterity = 9.1, 0;
+			melee = 90, 0;
 		}
 	}
 	[aspect]
@@ -198,7 +230,7 @@
 		life = 532.7;
 		max_life = 532.7;
 		mana = 94;
-        max_mana = 94;
+		max_mana = 94;
 	}
 	[attack]
 	{
@@ -206,11 +238,17 @@
 		damage_max = 194;
 		damage_min = 111;
 	}
-	[common] { screen_name="Tortured Corpse"; }
-	[defend] { defense=141; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Tortured Corpse";
+	}
+	[defend]
+	{
+		defense = 141;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -218,16 +256,16 @@
 				{
 					chance = 0.2;
 					il_main = #weapon/71-99;
-                	il_main = #armor/125-642;
+					il_main = #armor/125-642;
 				}
-        		[oneof*]
+				[oneof*]
 				{
-	        		chance = 0.002;
-	            	il_main = #weapon/-rare(1)/113-141;
-	            	il_main = #armor/-rare(1)/251-345;
-                }
-	        }
-        }
+					chance = 0.002;
+					il_main = #weapon/-rare(1)/113-141;
+					il_main = #armor/-rare(1)/251-345;
+				}
+			}
+		}
 	}
 }
 [t:template,n:3W_grave_crawler]
@@ -239,10 +277,10 @@
 	{
 		[skills]
 		{
-			strength =  		40.6, 0;
-			intelligence =  	6.3, 0;
-			dexterity =  		9.1, 0;
-			melee =  			93, 0;
+			strength = 40.6, 0;
+			intelligence = 6.3, 0;
+			dexterity = 9.1, 0;
+			melee = 93, 0;
 		}
 	}
 	[aspect]
@@ -251,7 +289,7 @@
 		life = 2560;
 		max_life = 2560;
 		mana = 24;
-        max_mana = 24;
+		max_mana = 24;
 	}
 	[attack]
 	{
@@ -259,32 +297,38 @@
 		damage_max = 616;
 		damage_min = 457.2;
 	}
-	[common] { screen_name="Grave Crawler"; }
-	[defend] { defense=685.3; }
-   	[inventory]
+	[common]
 	{
-    	[pcontent]
+		screen_name = "Grave Crawler";
+	}
+	[defend]
+	{
+		defense = 685.3;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
 			[oneof*]
 			{
 				chance = 0.2;
 				il_main = #weapon/31-51;
-                il_main = #armor/136-664;
+				il_main = #armor/136-664;
 			}
-            [oneof*]
-				{
-	            chance = 0.004;
-	            il_main = #weapon/-rare(1)/47-82;
-	            il_main = #armor/-rare(1)/80-204;
-                il_main = #*/-rare(1)/47-82;
-            }
 			[oneof*]
-				{
-            	chance = 0.002;
-	            il_main = #weapon/-unique(2)/47-82;
-	            il_main = #armor/-unique(2)/80-204;
-                il_main = #*/-unique(2)/47-82;
-	        }
+			{
+				chance = 0.004;
+				il_main = #weapon/-rare(1)/47-82;
+				il_main = #armor/-rare(1)/80-204;
+				il_main = #*/-rare(1)/47-82;
+			}
+			[oneof*]
+			{
+				chance = 0.002;
+				il_main = #weapon/-unique(2)/47-82;
+				il_main = #armor/-unique(2)/80-204;
+				il_main = #*/-unique(2)/47-82;
+			}
 		}
 	}
 }

@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  	15.2, 0;
-			intelligence =  5.1, 0;
-			dexterity =  	22.6, 0;
-			melee =  		58, 0;
+			strength = 15.2, 0;
+			intelligence = 5.1, 0;
+			dexterity = 22.6, 0;
+			melee = 58, 0;
 		}
 	}
 	[aspect]
@@ -23,8 +23,16 @@
 		model = m_c_edm_ss_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_soul_stinger; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_soul_stinger;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
 		}
 	}
 	[attack]
@@ -52,42 +60,62 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Soul Stinger"; }
-	[defend] { defense=534.1; }
+	[common]
+	{
+		screen_name = "Soul Stinger";
+	}
+	[defend]
+	{
+		defense = 534.1;
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander	= false
 			&still		= false;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.5;
 		ranged_engage_range = 14.0;
@@ -96,7 +124,6 @@
 	[physics]
 	{
 		explode_when_killed = true;
-
 		[break_particulate]
 		{
 			frag_glb_soul_stinger_01 = 1;

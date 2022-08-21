@@ -7,9 +7,9 @@
 	{
 		[skills]
 		{
-			strength =  17.5, 0;
-			intelligence =  7.3, 0;
-			dexterity =  11.3, 0;
+			strength = 17.5, 0;
+			intelligence = 7.3, 0;
+			dexterity = 11.3, 0;
 		}
 	}
 	[aspect]
@@ -22,8 +22,16 @@
 		model = m_c_edm_sp_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_spider; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_spider; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_spider;
+			}
 		}
 	}
 	[attack]
@@ -52,35 +60,53 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Spider"; }
+	[common]
+	{
+		screen_name = "Spider";
+	}
 	[mind]
 	{
 		melee_engage_range = 14.0;

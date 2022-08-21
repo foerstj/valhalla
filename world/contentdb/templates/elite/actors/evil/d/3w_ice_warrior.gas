@@ -7,25 +7,33 @@
 	{
 		[skills]
 		{
-			strength 	=  68.5, 0;
-			intelligence =  6.7, 0;
-			dexterity 	=  26.5, 0;
-            melee 		=  93,  0;
+			strength = 68.5, 0;
+			intelligence = 6.7, 0;
+			dexterity = 26.5, 0;
+			melee = 93,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1128564;
 		life = 1939.2;
-        max_life = 1939.2;
-        mana = 53.9;
+		max_life = 1939.2;
+		mana = 53.9;
 		max_mana = 53.9;
 		model = m_c_edm_iw_pos_1;
 		material = ice;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_ice_warrior;			}
-			[enemy_spotted]	{ priority = high; * = s_e_call_ice_creature_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_ice_warrior;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_ice_creature_SED;
+			}
 		}
 	}
 	[attack]
@@ -67,31 +75,43 @@
 			{
 				chore_stances = 0,1;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0,1;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0,1;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Ice Warrior";
+		screen_name = "Ice Warrior";
 		membership = monster, party_ice_archer;
 		[template_triggers]
 		{
@@ -103,52 +123,53 @@
 			}
 		}
 	}
-    [defend] { defense=720.5; }
-   	[inventory]
+	[defend]
+	{
+		defense = 720.5;
+	}
+	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
-
-    	[pcontent]
+		[pcontent]
 		{
 			[all*]
 			{
-                  es_weapon_hand = sd_un_ice_avg;
+				es_weapon_hand = sd_un_ice_avg;
 			}
-
 			[oneof*]
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_super;
-				   il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[all*]
 				{
-       				chance = 0.02;
-	                il_main = #spell/67-94;
+					chance = 0.02;
+					il_main = #spell/67-94;
 				}
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = #*/39-71;
 					il_main = #armor/121-660;
-	                il_main = #weapon/233-285;
+					il_main = #weapon/233-285;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/272-382;
-	                il_main = #armor/-rare(1)/848-970;
-                    il_main = #*/-rare(1)/272-382;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/272-382;
+					il_main = #armor/-rare(1)/848-970;
+					il_main = #*/-rare(1)/272-382;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/272-382;
-	                il_main = #armor/-unique(2)/848-970;
-                    il_main = #*/-unique(2)/272-382;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/272-382;
+					il_main = #armor/-unique(2)/848-970;
+					il_main = #*/-unique(2)/272-382;
+				}
 				[gold*]
 				{
 					chance = 0.15;
@@ -160,11 +181,9 @@
 	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party	= true;
-
-		jat_fidget 						= world\ai\jobs\common\job_fidget.skrit;
-
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -209,25 +228,32 @@
 	{
 		[skills]
 		{
-			strength 	=  68.5, 0;
-			intelligence =  8.4, 0;
-			dexterity 	=  29.2, 0;
-            melee 		=  99,  0;
+			strength = 68.5, 0;
+			intelligence = 8.4, 0;
+			dexterity = 29.2, 0;
+			melee = 99,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1339250;
 		life = 2201.8;
-        max_life = 2201.8;
-        mana = 53.9;
+		max_life = 2201.8;
+		mana = 53.9;
 		max_mana = 53.9;
 		model = m_c_edm_iw_pos_1;
-		textures:0 = b_c_edm_iw-02;
+		[textures]
+		{
+			0 = b_c_edm_iw-02;
+		}
 		material = ice;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_ice_warrior; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_ice_warrior;
+			}
 		}
 	}
 	[attack]
@@ -269,31 +295,43 @@
 			{
 				chore_stances = 0,1;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0,1;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0,1;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Frost Warrior";
+		screen_name = "Frost Warrior";
 		membership = monster,party_ice_archer,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
@@ -312,40 +350,41 @@
 			}
 		}
 	}
-    [defend] { defense=1444.3; }
-   	[inventory]
+	[defend]
+	{
+		defense = 1444.3;
+	}
+	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_MELEE_WEAPON;
-
-    	[pcontent]
+		[pcontent]
 		{
 			[all*]
 			{
-                  es_weapon_hand = sd_un_ice_avg;
+				es_weapon_hand = sd_un_ice_avg;
 			}
-
 			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.794;
 					il_main = #body,f/857-963;
-	                il_main = #weapon/285-311;
+					il_main = #weapon/285-311;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/330-382;
-	                il_main = #armor/-rare(1)/1044-1158;
-                    il_main = #*/-rare(1)/330-382;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/330-382;
+					il_main = #armor/-rare(1)/1044-1158;
+					il_main = #*/-rare(1)/330-382;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/330-382;
-	                il_main = #armor/-unique(2)/1044-1158;
-                    il_main = #*/-unique(2)/330-382;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/330-382;
+					il_main = #armor/-unique(2)/1044-1158;
+					il_main = #*/-unique(2)/330-382;
+				}
 				[gold*]
 				{
 					chance = 0.2;
@@ -357,19 +396,16 @@
 			}
 		}
 	}
-
 	[mind]
 	{
-		jat_brain							= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party			= true
 			&form_party_on_friend_entered_ICZ	= true
 			&form_party_on_friend_entered_OCZ	= true
 			&stop_flee_alive_party_size			= 1
 			&party_template						= "party_ice_archer";
-
-		jat_fidget 						= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?still						= false;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;

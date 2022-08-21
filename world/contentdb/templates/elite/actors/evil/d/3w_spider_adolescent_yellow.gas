@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  20.1, 0;
-			intelligence =  1.7, 0;
-			dexterity =  18.1, 0;
-			melee =  90, 0;
+			strength = 20.1, 0;
+			intelligence = 1.7, 0;
+			dexterity = 18.1, 0;
+			melee = 90, 0;
 		}
 	}
 	[aspect]
@@ -22,11 +22,22 @@
 		max_mana = 31;
 		model = m_c_edm_as_pos_1;
 		scale_base = 0.5;
-		[textures] { 0=b_c_edm_as-yel; }
+		[textures]
+		{
+			0 = b_c_edm_as-yel;
+		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_spider; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_spider_small_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_spider_small_SED;
+			}
 		}
 	}
 	[attack]
@@ -39,9 +50,7 @@
 	{
 		min_move_velocity = 2.0;
 		avg_move_velocity = 4.430000;
-
 		terrain_movement_permissions = lf_dirt;
-
 		[bone_translator]
 		{
 			body_anterior = bone01;
@@ -69,7 +78,10 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
@@ -86,24 +98,35 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Yellow Spider"; }
-	[defend] { defense=108.5; }
+	[common]
+	{
+		screen_name = "Yellow Spider";
+	}
+	[defend]
+	{
+		defense = 108.5;
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social		= 0.35
 			&still		= false;
-
 		melee_engage_range = 14.0;
 		personal_space_range = 0.1;
 		ranged_engage_range = 14.0;

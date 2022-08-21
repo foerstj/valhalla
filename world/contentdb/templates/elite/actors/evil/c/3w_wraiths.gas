@@ -8,8 +8,16 @@
 		draw_shadow = false;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_wraith;		}
-			[enemy_spotted]	{ priority = high; * = s_e_call_wraith_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_wraith;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_wraith_SED;
+			}
 		}
 	}
 	[body]
@@ -41,13 +49,19 @@
 			{
 				chore_stances = 3;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 3;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -65,15 +79,18 @@
 				skrit = select_fidget;
 				[anim_files]
 				{
-					00=dff;
-					01=dff-02;
+					00 = dff;
+					01 = dff-02;
 				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 3;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -81,13 +98,12 @@
 	{
 		jat_die = world\ai\jobs\actors\evil\job_die_explode.skrit;
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
-
 		actor_auto_fidgets = false;
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14;
-		sight_origin_height	= 2;
+		sight_origin_height = 2;
 	}
 	[physics]
 	{
@@ -95,10 +111,9 @@
 		break_effect = dust_explosion;
 		explosion_magnitude = 1.0;
 		fire_resistance = 0.0;
-        fire_burn_threshold = 80;
+		fire_burn_threshold = 80;
 	}
 }
-
 [t:template,n:3W_base_battle_wraith]
 {
 	category_name = "3W_evil_c";
@@ -108,10 +123,10 @@
 	{
 		[skills]
 		{
-			strength = 		42.3, 0;
-			intelligence = 	13.5, 0;
-			dexterity = 	17.8, 0;
-   			melee =  		110,  0;
+			strength = 42.3, 0;
+			intelligence = 13.5, 0;
+			dexterity = 17.8, 0;
+			melee = 110,  0;
 		}
 	}
 	[aspect]
@@ -122,7 +137,10 @@
 		mana = 51.8;
 		max_mana = 51.8;
 		model = m_c_ecm_wr_pos_1;
-		[textures] { 0=b_c_ecm_wr; }
+		[textures]
+		{
+			0 = b_c_ecm_wr;
+		}
 	}
 	[attack]
 	{
@@ -152,13 +170,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -174,27 +198,32 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[effect_manager_server]
 	{
-		effect_name	= "wraith_flame_head";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "wraith_flame_head";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
 	[common]
 	{
-		screen_name="Battle Wraith";
+		screen_name = "Battle Wraith";
 		[template_triggers]
 		{
 			[*]
@@ -206,35 +235,38 @@
 			}
 		}
 	}
-   	[defend] { defense=1144.3; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 1144.3;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.25;
 					il_main = #*/134-285;
 					il_main = #armor/139-702;
-                	il_main = #nmagic/42-117;
-                	il_main = #cmagic/42-117;
+					il_main = #nmagic/42-117;
+					il_main = #cmagic/42-117;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/239-316;
-	                il_main = #armor/-rare(1)/891-1016;
-                    il_main = #*/-rare(1)/239-316;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/239-316;
+					il_main = #armor/-rare(1)/891-1016;
+					il_main = #*/-rare(1)/239-316;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/239-316;
-	                il_main = #armor/-unique(2)/891-1016;
-                    il_main = #*/-unique(2)/239-316;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/239-316;
+					il_main = #armor/-unique(2)/891-1016;
+					il_main = #*/-unique(2)/239-316;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -246,11 +278,11 @@
 	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party	= true
 			&party_template				= "party_wraith";
 	}
-   	[physics]
+	[physics]
 	{
 		[break_particulate]
 		{
@@ -275,7 +307,10 @@
 	category_name = "3W_evil_c";
 	doc = "[summon] wraith";
 	specializes = 3W_base_battle_wraith;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -288,11 +323,10 @@
 	}
 	[mind]
 	{
-		jat_startup	= jat_none;
-		jat_brain	= world\ai\jobs\common\brain_hero.skrit;
+		jat_startup = jat_none;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
 	}
 }
-
 [t:template,n:3W_wraith_boss_01]
 {
 	category_name = "3W_evil_c";
@@ -302,10 +336,10 @@
 	{
 		[skills]
 		{
-			strength = 		44.6, 0;
-			intelligence = 	13.5, 0;
-			dexterity = 	17.8, 0;
-   			melee =  		110,  0;
+			strength = 44.6, 0;
+			intelligence = 13.5, 0;
+			dexterity = 17.8, 0;
+			melee = 110,  0;
 		}
 	}
 	[aspect]
@@ -316,7 +350,10 @@
 		mana = 51.8;
 		max_mana = 51.8;
 		model = m_c_ecm_wr_pos_1;
-		[textures] { 0=b_c_ecm_wr-05; }
+		[textures]
+		{
+			0 = b_c_ecm_wr-05;
+		}
 	}
 	[attack]
 	{
@@ -346,13 +383,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -368,28 +411,33 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[effect_manager_server]
 	{
-		effect_name	= "wraith_flame_head";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "wraith_flame_head";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
 	[common]
 	{
-		screen_name="Warrior Wraith";
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Warrior Wraith";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -408,12 +456,15 @@
 			}
 		}
 	}
-   	[defend] { defense=2078.6; }
-   	[inventory]
+	[defend]
 	{
-    	[pcontent]
+		defense = 2078.6;
+	}
+	[inventory]
+	{
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
@@ -423,24 +474,23 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/343-384;
-	                il_main = #armor/-rare(1)/1077-1168;
-                    il_main = #*/-rare(1)/343-384;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/343-384;
+					il_main = #armor/-rare(1)/1077-1168;
+					il_main = #*/-rare(1)/343-384;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/343-384;
-	                il_main = #armor/-unique(2)/1077-1168;
-                    il_main = #*/-unique(2)/343-384;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/343-384;
+					il_main = #armor/-unique(2)/1077-1168;
+					il_main = #*/-unique(2)/343-384;
+				}
 				[gold*]
 				{
 					chance = 0.2;
 					max = 857236;
 					min = 678101;
-
 					min_pile = 2110;
 					piles = 4 - 6;
 				}
@@ -449,11 +499,10 @@
 	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party	= true
 			&party_template				= "party_wraith";
 	}
-
 	[physics]
 	{
 		[break_particulate]
@@ -468,7 +517,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_wraith_lesser]
 {
 	category_name = "3W_evil_c";
@@ -478,10 +526,10 @@
 	{
 		[skills]
 		{
-			strength =		39.9, 0;
-			intelligence = 	13.5, 0;
-			dexterity = 	17.8, 0;
-            melee =  		108,  0;
+			strength = 39.9, 0;
+			intelligence = 13.5, 0;
+			dexterity = 17.8, 0;
+			melee = 108,  0;
 		}
 	}
 	[aspect]
@@ -492,7 +540,10 @@
 		mana = 46;
 		max_mana = 46;
 		model = m_c_ecm_wr_pos_2;
-		[textures] { 0=b_c_ecm_wr; }
+		[textures]
+		{
+			0 = b_c_ecm_wr;
+		}
 	}
 	[attack]
 	{
@@ -502,10 +553,13 @@
 	}
 	[common]
 	{
-		screen_name="Wraith";
+		screen_name = "Wraith";
 		membership = monster, party_wraith;
 	}
-   	[defend] { defense=1014.9; }
+	[defend]
+	{
+		defense = 1014.9;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -514,7 +568,6 @@
 			{
 				es_weapon_hand = ax_g_c_2h1b_avg;
 			}
-
 			[oneof*]
 			{
 				[oneof*]
@@ -522,22 +575,22 @@
 					chance = 0.35;
 					il_main = #*/134-285;
 					il_main = #armor/139-685;
-	                il_main = #spell/83-111;
+					il_main = #spell/83-111;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/261-316;
-	                il_main = #armor/-rare(1)/899-1016;
-                    il_main = #*/-rare(1)/261-316;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/261-316;
+					il_main = #armor/-rare(1)/899-1016;
+					il_main = #*/-rare(1)/261-316;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/261-316;
-	                il_main = #armor/-unique(2)/899-1016;
-                    il_main = #*/-unique(2)/261-316;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/261-316;
+					il_main = #armor/-unique(2)/899-1016;
+					il_main = #*/-unique(2)/261-316;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -549,7 +602,7 @@
 	}
 	[mind]
 	{
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party  = true;
 	}
 	[physics]
@@ -574,21 +627,24 @@
 	{
 		[skills]
 		{
-			strength = 		62, 0;
-			intelligence = 	11.5, 0;
-			dexterity = 	27.1, 0;
-            melee =  		99,  0;
+			strength = 62, 0;
+			intelligence = 11.5, 0;
+			dexterity = 27.1, 0;
+			melee = 99,  0;
 		}
 	}
 	[aspect]
 	{
-		experience_value =4836000;
+		experience_value = 4836000;
 		life = 3062;
 		max_life = 3062;
 		mana = 38.3;
 		max_mana = 38.3;
 		model = m_c_ecm_wr_pos_2;
-		[textures] { 0=b_c_ecm_wr-02; }
+		[textures]
+		{
+			0 = b_c_ecm_wr-02;
+		}
 	}
 	[attack]
 	{
@@ -596,8 +652,14 @@
 		damage_max = 580.1;
 		damage_min = 376.6;
 	}
-	[common] { screen_name="Terror Wraith"; }
-   	[defend] { defense=948.5; }
+	[common]
+	{
+		screen_name = "Terror Wraith";
+	}
+	[defend]
+	{
+		defense = 948.5;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -606,29 +668,28 @@
 			{
 				es_weapon_hand = ax_g_c_2h2b_fun;
 			}
-
 			[oneof*]
 			{
 				[oneof*]
 				{
 					chance = 0.35;
 					il_main = #*/220-274;
-                    il_main = #armor/139-688;
+					il_main = #armor/139-688;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/266-292;
-	                il_main = #armor/-rare(1)/1040-1064;
-                    il_main = #*/-rare(1)/266-292;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/266-292;
+					il_main = #armor/-rare(1)/1040-1064;
+					il_main = #*/-rare(1)/266-292;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/266-292;
-	                il_main = #armor/-unique(2)/1040-1064;
-                    il_main = #*/-unique(2)/266-292;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/266-292;
+					il_main = #armor/-unique(2)/1040-1064;
+					il_main = #*/-unique(2)/266-292;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -657,7 +718,6 @@
 	doc = "3W_wraith_terror reveal";
 	specializes = 3W_wraith_terror_base;
 }
-
 [t:template,n:3W_wraith_terror_act]
 {
 	category_name = "3W_evil_c";
@@ -669,9 +729,6 @@
 	 		?activate = true;
 	}
 }
-
-
-
 [t:template,n:3W_wraith_piercer]
 {
 	category_name = "3W_evil_c";
@@ -681,11 +738,11 @@
 	{
 		[skills]
 		{
-			strength = 		53.7, 0;
-			intelligence = 	12.9, 0;
-			dexterity = 	48.8, 0;
-            melee =  		98, 0;
-            ranged = 		98, 0;
+			strength = 53.7, 0;
+			intelligence = 12.9, 0;
+			dexterity = 48.8, 0;
+			melee = 98, 0;
+			ranged = 98, 0;
 		}
 	}
 	[aspect]
@@ -696,7 +753,10 @@
 		mana = 38.3;
 		max_mana = 38.3;
 		model = m_c_ecm_wr_pos_2;
-		[textures] { 0=b_c_ecm_wr-03; }
+		[textures]
+		{
+			0 = b_c_ecm_wr-03;
+		}
 	}
 	[attack]
 	{
@@ -725,43 +785,48 @@
 			{
 				chore_stances = 6;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 6;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
-			}
-/*			[chore_misc] //$$$ uncomment me when I have FS6 "ds" and "up" anims
-			{
-				chore_stances = 3;
-				skrit = select_transition;
 				[anim_files]
 				{
-					stil = ds;
-					wake = up;
+					00 = di;
 				}
-			}*/
+			}
 			[chore_fidget]
 			{
 				chore_stances = 6;
 				skrit = select_fidget;
 				[anim_files]
 				{
-					00=dff;
+					00 = dff;
 				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 6;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Wraith Piercer"; }
-   	[defend] { defense=1013.1; }
+	[common]
+	{
+		screen_name = "Wraith Piercer";
+	}
+	[defend]
+	{
+		defense = 1013.1;
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -777,24 +842,24 @@
 				{
 					chance = 0.35;
 					il_main = #*/156-274;
-                    il_main = #armor/139-688;
-	                il_main = #nmagic/33-104;
-	                il_main = #cmagic/33-104;
+					il_main = #armor/139-688;
+					il_main = #nmagic/33-104;
+					il_main = #cmagic/33-104;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/277-302;
-	                il_main = #armor/-rare(1)/921-966;
-                    il_main = #*/-rare(1)/277-302;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/277-302;
+					il_main = #armor/-rare(1)/921-966;
+					il_main = #*/-rare(1)/277-302;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/277-302;
-	                il_main = #armor/-unique(2)/921-966;
-                    il_main = #*/-unique(2)/277-302;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/277-302;
+					il_main = #armor/-unique(2)/921-966;
+					il_main = #*/-unique(2)/277-302;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -826,10 +891,10 @@
 	{
 		[skills]
 		{
-			strength = 		39.2, 0;
-			intelligence = 	14.9, 0;
-			dexterity = 	23.4, 0;
-            ranged = 		106, 0;
+			strength = 39.2, 0;
+			intelligence = 14.9, 0;
+			dexterity = 23.4, 0;
+			ranged = 106, 0;
 		}
 	}
 	[aspect]
@@ -840,15 +905,18 @@
 		mana = 44.9;
 		max_mana = 44.9;
 		model = m_c_ecm_wr_pos_2;
-		[textures] { 0=b_c_ecm_wr; }
+		[textures]
+		{
+			0 = b_c_ecm_wr;
+		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 392.9;
 		damage_min = 264.5;
-			damage_bonus_min_ranged = 143;
-			damage_bonus_max_ranged = 229;
+		damage_bonus_min_ranged = 143;
+		damage_bonus_max_ranged = 229;
 	}
 	[body]
 	{
@@ -869,47 +937,49 @@
 			{
 				chore_stances = 6;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 6;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
-			}
-/*			[chore_misc] //$$$ uncomment me when I have FS6 "ds" and "up" anims
-			{
-				chore_stances = 3;
-				skrit = select_transition;
 				[anim_files]
 				{
-					stil = ds;
-					wake = up;
+					00 = di;
 				}
-			}*/
+			}
 			[chore_fidget]
 			{
 				chore_stances = 6;
 				skrit = select_fidget;
 				[anim_files]
 				{
-					00=dff;
+					00 = dff;
 				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 6;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Wraith Archer";
+		screen_name = "Wraith Archer";
 		membership = monster, party_wraith_mage;
 	}
-   	[defend] { defense=1194.9; }
+	[defend]
+	{
+		defense = 1194.9;
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -925,23 +995,23 @@
 				{
 					chance = 0.35;
 					il_main = #*/209-281;
-                    il_main = #armor/138-685;
-	                il_main = #spell/70-122;
+					il_main = #armor/138-685;
+					il_main = #spell/70-122;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/238-295;
-	                il_main = #armor/-rare(1)/628-739;
-                    il_main = #*/-rare(1)/238-295;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/238-295;
+					il_main = #armor/-rare(1)/628-739;
+					il_main = #*/-rare(1)/238-295;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/238-295;
-	                il_main = #armor/-unique(2)/628-739;
-                    il_main = #*/-unique(2)/238-295;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/238-295;
+					il_main = #armor/-unique(2)/628-739;
+					il_main = #*/-unique(2)/238-295;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -953,7 +1023,7 @@
 	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party	= true;
 	}
 	[physics]
@@ -980,7 +1050,10 @@
 	category_name = "3W_evil_c";
 	doc = "[summon] wraith_archer";
 	specializes = 3W_wraith_archer_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		spew_equipped_kill_count = ;
@@ -993,7 +1066,10 @@
 			}
 		}
 	}
-	mind:jat_brain						= world\ai\jobs\common\brain_hero.skrit;
+	[mind]
+	{
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+	}
 }
 [t:template,n:3W_wraith_mage]
 {
@@ -1004,10 +1080,10 @@
 	{
 		[skills]
 		{
-			strength = 		39.2, 0;
-			intelligence = 	17.8, 0;
-			dexterity = 	17.5, 0;
-   			combat_magic =  104,  0;
+			strength = 39.2, 0;
+			intelligence = 17.8, 0;
+			dexterity = 17.5, 0;
+			combat_magic = 104,  0;
 		}
 	}
 	[aspect]
@@ -1018,15 +1094,18 @@
 		mana = 50.5;
 		max_mana = 50.5;
 		model = m_c_ecm_wr_pos_1;
-		[textures] { 0=b_c_ecm_wr; }
+		[textures]
+		{
+			0 = b_c_ecm_wr;
+		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 432;
 		damage_min = 270.1;
-				damage_bonus_min_cmagic = 195;
-				damage_bonus_max_cmagic = 278;
+		damage_bonus_min_cmagic = 195;
+		damage_bonus_max_cmagic = 278;
 	}
 	[body]
 	{
@@ -1050,13 +1129,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -1072,13 +1157,19 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_magic]
 			{
@@ -1086,23 +1177,22 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=mg;
-					01=mg-02;
+					00 = mg;
+					01 = mg-02;
 				}
 			}
 		}
 	}
 	[effect_manager_server]
 	{
-		effect_name	= "wraith_flame_head";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "wraith_flame_head";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
 	[common]
 	{
-		screen_name="Wraith Mage";
+		screen_name = "Wraith Mage";
 		[template_triggers]
 		{
 			[*]
@@ -1114,12 +1204,17 @@
 			}
 		}
 	}
-   	[defend] { defense=1130.4; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_wraith_hands; }
-
+		defense = 1130.4;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_wraith_hands;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -1128,24 +1223,24 @@
 				{
 					chance = 0.35;
 					il_main = #*/209-281;
-                    il_main = #armor/138-685;
-                    il_main = #body,ro/451-653;
-	                il_main = #spell/70-122;
+					il_main = #armor/138-685;
+					il_main = #body,ro/451-653;
+					il_main = #spell/70-122;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/233-308;
-	                il_main = #armor/-rare(1)/671-750;
-                    il_main = #*/-rare(1)/233-308;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/233-308;
+					il_main = #armor/-rare(1)/671-750;
+					il_main = #*/-rare(1)/233-308;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/233-308;
-	                il_main = #armor/-unique(2)/671-750;
-                    il_main = #*/-unique(2)/233-308;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/233-308;
+					il_main = #armor/-unique(2)/671-750;
+					il_main = #*/-unique(2)/233-308;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -1157,15 +1252,13 @@
 	}
 	[mind]
 	{
-
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party		 = true
 			&party_template					 = "party_wraith_mage";
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 	[physics]
 	{
@@ -1181,7 +1274,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_wraith_mage_boss_01]
 {
 	category_name = "3W_evil_c";
@@ -1191,10 +1283,10 @@
 	{
 		[skills]
 		{
-			strength = 		39.2, 0;
-			intelligence = 	17.8, 0;
-			dexterity = 	23.4, 0;
-   			combat_magic =  109,  0;
+			strength = 39.2, 0;
+			intelligence = 17.8, 0;
+			dexterity = 23.4, 0;
+			combat_magic = 109,  0;
 		}
 	}
 	[aspect]
@@ -1205,15 +1297,18 @@
 		mana = 50.5;
 		max_mana = 50.5;
 		model = m_c_ecm_wr_pos_1;
-		[textures] { 0=b_c_ecm_wr-06; }
+		[textures]
+		{
+			0 = b_c_ecm_wr-06;
+		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 462.8;
 		damage_min = 328.2;
-				damage_bonus_min_cmagic = 195;
-				damage_bonus_max_cmagic = 278;
+		damage_bonus_min_cmagic = 195;
+		damage_bonus_max_cmagic = 278;
 	}
 	[body]
 	{
@@ -1237,13 +1332,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -1259,13 +1360,19 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_magic]
 			{
@@ -1273,24 +1380,23 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=mg;
-					01=mg-02;
+					00 = mg;
+					01 = mg-02;
 				}
 			}
 		}
 	}
 	[effect_manager_server]
 	{
-		effect_name	= "wraith_flame_head";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "wraith_flame_head";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
 	[common]
 	{
-		screen_name="Dark Wraith Mage";
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		screen_name = "Dark Wraith Mage";
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -1309,12 +1415,17 @@
 			}
 		}
 	}
-   	[defend] { defense=1677.3; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_wraith_hands; }
-
+		defense = 1677.3;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_wraith_hands;
+		}
 		[pcontent]
 		{
 			[oneof*]
@@ -1323,25 +1434,24 @@
 				{
 					chance = 0.794;
 					il_main = #*/281-335;
-                    il_main = #armor/704-839;
-                    il_main = #body,ro/651-750;
-	                il_main = #spell/125-135;
+					il_main = #armor/704-839;
+					il_main = #body,ro/651-750;
+					il_main = #spell/125-135;
 				}
-
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/297-356;
-	                il_main = #armor/-rare(1)/785-866;
-                    il_main = #*/-rare(1)/297-356;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/297-356;
+					il_main = #armor/-rare(1)/785-866;
+					il_main = #*/-rare(1)/297-356;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/297-356;
-	                il_main = #armor/-unique(2)/785-866;
-                    il_main = #*/-unique(2)/297-356;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/297-356;
+					il_main = #armor/-unique(2)/785-866;
+					il_main = #*/-unique(2)/297-356;
+				}
 				[gold*]
 				{
 					chance = 0.2;
@@ -1355,15 +1465,13 @@
 	}
 	[mind]
 	{
-
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party		 = true
 			&party_template					 = "party_wraith_mage";
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 	[physics]
 	{
@@ -1379,7 +1487,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_warlock_base]
 {
 	category_name = "3W_evil_c";
@@ -1389,10 +1496,10 @@
 	{
 		[skills]
 		{
-			strength = 		49.6, 0;
-			intelligence = 	18.7, 0;
-			dexterity = 	23.5, 0;
-   			combat_magic =  103,  0;
+			strength = 49.6, 0;
+			intelligence = 18.7, 0;
+			dexterity = 23.5, 0;
+			combat_magic = 103,  0;
 		}
 	}
 	[aspect]
@@ -1403,15 +1510,18 @@
 		mana = 43.1;
 		max_mana = 43.1;
 		model = m_c_ecm_wr_pos_1;
-		[textures] { 0=b_c_ecm_wr-04; }
+		[textures]
+		{
+			0 = b_c_ecm_wr-04;
+		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 526.3;
 		damage_min = 387.5;
-				damage_bonus_min_cmagic = 226;
-				damage_bonus_max_cmagic = 306;
+		damage_bonus_min_cmagic = 226;
+		damage_bonus_max_cmagic = 306;
 	}
 	[body]
 	{
@@ -1435,13 +1545,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -1457,13 +1573,19 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_magic]
 			{
@@ -1471,24 +1593,23 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at-03;
-					01=mg;
-					02=mg-02;
+					00 = at-03;
+					01 = mg;
+					02 = mg-02;
 				}
 			}
 		}
 	}
 	[effect_manager_server]
 	{
-		effect_name	= "wraith_flame_head";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "wraith_flame_head";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
 	[common]
 	{
-		screen_name="Wraith Warlock";
+		screen_name = "Wraith Warlock";
 		[template_triggers]
 		{
 			[*]
@@ -1500,13 +1621,18 @@
 			}
 		}
 	}
-   	[defend] { defense=1051.4; }
-   	[inventory]
+	[defend]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_wraith_zap; }
-
-    	[pcontent]
+		defense = 1051.4;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_wraith_zap;
+		}
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -1515,22 +1641,22 @@
 					chance = 0.3;
 					il_main = #*/225-298;
 					il_main = #armor/139-688;
-	                il_main = #spell/98-122;
+					il_main = #spell/98-122;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/302-326;
-	                il_main = #armor/-rare(1)/1001-1043;
-                    il_main = #*/-rare(1)/302-326;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/302-326;
+					il_main = #armor/-rare(1)/1001-1043;
+					il_main = #*/-rare(1)/302-326;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/302-326;
-	                il_main = #armor/-unique(2)/1001-1043;
-                    il_main = #*/-unique(2)/302-326;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/302-326;
+					il_main = #armor/-unique(2)/1001-1043;
+					il_main = #*/-unique(2)/302-326;
+				}
 				[gold*]
 				{
 					chance = 0.1;
@@ -1538,14 +1664,14 @@
 					min = 508345;
 				}
 			}
-         }
+		}
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 	[physics]
 	{
@@ -1561,14 +1687,12 @@
 		}
 	}
 }
-
 [t:template,n:3W_warlock]
 {
 	category_name = "3W_evil_c";
 	doc = "3W_warlock";
 	specializes = 3W_warlock_base;
 }
-
 [t:template,n:3W_warlock_act]
 {
 	category_name = "3W_evil_c";

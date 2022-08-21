@@ -7,11 +7,11 @@
 	{
 		[skills]
 		{
-			strength =  	259.9, 0;
-			intelligence =  58.5, 0;
-			dexterity =  	84.1, 0;
-			melee =  		125, 0;
-            combat_magic =  138, 0;
+			strength = 259.9, 0;
+			intelligence = 58.5, 0;
+			dexterity = 84.1, 0;
+			melee = 125, 0;
+			combat_magic = 138, 0;
 		}
 	}
 	[aspect]
@@ -26,7 +26,11 @@
 		rollover_highlight = false;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_dragon; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_dragon;
+			}
 		}
 	}
 	[attack]
@@ -68,7 +72,10 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=sleep; }
+				[anim_files]
+				{
+					00 = sleep;
+				}
 			}
 			[chore_misc]
 			{
@@ -84,7 +91,10 @@
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=fall; }
+				[anim_files]
+				{
+					00 = fall;
+				}
 			}
 			[chore_fidget]
 			{
@@ -92,18 +102,18 @@
 				skrit = select_fidget;
 				[anim_files]
 				{
-					00=dff;
-					00=dff-02;
+					00 = dff;
+					00 = dff-02;
 				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Scorch";
+		screen_name = "Scorch";
 		auto_expiration_class = never;
 		forced_expiration_class = never;
-		membership=monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -111,51 +121,50 @@
 				action* = call_sfx_script("dragon_scream");
 				condition* = receive_world_message("we_anim_sfx",1);
 			}
-
 		}
 	}
-	[defend] { defense=2633.6; }
-	[follower] {}
+	[defend]
+	{
+		defense = 2633.6;
+	}
+	[follower]
+	{
+	}
 	[inventory]
 	{
-    	spew_equipped_kill_count = ;
+		spew_equipped_kill_count = ;
 		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=spell_dragon_breath_long;
-			il_spell_1=spell_dragon_breath_long;
-			il_spell_2=spell_dragon_stomp;
-			il_spell_3=spell_dragon_breath_short;
+			il_active_primary_spell = spell_dragon_breath_long;
+			il_spell_1 = spell_dragon_breath_long;
+			il_spell_2 = spell_dragon_stomp;
+			il_spell_3 = spell_dragon_breath_short;
 		}
 	}
-
 	[mind]
 	{
-		jat_brain 						= world\ai\jobs\common\brain_hero.skrit;
-		jat_attack_object 				= world\ai\jobs\common\job_attack_object.skrit;
-		jat_cast	    				= world\ai\jobs\common\job_cast.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit;
+		jat_attack_object = world\ai\jobs\common\job_attack_object.skrit;
+		jat_cast = world\ai\jobs\common\job_cast.skrit
 			?no_moveturn				= true
 			&spell_by_range				= true
 			&use_base_duration			= false
 		    &rand_target				= true;
-
-		jat_die 						= world\ai\jobs\actors\evil\job_die_delete.skrit;
-		jat_fidget 						= world\ai\jobs\common\job_fidget.skrit;
-		jat_startup 					= world\ai\jobs\common\job_startup_reveal.skrit
+		jat_die = world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?activate					= true
 			&try_face					= false;
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		movement_orders					= mo_hold;
-
-		melee_engage_range 				= 10;
-		personal_space_range 			= 4.5;
-		ranged_engage_range 			= 25.0;
-		sight_range 					= 30.0;
-		sight_origin_height				= 8;
-		actor_auto_fidgets 				= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		movement_orders = mo_hold;
+		melee_engage_range = 10;
+		personal_space_range = 4.5;
+		ranged_engage_range = 25.0;
+		sight_range = 30.0;
+		sight_origin_height = 8;
+		actor_auto_fidgets = false;
 		on_engaged_lost_consciousness_abort_attack = true;
 	}
 	[physics]

@@ -103,7 +103,7 @@
 	[mind]
 	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 		melee_engage_range = 10;
 		personal_space_range = 0.7;
@@ -150,7 +150,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/192-264;
@@ -169,8 +168,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/24-264;
@@ -189,8 +186,6 @@
 					max = 4;
 					min = 4;
 				}
-
-
 				[all*]
 				{
 					il_main = #helm/24-264;
@@ -209,7 +204,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/24-264;
@@ -250,7 +244,6 @@
 					min = 4;
 				}
 			}
-
 			[weapons]
 			{
 				[all*]
@@ -290,7 +283,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -317,24 +309,23 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
-
 		[item_restock]
 		{
 			potion_health_small = 18;
 			potion_mana_small = 18;
 			potion_rejuvenation_small = 4;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_zap = 2;
-            spell_fireshot = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_zap = 2;
+			spell_fireshot = 2;
 		}
 	}
 }
@@ -349,7 +340,7 @@
 	}
 	[aspect]
 	{
-		draw_selection_indicator	= TRUE;
+		draw_selection_indicator = TRUE;
 		[textures]
 		{
 			0 = b_c_gbn_bk-05;
@@ -384,8 +375,8 @@
 				skrit = select_transition;
 				[anim_files]
 				{
-					edg1 = a_c_gbn_ed_fs0_dsf; // Edgaar's first dialog speech
-					edg2 = a_c_gbn_ed_fs0_dsf-02; // Edgaar's generic talk anim
+					edg1 = a_c_gbn_ed_fs0_dsf;
+					edg2 = a_c_gbn_ed_fs0_dsf-02;
 				}
 			}
 		}
@@ -399,18 +390,18 @@
 	}
 	[inventory]
 	{
-        [pcontent]
-        {
+		[pcontent]
+		{
 			[all*]
 			{
 				il_main = potion_health_large;
 				il_main = potion_mana_large;
 			}
-        }
+		}
 	}
-    [mind]
-    {
-        jat_face = jat_none;
+	[mind]
+	{
+		jat_face = jat_none;
 	}
 }
 [t:template,n:3W_hein]
@@ -452,7 +443,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/538-618;
@@ -471,8 +461,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/72-618;
@@ -491,7 +479,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/72-618;
@@ -510,7 +497,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/72-618;
@@ -571,7 +557,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/240-274;
@@ -591,7 +576,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -609,7 +593,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/171-260;
 					max = 4;
@@ -624,11 +608,12 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
-
 		[item_restock]
 		{
 			potion_health_small = 4;
@@ -640,14 +625,12 @@
 			potion_rejuvenation_small = 2;
 			potion_rejuvenation_medium = 1;
 			potion_rejuvenation_large = 1;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_zap = 2;
-            spell_fireshot = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_zap = 2;
+			spell_fireshot = 2;
 		}
 	}
 }
@@ -719,7 +702,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/444-518;
@@ -738,8 +720,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/60-518;
@@ -758,7 +738,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/60-518;
@@ -777,7 +756,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/60-518;
@@ -838,7 +816,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/200-231;
@@ -860,7 +837,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;
@@ -1022,7 +1001,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/205-356;
@@ -1041,8 +1019,6 @@
 					max = 5;
 					min = 5;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/27-356;
@@ -1061,7 +1037,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #helm/27-356;
@@ -1080,7 +1055,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #boots/27-356;
@@ -1141,7 +1115,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/118-152;
@@ -1163,7 +1136,9 @@
 			}
 		}
 	}
-	[respawn_shrine] {}
+	[respawn_shrine]
+	{
+	}
 	[store]
 	{
 		item_markup = 2;

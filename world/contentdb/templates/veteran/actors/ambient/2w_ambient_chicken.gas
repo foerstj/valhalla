@@ -4,7 +4,7 @@
 	specializes = actor_ambient;
 	[actor]
 	{
-		race=other;
+		race = other;
 		drops_spellbook = false;
 	}
 	[aspect]
@@ -14,7 +14,7 @@
 		{
 			[die]
 			{
-				  * = s_e_die_chicken;
+				* = s_e_die_chicken;
 			}
 		}
 	}
@@ -37,25 +37,37 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=mg; }
+				[anim_files]
+				{
+					00 = mg;
+				}
 			}
 			[chore_fidget]
 			{
@@ -72,26 +84,32 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Chicken"; }
+	[common]
+	{
+		screen_name = "Chicken";
+	}
 	[mind]
 	{
-		on_enemy_spotted_alert_friends 				= false;
-		on_enemy_spotted_attack 					= false;
-		on_enemy_entered_ocz_attack 				= false;
-		on_enemy_entered_icz_attack 				= false;
-		on_enemy_entered_ocz_flee 					= true;
-		on_friend_entered_ocz_flee 					= true;
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_spotted_attack = false;
+		on_enemy_entered_ocz_attack = false;
+		on_enemy_entered_icz_attack = false;
+		on_enemy_entered_ocz_flee = true;
+		on_friend_entered_ocz_flee = true;
 		on_enemy_entered_weapon_engage_range_attack = false;
-		inner_comfort_zone_range 					= 0.1;
-		melee_engage_range 							= 0.1;
-		outer_comfort_zone_range 					= 5.0;
-		personal_space_range 						= 0.4;
-		sight_range 								= 6.0;
-		flee_count									= 1000;
+		inner_comfort_zone_range = 0.1;
+		melee_engage_range = 0.1;
+		outer_comfort_zone_range = 5.0;
+		personal_space_range = 0.4;
+		sight_range = 6.0;
+		flee_count = 1000;
 	}
 }
 [t:template,n:2W_chicken_grey]
@@ -101,7 +119,10 @@
 	specializes = 2W_base_chicken;
 	[aspect]
 	{
-		[textures] { 0=b_c_na_ckn_grey; }
+		[textures]
+		{
+			0 = b_c_na_ckn_grey;
+		}
 	}
 	[common]
 	{
@@ -128,7 +149,10 @@
 	specializes = 2W_base_chicken;
 	[aspect]
 	{
-		[textures] { 0=b_c_na_ckn_red; }
+		[textures]
+		{
+			0 = b_c_na_ckn_red;
+		}
 	}
 	[common]
 	{
@@ -155,7 +179,10 @@
 	specializes = 2W_base_chicken;
 	[aspect]
 	{
-		[textures] { 0=b_c_na_ckn_white; }
+		[textures]
+		{
+			0 = b_c_na_ckn_white;
+		}
 	}
 	[common]
 	{

@@ -3,20 +3,33 @@
 	category_name = "3W_evil_d";
 	doc = "3W_skrubb";
 	specializes = actor_evil;
-
 	[aspect]
 	{
 		model = m_c_edm_sb_pos_1;
 		draw_shadow = FALSE;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_skrubb; }
-			[die]			{ priority = high; * = s_e_die_skrubb; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_small_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_skrubb_SED; }
+			[cast]
+			{
+				* = s_e_attack_skrubb;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skrubb;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skrubb_small_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skrubb_SED;
+			}
 		}
 	}
-
 	[body]
 	{
 		avg_move_velocity = 1;
@@ -37,19 +50,28 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -65,35 +87,42 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at-02; }
+				[anim_files]
+				{
+					00 = at-02;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rv; }
+				[anim_files]
+				{
+					00 = rv;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_die 				= world\ai\jobs\actors\evil\job_die_delete.skrit;
-		jat_startup 							= world\ai\jobs\common\job_startup_reveal.skrit
+		jat_die = world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible 							= true;
-
-		jat_flee_from_object	= jat_none;
-		jat_guard         		= jat_none;
-		jat_move          		= jat_none;
-		jat_patrol         		= jat_none;
+		jat_flee_from_object = jat_none;
+		jat_guard = jat_none;
+		jat_move = jat_none;
+		jat_patrol = jat_none;
 	}
 }
-
 [t:template,n:3W_skrubb]
 {
 	category_name = "3W_evil_d";
@@ -103,9 +132,9 @@
 	{
 		[skills]
 		{
-			strength =  35.2, 0;
-			intelligence =  4.5, 0;
-			dexterity =  3.9, 0;
+			strength = 35.2, 0;
+			intelligence = 4.5, 0;
+			dexterity = 3.9, 0;
 		}
 	}
 	[aspect]
@@ -119,10 +148,25 @@
 		model = m_c_edm_sb_pos_1;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_skrubb; }
-			[die]			{ priority = high; * = s_e_die_skrubb_SED; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_small_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_skrubb; }
+			[cast]
+			{
+				* = s_e_attack_skrubb;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skrubb_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skrubb_small_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skrubb;
+			}
 		}
 	}
 	[attack]
@@ -134,35 +178,39 @@
 		damage_bonus_min_cmagic = 7;
 		damage_bonus_max_cmagic = 21;
 	}
-    [defend] { defense=62.3; }
+	[defend]
+	{
+		defense = 62.3;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_skrubb_spit; }
+		[other]
+		{
+			il_active_primary_spell = spell_skrubb_spit;
+		}
 	}
 	[common]
 	{
-		screen_name="Skrubb";
+		screen_name = "Skrubb";
 		membership = monster,immune_freeze;
 	}
 	[mind]
 	{
 		actor_auto_fidgets = false;
 		movement_orders = mo_hold;
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 10;
 		personal_space_range = 4.7;
 		on_enemy_entered_ocz_attack = true;
 		ranged_engage_range = 10.0;
 		sight_range = 10.0;
-		sight_origin_height	= 2;
+		sight_origin_height = 2;
 	}
 }
-
 [t:template,n:3W_skrubb_small]
 {
 	category_name = "3W_evil_d";
@@ -172,9 +220,9 @@
 	{
 		[skills]
 		{
-			strength =  31, 0;
-			intelligence =  3.5, 0;
-			dexterity =  6.1, 0;
+			strength = 31, 0;
+			intelligence = 3.5, 0;
+			dexterity = 6.1, 0;
 		}
 	}
 	[aspect]
@@ -186,14 +234,32 @@
 		mana = 182;
 		max_mana = 182;
 		model = m_c_edm_sb_pos_1;
-		[textures] {0 = b_c_edm_sb-02;}
+		[textures]
+		{
+			0 = b_c_edm_sb-02;
+		}
 		scale_base = 0.20;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_skrubb; }
-			[die]			{ priority = high; * = s_e_die_skrubb_small_SED; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_small_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_skrubb; }
+			[cast]
+			{
+				* = s_e_attack_skrubb;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skrubb_small_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skrubb_small_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skrubb;
+			}
 		}
 	}
 	[attack]
@@ -205,7 +271,10 @@
 		damage_bonus_min_cmagic = 336;
 		damage_bonus_max_cmagic = 428;
 	}
-    [defend] { defense=908.5; }
+	[defend]
+	{
+		defense = 908.5;
+	}
 	[generator_in_object]
 	{
 		child_template_name = hole_grs_01;
@@ -214,14 +283,17 @@
 		spawn_delay = 0.5;
 		fade_kid = true;
 	}
-    [inventory]
+	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_skrubb_spit_small; }
+		[other]
+		{
+			il_active_primary_spell = spell_skrubb_spit_small;
+		}
 	}
 	[common]
 	{
-		screen_name="Black Skrubb";
+		screen_name = "Black Skrubb";
 		[template_triggers]
 		{
 			[*]
@@ -235,17 +307,16 @@
 	{
 		actor_auto_fidgets = false;
 		movement_orders = mo_hold;
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 10;
 		personal_space_range = 1.2;
 		on_enemy_entered_ocz_attack = true;
 		ranged_engage_range = 10.0;
 		sight_range = 10.0;
-		sight_origin_height	= 2;
+		sight_origin_height = 2;
 	}
 }
 [t:template,n:3W_skrubb_farm]
@@ -257,10 +328,10 @@
 	{
 		[skills]
 		{
-			strength =  37.8, 0;
-			intelligence =  3.6, 0;
-			dexterity =  6.6, 0;
-			ranged =  88, 0;
+			strength = 37.8, 0;
+			intelligence = 3.6, 0;
+			dexterity = 6.6, 0;
+			ranged = 88, 0;
 		}
 	}
 	[aspect]
@@ -272,14 +343,32 @@
 		mana = 890;
 		max_mana = 890;
 		model = m_c_edm_sb_pos_1;
-		textures:0 = b_c_edm_sb-03;
+		[textures]
+		{
+			0 = b_c_edm_sb-03;
+		}
 		scale_base = 0.14;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_skrubb_farm_SED; }
-			[die]			{ priority = high; * = s_e_die_skrubb_farm_SED; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_skrubb_farm_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_skrubb_SED; }
+			[cast]
+			{
+				* = s_e_attack_skrubb_farm_SED;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skrubb_farm_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skrubb_farm_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skrubb_SED;
+			}
 		}
 	}
 	[attack]
@@ -291,7 +380,10 @@
 		damage_bonus_min_cmagic = 241;
 		damage_bonus_max_cmagic = 281;
 	}
-    [defend] { defense=723.3; }
+	[defend]
+	{
+		defense = 723.3;
+	}
 	[generator_in_object]
 	{
 		child_template_name = hole_grs_02;
@@ -300,14 +392,17 @@
 		spawn_delay = 0.5;
 		fade_kid = true;
 	}
-    [inventory]
+	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_skrubb_spit_farm; }
+		[other]
+		{
+			il_active_primary_spell = spell_skrubb_spit_farm;
+		}
 	}
 	[common]
 	{
-		screen_name="Farm Skrubb";
+		screen_name = "Farm Skrubb";
 		[template_triggers]
 		{
 			[*]
@@ -321,16 +416,15 @@
 	{
 		actor_auto_fidgets = false;
 		movement_orders = mo_hold;
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 10;
 		personal_space_range = 1.2;
 		on_enemy_entered_ocz_attack = true;
 		ranged_engage_range = 10.0;
 		sight_range = 10.0;
-		sight_origin_height	= 2;
+		sight_origin_height = 2;
 	}
 }

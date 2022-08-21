@@ -9,7 +9,7 @@
 		{
 			[die]
 			{
-				  * = s_e_die_chicken;
+				* = s_e_die_chicken;
 			}
 		}
 	}
@@ -32,25 +32,37 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=mg; }
+				[anim_files]
+				{
+					00 = mg;
+				}
 			}
 			[chore_fidget]
 			{
@@ -67,26 +79,33 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Big Chicken"; }
+	[common]
+	{
+		screen_name = "Big Chicken";
+	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
 	}
-	physics:gib_gore_good = true;
+	[physics]
+	{
+		gib_gore_good = true;
+	}
 }
-
 [t:template,n:2W_chicken_red_super]
 {
 	category_name = "2W_evil_b";
@@ -96,10 +115,10 @@
 	{
 		[skills]
 		{
-			strength =  	97.7,  0;
-			intelligence =  1,  0;
-			dexterity =  	61.6, 0;
-			melee =  		69, 0;
+			strength = 97.7,  0;
+			intelligence = 1,  0;
+			dexterity = 61.6, 0;
+			melee = 69, 0;
 		}
 	}
 	[aspect]
@@ -109,10 +128,16 @@
 		max_life = 26037.7;
 		mana = 10849.1;
 		max_mana = 10849.1;
-		[textures] { 0=b_c_na_ckn_red; }
+		[textures]
+		{
+			0 = b_c_na_ckn_red;
+		}
 		scale_multiplier = 3.5;
 	}
-    [defend] { defense=3446.7; }
+	[defend]
+	{
+		defense = 3446.7;
+	}
 	[attack]
 	{
 		damage_max = 656.4;
@@ -120,16 +145,14 @@
 		damage_bonus_min_cmagic = 31;
 		damage_bonus_max_cmagic = 51;
 	}
-	body:avg_move_velocity = 4.000000;
+	[body]
+	{
+		avg_move_velocity = 4.000000;
+	}
 	[common]
 	{
 		[template_triggers]
 		{
-			/*[*]
-			{
-				action* = call_sfx_script("feathers_flap_red");
-				condition* = receive_world_message("we_anim_sfx",1);
-			}*/
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x0940008F,0f,"default","every",0);
@@ -146,7 +169,6 @@
 			}
 		}
 	}
-	
 	[physics]
 	{
 		gib_gore_good = true;
@@ -156,7 +178,10 @@
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_chicken_fry; }
+		[other]
+		{
+			il_active_primary_spell = spell_chicken_fry;
+		}
 		[pcontent]
 		{
 			[all*]
@@ -164,7 +189,7 @@
 				[all*]
 				{
 					chance = 0.5;
-            	    il_main = #spell/68-116;
+					il_main = #spell/68-116;
 				}
 				[oneof*]
 				{
@@ -172,41 +197,39 @@
 					il_main = #armor/545-733;
 					max = 2;
 					min = 1;
-   	    		}
-    			[gold*]
+				}
+				[gold*]
 				{
 					chance = 0.5;
 					max = 521794;
 					min = 104359;
-                    piles = 5 - 10;
+					piles = 5 - 10;
 				}
 				[oneof*]
 				{
-	            	il_main = #weapon/-rare(1)/251-335;
-	                il_main = #armor/-rare(1)/628-838;
-                    il_main = #*/-rare(1)/251-335;
+					il_main = #weapon/-rare(1)/251-335;
+					il_main = #armor/-rare(1)/628-838;
+					il_main = #*/-rare(1)/251-335;
 					max = 3;
 					min = 2;
-
-                }
+				}
 				[oneof*]
-                {
-	                il_main = #weapon/-unique(2)/251-335;
-	                il_main = #armor/-unique(2)/628-838;
-                    il_main = #*/-unique(2)/251-335;
+				{
+					il_main = #weapon/-unique(2)/251-335;
+					il_main = #armor/-unique(2)/628-838;
+					il_main = #*/-unique(2)/251-335;
 					max = 2;
 					min = 1;
-	            }
-
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 }
 [t:template,n:2W_chicken_white_super]
@@ -218,13 +241,16 @@
 	{
 		[skills]
 		{
-			strength =  	69.8,  0;
-			intelligence =  1,  0;
-			dexterity =  	52.1, 0;
-			melee =  		57, 0;
+			strength = 69.8,  0;
+			intelligence = 1,  0;
+			dexterity = 52.1, 0;
+			melee = 57, 0;
 		}
 	}
-    [defend] { defense=2918.9; }
+	[defend]
+	{
+		defense = 2918.9;
+	}
 	[aspect]
 	{
 		experience_value = 330000;
@@ -233,7 +259,10 @@
 		mana = 8679.2;
 		max_mana = 8679.2;
 		scale_multiplier = 3;
-		[textures] { 0=b_c_na_ckn_white; }
+		[textures]
+		{
+			0 = b_c_na_ckn_white;
+		}
 	}
 	[attack]
 	{
@@ -244,11 +273,6 @@
 	{
 		[template_triggers]
 		{
-			/*[*]
-			{
-				action* = call_sfx_script("feathers_flap_white");
-				condition* = receive_world_message("we_anim_sfx",1);
-			}*/
 			[*]
 			{
 				action* = send_world_message("we_req_activate",0x0940008F,0f,"default","every",0);
@@ -273,14 +297,14 @@
 	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
 			[all*]
 			{
 				[all*]
 				{
 					chance = 0.5;
-            	    il_main = #spell/68-110;
+					il_main = #spell/68-110;
 				}
 				[oneof*]
 				{
@@ -288,32 +312,30 @@
 					il_main = #armor/628-785;
 					max = 4;
 					min = 2;
-   	    		}
-    			[gold*]
+				}
+				[gold*]
 				{
 					chance = 0.5;
 					max = 521794;
 					min = 104359;
-                    piles = 3 - 7;
+					piles = 3 - 7;
 				}
 				[oneof*]
 				{
-	            	il_main = #weapon/-rare(1)/251-335;
-	                il_main = #armor/-rare(1)/628-785;
-                    il_main = #*/-rare(1)/251-335;
+					il_main = #weapon/-rare(1)/251-335;
+					il_main = #armor/-rare(1)/628-785;
+					il_main = #*/-rare(1)/251-335;
 					max = 2;
 					min = 1;
-
-                }
+				}
 				[oneof*]
-                {
-	                il_main = #weapon/-unique(2)/251-335;
-	                il_main = #armor/-unique(2)/628-785;
-                    il_main = #*/-unique(2)/251-335;
+				{
+					il_main = #weapon/-unique(2)/251-335;
+					il_main = #armor/-unique(2)/628-785;
+					il_main = #*/-unique(2)/251-335;
 					max = 1;
 					min = 0;
-	            }
-
+				}
 			}
 		}
 	}

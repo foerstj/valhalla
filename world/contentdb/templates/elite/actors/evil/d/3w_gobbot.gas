@@ -9,7 +9,11 @@
 		material = wood;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_copter; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_copter;
+			}
 		}
 	}
 	[body]
@@ -32,25 +36,37 @@
 			{
 				chore_stances = 7;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 7;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 7;
 				skrit = select_transition;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 7;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_misc]
 			{
@@ -65,12 +81,15 @@
 			{
 				chore_stances = 7;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 		[weapon_scales]
 		{
-			as_minigun			= 0.8, 0.8, 0.8;
+			as_minigun = 0.8, 0.8, 0.8;
 		}
 	}
 	[effect_manager]
@@ -78,34 +97,29 @@
 		start_msg = WE_ENTERED_WORLD;
 		stop_msg = WE_LEFT_WORLD;
 		stop_msg2 = WE_KILLED;
-
 		effect_name = "";
 		rep_effect_name = "gobbot_blink";
-
 		repeat_rate = .3;
 		repeat_rate_max = .3;
-
 		run_once = true;
 	}
 	[common]
 	{
-		screen_name="Gobbot";
+		screen_name = "Gobbot";
 		membership = gobbot, monster;
 	}
 	[mind]
 	{
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		 = true
 			&actor_creates_own_party		 = true
 			&party_template					 = "party_gobbot";
-
-		melee_engage_range		= 14;
-		personal_space_range	= 0.7;
-		ranged_engage_range		= 14.0;
-		sight_range				= 14.0;
-		// $ mana ratio low is sent when a gobbot runs out of mana in his minigun. -ET
-		on_mana_ratio_low_flee	= true;
-		flee_count				= 1;
+		melee_engage_range = 14;
+		personal_space_range = 0.7;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		on_mana_ratio_low_flee = true;
+		flee_count = 1;
 	}
 	[physics]
 	{
@@ -133,19 +147,19 @@
 	{
 		[skills]
 		{
-			strength 		=  39.1,0;
-			intelligence 	=  12.3, 0;
-			dexterity 		=  19, 0;
-            combat_magic	=  98,0;
+			strength = 39.1,0;
+			intelligence = 12.3, 0;
+			dexterity = 19, 0;
+			combat_magic = 98,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 2494800;
 		life = 2220;
-        max_life = 2220;
-        mana = 47.1;
-        max_mana = 47.1;
+		max_life = 2220;
+		mana = 47.1;
+		max_mana = 47.1;
 	}
 	[attack]
 	{
@@ -155,15 +169,15 @@
 	}
 	[common]
 	{
-		screen_name="Gobbot Gunner";
+		screen_name = "Gobbot Gunner";
 	}
-
-	[defend] { defense=1086.5; }
-
+	[defend]
+	{
+		defense = 1086.5;
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
@@ -174,15 +188,15 @@
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_super;
-				   il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[oneof*]
 				{
-       				chance = 0.02;
-               		il_main = #nmagic/17-61;
-               		il_main = #cmagic/17-61;
+					chance = 0.02;
+					il_main = #nmagic/17-61;
+					il_main = #cmagic/17-61;
 				}
 				[oneof*]
 				{
@@ -192,18 +206,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/292-325;
-	                il_main = #armor/-rare(1)/898-1006;
-                    il_main = #*/-rare(1)/292-325;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/292-325;
+					il_main = #armor/-rare(1)/898-1006;
+					il_main = #*/-rare(1)/292-325;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/292-325;
-	                il_main = #armor/-unique(2)/898-1006;
-                    il_main = #*/-unique(2)/292-325;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/292-325;
+					il_main = #armor/-unique(2)/898-1006;
+					il_main = #*/-unique(2)/292-325;
+				}
 			}
 		}
 	}
@@ -217,19 +231,19 @@
 	{
 		[skills]
 		{
-			strength 		=  40.4,0;
-			intelligence 	=  12.4, 0;
-			dexterity 		=  19.5, 0;
-            combat_magic	=  99,0;
+			strength = 40.4,0;
+			intelligence = 12.4, 0;
+			dexterity = 19.5, 0;
+			combat_magic = 99,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 2494800;
 		life = 2341.9;
-        max_life = 2341.9;
-        mana = 49.7;
-        max_mana = 49.7;
+		max_life = 2341.9;
+		mana = 49.7;
+		max_mana = 49.7;
 	}
 	[attack]
 	{
@@ -237,17 +251,17 @@
 		damage_max = 659.6;
 		damage_min = 389.6;
 	}
-	[defend] { defense=1146.1; }
-
+	[defend]
+	{
+		defense = 1146.1;
+	}
 	[common]
 	{
-		screen_name="Gobbot Igniter";
+		screen_name = "Gobbot Igniter";
 	}
-
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
@@ -258,15 +272,15 @@
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_super;
-				   il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[oneof*]
 				{
-       				chance = 0.02;
-               		il_main = #nmagic/18-64;
-               		il_main = #cmagic/18-64;
+					chance = 0.02;
+					il_main = #nmagic/18-64;
+					il_main = #cmagic/18-64;
 				}
 				[oneof*]
 				{
@@ -276,18 +290,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/307-342;
-	                il_main = #armor/-rare(1)/947-1061;
-                    il_main = #*/-rare(1)/307-342;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/307-342;
+					il_main = #armor/-rare(1)/947-1061;
+					il_main = #*/-rare(1)/307-342;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/307-342;
-	                il_main = #armor/-unique(2)/947-1061;
-                    il_main = #*/-unique(2)/307-342;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/307-342;
+					il_main = #armor/-unique(2)/947-1061;
+					il_main = #*/-unique(2)/307-342;
+				}
 			}
 		}
 	}
@@ -301,19 +315,19 @@
 	{
 		[skills]
 		{
-			strength 		=  40.4,0;
-			intelligence 	=  12.4, 0;
-			dexterity 		=  19.5, 0;
-            combat_magic	=  99,0;
+			strength = 40.4,0;
+			intelligence = 12.4, 0;
+			dexterity = 19.5, 0;
+			combat_magic = 99,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 2494800;
 		life = 2341.9;
-        max_life = 2341.9;
-        mana = 49.7;
-        max_mana = 49.7;
+		max_life = 2341.9;
+		mana = 49.7;
+		max_mana = 49.7;
 	}
 	[attack]
 	{
@@ -321,17 +335,17 @@
 		damage_max = 659.6;
 		damage_min = 389.6;
 	}
-	[defend] { defense=1146.1; }
-
+	[defend]
+	{
+		defense = 1146.1;
+	}
 	[common]
 	{
-		screen_name="Gobbot Shocker";
+		screen_name = "Gobbot Shocker";
 	}
-
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
@@ -342,15 +356,15 @@
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_super;
-				   il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[oneof*]
 				{
-       				chance = 0.02;
-               		il_main = #nmagic/18-64;
-               		il_main = #cmagic/18-64;
+					chance = 0.02;
+					il_main = #nmagic/18-64;
+					il_main = #cmagic/18-64;
 				}
 				[oneof*]
 				{
@@ -360,18 +374,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/307-342;
-	                il_main = #armor/-rare(1)/947-1061;
-                    il_main = #*/-rare(1)/307-342;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/307-342;
+					il_main = #armor/-rare(1)/947-1061;
+					il_main = #*/-rare(1)/307-342;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/307-342;
-	                il_main = #armor/-unique(2)/947-1061;
-                    il_main = #*/-unique(2)/307-342;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/307-342;
+					il_main = #armor/-unique(2)/947-1061;
+					il_main = #*/-unique(2)/307-342;
+				}
 			}
 		}
 	}
@@ -385,19 +399,19 @@
 	{
 		[skills]
 		{
-			strength 		=  40.4,0;
-			intelligence 	=  12.4, 0;
-			dexterity 		=  19.5, 0;
-            combat_magic	=  99,0;
+			strength = 40.4,0;
+			intelligence = 12.4, 0;
+			dexterity = 19.5, 0;
+			combat_magic = 99,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 2494800;
 		life = 2341.9;
-        max_life = 2341.9;
-        mana = 49.7;
-        max_mana = 49.7;
+		max_life = 2341.9;
+		mana = 49.7;
+		max_mana = 49.7;
 	}
 	[attack]
 	{
@@ -405,18 +419,17 @@
 		damage_max = 659.6;
 		damage_min = 389.6;
 	}
-	[defend] { defense=1146.1; }
-
-  	[common]
+	[defend]
 	{
-		screen_name="Gobbot Grenadier";
+		defense = 1146.1;
 	}
-
-
+	[common]
+	{
+		screen_name = "Gobbot Grenadier";
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
@@ -427,15 +440,15 @@
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_super;
-				   il_main = potion_mana_super;
+					chance = 0.05;
+					il_main = potion_health_super;
+					il_main = potion_mana_super;
 				}
 				[oneof*]
 				{
-       				chance = 0.02;
-               		il_main = #nmagic/18-64;
-               		il_main = #cmagic/18-64;
+					chance = 0.02;
+					il_main = #nmagic/18-64;
+					il_main = #cmagic/18-64;
 				}
 				[oneof*]
 				{
@@ -445,20 +458,19 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/307-342;
-	                il_main = #armor/-rare(1)/947-1061;
-                    il_main = #*/-rare(1)/307-342;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/307-342;
+					il_main = #armor/-rare(1)/947-1061;
+					il_main = #*/-rare(1)/307-342;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/307-342;
-	                il_main = #armor/-unique(2)/947-1061;
-                    il_main = #*/-unique(2)/307-342;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/307-342;
+					il_main = #armor/-unique(2)/947-1061;
+					il_main = #*/-unique(2)/307-342;
+				}
 			}
 		}
-    }
+	}
 }
-

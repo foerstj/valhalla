@@ -81,7 +81,7 @@
 	[mind]
 	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
 	}
 }
@@ -98,8 +98,8 @@
 	{
 		life = 4.6;
 		max_life = 4.6;
-		is_invincible		= false;
-		is_collidable   = true;
+		is_invincible = false;
+		is_collidable = true;
 		model = m_c_gbn_pmo_pos_1;
 		[textures]
 		{
@@ -167,7 +167,9 @@
 	{
 		screen_name = "Azunite Scholar";
 	}
-	[conversation] {}
+	[conversation]
+	{
+	}
 	[inventory]
 	{
 		[other]
@@ -177,24 +179,23 @@
 	}
 	[mind]
 	{
-        jat_attack_object = jat_none;
-        jat_attack_object_melee = jat_none;
-        jat_attack_object_ranged = jat_none;
+		jat_attack_object = jat_none;
+		jat_attack_object_melee = jat_none;
+		jat_attack_object_ranged = jat_none;
 		jat_talk = world\ai\jobs\common\job_talk.skrit;
-        jat_die = world\ai\jobs\common\job_die.skrit;
-
-		on_enemy_spotted_alert_friends             = false;
-		on_enemy_spotted_attack                    = false;
-		actor_auto_defends_others                  = false;
-		actor_auto_heals_others_life               = false;
-		actor_auto_heals_others_mana               = false;
-		actor_auto_heals_self_life                 = false;
-		actor_auto_heals_self_mana                 = false;
-		actor_auto_xfers_mana                      = false;
+		jat_die = world\ai\jobs\common\job_die.skrit;
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_spotted_attack = false;
+		actor_auto_defends_others = false;
+		actor_auto_heals_others_life = false;
+		actor_auto_heals_others_mana = false;
+		actor_auto_heals_self_life = false;
+		actor_auto_heals_self_mana = false;
+		actor_auto_xfers_mana = false;
 		actor_may_attack = false;
 		actor_may_be_attacked = false;
-		combat_orders                              = co_hold;
-		movement_orders                            = mo_hold;
+		combat_orders = co_hold;
+		movement_orders = mo_hold;
 	}
 }
 [t:template,n:3W_horty_olof]
@@ -451,7 +452,7 @@
 			}
 			[misc]
 			{
-                [all*]
+				[all*]
 				{
 					il_main = #spellbook/143-260;
 					max = 6;
@@ -479,14 +480,12 @@
 			potion_mana_small = 20;
 			potion_mana_medium = 10;
 			potion_rejuvenation_small = 5;
-
 			scroll_resurrect = 10;
-            spell_resurrect = 10;
-            spell_revive = 10;
-            spell_healing_hands = 10;
-
-            spell_fireshot = 4;
-            spell_zap = 4;
+			spell_resurrect = 10;
+			spell_revive = 10;
+			spell_healing_hands = 10;
+			spell_fireshot = 4;
+			spell_zap = 4;
 		}
 	}
 }
@@ -551,7 +550,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #body/354-471;
@@ -570,8 +568,6 @@
 					max = 3;
 					min = 3;
 				}
-
-
 				[all*]
 				{
 					il_main = #gloves/47-471;
@@ -590,7 +586,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #helm/47-471;
@@ -609,7 +604,6 @@
 					max = 4;
 					min = 4;
 				}
-
 				[all*]
 				{
 					il_main = #boots/47-471;
@@ -670,7 +664,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/168-214;
@@ -690,7 +683,6 @@
 					min = 6;
 				}
 			}
-
 			[magic]
 			{
 				[all*]
@@ -734,15 +726,12 @@
 			potion_rejuvenation_small = 1;
 			potion_rejuvenation_medium = 2;
 			potion_rejuvenation_large = 1;
-
 			scroll_resurrect = 2;
-            spell_resurrect = 2;
-            spell_revive = 2;
-            spell_healing_hands = 2;
-
-            spell_fireshot = 2;
-            spell_zap = 2;
+			spell_resurrect = 2;
+			spell_revive = 2;
+			spell_healing_hands = 2;
+			spell_fireshot = 2;
+			spell_zap = 2;
 		}
 	}
 }
-

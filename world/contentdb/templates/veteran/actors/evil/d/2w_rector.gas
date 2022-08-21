@@ -8,9 +8,20 @@
 		model = m_c_edm_rt_pos_1;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_rector; }
-			[die]			{ priority = high; * = s_e_die_rector; }
-			[hit_glance]	{ priority = low; * = s_e_hit_rector_SED; }
+			[cast]
+			{
+				* = s_e_attack_rector;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_rector;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_rector_SED;
+			}
 		}
 	}
 	[body]
@@ -33,37 +44,55 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -79,13 +108,12 @@
 			}
 		}
 	}
-   	[mind]
+	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 15;
 		personal_space_range = 0.7;
 		ranged_engage_range = 15.0;
@@ -116,19 +144,19 @@
 	{
 		[skills]
 		{
-			strength =  	42, 0;
-			intelligence =  10.2, 0;
-			dexterity =  	4.5, 0;
-            combat_magic =  58,  0;
+			strength = 42, 0;
+			intelligence = 10.2, 0;
+			dexterity = 4.5, 0;
+			combat_magic = 58,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 29260;
 		life = 410;
-        max_life = 410;
-        mana = 140;
-        max_mana = 140;
+		max_life = 410;
+		mana = 140;
+		max_mana = 140;
 	}
 	[attack]
 	{
@@ -138,29 +166,37 @@
 		damage_bonus_min_cmagic = 138;
 		damage_bonus_max_cmagic = 218;
 	}
-	[common] { screen_name="Rector"; }
-	[defend] { defense=256.7; }
+	[common]
+	{
+		screen_name = "Rector";
+	}
+	[defend]
+	{
+		defense = 256.7;
+	}
 	[inventory]
 	{
-   		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_rector_burn; }
-
-    	[pcontent]
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_rector_burn;
+		}
+		[pcontent]
 		{
 			[oneof*]
 			{
-            	[oneof*]
+				[oneof*]
 				{
 					chance = 0.1;
 					il_main = #ring/109-181;
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	            	il_main = #weapon/-rare(1)/172-253;
-	                il_main = #armor/-rare(1)/180-660;
-                    il_main = #*/-rare(1)/172-253;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/172-253;
+					il_main = #armor/-rare(1)/180-660;
+					il_main = #*/-rare(1)/172-253;
+				}
 			}
 		}
 	}
@@ -174,20 +210,23 @@
 	{
 		[skills]
 		{
-			strength =  	24.1, 0;
-			intelligence =  16.2, 0;
-			dexterity =  	21.8, 0;
-            combat_magic =  57,  0;
+			strength = 24.1, 0;
+			intelligence = 16.2, 0;
+			dexterity = 21.8, 0;
+			combat_magic = 57,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 160000;
 		life = 1580.4;
-        max_life = 1580.4;
-        mana = 25.1;
-        max_mana = 25.1;
-        textures:0 = b_c_edm_rt-03;
+		max_life = 1580.4;
+		mana = 25.1;
+		max_mana = 25.1;
+		[textures]
+		{
+			0 = b_c_edm_rt-03;
+		}
 	}
 	[attack]
 	{
@@ -197,14 +236,22 @@
 		damage_bonus_min_cmagic = 186;
 		damage_bonus_max_cmagic = 263;
 	}
-	[common] { screen_name="Punisher"; }
-	[defend] { defense=424.7; }
+	[common]
+	{
+		screen_name = "Punisher";
+	}
+	[defend]
+	{
+		defense = 424.7;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_punisher_burn; }
-
-    	[pcontent]
+		[other]
+		{
+			il_active_primary_spell = spell_punisher_burn;
+		}
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -212,8 +259,8 @@
 				{
 					chance = 0.55;
 					il_main = #*/114-246;
-	                il_main = #nmagic/81-95;
-	                il_main = #cmagic/81-95;
+					il_main = #nmagic/81-95;
+					il_main = #cmagic/81-95;
 				}
 				[gold*]
 				{
@@ -247,11 +294,17 @@
 	category_name = "2W_evil_d";
 	doc = "[summon] punisher";
 	specializes = 2W_punisher_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
-    	selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_punisher_burn; }
+		selected_active_location = il_active_primary_spell;
+		[other]
+		{
+			il_active_primary_spell = spell_punisher_burn;
+		}
 		[pcontent]
 		{
 			[gold*]
@@ -270,19 +323,19 @@
 	{
 		[skills]
 		{
-			strength =  	22.1, 0;
-			intelligence =  13.9, 0;
-			dexterity =  	16.6, 0;
-            combat_magic =  74,  0;
+			strength = 22.1, 0;
+			intelligence = 13.9, 0;
+			dexterity = 16.6, 0;
+			combat_magic = 74,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 161000;
 		life = 2305.1;
-        max_life = 2305.1;
-        mana = 27.3;
-        max_mana = 27.3;
+		max_life = 2305.1;
+		mana = 27.3;
+		max_mana = 27.3;
 	}
 	[attack]
 	{
@@ -292,14 +345,22 @@
 		damage_bonus_min_cmagic = 129;
 		damage_bonus_max_cmagic = 177;
 	}
-	[common] { screen_name="Possessed Skull"; }
-	[defend] { defense=766.7; }
+	[common]
+	{
+		screen_name = "Possessed Skull";
+	}
+	[defend]
+	{
+		defense = 766.7;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_possessed_skull_burn; }
-
-    	[pcontent]
+		[other]
+		{
+			il_active_primary_spell = spell_possessed_skull_burn;
+		}
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -307,8 +368,8 @@
 				{
 					chance = 0.55;
 					il_main = #*/163-205;
-	                il_main = #nmagic/68-84;
-	                il_main = #cmagic/68-84;
+					il_main = #nmagic/68-84;
+					il_main = #cmagic/68-84;
 				}
 				[gold*]
 				{
@@ -321,10 +382,10 @@
 	}
 	[mind]
 	{
-		on_enemy_entered_ocz_flee 	= true;
+		on_enemy_entered_ocz_flee = true;
 		on_enemy_entered_ocz_attack = false;
-		on_enemy_entered_icz_flee 	= true;
+		on_enemy_entered_icz_flee = true;
 		on_enemy_entered_icz_attack = false;
-		flee_count 					= 1;
+		flee_count = 1;
 	}
 }

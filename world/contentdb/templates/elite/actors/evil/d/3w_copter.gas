@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  	10.8, 0;
-			intelligence =  	9.3, 0;
-			dexterity =  	25.9, 0;
-			ranged =  	91,  0;
+			strength = 10.8, 0;
+			intelligence = 9.3, 0;
+			dexterity = 25.9, 0;
+			ranged = 91,  0;
 		}
 	}
 	[aspect]
@@ -24,15 +24,23 @@
 		material = wood;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_copter; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_small_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_copter;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_mechanoid_small_SED;
+			}
 		}
 	}
 	[attack]
 	{
-		attack_range = 	0.5;
-		damage_max = 	378.6;
-		damage_min = 	297;
+		attack_range = 0.5;
+		damage_max = 378.6;
+		damage_min = 297;
 		damage_bonus_min_cmagic = 188;
 		damage_bonus_max_cmagic = 247;
 	}
@@ -56,50 +64,69 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
-
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_copter_lightning; }
+		[other]
+		{
+			il_active_primary_spell = spell_copter_lightning;
+		}
 	}
-
 	[common]
 	{
-		screen_name="Copter";
+		screen_name = "Copter";
 		[template_triggers]
 		{
 			[*]
@@ -107,18 +134,19 @@
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				action* = call_sfx_script("tailpipe_steam_copter");
-
 			}
 		}
 	}
-	[defend] { defense=731; }
+	[defend]
+	{
+		defense = 731;
+	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 12;
 		personal_space_range = 0.7;
 		ranged_engage_range = 13.0;

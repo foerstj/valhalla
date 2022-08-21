@@ -8,10 +8,26 @@
 		model = m_c_edm_pr_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_picker; }
-			[hit_critical]	{ priority = low; * = s_e_hit_picker_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_picker_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_picker_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_picker;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_picker_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_picker_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_picker_SED;
+			}
 		}
 	}
 	[body]
@@ -43,37 +59,47 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?cautious_chance	= 0.75
 			&min_cautious_distance = 2.00
 			&cautious_approach_distance = 1.5
 			&cautious_down_time = 2.0;
-
-
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -89,10 +115,10 @@
 	{
 		[skills]
 		{
-			strength =  	25.2, 0;
-			intelligence =  9, 0;
-			dexterity =  	26.7, 0;
-            melee = 		65, 0;
+			strength = 25.2, 0;
+			intelligence = 9, 0;
+			dexterity = 26.7, 0;
+			melee = 65, 0;
 		}
 	}
 	[aspect]
@@ -104,7 +130,11 @@
 		max_mana = 21.3;
 		[voice]
 		{
-			[die]	{ priority = high; * = s_e_die_spider; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
 		}
 	}
 	[attack]
@@ -114,11 +144,17 @@
 		damage_min = 228.3;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Picker"; }
-	[defend] { defense=742.9; }
+	[common]
+	{
+		screen_name = "Picker";
+	}
+	[defend]
+	{
+		defense = 742.9;
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander	= false
 			&still		= false;
 	}
@@ -149,7 +185,10 @@
 	category_name = "2W_evil_d";
 	doc = "[summon] picker";
 	specializes = 2W_picker_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -170,10 +209,10 @@
 	{
 		[skills]
 		{
-			strength =  24.4, 0;
-			intelligence =  4, 0;
-			dexterity =  17, 0;
-            melee       = 72, 0;
+			strength = 24.4, 0;
+			intelligence = 4, 0;
+			dexterity = 17, 0;
+			melee = 72, 0;
 		}
 	}
 	[aspect]
@@ -183,12 +222,23 @@
 		max_life = 1026.7;
 		mana = 25.7;
 		max_mana = 25.7;
-		textures:0 = b_c_edm_pr-02;
+		[textures]
+		{
+			0 = b_c_edm_pr-02;
+		}
 		material = steel;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_copter; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_small_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_copter;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_mechanoid_small_SED;
+			}
 		}
 	}
 	[attack]
@@ -198,11 +248,17 @@
 		damage_min = 242.6;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Kill Bot"; }
-	[defend] { defense=741.8; }
+	[common]
+	{
+		screen_name = "Kill Bot";
+	}
+	[defend]
+	{
+		defense = 741.8;
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious	= 0.65
 			&interest	= interest
 			&meander	= false
@@ -235,10 +291,10 @@
 	{
 		[skills]
 		{
-			strength =  19.9, 0;
-			intelligence =  11.9, 0;
-			dexterity =  18.4, 0;
-            melee       = 76, 0;
+			strength = 19.9, 0;
+			intelligence = 11.9, 0;
+			dexterity = 18.4, 0;
+			melee = 76, 0;
 		}
 	}
 	[aspect]
@@ -248,12 +304,23 @@
 		max_life = 1192.3;
 		mana = 24.8;
 		max_mana = 24.8;
-		textures:0 = b_c_edm_pr-03;
+		[textures]
+		{
+			0 = b_c_edm_pr-03;
+		}
 		material = steel;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_copter; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_small_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_copter;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_mechanoid_small_SED;
+			}
 		}
 	}
 	[attack]
@@ -263,11 +330,17 @@
 		damage_min = 268.3;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Hunter"; }
-	[defend] { defense=825.9; }
+	[common]
+	{
+		screen_name = "Hunter";
+	}
+	[defend]
+	{
+		defense = 825.9;
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious	= 0.65
 			&interest	= interest
 			&meander	= false

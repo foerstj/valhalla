@@ -7,22 +7,30 @@
 	{
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_lava_imp;		}
-			[enemy_spotted]	{ priority = high; * = s_e_call_maljin_SED;	}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_lava_imp;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_maljin_SED;
+			}
 		}
 	}
 	[body]
 	{
-        avg_move_velocity = 5.000000;
+		avg_move_velocity = 5.000000;
 		avg_move_velocity = 6.000000;
 		[bone_translator]
 		{
-			body_anterior 	= bip01_head;
-			body_mid 		= bip01_spine2;
-			body_posterior 	= bip01_pelvis;
-			kill_bone 		= bip01_spine2;
-			shield_bone 	= Bip01_L_Hand;
-			weapon_bone 	= Bip01_R_Hand;
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
 		}
 		[chore_dictionary]
 		{
@@ -44,13 +52,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00 = dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00 = di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -76,7 +90,10 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00 = rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
@@ -103,10 +120,10 @@
 	{
 		[skills]
 		{
-			strength = 		73.1, 0;
-			intelligence = 	19.8, 0;
-			dexterity = 	66.5, 0;
-			melee =  		99, 0;
+			strength = 73.1, 0;
+			intelligence = 19.8, 0;
+			dexterity = 66.5, 0;
+			melee = 99, 0;
 		}
 	}
 	[aspect]
@@ -118,7 +135,10 @@
 		max_mana = 2511.6;
 		model = m_c_edm_li_pos_2;
 		scale_base = 1.4;
-		[textures] { 0 = b_c_edm_li-02; }
+		[textures]
+		{
+			0 = b_c_edm_li-02;
+		}
 	}
 	[attack]
 	{
@@ -129,14 +149,17 @@
 	[common]
 	{
 		screen_name = "Maljin Stalker";
-		membership	= party_maljin_ranged, monster;
+		membership = party_maljin_ranged, monster;
 	}
-	[defend] { defense = 1706.7; }
+	[defend]
+	{
+		defense = 1706.7;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
@@ -146,18 +169,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/257-281;
-	                il_main = #armor/-rare(1)/706-807;
-                    il_main = #*/-rare(1)/257-281;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/257-281;
+					il_main = #armor/-rare(1)/706-807;
+					il_main = #*/-rare(1)/257-281;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/257-281;
-	                il_main = #armor/-unique(2)/706-807;
-                    il_main = #*/-unique(2)/257-281;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/257-281;
+					il_main = #armor/-unique(2)/706-807;
+					il_main = #*/-unique(2)/257-281;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -165,13 +188,12 @@
 					min = 372530;
 				}
 			}
-         }
+		}
 	}
 	[mind]
 	{
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		 = true;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -187,21 +209,25 @@
 	{
 		[voice]
 		{
-			[die]	{ priority = high; * = s_e_die_lava_imp; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_lava_imp;
+			}
 		}
 	}
 	[body]
 	{
-        min_move_velocity = 5.000000;
+		min_move_velocity = 5.000000;
 		avg_move_velocity = 6.000000;
 		[bone_translator]
 		{
-			body_anterior 	= bip01_head;
-			body_mid 		= bip01_spine2;
-			body_posterior 	= bip01_pelvis;
-			kill_bone 		= bip01_spine2;
-			shield_bone 	= Bip01_L_Hand;
-			weapon_bone 	= Bip01_R_Hand;
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
 		}
 		[chore_dictionary]
 		{
@@ -234,13 +260,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00 = dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00 = di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -266,20 +298,21 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00 = rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+		jat_cast = world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true;
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 	[physics]
 	{
@@ -297,11 +330,11 @@
 	{
 		[skills]
 		{
-			strength = 		61.3, 0;
-			intelligence = 	25.5, 0;
-			dexterity = 	80.5, 0;
-			melee =  		89, 0;
-   			ranged =  		98, 0;
+			strength = 61.3, 0;
+			intelligence = 25.5, 0;
+			dexterity = 80.5, 0;
+			melee = 89, 0;
+			ranged = 98, 0;
 		}
 	}
 	[aspect]
@@ -313,7 +346,10 @@
 		max_mana = 2489;
 		model = m_c_edm_li_pos_3;
 		scale_base = 1.4;
-		[textures] { 0 = b_c_edm_li-03; }
+		[textures]
+		{
+			0 = b_c_edm_li-03;
+		}
 	}
 	[attack]
 	{
@@ -326,14 +362,17 @@
 	[common]
 	{
 		screen_name = "Maljin Jolt";
-		membership	= party_maljin_ranged, monster;
+		membership = party_maljin_ranged, monster;
 	}
-	[defend] { defense = 1296.4; }
+	[defend]
+	{
+		defense = 1296.4;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
@@ -343,18 +382,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/257-281;
-	                il_main = #armor/-rare(1)/706-807;
-                    il_main = #*/-rare(1)/257-281;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/257-281;
+					il_main = #armor/-rare(1)/706-807;
+					il_main = #*/-rare(1)/257-281;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/257-281;
-	                il_main = #armor/-unique(2)/706-807;
-                    il_main = #*/-unique(2)/257-281;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/257-281;
+					il_main = #armor/-unique(2)/706-807;
+					il_main = #*/-unique(2)/257-281;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -362,11 +401,11 @@
 					min = 371948;
 				}
 			}
-        }
+		}
 		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=spell_maljin_spike_01;
+			il_active_primary_spell = spell_maljin_spike_01;
 			il_spell_1 = spell_maljin_spike_01;
 			il_spell_2 = spell_maljin_spike_02;
 			il_spell_3 = spell_maljin_spike_03;
@@ -374,11 +413,10 @@
 	}
 	[mind]
 	{
-		jat_brain						 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true
 			&actor_creates_own_party		= true
 			&party_template					= party_maljin_ranged;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -394,21 +432,25 @@
 	{
 		[voice]
 		{
-			[die]	{ priority = high; * = s_e_die_lava_imp; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_lava_imp;
+			}
 		}
 	}
 	[body]
 	{
-        min_move_velocity = 5.000000;
+		min_move_velocity = 5.000000;
 		avg_move_velocity = 6.000000;
 		[bone_translator]
 		{
-			body_anterior 	= bip01_head;
-			body_mid 		= bip01_spine2;
-			body_posterior 	= bip01_pelvis;
-			kill_bone 		= bip01_spine2;
-			shield_bone 	= Bip01_L_Hand;
-			weapon_bone 	= Bip01_R_Hand;
+			body_anterior = bip01_head;
+			body_mid = bip01_spine2;
+			body_posterior = bip01_pelvis;
+			kill_bone = bip01_spine2;
+			shield_bone = Bip01_L_Hand;
+			weapon_bone = Bip01_R_Hand;
 		}
 		[chore_dictionary]
 		{
@@ -441,13 +483,19 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00 = dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00 = di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -473,26 +521,26 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00 = rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_cast 						= world\ai\jobs\common\job_cast.skrit
+		jat_cast = world\ai\jobs\common\job_cast.skrit
 			?rand_spell					= true;
-
-		on_enemy_entered_ocz_flee 	= true;
+		on_enemy_entered_ocz_flee = true;
 		on_enemy_entered_ocz_attack = false;
-		on_enemy_entered_icz_flee 	= true;
+		on_enemy_entered_icz_flee = true;
 		on_enemy_entered_icz_attack = false;
-		flee_count 					= 1;
-
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		flee_count = 1;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?curious 		= 0.65
 			&interest		= interest
@@ -514,11 +562,11 @@
 	{
 		[skills]
 		{
-			strength = 		59.3, 0;
-			intelligence = 	35.4, 0;
-			dexterity = 	61.2, 0;
-			melee =  		84, 0;
-            combat_magic = 	102, 0;
+			strength = 59.3, 0;
+			intelligence = 35.4, 0;
+			dexterity = 61.2, 0;
+			melee = 84, 0;
+			combat_magic = 102, 0;
 		}
 	}
 	[aspect]
@@ -530,7 +578,10 @@
 		max_mana = 4991.6;
 		model = m_c_edm_li_pos_4;
 		scale_base = 1.4;
-		[textures] { 0 = b_c_edm_li-04; }
+		[textures]
+		{
+			0 = b_c_edm_li-04;
+		}
 	}
 	[attack]
 	{
@@ -544,12 +595,15 @@
 	{
 		screen_name = "Maljin Phantom";
 	}
-	[defend] { defense = 1051.7; }
+	[defend]
+	{
+		defense = 1051.7;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
-   			[oneof*]
+			[oneof*]
 			{
 				[oneof*]
 				{
@@ -559,18 +613,18 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/257-281;
-	                il_main = #armor/-rare(1)/706-807;
-                    il_main = #*/-rare(1)/257-281;
-                }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/257-281;
+					il_main = #armor/-rare(1)/706-807;
+					il_main = #*/-rare(1)/257-281;
+				}
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/257-281;
-	                il_main = #armor/-unique(2)/706-807;
-                    il_main = #*/-unique(2)/257-281;
-	            }
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/257-281;
+					il_main = #armor/-unique(2)/706-807;
+					il_main = #*/-unique(2)/257-281;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -578,11 +632,11 @@
 					min = 335591;
 				}
 			}
-        }
-        selected_active_location = il_active_primary_spell;
+		}
+		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=spell_maljin_ball_01;
+			il_active_primary_spell = spell_maljin_ball_01;
 			il_spell_1 = spell_maljin_ball_01;
 			il_spell_2 = spell_maljin_ball_02;
 			il_spell_3 = spell_maljin_ball_03;
@@ -605,10 +659,10 @@
 	{
 		[skills]
 		{
-			strength = 		83, 0;
-			intelligence = 	21.2, 0;
-			dexterity = 	70, 0;
-			melee =  		104, 0;
+			strength = 83, 0;
+			intelligence = 21.2, 0;
+			dexterity = 70, 0;
+			melee = 104, 0;
 		}
 	}
 	[aspect]
@@ -620,7 +674,10 @@
 		max_mana = 2779.9;
 		model = m_c_edm_li_pos_4;
 		scale_base = 1.4;
-		[textures] { 0 = b_c_edm_li-05; }
+		[textures]
+		{
+			0 = b_c_edm_li-05;
+		}
 	}
 	[attack]
 	{
@@ -631,26 +688,27 @@
 	[common]
 	{
 		screen_name = "Maljin Assassin";
-		membership=monster,party_maljin_ranged,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		membership = monster,party_maljin_ranged,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
-				no_trig_bits=true;
+				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
-
 			}
-
 		}
 	}
-	[defend] { defense = 1970.5; }
+	[defend]
+	{
+		defense = 1970.5;
+	}
 	[inventory]
 	{
-    	[pcontent]
+		[pcontent]
 		{
-   			[all*]
+			[all*]
 			{
 				[oneof*]
 				{
@@ -659,24 +717,24 @@
 				}
 				[oneof*]
 				{
-	            	chance = 0.01;
-	                il_main = #weapon/-rare(1)/257-281;
-	                il_main = #armor/-rare(1)/605-807;
-                    il_main = #*/-rare(1)/257-281;
-                }
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/257-281;
+					il_main = #armor/-rare(1)/605-807;
+					il_main = #*/-rare(1)/257-281;
+				}
 				[oneof*]
 				{
-	                il_main = #weapon/-unique(2)/257-281;
-	                il_main = #armor/-unique(2)/605-807;
-                    il_main = #*/-unique(2)/257-281;
-	            }
+					il_main = #weapon/-unique(2)/257-281;
+					il_main = #armor/-unique(2)/605-807;
+					il_main = #*/-unique(2)/257-281;
+				}
 				[gold*]
 				{
 					max = 527248;
 					min = 416106;
 				}
 			}
-         }
+		}
 	}
 	[mind]
 	{
@@ -686,13 +744,11 @@
 			&friends			= party_maljin_ranged
 			&approach_dist		= 2
 			&still				= false;
-
-		jat_brain							 = world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_creates_own_party			= true
 			&form_party_on_friend_entered_ICZ	= true
 			&form_party_on_friend_entered_OCZ	= true
 			&party_template						= "party_maljin_ranged";
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;

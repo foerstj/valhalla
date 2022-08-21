@@ -5,11 +5,14 @@
 	specializes = actor_evil;
 	[aspect]
 	{
-		model=m_c_edm_mg_pos_1;
+		model = m_c_edm_mg_pos_1;
 		material = stone;
 		[voice]
 		{
-			[die] { * = s_e_die_gargoyle; }
+			[die]
+			{
+				* = s_e_die_gargoyle;
+			}
 		}
 	}
 	[body]
@@ -50,29 +53,44 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Molten Golem"; }
+	[common]
+	{
+		screen_name = "Molten Golem";
+	}
 	[physics]
 	{
 		explode_when_killed = true;
@@ -89,10 +107,10 @@
 	{
 		[skills]
 		{
-			strength = 		80, 0;
-			intelligence = 	11, 0;
-			dexterity = 	27.8, 0;
-            melee =         76, 0;
+			strength = 80, 0;
+			intelligence = 11, 0;
+			dexterity = 27.8, 0;
+			melee = 76, 0;
 		}
 	}
 	[aspect]
@@ -101,8 +119,11 @@
 		life = 2316.4;
 		max_life = 2316.4;
 		mana = 1290.5;
-        max_mana = 1290.5;
-        textures:0 = b_c_edm_rg-03;
+		max_mana = 1290.5;
+		[textures]
+		{
+			0 = b_c_edm_rg-03;
+		}
 	}
 	[attack]
 	{
@@ -113,7 +134,7 @@
 	}
 	[common]
 	{
-		screen_name="Slag";
+		screen_name = "Slag";
 		[template_triggers]
 		{
 			[*]
@@ -124,7 +145,10 @@
 			}
 		}
 	}
-    [defend] { defense=1189.6; }
+	[defend]
+	{
+		defense = 1189.6;
+	}
 	[mind]
 	{
 		melee_engage_range = 14;
@@ -156,7 +180,7 @@
 	category_name = "2W_evil_d";
 	doc = "summoned molten_golem";
 	specializes = 2w_molten_golem_base;
-	[self_destruct] 
+	[self_destruct]
 	{
 		delete_time = 20.0;
 		explode = true;
@@ -171,10 +195,10 @@
 	{
 		[skills]
 		{
-			strength = 		71, 0;
-			intelligence = 	14.6, 0;
-			dexterity = 		22.3, 0;
-            melee =         84, 0;
+			strength = 71, 0;
+			intelligence = 14.6, 0;
+			dexterity = 22.3, 0;
+			melee = 84, 0;
 		}
 	}
 	[aspect]
@@ -183,8 +207,11 @@
 		life = 1720.7;
 		max_life = 1720.7;
 		mana = 1638;
-        max_mana = 1638;
-		textures:0	= b_c_edm_rg-04;
+		max_mana = 1638;
+		[textures]
+		{
+			0 = b_c_edm_rg-04;
+		}
 	}
 	[attack]
 	{
@@ -193,8 +220,14 @@
 		damage_min = 297.8;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Rock Golem"; }
-    [defend] { defense=956.3; }
+	[common]
+	{
+		screen_name = "Rock Golem";
+	}
+	[defend]
+	{
+		defense = 956.3;
+	}
 	[mind]
 	{
 		jat_guard = world\ai\jobs\common\job_guard.skrit;
@@ -221,14 +254,13 @@
 	category_name = "2W_evil_d";
 	doc = "2W_clay_golem";
 	specializes = actor_evil;
-
 	[actor]
 	{
 		[skills]
 		{
-			strength = 		72.9, 0;
-			intelligence = 	6.9, 0;
-			dexterity = 	24.6, 0;
+			strength = 72.9, 0;
+			intelligence = 6.9, 0;
+			dexterity = 24.6, 0;
 		}
 	}
 	[aspect]
@@ -238,15 +270,22 @@
 		max_life = 1775;
 		mana = 355;
 		max_mana = 355;
-		model=m_c_edm_cg_pos_1;
+		model = m_c_edm_cg_pos_1;
 		material = stone;
 		scale_base = 0.5;
-		is_usable					= true;
-		use_range					= 3;
-		[textures] { 0=b_c_edm_cg; }
+		is_usable = true;
+		use_range = 3;
+		[textures]
+		{
+			0 = b_c_edm_cg;
+		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_rector; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_rector;
+			}
 		}
 	}
 	[breaking_object]
@@ -262,7 +301,6 @@
 		damage_min = 32;
 		reload_delay = 0;
 	}
-
 	[body]
 	{
 		avg_move_velocity = 3.30000;
@@ -284,21 +322,27 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					qffg=dsf-02;
+					00 = at;
+					qffg = dsf-02;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_fidget]
 			{
@@ -306,47 +350,56 @@
 				skrit = select_fidget;
 				[anim_files]
 				{
-					00=dsf;
-				  	01=dsf-02;
+					00 = dsf;
+					01 = dsf-02;
 				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
-	[inventory] {}
-    [defend] { defense=601.7; }
-	[common] { screen_name="Clay Golem"; }
+	[inventory]
+	{
+	}
+	[defend]
+	{
+		defense = 601.7;
+	}
+	[common]
+	{
+		screen_name = "Clay Golem";
+	}
 	[mind]
 	{
-		jat_guard 				= world\ai\jobs\actors\good\job_helper_follow.skrit;
-		jat_flee_from_object	= world\ai\jobs\common\job_flee_from_object.skrit;
-		jat_get					= world\ai\jobs\common\job_get.skrit
+		jat_guard = world\ai\jobs\actors\good\job_helper_follow.skrit;
+		jat_flee_from_object = world\ai\jobs\common\job_flee_from_object.skrit;
+		jat_get = world\ai\jobs\common\job_get.skrit
 			?auto_use			= false;
-		jat_brain 				= jat_none;
-
-		actor_auto_picks_up_items 							= true;
-		on_enemy_spotted_alert_friends 						= false;
-		on_enemy_spotted_attack								= false;
-		on_enemy_entered_ocz_flee 							= true;
-		on_enemy_entered_icz_flee                      		= true;
-		on_enemy_entered_ocz_flee                      		= true;
-		on_enemy_entered_weapon_engage_range_attack			= false;
-		on_life_ratio_low_flee                         		= true;
-		on_alert_projectile_near_missed_flee				= true;
-
-		inner_comfort_zone_range	= 4;
-		outer_comfort_zone_range	= 8;
-		melee_engage_range 			= .1;
-		personal_space_range 		= 0.1;
-		ranged_engage_range 		= .2;
-		sight_range 				= 10.0;
-		flee_count					= 3;
-		flee_distance				= 8.0;
+		jat_brain = jat_none;
+		actor_auto_picks_up_items = true;
+		on_enemy_spotted_alert_friends = false;
+		on_enemy_spotted_attack = false;
+		on_enemy_entered_ocz_flee = true;
+		on_enemy_entered_icz_flee = true;
+		on_enemy_entered_ocz_flee = true;
+		on_enemy_entered_weapon_engage_range_attack = false;
+		on_life_ratio_low_flee = true;
+		on_alert_projectile_near_missed_flee = true;
+		inner_comfort_zone_range = 4;
+		outer_comfort_zone_range = 8;
+		melee_engage_range = .1;
+		personal_space_range = 0.1;
+		ranged_engage_range = .2;
+		sight_range = 10.0;
+		flee_count = 3;
+		flee_distance = 8.0;
 	}
 	[physics]
 	{
@@ -365,10 +418,10 @@
 	{
 		[skills]
 		{
-			strength = 		54.8, 0;
-			intelligence = 	7.2, 0;
-			dexterity =		14.6, 0;
-            melee =         60, 0;
+			strength = 54.8, 0;
+			intelligence = 7.2, 0;
+			dexterity = 14.6, 0;
+			melee = 60, 0;
 		}
 	}
 	[aspect]
@@ -377,8 +430,11 @@
 		life = 1005;
 		max_life = 1005;
 		mana = 51.5;
-        max_mana = 51.5;
-		textures:0 = b_c_edm_rg-02;
+		max_mana = 51.5;
+		[textures]
+		{
+			0 = b_c_edm_rg-02;
+		}
 		material = ice;
 	}
 	[attack]
@@ -388,8 +444,14 @@
 		damage_min = 231.9;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Frost Golem"; }
-    [defend] { defense=486.2; }
+	[common]
+	{
+		screen_name = "Frost Golem";
+	}
+	[defend]
+	{
+		defense = 486.2;
+	}
 	[inventory]
 	{
 		[pcontent]
@@ -398,36 +460,36 @@
 			{
 				[oneof*]
 				{
-				   chance = 0.05;
-				   il_main = potion_health_large;
-				   il_main = potion_mana_large;
+					chance = 0.05;
+					il_main = potion_health_large;
+					il_main = potion_mana_large;
 				}
 				[all*]
 				{
-       				chance = 0.02;
-	                il_main = #nmagic/26-62;
-	                il_main = #cmagic/26-62;
+					chance = 0.02;
+					il_main = #nmagic/26-62;
+					il_main = #cmagic/26-62;
 				}
 				[oneof*]
 				{
 					chance = 0.3;
 					il_main = #*/148-188;
-                    il_main = #armor/82-407;
+					il_main = #armor/82-407;
 				}
-                [oneof*]
-				{
-	            	chance = 0.004;
-	                il_main = #weapon/-rare(1)/183-247;
-	                il_main = #armor/-rare(1)/320-675;
-                    il_main = #*/-rare(1)/183-247;
-                }
 				[oneof*]
 				{
-                	chance = 0.002;
-	                il_main = #weapon/-unique(2)/183-247;
-	                il_main = #armor/-unique(2)/320-675;
-                    il_main = #*/-unique(2)/183-247;
-	            }
+					chance = 0.004;
+					il_main = #weapon/-rare(1)/183-247;
+					il_main = #armor/-rare(1)/320-675;
+					il_main = #*/-rare(1)/183-247;
+				}
+				[oneof*]
+				{
+					chance = 0.002;
+					il_main = #weapon/-unique(2)/183-247;
+					il_main = #armor/-unique(2)/320-675;
+					il_main = #*/-unique(2)/183-247;
+				}
 				[gold*]
 				{
 					chance = 0.125;
@@ -437,11 +499,10 @@
 			}
 		}
 	}
-
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
-		jat_guard	= world\ai\jobs\common\job_guard.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		jat_guard = world\ai\jobs\common\job_guard.skrit;
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 13.0;
@@ -472,7 +533,10 @@
 	category_name = "2W_evil_d";
 	doc = "[summon] golem_frost";
 	specializes = 2W_golem_frost_base;
-	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		[pcontent]

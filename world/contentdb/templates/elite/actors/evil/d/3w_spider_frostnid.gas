@@ -8,8 +8,16 @@
 		model = m_c_edm_fn_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_spider; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_spider_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_spider_SED;
+			}
 		}
 	}
 	[body]
@@ -31,37 +39,55 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -71,11 +97,10 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
-		sight_origin_height	= 1;
+		sight_origin_height = 1;
 	}
 	[physics]
 	{
-		//break_effect = ;
 		explode_when_killed = true;
 		explosion_magnitude = 1.0;
 		gib_gore_good = true;
@@ -100,18 +125,18 @@
 	{
 		[skills]
 		{
-			strength =  39.4, 0;
-			intelligence =  6.8, 0;
-			dexterity =  40.6, 0;
-            melee =  95,  0;
+			strength = 39.4, 0;
+			intelligence = 6.8, 0;
+			dexterity = 40.6, 0;
+			melee = 95,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 987924;
 		life = 1276.9;
-        max_life = 1276.9;
-        mana = 57.7;
+		max_life = 1276.9;
+		mana = 57.7;
 		max_mana = 57.7;
 	}
 	[attack]
@@ -120,8 +145,14 @@
 		damage_max = 285.7;
 		damage_min = 194.8;
 	}
-	[common] { screen_name="Frostnid"; }
-    [defend] { defense=624; }
+	[common]
+	{
+		screen_name = "Frostnid";
+	}
+	[defend]
+	{
+		defense = 624;
+	}
 }
 [t:template,n:3W_spider_frostnid_ranged]
 {
@@ -132,24 +163,35 @@
 	{
 		[skills]
 		{
-			strength =  40.4, 0;
-			intelligence =  8.5, 0;
-			dexterity =  43.8, 0;
-            ranged =  97,  0;
+			strength = 40.4, 0;
+			intelligence = 8.5, 0;
+			dexterity = 43.8, 0;
+			ranged = 97,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1152360;
 		life = 830.8;
-        max_life = 830.8;
-        mana = 61.5;
+		max_life = 830.8;
+		mana = 61.5;
 		max_mana = 61.5;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_frostnid; }
-			[die]			{ priority = high; * = s_e_die_spider; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_spider_SED; }
+			[cast]
+			{
+				* = s_e_attack_frostnid;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_spider_SED;
+			}
 		}
 	}
 	[attack]
@@ -163,15 +205,24 @@
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=spell_frostnid_freeze; }
+		[other]
+		{
+			il_active_primary_spell = spell_frostnid_freeze;
+		}
 	}
-	[common] { screen_name="Frost Spitter"; }
-    [defend] { defense=676.9; }
+	[common]
+	{
+		screen_name = "Frost Spitter";
+	}
+	[defend]
+	{
+		defense = 676.9;
+	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 }
