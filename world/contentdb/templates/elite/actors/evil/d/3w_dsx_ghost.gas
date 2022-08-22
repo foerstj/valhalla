@@ -3,16 +3,15 @@
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_ghost";
 	specializes = actor_evil;
-	
 	[actor]
 	{
 		[skills]
 		{
-			strength     =  44.8, 0;
-			intelligence =  12.5, 0;
-			dexterity    =  21.6, 0;
-			combat_magic = 	81, 0;
-			nature_magic =  81, 0;
+			strength = 44.8, 0;
+			intelligence = 12.5, 0;
+			dexterity = 21.6, 0;
+			combat_magic = 81, 0;
+			nature_magic = 81, 0;
 		}
 	}
 	[aspect]
@@ -21,16 +20,19 @@
 		life = 1653.6;
 		max_life = 1653.6;
 		mana = 89.4;
-       		max_mana = 89.4;
+		max_mana = 89.4;
 		draw_shadow = false;
 		model = m_c_edm_gh_pos_1;
-		
-		[textures] { 0=b_c_edm_gh-static; }
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_gh-static;
+		}
 		[voice]
 		{
 			[die]
 			{
-				  * = s_e_die_ghost;
+				* = s_e_die_ghost;
 			}
 		}
 	}
@@ -61,25 +63,37 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_misc]
 			{
@@ -95,20 +109,26 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Spirit";
-		membership=monster;//immune_freeze;
+		screen_name = "Spirit";
+		membership = monster;
 		[template_triggers]
 		{
 			[*]
@@ -117,14 +137,33 @@
 				action* = call_sfx_script("ghost_eye_glow");
 				condition* = receive_world_message("we_enemy_spotted");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
-	[defend] { defense=510.8; }
+	[defend]
+	{
+		defense = 510.8;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=dsx_spell_ghost_sap; }
-		
+		[other]
+		{
+			il_active_primary_spell = dsx_spell_ghost_sap;
+		}
 	}
 	[mind]
 	{
@@ -132,19 +171,15 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
-	
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible = true;
-		
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
-		
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 		actor_auto_fidgets = false;
 		sight_origin_height = 1;
-		
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 	[physics]
 	{

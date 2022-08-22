@@ -4,13 +4,33 @@
 	doc = "2W_Angler Base";
 	specializes = actor_evil;
 	[aspect]
-	{	
-       [textures]	{ 0 = b_c_edm_angler; }
+	{
+		[textures]
+		{
+			0 = b_c_edm_angler;
+		}
 		model = m_c_edm_mn_pos_1;
-		voice:die:		* = s_e_die_angler_SED;
-		voice:hit_glance:	* = s_e_hit_mangler_SED;
-		//voice:hit_solid:	* = s_e_hit_mangler_SED;
-		voice:hit_critical:	* = s_e_hit_mangler_SED;
+		[voice]
+		{
+			[die]
+			{
+						* = s_e_die_angler_SED;
+			}
+		}
+		[voice]
+		{
+			[hit_glance]
+			{
+					* = s_e_hit_mangler_SED;
+			}
+		}
+		[voice]
+		{
+			[hit_critical]
+			{
+					* = s_e_hit_mangler_SED;
+			}
+		}
 	}
 	[body]
 	{
@@ -42,25 +62,37 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -78,9 +110,9 @@
 		personal_space_range = 0.7;
 		ranged_engage_range = 10.0;
 		sight_range = 10.0;
-   		job_travel_distance_limit = 10;
+		job_travel_distance_limit = 10;
 		on_job_reached_travel_distance_abort_attack = true;
-		sight_origin_height	= 1;
+		sight_origin_height = 1;
 	}
 }
 [t:template,n:2W_dsx_angler]
@@ -91,35 +123,51 @@
 	{
 		[skills]
 		{
-			strength 		= 	23.2, 0;
-			intelligence 	= 	9.4, 0;
-			dexterity 		= 	15, 0;
-			melee 			=  	48,  0;
+			strength = 23.2, 0;
+			intelligence = 9.4, 0;
+			dexterity = 15, 0;
+			melee = 48,  0;
 		}
 	}
-
 	[aspect]
 	{
-		[textures]	{ 0 = b_c_edm_angler; }
+	  f scale_base = 1.259921;
+		[textures]
+		{
+			0 = b_c_edm_angler;
+		}
 		experience_value = 29260;
 		life = 289.1;
 		max_life = 289.1;
 		mana = 72.3;
 		max_mana = 72.3;
 	}
-
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 212;
 		damage_min = 104.1;
 	}
-	[common] { screen_name="Angler"; }
-	[defend] { defense = 205.6; }
+	[common]
+	{
+		screen_name = "Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 205.6;
+	}
 }
-
 [t:template,n:2W_dsx_angler_shadow]
-//balanced to Level 15
 {
 	doc = "2W_dsx_angler_shadow";
 	specializes = 2W_dsx_angler_base;
@@ -127,10 +175,10 @@
 	{
 		[skills]
 		{
-			strength = 	33.2, 0;
-			intelligence = 	10.6, 0;
-			dexterity = 	19.2, 0;
-			melee =  	55,  0;
+			strength = 33.2, 0;
+			intelligence = 10.6, 0;
+			dexterity = 19.2, 0;
+			melee = 55,  0;
 		}
 	}
 	[aspect]
@@ -140,8 +188,11 @@
 		max_life = 590.7;
 		mana = 32.1;
 		max_mana = 32.1;
-		scale_base = 0.60;
-		[textures]	{0=b_c_edm_shadow_angler;}
+	  f scale_base = 0.755953;
+		[textures]
+		{
+			0 = b_c_edm_shadow_angler;
+		}
 	}
 	[attack]
 	{
@@ -149,15 +200,30 @@
 		damage_max = 215.4;
 		damage_min = 158.9;
 	}
-	[common] { screen_name="Shadow Angler"; }
-	[defend] { defense=348.3; }
-	[mind] 
-	{ 
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit;
-        personal_space_range = 0.2;
+	[common]
+	{
+		screen_name = "Shadow Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 348.3;
+	}
+	[mind]
+	{
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
+		personal_space_range = 0.2;
 	}
 }
-
 [t:template,n:2W_dsx_angler_jungle]
 {
 	doc = "2W_dsx_angler_jungle";
@@ -166,10 +232,10 @@
 	{
 		[skills]
 		{
-			strength = 	25.7, 0;
-			intelligence = 	9.5, 0;
-			dexterity = 	15.6, 0;
-			melee =  	46, 0;
+			strength = 25.7, 0;
+			intelligence = 9.5, 0;
+			dexterity = 15.6, 0;
+			melee = 46, 0;
 		}
 	}
 	[aspect]
@@ -180,7 +246,11 @@
 		mana = 28;
 		material = teeth;
 		max_mana = 28;
- 	    [textures]	{0=b_c_edm_jungle_mangler;}
+	  f scale_base = 1.259921;
+		[textures]
+		{
+			0 = b_c_edm_jungle_mangler;
+		}
 	}
 	[attack]
 	{
@@ -188,17 +258,31 @@
 		damage_max = 200.2;
 		damage_min = 126;
 	}
-	[common] { screen_name="Jungle Angler"; }
-	[defend] { defense=382.7; }
+	[common]
+	{
+		screen_name = "Jungle Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 382.7;
+	}
 	[mind]
 	{
-		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?cautious_chance	= 0.75
 			&min_cautious_distance = 3.00
 			&cautious_approach_distance = 1.0
 			&cautious_down_time = 1.1;
-
-
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social 		= 0.35
 			&approach_dist 	= 2.00
@@ -207,9 +291,7 @@
 			&still 			= false;
 	}
 }
-
 [t:template,n:2W_dsx_angler_jungle_02]
-]
 {
 	doc = "2W_dsx_angler_jungle_02";
 	specializes = 2W_dsx_angler_base;
@@ -217,10 +299,10 @@
 	{
 		[skills]
 		{
-			strength = 	37, 0;
-			intelligence = 	10.6, 0;
-			dexterity = 	19.1, 0;
-			melee =  	59, 0;
+			strength = 37, 0;
+			intelligence = 10.6, 0;
+			dexterity = 19.1, 0;
+			melee = 59, 0;
 		}
 	}
 	[aspect]
@@ -231,7 +313,11 @@
 		mana = 12.2;
 		material = teeth;
 		max_mana = 12.2;
- 	    [textures]	{0=b_c_edm_jungle_mangler;}
+	  f scale_base = 1.259921;
+		[textures]
+		{
+			0 = b_c_edm_jungle_mangler;
+		}
 	}
 	[attack]
 	{
@@ -239,17 +325,31 @@
 		damage_max = 248.1;
 		damage_min = 178.3;
 	}
-	[common] { screen_name="Jungle Angler"; }
-	[defend] { defense=394.7; }
+	[common]
+	{
+		screen_name = "Jungle Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 394.7;
+	}
 	[mind]
 	{
-		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?cautious_chance	= 0.75
 			&min_cautious_distance = 3.00
 			&cautious_approach_distance = 1.0
 			&cautious_down_time = 1.1;
-
-
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?social 		= 0.35
 			&approach_dist 	= 2.00
@@ -258,10 +358,7 @@
 			&still 			= false;
 	}
 }
-
-
 [t:template,n:2W_dsx_angler_cave]
-// balanced to Level 12
 {
 	doc = "2W_dsx_angler_cave";
 	specializes = base_mangler;
@@ -269,10 +366,10 @@
 	{
 		[skills]
 		{
-			strength 		= 	31.4, 0;
-			intelligence 	= 	10.7, 0;
-			dexterity 		= 	18.2, 0;
-			melee 			=  	53,  0;
+			strength = 31.4, 0;
+			intelligence = 10.7, 0;
+			dexterity = 18.2, 0;
+			melee = 53,  0;
 		}
 	}
 	[aspect]
@@ -282,10 +379,28 @@
 		max_life = 580;
 		mana = 40;
 		max_mana = 40;
-		voice:die:			* = s_e_die_angler_SED;
-		voice:hit_glance:	* = s_e_hit_mangler_SED;
-		//voice:hit_solid:	* = s_e_hit_mangler_SED;
-		voice:hit_critical:	* = s_e_hit_mangler_SED;
+	  f scale_base = 1.259921;
+		[voice]
+		{
+			[die]
+			{
+							* = s_e_die_angler_SED;
+			}
+		}
+		[voice]
+		{
+			[hit_glance]
+			{
+					* = s_e_hit_mangler_SED;
+			}
+		}
+		[voice]
+		{
+			[hit_critical]
+			{
+					* = s_e_hit_mangler_SED;
+			}
+		}
 	}
 	[attack]
 	{
@@ -293,8 +408,24 @@
 		damage_max = 228.8;
 		damage_min = 144;
 	}
-	[common] { screen_name="Cave Angler"; }
-	[defend] { defense=576; }
+	[common]
+	{
+		screen_name = "Cave Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 576;
+	}
 	[inventory]
 	{
 	}

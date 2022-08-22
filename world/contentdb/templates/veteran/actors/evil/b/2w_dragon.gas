@@ -24,6 +24,7 @@
 		max_mana = 27858.5;
 		model = m_c_ebb_dg_pos_1;
 		rollover_highlight = false;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -120,6 +121,13 @@
 			{
 				action* = call_sfx_script("dragon_scream");
 				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

@@ -7,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  25.1, 0;
-			intelligence =  9.6, 0;
+			strength = 25.1, 0;
+			intelligence = 9.6, 0;
 			dexterity = 16.2, 0;
-			melee =  45,  0;
+			melee = 45,  0;
 		}
 	}
 	[aspect]
@@ -21,10 +21,19 @@
 		mana = 115;
 		max_mana = 115;
 		model = m_c_edm_sp_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_spider; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_spider; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_spider;
+			}
 		}
 	}
 	[attack]
@@ -34,7 +43,10 @@
 		damage_min = 176;
 		reload_delay = 1;
 	}
-	[defend] { defense=364.2; }
+	[defend]
+	{
+		defense = 364.2;
+	}
 	[body]
 	{
 		avg_move_velocity = 2.350000;
@@ -54,36 +66,63 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Widow Spider"; }
-
+	[common]
+	{
+		screen_name = "Widow Spider";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[mind]
 	{
 		melee_engage_range = 14.0;

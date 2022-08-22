@@ -176,18 +176,49 @@
 }
 [t:template,n:2W_picker]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_picker";
 	specializes = 2W_picker_base;
 }
 [t:template,n:2W_picker_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] picker";
 	specializes = 2W_picker_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -222,6 +253,7 @@
 		max_life = 1026.7;
 		mana = 25.7;
 		max_mana = 25.7;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_pr-02;
@@ -251,6 +283,16 @@
 	[common]
 	{
 		screen_name = "Kill Bot";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -304,6 +346,7 @@
 		max_life = 1192.3;
 		mana = 24.8;
 		max_mana = 24.8;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_pr-03;
@@ -333,6 +376,16 @@
 	[common]
 	{
 		screen_name = "Hunter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

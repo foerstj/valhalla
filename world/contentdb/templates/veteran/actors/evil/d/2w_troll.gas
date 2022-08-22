@@ -120,6 +120,7 @@
 		max_mana = 25.7;
 		life_recovery_unit = 1;
 		life_recovery_period = 8;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -130,6 +131,16 @@
 	[common]
 	{
 		screen_name = "Troll";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -182,7 +193,7 @@
 		max_life = 1324.6;
 		mana = 27.1;
 		max_mana = 27.1;
-		scale_base = 0.6;
+	  f scale_base = 0.755953;
 		[textures]
 		{
 			0 = b_c_edm_tl-02;
@@ -205,6 +216,16 @@
 	{
 		screen_name = "Swamp Troll";
 		membership = party_troll_swamp_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -275,7 +296,7 @@
 		max_life = 1900;
 		mana = 27.1;
 		max_mana = 27.1;
-		scale_base = 0.6;
+	  f scale_base = 0.755953;
 		[textures]
 		{
 			0 = b_c_edm_tl-07;
@@ -306,6 +327,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_green(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -459,18 +487,49 @@
 }
 [t:template,n:2W_troll_forest]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_troll forest";
 	specializes = 2W_troll_forest_base;
 }
 [t:template,n:2W_troll_forest_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] troll forest";
 	specializes = 2W_troll_forest_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -512,6 +571,7 @@
 		max_life = 2400.5;
 		mana = 33.8;
 		max_mana = 33.8;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_tl-06;
@@ -536,6 +596,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_green(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -615,6 +682,7 @@
 		max_life = 51.3;
 		mana = 25.7;
 		max_mana = 25.7;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_tl-04;
@@ -631,6 +699,16 @@
 	[common]
 	{
 		screen_name = "Rock Troll";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -681,6 +759,7 @@
 		max_life = 51.3;
 		mana = 25.7;
 		max_mana = 25.7;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_tl-05;
@@ -697,6 +776,16 @@
 	[common]
 	{
 		screen_name = "Mountain Troll";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

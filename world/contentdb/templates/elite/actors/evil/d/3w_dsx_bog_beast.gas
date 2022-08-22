@@ -8,16 +8,36 @@
 		model = m_c_edm_BOGBEAST_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_bog_beast_SED; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_gorack_SED; }
-			[hit_critical]	{ priority = low;  * = s_e_hit_bog_beast_SED; }
-			[hit_glance]	{ priority = low;  * = s_e_hit_bog_beast_SED; }
-			[hit_solid]		{ priority = low;  * = s_e_hit_bog_beast_SED; }
-		}		
+			[die]
+			{
+				priority = high;
+				* = s_e_die_bog_beast_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_gorack_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_bog_beast_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_bog_beast_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_bog_beast_SED;
+			}
+		}
 	}
 	[body]
 	{
-		avg_move_velocity = 2.580000;	 // 2.080
+		avg_move_velocity = 2.580000;
 		[bone_translator]
 		{
 			body_anterior = bip01_head;
@@ -34,37 +54,55 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
@@ -72,76 +110,88 @@
 	{
 		screen_name = "Bog Beast";
 		membership = monster;
-	}	
+	}
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit
 		?actor_joins_existing_party	= true;
-
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
-// Meander seems to set the melee engage range to a ridiculously small number,
-// which can't be overwritten with the specifier below. Go Figure
-//		?meander = false
-//		&still = false;
-		
-		melee_engage_range 		= 14;
-		personal_space_range 	= 1.0;
-		ranged_engage_range 	= 14.0;
-		sight_range 			= 14.0;
+		melee_engage_range = 14;
+		personal_space_range = 1.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
 	}
 }
-
 [t:template,n:3W_dsx_bog_beast]
 {
-// Balanced for level 12, medium melee
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_bog_beast";
 	specializes = 3W_dsx_bog_beast_base;
-	
 	[actor]
 	{
 		[skills]
 		{
-			strength		= 42.4, 0;
-			intelligence 	= 12.5, 0;
-			dexterity		= 24.3, 0;
-			melee			= 79, 0;
+			strength = 42.4, 0;
+			intelligence = 12.5, 0;
+			dexterity = 24.3, 0;
+			melee = 79, 0;
 		}
 	}
-	
 	[aspect]
 	{
-		[textures]	{ 0 = b_c_edm_bog_beast; }
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_bog_beast;
+		}
 		material = flesh;
-	
-		experience_value 	= 1070880;
-		life		 	= 1674.2;
-		max_life	 	= 1674.2;
-		mana			= 307.5;
-		max_mana	 	= 307.5;
+		experience_value = 1070880;
+		life = 1674.2;
+		max_life = 1674.2;
+		mana = 307.5;
+		max_mana = 307.5;
 	}
-
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 428.5; 
-		damage_min = 295.2; 
+		damage_max = 428.5;
+		damage_min = 295.2;
 	}
-	[defend] { defense = 779; }
+	[defend]
+	{
+		defense = 779;
 	}
-	[common]
+}
+[common]
+{
+	screen_name = "Bog Beast";
+	membership = monster;
+}
+[inventory]
+{
+	drop_at_use_point = true;
+	[pcontent]
 	{
-		screen_name="Bog Beast";
-		membership = monster;
-	}
-	[inventory]
-	{
-		drop_at_use_point = true;
-		// @TODO - this is the wrong level $$$
-		[pcontent]
-	{
-	/* Generated: Tue Jun 17 11:13:15 2003
-		Level 12, Medium */
 		[oneof*]
 		{
 			[gold*]
@@ -169,8 +219,7 @@
 				il_main = #weapon/-rare(1)/182-254;
 				il_main = #armor/-rare(1)/294-745;
 				il_main = #*/-rare(1)/182-254;
-			}	
+			}
 		}
-	}
 	}
 }

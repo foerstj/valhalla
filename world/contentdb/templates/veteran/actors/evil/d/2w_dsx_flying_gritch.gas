@@ -1,5 +1,4 @@
 [t:template,n:2W_dsx_flying_gritch]
-//balanced for Level 15
 {
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_flying_gritch";
@@ -8,16 +7,20 @@
 	{
 		[skills]
 		{
-		  strength 	 	=  33.2, 0;
-		  intelligence 	=   10.6, 0;
-		  dexterity 	=  19.2, 0;
-		  melee 		=  55, 0;
+			strength = 33.2, 0;
+			intelligence = 10.6, 0;
+			dexterity = 19.2, 0;
+			melee = 55, 0;
 		}
 	}
 	[aspect]
 	{
-		[textures]	{ 0 = b_c_edm_flying_gritch; }		
-		experience_value = 48400;		
+	  f scale_base = 1.259921;
+		[textures]
+		{
+			0 = b_c_edm_flying_gritch;
+		}
+		experience_value = 48400;
 		life = 815.5;
 		max_life = 815.5;
 		mana = 32.1;
@@ -25,8 +28,16 @@
 		model = m_c_edm_flgritch_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_soul_stinger; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_soul_stinger;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
 		}
 	}
 	[attack]
@@ -35,7 +46,10 @@
 		damage_max = 286.1;
 		damage_min = 187.8;
 	}
-	[defend] { defense=457.5; }
+	[defend]
+	{
+		defense = 457.5;
+	}
 	[body]
 	{
 		avg_move_velocity = 4.990000;
@@ -55,41 +69,68 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Flying Gritch"; }
+	[common]
+	{
+		screen_name = "Flying Gritch";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?meander	= false
 		&still		= false;
-		
 		melee_engage_range = 14;
 		personal_space_range = 0.5;
 		ranged_engage_range = 14.0;
@@ -98,7 +139,6 @@
 	[physics]
 	{
 		explode_when_killed = true;
-		
 		[break_particulate]
 		{
 			frag_glb_soul_stinger_01 = 1;

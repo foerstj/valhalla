@@ -2,8 +2,7 @@
 {
 	doc = "2W_packanimal base template";
 	specializes = actor_ambient;
-    category_name = "2W_ambients";
-
+	category_name = "2W_ambients";
 	[actor]
 	{
 		alignment = aa_good;
@@ -33,19 +32,28 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
@@ -60,28 +68,30 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Pack Animal";
+		screen_name = "Pack Animal";
 		is_multi_player = true;
 	}
 	[inventory]
 	{
 		is_pack_only = true;
-	        is_nonaggressive_pack = false;
+		is_nonaggressive_pack = false;
 	}
 	[mind]
 	{
 		flee_count = 1000;
-		jat_attack_object_melee			= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?face_reverse				= true;
 		on_enemy_spotted_alert_friends = false;
 		on_enemy_spotted_attack = false;
-		//actor_attacks_others_in_icz = false;
 		on_enemy_entered_ocz_flee = true;
 		inner_comfort_zone_range = 4;
 		outer_comfort_zone_range = 8;
@@ -89,9 +99,6 @@
 		sight_range = 10;
 	}
 }
-
-
-// plain mule
 [t:template,n:2W_packanimal]
 {
 	doc = "2W_Pack animal";
@@ -102,56 +109,3 @@
 		gold_value = 200;
 	}
 }
-
-
-// region-specific mules
-//[t:template,n:mule_bt_r1]
-//{
-//	doc = "mule_bt_r1";
-//	specializes = base_mule;
-//    category_name = "1W_ambients";
-//    [aspect]
-//	{
-//		gold_value = 320;
-//	}
-//}
-//[t:template,n:mule_cf_r1]
-//{
-//	doc = "mule_cf_r1";
-//	specializes = base_mule;
-//    category_name = "1W_ambients";
-//    [aspect]
-//	{
-//		gold_value = 151800;
-//	}
-//}
-//[t:template,n:mule_df_r0]
-//{
-//	doc = "mule_df_r0";
-//	specializes = base_mule;
-//    category_name = "1W_ambients";
-//    [aspect]
-//	{
-//		gold_value = 16300;
-//	}
-//}
-//[t:template,n:mule_nt_r1]
-//{
-//	doc = "mule_nt_r1";
-//	specializes = base_mule;
-//    category_name = "1W_ambients";
-//    [aspect]
-//	{
-//		gold_value = 1750;
-//	}
-//}
-//[t:template,n:mule_path2dm]
-//{
-//	doc = "mule_path2dm";
-//	specializes = base_mule;
-//    category_name = "1W_ambients";
-//    [aspect]
-//	{
-//		gold_value = 955;
-//	}
-//}

@@ -5,13 +5,16 @@
 	specializes = actor_evil;
 	[aspect]
 	{
-		[textures]	{ 0 = b_c_ecm_frost_giant; }
+		[textures]
+		{
+			0 = b_c_ecm_frost_giant;
+		}
 		model = m_c_ecm_FGIANT_pos_1;
 		material = flesh;
 	}
 	[body]
 	{
-		avg_move_velocity = 1.550000; //1.15
+		avg_move_velocity = 1.550000;
 		[bone_translator]
 		{
 			body_anterior = bip01_head;
@@ -23,7 +26,7 @@
 		}
 		[weapon_scales]
 		{
-			as_single_melee	= 1.7, 1.7, 1.7;
+			as_single_melee = 1.7, 1.7, 1.7;
 		}
 		[chore_dictionary]
 		{
@@ -42,35 +45,46 @@
 			{
 				chore_stances = 0,1;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0,1;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0,1;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?still		= false;
 	}
 }
-
 [t:template,n:3W_dsx_frost_giant]
 {
 	category_name = "3W_evil_c";
@@ -80,10 +94,10 @@
 	{
 		[skills]
 		{
-			strength	 =  66.1, 0;
-			intelligence   =  11.5, 0;
-			dexterity	 =  19.9, 0;
-			melee		 =  75, 0;
+			strength = 66.1, 0;
+			intelligence = 11.5, 0;
+			dexterity = 19.9, 0;
+			melee = 75, 0;
 		}
 	}
 	[aspect]
@@ -93,13 +107,34 @@
 		max_life = 1850;
 		mana = 0;
 		max_mana = 0;
+	  f scale_base = 1.587401;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_ice_giant; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_ice_giant_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_ice_giant_SED; }
-			[hit_glance]	        { priority = low; * = s_e_hit_ice_giant_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_ice_giant_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_ice_giant;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_ice_giant_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_ice_giant_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_ice_giant_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_ice_giant_SED;
+			}
 		}
 	}
 	[attack]
@@ -109,7 +144,6 @@
 		damage_min = 666;
 		reload_delay = 0;
 	}
-	
 	[common]
 	{
 		screen_name = "Ice Giant";
@@ -123,26 +157,39 @@
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_cyan(sgx)");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
-	
-	[defend] { defense = 1381.3; }
-	
+	[defend]
+	{
+		defense = 1381.3;
+	}
 	[inventory]
 	{
-	[pcontent]
-	{
-	/* Generated: Tue Jun 17 11:13:15 2003
-		Level 2, Special */
-		[all*]
+		[pcontent]
 		{
-			[gold*]
-					{
-						max = 995022;
-						min = 796017;
-						min_pile = 15;
-						piles = 2 - 4;
-					}
+			[all*]
+			{
+				[gold*]
+				{
+					max = 995022;
+					min = 796017;
+					min_pile = 15;
+					piles = 2 - 4;
+				}
 				[all*]
 				{
 					il_main = potion_health_super;
@@ -152,16 +199,15 @@
 					il_main = #armor/-mod(1)/370-740;
 					il_main = #weapon/-mod(1)/138-330;
 					il_main = #*/-mod(1)/275-413;
+				}
 			}
 		}
-	}	
 	}
-
 	[mind]
 	{
-		job_travel_distance_limit 			= 40;	// leash the giant
-		on_job_reached_travel_distance_abort_attack 	= false;
-		jat_fidget					= world\ai\jobs\common\job_fidget.skrit
+		job_travel_distance_limit = 40;
+		on_job_reached_travel_distance_abort_attack = false;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?curious					= 0.75
 		&wander						= 0.8
 		&social						= 0.1
@@ -169,25 +215,22 @@
 		&delay_min					= 6
 		&delay_max					= 16
 		&still						= false;
-		on_enemy_spotted_alert_friends 			= true;
-		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+		on_enemy_spotted_alert_friends = true;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 		?actor_joins_existing_party			= true
 		&actor_creates_own_party			= true
 		&party_template					= "party_dsx_ice";
-		com_channels					= dyn_party, ice;
-		com_range					= 14.0;
-		melee_engage_range				= 14.0;
-		ranged_engage_range	 			= 14.0;
-		personal_space_range 				= 0.7;
-		sight_range					= 14.0;
-		actor_life_ratio_low_threshold 			= 0.5;
+		com_channels = dyn_party, ice;
+		com_range = 14.0;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		personal_space_range = 0.7;
+		sight_range = 14.0;
+		actor_life_ratio_low_threshold = 0.5;
 	}
 }
-
-
 [t:template,n:3W_dsx_troll_masher_base]
 {
-// Balanced for level 26, hard melee
 	category_name = "3W_evil_c";
 	doc = "3W_dsx_troll_masher_base";
 	specializes = base_cyclops;
@@ -195,29 +238,55 @@
 	{
 		[skills]
 		{
-			strength =  48.7, 0;
-			intelligence =  12.1, 0;
-			dexterity =  25.5, 0;
-			melee =  89,  0;
+			strength = 48.7, 0;
+			intelligence = 12.1, 0;
+			dexterity = 25.5, 0;
+			melee = 89,  0;
 		}
 	}
 	[aspect]
 	{
-		[textures]	{ 0 = b_c_ecm_troll_masher; }
+		[textures]
+		{
+			0 = b_c_ecm_troll_masher;
+		}
 		experience_value = 2177780;
 		life = 2734.7;
 		max_life = 2734.7;
 		mana = 67.2;
 		max_mana = 67.2;
 		scale_base = 1.3;
-		textures:0 = b_c_ecm_cy-02;
+		[textures]
+		{
+			0 = b_c_ecm_cy-02;
+		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_cyclops; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_troll_masher_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_cyclops_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_cyclops_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_cyclops_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_cyclops;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_troll_masher_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_cyclops_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_cyclops_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_cyclops_SED;
+			}
 		}
 	}
 	[attack]
@@ -227,15 +296,18 @@
 		damage_min = 352.6;
 		reload_delay = 0;
 	}
-	[common] 
-	{ 
-		screen_name="Troll Masher"; 
-		membership = troll, monster;	
+	[common]
+	{
+		screen_name = "Troll Masher";
+		membership = troll, monster;
 	}
-	[defend] { defense=1328.2; }
+	[defend]
+	{
+		defense = 1328.2;
+	}
 	[mind]
 	{
-		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?curious				= 0.75
 		&wander					= 0.8
 		&social					= 0.1
@@ -243,38 +315,82 @@
 		&delay_min				= 6
 		&delay_max				= 16
 		&still					= false;
-		on_enemy_spotted_alert_friends 		= true;
-		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+		on_enemy_spotted_alert_friends = true;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 		?actor_joins_existing_party		= true
 		&actor_creates_own_party		= true
 		&party_template				= "party_dsx_troll";
-		com_channels				= dyn_party, troll;
-		com_range				= 14.0;
-		melee_engage_range			= 14.0;
-		ranged_engage_range	 		= 14.0;
-		personal_space_range 			= 0.7;
-		sight_range				= 14.0;
-		actor_life_ratio_low_threshold 		= 0.5;
+		com_channels = dyn_party, troll;
+		com_range = 14.0;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		personal_space_range = 0.7;
+		sight_range = 14.0;
+		actor_life_ratio_low_threshold = 0.5;
 	}
 }
-
 [t:template,n:3W_dsx_troll_masher]
 {
+	[aspect]
+	{
+	  f scale_base = 2.063621;
+	}
 	category_name = "3W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_troll_masher";
 	specializes = 3W_dsx_troll_masher_base;
 }
-
-
 [t:template,n:3W_dsx_troll_masher_summon]
 {
-  category_name = "3W_evil_c";
-  doc = "3W_dsx_summon_troll_masher";
-  specializes = 3W_dsx_troll_masher_base;
- aspect:experience_value = 0;
-  [inventory]
-    {
-      selected_active_location = il_active_primary_spell;
-      
-    }
+	category_name = "3W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	doc = "3W_dsx_summon_troll_masher";
+	specializes = 3W_dsx_troll_masher_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 2.063621;
+	}
+	[inventory]
+	{
+		selected_active_location = il_active_primary_spell;
+	}
 }

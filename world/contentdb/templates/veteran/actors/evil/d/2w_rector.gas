@@ -157,6 +157,7 @@
 		max_life = 410;
 		mana = 140;
 		max_mana = 140;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -169,6 +170,22 @@
 	[common]
 	{
 		screen_name = "Rector";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rector_eye_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -285,18 +302,61 @@
 }
 [t:template,n:2W_punisher]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rector_eye_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_punisher";
 	specializes = 2W_punisher_base;
 }
 [t:template,n:2W_punisher_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rector_eye_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] punisher";
 	specializes = 2W_punisher_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -336,6 +396,7 @@
 		max_life = 2305.1;
 		mana = 27.3;
 		max_mana = 27.3;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -348,6 +409,22 @@
 	[common]
 	{
 		screen_name = "Possessed Skull";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rector_eye_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

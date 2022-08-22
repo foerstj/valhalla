@@ -194,7 +194,7 @@
 		max_life = 1692.7;
 		max_mana = 160.4;
 		model = m_c_eam_kc_pos_1;
-		scale_base = 1.2;
+	  f scale_base = 1.904881;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -215,6 +215,23 @@
 	{
 		screen_name = "Krug Commander";
 		membership = krug, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -328,7 +345,7 @@
 		mana = 534;
 		max_life = 568;
 		max_mana = 534;
-		scale_base = 0.9;
+	  f scale_base = 1.428661;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -435,6 +452,23 @@
 	{
 		screen_name = "Krug Scout";
 		membership = krug, party_krug_shaman, party_krug_scout_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -518,6 +552,7 @@
 		mana = 145.6;
 		max_life = 409.6;
 		max_mana = 145.6;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -533,6 +568,23 @@
 	{
 		screen_name = "Krug Grunt";
 		membership = krug, party_krug_grunt_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -602,6 +654,7 @@
 		mana = 145.6;
 		max_life = 819.2;
 		max_mana = 145.6;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 1.15;
 		[textures]
 		{
@@ -625,6 +678,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -687,6 +754,7 @@
 		material = steel;
 		max_life = 586.7;
 		max_mana = 149.3;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -702,6 +770,23 @@
 	{
 		screen_name = "Krug Guard";
 		membership = krug, krug_guard, party_krug_commander, party_krug_shaman, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -783,6 +868,7 @@
 		max_life = 446;
 		max_mana = 18.2;
 		model = m_c_eam_kr_pos_1;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -797,6 +883,23 @@
 	[common]
 	{
 		screen_name = "Krug Raider";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -893,7 +996,7 @@
 		mana = 534;
 		max_life = 412;
 		max_mana = 534;
-		scale_base = 0.9;
+	  f scale_base = 1.428661;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -909,6 +1012,23 @@
 	{
 		screen_name = "Krug Scavenger";
 		membership = krug, party_krug_shaman, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1009,7 +1129,7 @@
 		mana = 534;
 		max_life = 916;
 		max_mana = 534;
-		scale_base = 1.1;
+	  f scale_base = 1.746141;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -1033,6 +1153,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_cyan(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -1123,7 +1257,7 @@
 		mana = 534;
 		max_life = 568;
 		max_mana = 534;
-		scale_base = 0.9;
+	  f scale_base = 1.428661;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -1222,6 +1356,23 @@
 	{
 		screen_name = "Krug Scout";
 		membership = krug, party_krug_shaman, party_krug_scavenger_boss, party_krug_grunt_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1325,7 +1476,7 @@
 		mana = 267;
 		max_life = 1246;
 		max_mana = 267;
-		scale_base = 1.15;
+	  f scale_base = 1.825511;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -1440,6 +1591,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_green(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -1612,6 +1777,7 @@
 		mana = 3604.5;
 		max_life = 486.5;
 		max_mana = 3604.5;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -1623,6 +1789,23 @@
 	[common]
 	{
 		screen_name = "Krug Shaman";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1687,6 +1870,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_eam_ks-02;
@@ -1717,6 +1901,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -1788,6 +1986,7 @@
 		mana = 7209;
 		max_life = 668;
 		max_mana = 7209;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -1799,6 +1998,23 @@
 	[common]
 	{
 		screen_name = "Krug Apprentice";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1865,6 +2081,7 @@
 		mana = 110.4;
 		max_life = 323.2;
 		max_mana = 110.4;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -1911,6 +2128,23 @@
 	{
 		screen_name = "Krug Chucker";
 		membership = monster, krug;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1990,6 +2224,7 @@
 		mana = 145.6;
 		max_life = 200.2;
 		max_mana = 145.6;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -2056,6 +2291,23 @@
 	[common]
 	{
 		screen_name = "Krug Grunt";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -2117,6 +2369,7 @@
 		mana = 145.6;
 		max_life = 200.2;
 		max_mana = 145.6;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -2183,6 +2436,23 @@
 	[common]
 	{
 		screen_name = "Krug Grunt";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -2247,6 +2517,7 @@
 		max_life = 327.6;
 		max_mana = 746.2;
 		model = m_c_eam_kg_pos_1;
+	  f scale_base = 1.587401;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -2338,6 +2609,20 @@
 			{
 				action* = call_sfx_script("melee_hit_2");
 				condition* = receive_world_message("we_damaged");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

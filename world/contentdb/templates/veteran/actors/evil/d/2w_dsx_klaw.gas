@@ -7,20 +7,24 @@
 	{
 		[skills]
 		{
-			strength =  26.4, 0;
-			intelligence =  9.4, 0;
-			dexterity =  15.1, 0;
-           		 melee =  48,  0;
+			strength = 26.4, 0;
+			intelligence = 9.4, 0;
+			dexterity = 15.1, 0;
+			melee = 48,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 38808;
 		life = 894.4;
-       		max_life = 894.4;
-        	mana = 93.6;
+		max_life = 894.4;
+		mana = 93.6;
 		max_mana = 93.6;
-		textures:0 = b_c_edm_kw-02;
+	  f scale_base = 1.259921;
+		[textures]
+		{
+			0 = b_c_edm_kw-02;
+		}
 	}
 	[attack]
 	{
@@ -28,44 +32,57 @@
 		damage_max = 234.5;
 		damage_min = 177.8;
 	}
-	[common] { screen_name="Jungle Klaw"; }
-   	 [defend] { defense=247.9; }
+	[common]
+	{
+		screen_name = "Jungle Klaw";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 247.9;
+	}
 	[inventory]
 	{
 		[pcontent]
-	{
-	/* Generated: Tue Jun 17 11:13:15 2003
-		Level 10, Medium */
-		[oneof*]
 		{
-			[gold*]
-			{
-				chance = 0.2;
-				min = 34016;
-				max = 67736;
-			}
 			[oneof*]
 			{
-				chance = 0.2;
-				il_main = potion_mana_large;
-				il_main = potion_health_large;
+				[gold*]
+				{
+					chance = 0.2;
+					min = 34016;
+					max = 67736;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #weapon/98-138;
+					il_main = #armor/31-276;
+					il_main = #*/98-138;
+				}
+				[oneof*]
+				{
+					chance = 0.0075;
+					il_main = #weapon/-rare(1)/108-162;
+					il_main = #armor/-rare(1)/177-468;
+					il_main = #*/-rare(1)/108-162;
+				}
 			}
-			[oneof*]
-			{
-				chance = 0.15;
-				il_main = #weapon/98-138;
-				il_main = #armor/31-276;
-				il_main = #*/98-138;
-			}
-			[oneof*]
-			{
-				chance = 0.0075;
-				il_main = #weapon/-rare(1)/108-162;
-				il_main = #armor/-rare(1)/177-468;
-				il_main = #*/-rare(1)/108-162;
-			}
-			
 		}
-	}
 	}
 }

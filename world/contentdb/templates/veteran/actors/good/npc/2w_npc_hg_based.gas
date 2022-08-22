@@ -35,8 +35,7 @@
 					extr = at-04;
 					qffg = dff;
 				}
-
-		 	  	[anim_durations]
+				[anim_durations]
 				{
 					fs0 = 1.250;
 					fs1 = 0.830;
@@ -48,7 +47,6 @@
 					fs7 = 0.125;
 					fs8 = 1.000;
 				}
-
 			}
 			[chore_default]
 			{
@@ -134,7 +132,10 @@
 			es_feet = bo_bo_le_light;
 		}
 	}
- mind:sight_origin_height = 1.6;
+	[mind]
+	{
+		sight_origin_height = 1.6;
+	}
 	[physics]
 	{
 		fire_effect = human_physics_fire;

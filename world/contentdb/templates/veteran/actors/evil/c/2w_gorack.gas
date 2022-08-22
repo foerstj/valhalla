@@ -21,6 +21,7 @@
 		life = 2945.5;
 		max_life = 2945.5;
 		model = m_c_ecm_ga_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -132,6 +133,16 @@
 	[common]
 	{
 		membership = party_gorack_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -226,6 +237,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_ga-04;
@@ -347,6 +359,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

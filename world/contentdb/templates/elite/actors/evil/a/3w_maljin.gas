@@ -134,7 +134,7 @@
 		mana = 2511.6;
 		max_mana = 2511.6;
 		model = m_c_edm_li_pos_2;
-		scale_base = 1.4;
+	  f scale_base = 2.222361;
 		[textures]
 		{
 			0 = b_c_edm_li-02;
@@ -150,6 +150,23 @@
 	{
 		screen_name = "Maljin Stalker";
 		membership = party_maljin_ranged, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -345,7 +362,7 @@
 		mana = 2489;
 		max_mana = 2489;
 		model = m_c_edm_li_pos_3;
-		scale_base = 1.4;
+	  f scale_base = 2.222361;
 		[textures]
 		{
 			0 = b_c_edm_li-03;
@@ -363,6 +380,23 @@
 	{
 		screen_name = "Maljin Jolt";
 		membership = party_maljin_ranged, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -577,7 +611,7 @@
 		mana = 4991.6;
 		max_mana = 4991.6;
 		model = m_c_edm_li_pos_4;
-		scale_base = 1.4;
+	  f scale_base = 2.222361;
 		[textures]
 		{
 			0 = b_c_edm_li-04;
@@ -594,6 +628,23 @@
 	[common]
 	{
 		screen_name = "Maljin Phantom";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -673,7 +724,7 @@
 		mana = 2779.9;
 		max_mana = 2779.9;
 		model = m_c_edm_li_pos_4;
-		scale_base = 1.4;
+	  f scale_base = 2.222361;
 		[textures]
 		{
 			0 = b_c_edm_li-05;
@@ -697,6 +748,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

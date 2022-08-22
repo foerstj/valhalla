@@ -21,6 +21,7 @@
 		mana = 211.2;
 		max_mana = 211.2;
 		model = m_c_gbn_bs_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_mj;
@@ -143,6 +144,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

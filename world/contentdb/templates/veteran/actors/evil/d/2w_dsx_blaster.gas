@@ -1,6 +1,5 @@
 [t:template,n:2W_dsx_blaster]
 {
-// Balanced to level 27+, hard ranged
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_blaster";
 	specializes = actor_evil;
@@ -8,27 +7,36 @@
 	{
 		[skills]
 		{
-			strength 		= 37.7, 0;
-			intelligence 	= 13.1, 0;
-			dexterity 		= 19.9, 0;
-			ranged 			= 63, 0;
-			nature_magic 	= 64, 0;
-			combat_magic 	= 64, 0;
+			strength = 37.7, 0;
+			intelligence = 13.1, 0;
+			dexterity = 19.9, 0;
+			ranged = 63, 0;
+			nature_magic = 64, 0;
+			combat_magic = 64, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 93600;
-		life 			= 1988;
-		max_life 		= 1988;
-		mana 			= 25.4;
-		max_mana 		= 25.4;
+		life = 1988;
+		max_life = 1988;
+		mana = 25.4;
+		max_mana = 25.4;
 		model = m_c_edm_bl_pos_1;
 		material = wood;
+	  f scale_base = 1.259921;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_proxo; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_mechanoid_big_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_proxo;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_mechanoid_big_SED;
+			}
 		}
 	}
 	[attack]
@@ -38,7 +46,7 @@
 		damage_min = 205.4;
 		damage_bonus_min_cmagic = 124;
 		damage_bonus_max_cmagic = 169;
-	}	
+	}
 	[body]
 	{
 		avg_move_velocity = 1.960000;
@@ -58,44 +66,61 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-
 	[common]
 	{
-		screen_name="Gobbot Blaster";
+		screen_name = "Gobbot Blaster";
 		membership = automaton,monster,immune_freeze;
 		[template_triggers]
 		{
@@ -105,64 +130,75 @@
 				single_shot = true;
 				action* = call_sfx_script("tailpipe_steam_blaster");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
-	[defend] { defense=692.3; }
+	[defend]
+	{
+		defense = 692.3;
+	}
 	[inventory]
 	{
-    		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=dsx_spell_blaster_bomb; }
-    		[pcontent]
-	{
-		/* Generated: Tue Jun 17 11:13:15 2003
-		Level 28, Strong */
-		[oneof*]
+		selected_active_location = il_active_primary_spell;
+		[other]
 		{
-			[gold*]
-			{
-				chance = 0.2;
-				min = 58333;
-				max = 115804;
-			}
-			[oneof*]
-			{
-				chance = 0.088888888888889;
-				il_main = potion_mana_large;
-				il_main = potion_health_large;
-			}
-			[oneof*]
-			{
-				chance = 0.111111111111111;
-				il_main = potion_mana_large;
-				il_main = potion_health_large;
-			}
-			[oneof*]
-			{
-				chance = 0.2;
-				il_main = #weapon/157-197;
-				il_main = #armor/96-512;
-				il_main = #*/157-197;
-			}
-			[oneof*]
-			{
-				chance = 0.01;
-				il_main = #weapon/-rare(1)/197-217;
-				il_main = #armor/-rare(1)/418-680;
-				il_main = #*/-rare(1)/197-217;
-			}
-			[oneof*]
-			{
-				chance = 0.005;
-				il_main = #weapon/-unique(2)/197-217;
-				il_main = #armor/-unique(2)/418-680;
-				il_main = #*/-unique(2)/197-217;
-			}		
+			il_active_primary_spell = dsx_spell_blaster_bomb;
 		}
-	}
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 58333;
+					max = 115804;
+				}
+				[oneof*]
+				{
+					chance = 0.088888888888889;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.111111111111111;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/157-197;
+					il_main = #armor/96-512;
+					il_main = #*/157-197;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/197-217;
+					il_main = #armor/-rare(1)/418-680;
+					il_main = #*/-rare(1)/197-217;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #weapon/-unique(2)/197-217;
+					il_main = #armor/-unique(2)/418-680;
+					il_main = #*/-unique(2)/197-217;
+				}
+			}
+		}
 	}
 	[mind]
 	{
-		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?curious				= 0.75
 		&wander					= 0.8
 		&social					= 0.1
@@ -170,26 +206,26 @@
 		&delay_min				= 6
 		&delay_max				= 16
 		&still					= false;
-		on_enemy_spotted_alert_friends 		= true;
-		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+		on_enemy_spotted_alert_friends = true;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 		?actor_joins_existing_party		= true
 		&actor_creates_own_party		= true
 		&party_template				= "party_dsx_gobbot";
-		com_channels				= dyn_party, gobbot;
-		com_range				= 8.0;
-		melee_engage_range			= 9.0;
-		ranged_engage_range	 		= 10.0;
-		sight_range				= 13.0;
-		personal_space_range 			= 0.7;
-		actor_life_ratio_low_threshold 		= 0.5;
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic		= true;
-		actor_auto_switches_to_karate		= false;
-		actor_auto_switches_to_melee		= false;
+		com_channels = dyn_party, gobbot;
+		com_range = 8.0;
+		melee_engage_range = 9.0;
+		ranged_engage_range = 10.0;
+		sight_range = 13.0;
+		personal_space_range = 0.7;
+		actor_life_ratio_low_threshold = 0.5;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 	}
 	[physics]
 	{
-		velocity=14.0;
+		velocity = 14.0;
 		break_effect = generic_explosion;
 		explode_when_killed = true;
 		explosion_magnitude = 3.0;
@@ -217,8 +253,8 @@
 	}
 	[tsd_manager]
 	{
-		check_freq_min	= .1;
-		check_freq_max	= .1;
+		check_freq_min = .1;
+		check_freq_max = .1;
 		use_velocity_for_speed = true;
 	}
 }

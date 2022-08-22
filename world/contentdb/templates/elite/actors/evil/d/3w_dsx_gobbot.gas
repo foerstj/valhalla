@@ -9,7 +9,11 @@
 		material = wood;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_gobbot_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_gobbot_SED;
+			}
 		}
 	}
 	[body]
@@ -32,25 +36,37 @@
 			{
 				chore_stances = 7;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 7;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 7;
 				skrit = select_transition;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 7;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_misc]
 			{
@@ -65,12 +81,15 @@
 			{
 				chore_stances = 7;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 		[weapon_scales]
 		{
-			as_minigun			= 0.8, 0.8, 0.8;
+			as_minigun = 0.8, 0.8, 0.8;
 		}
 	}
 	[effect_manager]
@@ -78,23 +97,20 @@
 		start_msg = WE_ENTERED_WORLD;
 		stop_msg = WE_LEFT_WORLD;
 		stop_msg2 = WE_KILLED;
-
 		effect_name = "";
 		rep_effect_name = "gobbot_blink";
-
 		repeat_rate = .3;
 		repeat_rate_max = .3;
-
 		run_once = true;
 	}
 	[common]
 	{
-		screen_name="Gobbot";
+		screen_name = "Gobbot";
 		membership = gobbot, monster;
 	}
 	[mind]
 	{
-		jat_fidget				= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?curious				= 0.75
 		&wander					= 0.8
 		&social					= 0.1
@@ -102,21 +118,20 @@
 		&delay_min				= 6
 		&delay_max				= 16
 		&still					= false;
-		on_enemy_spotted_alert_friends 		= true;
-		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+		on_enemy_spotted_alert_friends = true;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 		?actor_joins_existing_party		= true
 		&actor_creates_own_party		= true
 		&party_template				= "party_dsx_gobbot";
-		com_channels				= dyn_party, gobbot;
-		com_range				= 14.0;
-		melee_engage_range			= 14.0;
-		ranged_engage_range	 		= 14.0;
-		sight_range				= 14.0;
-		personal_space_range			= 0.7;
-		actor_life_ratio_low_threshold 		= 0.5;
-		// $ mana ratio low is sent when a gobbot runs out of mana in his minigun. -ET
-		on_mana_ratio_low_flee			= true;
-		flee_count				= 1;
+		com_channels = dyn_party, gobbot;
+		com_range = 14.0;
+		melee_engage_range = 14.0;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
+		personal_space_range = 0.7;
+		actor_life_ratio_low_threshold = 0.5;
+		on_mana_ratio_low_flee = true;
+		flee_count = 1;
 	}
 	[physics]
 	{
@@ -135,9 +150,7 @@
 		}
 	}
 }
-
 [t:template,n:3W_dsx_gobbot_minigun]
-//balanced to Level 18
 {
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_gobbot_minigun";
@@ -146,23 +159,24 @@
 	{
 		[skills]
 		{
-			strength 		=  55,0;
-			intelligence 	=  13.7, 0;
-			dexterity 		=  27.9, 0;
-            ranged			=  91,0;
+			strength = 55,0;
+			intelligence = 13.7, 0;
+			dexterity = 27.9, 0;
+			ranged = 91,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1651676;
-		life 			= 1363.2;
-        	max_life 		= 1363.2;
-        	mana 			= 53.8;
-        	max_mana 		= 53.8;
-        	[textures]	
-        	{ 
-        		0 = b_c_edm_px_2; 
-        	}
+		life = 1363.2;
+		max_life = 1363.2;
+		mana = 53.8;
+		max_mana = 53.8;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_px_2;
+		}
 	}
 	[attack]
 	{
@@ -172,15 +186,33 @@
 	}
 	[common]
 	{
-		screen_name="Gobbot Sleeper";
+		screen_name = "Gobbot Sleeper";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-
-	[defend] { defense=505; }
-
+	[defend]
+	{
+		defense = 505;
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-	[pcontent]  //GUN
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -189,10 +221,8 @@
 		}
 	}
 }
-
 [t:template,n:3W_dsx_gobbot_minigun_02]
 {
-//balanced to Level 28, medium ranged
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_gobbot_minigun_2";
 	specializes = 3W_dsx_base_gobbot;
@@ -200,39 +230,56 @@
 	{
 		[skills]
 		{
-			strength 	=  49.9,0;
-			intelligence 	=  12.1, 0;
-			dexterity 	=  25.1, 0;
-           		ranged		=  91,0;
+			strength = 49.9,0;
+			intelligence = 12.1, 0;
+			dexterity = 25.1, 0;
+			ranged = 91,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1880810;
 		life = 1803.2;
-        	max_life = 1803.2;
-        	mana = 49.5;
-        	max_mana = 49.5;    	
+		max_life = 1803.2;
+		mana = 49.5;
+		max_mana = 49.5;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
-		// minigun_dragon does 68-75 damage, which is fine for this guy 
-		//		- no new weapon needed unless we want to change his damage
 		attack_range = 0.5;
 		damage_max = 287.8;
 		damage_min = 216.4;
 	}
 	[common]
 	{
-		screen_name="Gobbot Gunner";
+		screen_name = "Gobbot Gunner";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-
-	[defend] { defense=650.6; }
-
+	[defend]
+	{
+		defense = 650.6;
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-[pcontent]  //GUN
+		[pcontent]
 		{
 			[oneof*]
 			{
@@ -241,7 +288,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_dsx_gobbot_flamethrower]
 {
 	category_name = "3W_evil_d";
@@ -251,23 +297,24 @@
 	{
 		[skills]
 		{
-			strength 	=  49.5,0;
-			intelligence =  12.2, 0;
-			dexterity 	=  23.6, 0;
-            		ranged		=  92,0;
+			strength = 49.5,0;
+			intelligence = 12.2, 0;
+			dexterity = 23.6, 0;
+			ranged = 92,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1615770;
 		life = 1835.5;
-        	max_life = 1835.5;
-        	mana = 53.8;
-        	max_mana = 53.8;
-        	[textures]	
-        	{ 
-        		0 = b_c_edm_px_2; 
-        	}
+		max_life = 1835.5;
+		mana = 53.8;
+		max_mana = 53.8;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_px_2;
+		}
 	}
 	[attack]
 	{
@@ -275,17 +322,34 @@
 		damage_max = 295.7;
 		damage_min = 210.8;
 	}
-	[defend] { defense=773.8; }
-
+	[defend]
+	{
+		defense = 773.8;
+	}
 	[common]
 	{
-		screen_name="Gobbot Igniter";
+		screen_name = "Gobbot Igniter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
@@ -297,7 +361,6 @@
 }
 [t:template,n:3W_dsx_gobbot_flamethrower_02]
 {
-// Balanced to level 28, medium ranged
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_gobbot_flamethrower_2";
 	specializes = 3W_dsx_base_gobbot;
@@ -305,38 +368,55 @@
 	{
 		[skills]
 		{
-			strength 	=  49.9,0;
-			intelligence 	=  12.1, 0;
-			dexterity 	=  25.1, 0;
-            		ranged		=  91,0;
+			strength = 49.9,0;
+			intelligence = 12.1, 0;
+			dexterity = 25.1, 0;
+			ranged = 91,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1868306;
 		life = 1803.2;
-        	max_life = 1803.2;
-        	mana = 49.5;
-        	max_mana = 49.5;
+		max_life = 1803.2;
+		mana = 49.5;
+		max_mana = 49.5;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
-		// has custom weapon
 		attack_range = 0.5;
 		damage_max = 291.7;
 		damage_min = 216.4;
 	}
-	[defend] { defense=650.6; }
-
+	[defend]
+	{
+		defense = 650.6;
+	}
 	[common]
 	{
-		screen_name="Gobbot Scorcher";
+		screen_name = "Gobbot Scorcher";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
@@ -346,7 +426,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_dsx_gobbot_lightning]
 {
 	category_name = "3W_evil_d";
@@ -356,23 +435,24 @@
 	{
 		[skills]
 		{
-			strength 		=  47.3,0;
-			intelligence 		=  12.1, 0;
-			dexterity 		=  25.1, 0;
-            		ranged			=  89,0;
+			strength = 47.3,0;
+			intelligence = 12.1, 0;
+			dexterity = 25.1, 0;
+			ranged = 89,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1744308;
 		life = 1718.4;
-        	max_life = 1718.4;
-        	mana = 49.5;
-        	max_mana = 49.5;
-        	[textures]	
-        	{ 
-        		0 = b_c_edm_px_2; 
-        	}
+		max_life = 1718.4;
+		mana = 49.5;
+		max_mana = 49.5;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_px_2;
+		}
 	}
 	[attack]
 	{
@@ -380,13 +460,31 @@
 		damage_max = 272.3;
 		damage_min = 197.3;
 	}
-	[defend] { defense=608.1; }
-
+	[defend]
+	{
+		defense = 608.1;
+	}
 	[common]
 	{
-		screen_name="Gobbot Shocker";
+		screen_name = "Gobbot Shocker";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
@@ -399,11 +497,8 @@
 		}
 	}
 }
-
-
 [t:template,n:3W_dsx_gobbot_lightning_02]
 {
-// Balanced to level 28 - medium ranged
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_gobbot_lightning_2";
 	specializes = 3W_dsx_base_gobbot;
@@ -411,38 +506,55 @@
 	{
 		[skills]
 		{
-			strength 	=  49.9,0;
-			intelligence 	=  12.1, 0;
-			dexterity 	=  25.1, 0;
-            		ranged		=  91,0;
+			strength = 49.9,0;
+			intelligence = 12.1, 0;
+			dexterity = 25.1, 0;
+			ranged = 91,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1868306;
 		life = 1803.2;
-        	max_life = 1803.2;
-        	mana = 49.5;
-        	max_mana = 49.5;
+		max_life = 1803.2;
+		mana = 49.5;
+		max_mana = 49.5;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
-		// minigun_lightning does 69-77 damage, below is what it's supposed to be
 		attack_range = 0.5;
 		damage_max = 287.8;
 		damage_min = 216.4;
 	}
-	[defend] { defense=654.1; }
-
+	[defend]
+	{
+		defense = 654.1;
+	}
 	[common]
 	{
-		screen_name="Gobbot Zapper";
+		screen_name = "Gobbot Zapper";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
@@ -452,7 +564,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_dsx_gobbot_grenade]
 {
 	category_name = "3W_evil_d";
@@ -462,23 +573,24 @@
 	{
 		[skills]
 		{
-			strength 	=  49.5,0;
-			intelligence =  12.2, 0;
-			dexterity 	=  23.6, 0;
-            ranged		=  89,0;
+			strength = 49.5,0;
+			intelligence = 12.2, 0;
+			dexterity = 23.6, 0;
+			ranged = 89,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1891970;
 		life = 1835.5;
-        	max_life = 1835.5;
-        	mana = 53.8;
-        	max_mana = 53.8;
-        	[textures]	
-        	{ 
-        		0 = b_c_edm_px_2; 
-        	}
+		max_life = 1835.5;
+		mana = 53.8;
+		max_mana = 53.8;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_px_2;
+		}
 	}
 	[attack]
 	{
@@ -486,14 +598,31 @@
 		damage_max = 585.8;
 		damage_min = 409.8;
 	}
-	[defend] { defense=624; }
-
-  	[common]
+	[defend]
 	{
-		screen_name="Gobbot Grenadier";
+		defense = 624;
 	}
-
-
+	[common]
+	{
+		screen_name = "Gobbot Grenadier";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[inventory]
 	{
 		spew_equipped_kill_count = <ignore>;
@@ -502,13 +631,10 @@
 		{
 			es_weapon_hand = dsx_gobbot_grenade_launcher;
 		}
-		
 	}
 }
-
 [t:template,n:3W_dsx_gobbot_grenade_02]
 {
-// Balanced to Level 28, easy ranged
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_gobbot_grenade_02";
 	specializes = 3W_dsx_base_gobbot;
@@ -516,19 +642,20 @@
 	{
 		[skills]
 		{
-			strength 	=  49.9,0;
-			intelligence 	=  12.1, 0;
-			dexterity 	=  25.1, 0;
-            		ranged		=  91,0;
+			strength = 49.9,0;
+			intelligence = 12.1, 0;
+			dexterity = 25.1, 0;
+			ranged = 91,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1661343;
 		life = 901.6;
-    	    	max_life = 901.6;
-        	mana = 49.5;
-        	max_mana = 49.5;
+		max_life = 901.6;
+		mana = 49.5;
+		max_mana = 49.5;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -536,30 +663,45 @@
 		damage_max = 245;
 		damage_min = 175;
 	}
-	[defend] { defense=470.3; }
-
-  	[common]
+	[defend]
 	{
-		screen_name="Gobbot Lobber";
+		defense = 470.3;
 	}
-
-
+	[common]
+	{
+		screen_name = "Gobbot Lobber";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[inventory]
 	{
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
-
 		[pcontent]
 		{
 			[oneof*]
 			{
 				ES_WEAPON_HAND = dsx_minigun_grenade_launcher;
 			}
-    		}
+		}
 	}
 }
 [t:template,n:3W_dsx_gobbot_general]
 {
-// Balanced to level 28, hard ranged
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_gobbot_general";
 	specializes = 3W_dsx_base_gobbot;
@@ -567,23 +709,24 @@
 	{
 		[skills]
 		{
-			strength 	=  49.9,0;
-			intelligence 	=  12.1, 0;
-			dexterity 	=  25.1, 0;
-           		ranged		=  91,0;
+			strength = 49.9,0;
+			intelligence = 12.1, 0;
+			dexterity = 25.1, 0;
+			ranged = 91,0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 2150084;
 		life = 2772;
-        	max_life = 2772;
-        	mana = 49.5;
-        	max_mana = 49.5;
-        	[textures]	
-        	{ 
-        		0 = b_c_edm_px_3; 
-        	}    	
+		max_life = 2772;
+		mana = 49.5;
+		max_mana = 49.5;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_px_3;
+		}
 	}
 	[attack]
 	{
@@ -593,72 +736,82 @@
 	}
 	[common]
 	{
-		screen_name="Gobbot General";
+		screen_name = "Gobbot General";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-
-	[defend] { defense=788.5; }
-
+	[defend]
+	{
+		defense = 788.5;
+	}
 	[inventory]
 	{
-		// Has the monster weapon equipped
 		spew_equipped_kill_count = <ignore>;
 		selected_active_location = IL_ACTIVE_RANGED_WEAPON;
 		[equipment]
 		{
-			// this is balanced for the monster to use
 			es_weapon_hand = dsx_minigun_gas_monster;
 		}
 		[pcontent]
-	{
-	/* Generated: Tue Jun 17 11:13:15 2003
-		Level 28, Strong */
-		[oneof*]
 		{
-			[gold*]
-			{
-				chance = 0.2;
-				min = 191093;
-				max = 379362;
-			}
 			[oneof*]
 			{
-				chance = 0.088888888888889;
-				il_main = potion_mana_super;
-				il_main = potion_health_super;
+				[gold*]
+				{
+					chance = 0.2;
+					min = 191093;
+					max = 379362;
+				}
+				[oneof*]
+				{
+					chance = 0.088888888888889;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+				[oneof*]
+				{
+					chance = 0.111111111111111;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+				[oneof*]
+				{
+					il_main = minigun_gas;
+					chance = 0.2;
+					il_main = #weapon/219-274;
+					il_main = #armor/134-714;
+					il_main = #*/219-274;
+				}
+				[oneof*]
+				{
+					chance = 0.01;
+					il_main = #weapon/-rare(1)/274-302;
+					il_main = #armor/-rare(1)/583-948;
+					il_main = #*/-rare(1)/274-302;
+				}
+				[oneof*]
+				{
+					chance = 0.005;
+					il_main = #weapon/-unique(2)/274-302;
+					il_main = #armor/-unique(2)/583-948;
+					il_main = #*/-unique(2)/274-302;
+				}
 			}
-			[oneof*]
-			{
-				chance = 0.111111111111111;
-				il_main = potion_mana_super;
-				il_main = potion_health_super;
-			}
-			[oneof*]
-			{
-				il_main = minigun_gas;
-				chance = 0.2;
-				il_main = #weapon/219-274;
-				il_main = #armor/134-714;
-				il_main = #*/219-274;
-			}
-			[oneof*]
-			{
-				chance = 0.01;
-				il_main = #weapon/-rare(1)/274-302;
-				il_main = #armor/-rare(1)/583-948;
-				il_main = #*/-rare(1)/274-302;
-			}
-			[oneof*]
-			{
-				chance = 0.005;
-				il_main = #weapon/-unique(2)/274-302;
-				il_main = #armor/-unique(2)/583-948;
-				il_main = #*/-unique(2)/274-302;
-			}		
 		}
 	}
-
-		// drops a player version
-		
-	}
 }
-

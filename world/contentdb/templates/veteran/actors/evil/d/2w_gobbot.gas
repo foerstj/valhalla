@@ -160,6 +160,7 @@
 		max_life = 1560;
 		mana = 33.1;
 		max_mana = 33.1;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -170,6 +171,16 @@
 	[common]
 	{
 		screen_name = "Gobbot Gunner";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -244,6 +255,7 @@
 		max_life = 1639.4;
 		mana = 34.8;
 		max_mana = 34.8;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -258,6 +270,16 @@
 	[common]
 	{
 		screen_name = "Gobbot Igniter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -328,6 +350,7 @@
 		max_life = 1639.4;
 		mana = 34.8;
 		max_mana = 34.8;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -342,6 +365,16 @@
 	[common]
 	{
 		screen_name = "Gobbot Shocker";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -412,6 +445,7 @@
 		max_life = 1639.4;
 		mana = 34.8;
 		max_mana = 34.8;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -426,6 +460,16 @@
 	[common]
 	{
 		screen_name = "Gobbot Grenadier";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{

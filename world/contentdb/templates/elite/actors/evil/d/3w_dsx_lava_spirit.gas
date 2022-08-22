@@ -8,23 +8,43 @@
 		model = m_c_edm_ls_pos_1;
 		[voice]
 		{
-			[enemy_spotted]	{ priority = high; * = s_e_call_lava_spirit_SED; }
-			[die]			{ priority = high; * = s_e_die_lava_spirit_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_lava_spirit_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_lava_spirit_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_lava_spirit_SED; }
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_lava_spirit_SED;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_lava_spirit_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_lava_spirit_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_lava_spirit_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_lava_spirit_SED;
+			}
 		}
 	}
 	[body]
 	{
 		[bone_translator]
 		{
-			body_anterior 	= head_bone;
-			body_mid 		= Mid_torso;
-			body_posterior 	= Spine_end;
-			kill_bone 		= Mid_torso;
-			shield_bone 	= shield_grip;
-			weapon_bone 	= weapon_grip;
+			body_anterior = head_bone;
+			body_mid = Mid_torso;
+			body_posterior = Spine_end;
+			kill_bone = Mid_torso;
+			shield_bone = shield_grip;
+			weapon_bone = weapon_grip;
 		}
 		[chore_dictionary]
 		{
@@ -35,28 +55,37 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
-					02=at-05;
+					00 = at;
+					01 = at-02;
+					02 = at-05;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_misc]
 			{
@@ -72,7 +101,10 @@
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 			[chore_magic]
 			{
@@ -80,26 +112,31 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=mg;
-					01=mg-02;
+					00 = mg;
+					01 = mg-02;
 				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name="Lava Fiend";
+		screen_name = "Lava Fiend";
 	}
 	[effect_manager_server]
 	{
-		effect_name	= "lava_spirit_flames";
-	    repeat		= false;
-
-	    start_msg	= WE_ENEMY_SPOTTED;
-	    stop_msg	= WE_KILLED;
+		effect_name = "lava_spirit_flames";
+		repeat = false;
+		start_msg = WE_ENEMY_SPOTTED;
+		stop_msg = WE_KILLED;
 	}
-	mind:actor_auto_fidgets = false;
-	mind:jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	[mind]
+	{
+		actor_auto_fidgets = false;
+	}
+	[mind]
+	{
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
+	}
 	[physics]
 	{
 		explode_when_killed = true;
@@ -122,16 +159,36 @@
 [t:template,n:3W_dsx_lava_spirit]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_lava_spirit";
 	specializes = base_lava_spirit;
 	[actor]
 	{
 		[skills]
 		{
-			strength = 		49.5, 0;
-			intelligence = 	12.2, 0;
-			dexterity = 	23.6, 0;
-			melee =  		91, 0;
+			strength = 49.5, 0;
+			intelligence = 12.2, 0;
+			dexterity = 23.6, 0;
+			melee = 91, 0;
 		}
 	}
 	[aspect]
@@ -141,14 +198,18 @@
 		max_life = 917.8;
 		mana = 3072;
 		max_mana = 3072;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max 	= 473.1;
-		damage_min 	= 311;
+		damage_max = 473.1;
+		damage_min = 311;
 	}
-	[defend] { defense=1299.8; }
+	[defend]
+	{
+		defense = 1299.8;
+	}
 	[mind]
 	{
 		melee_engage_range = 14;
@@ -157,7 +218,6 @@
 		sight_range = 14;
 	}
 }
-
 [t:template,n:3W_dsx_lava_spirit_magic_base]
 {
 	category_name = "3W_evil_d";
@@ -167,19 +227,19 @@
 	{
 		[skills]
 		{
-			strength 		= 49.5, 0;
-			intelligence 	= 12.2, 0;
-			dexterity 		= 23.6, 0;
-			nature_magic 	= 89, 0;
+			strength = 49.5, 0;
+			intelligence = 12.2, 0;
+			dexterity = 23.6, 0;
+			nature_magic = 89, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1672616;
-		life 			 = 2457.6;
-		max_life 		 = 2457.6;
-		mana 			 = 3072;
-		max_mana 		 = 3072;
+		life = 2457.6;
+		max_life = 2457.6;
+		mana = 3072;
+		max_mana = 3072;
 	}
 	[attack]
 	{
@@ -189,34 +249,57 @@
 		damage_bonus_min_cmagic = 181;
 		damage_bonus_max_cmagic = 250;
 	}
-	[defend] { defense=647; }
+	[defend]
+	{
+		defense = 647;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
 		[other]
 		{
-			il_active_primary_spell=dsx_spell_lava_spirit_fire;
+			il_active_primary_spell = dsx_spell_lava_spirit_fire;
 		}
-			
 	}
 	[mind]
 	{
-		actor_weapon_preference			= WP_MAGIC;
-		actor_auto_switches_to_magic	= true;
-		actor_auto_switches_to_karate	= false;
-		actor_auto_switches_to_melee	= false;
-
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = false;
+		actor_auto_switches_to_melee = false;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14;
 	}
 }
-
 [t:template,n:3W_dsx_lava_spirit_magic]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_lava_spirit magic";
 	specializes = 3W_dsx_lava_spirit_magic_base;
 }
-

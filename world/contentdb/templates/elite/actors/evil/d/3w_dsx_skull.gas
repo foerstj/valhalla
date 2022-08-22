@@ -2,25 +2,26 @@
 {
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_possessed_skull";
-	specializes = base_rector; //from original game
+	specializes = base_rector;
 	[actor]
 	{
 		[skills]
 		{
-			strength     =	43.7, 0;
-			intelligence =	14, 0;
-			dexterity    =	21.3, 0;
-			combat_magic =	81, 0;
-			nature_magic =  81, 0;
+			strength = 43.7, 0;
+			intelligence = 14, 0;
+			dexterity = 21.3, 0;
+			combat_magic = 81, 0;
+			nature_magic = 81, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1347563;
-		life 		= 2328;
-		max_life 	= 2328;
-		mana 		= 84;
-		max_mana 	= 84;
+		life = 2328;
+		max_life = 2328;
+		mana = 84;
+		max_mana = 84;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -30,24 +31,51 @@
 		damage_bonus_min_cmagic = 288;
 		damage_bonus_max_cmagic = 429;
 	}
-	[common] { screen_name="Possessed Skull"; }
-	[defend] { defense = 582; }
-	
+	[common]
+	{
+		screen_name = "Possessed Skull";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rector_eye_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 582;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=dsx_spell_possessed_skull_burn; }
-	
-		
+		[other]
+		{
+			il_active_primary_spell = dsx_spell_possessed_skull_burn;
+		}
 	}
-
 	[mind]
 	{
-		on_enemy_entered_ocz_flee	= true;
-		on_enemy_entered_ocz_attack 	= false;
-		on_enemy_entered_icz_flee	= true;
-		on_enemy_entered_icz_attack 	= false;
-		flee_count			= 1;
+		on_enemy_entered_ocz_flee = true;
+		on_enemy_entered_ocz_attack = false;
+		on_enemy_entered_icz_flee = true;
+		on_enemy_entered_icz_attack = false;
+		flee_count = 1;
 	}
 }
-

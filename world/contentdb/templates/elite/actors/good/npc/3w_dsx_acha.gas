@@ -3,7 +3,10 @@
 	category_name = "3W_shopkeep";
 	doc = "blacksmith, acha (HG)";
 	specializes = 3W_base_giant;
-	[actor] { portrait_icon = b_gui_ig_i_ic_c_acha; }
+	[actor]
+	{
+		portrait_icon = b_gui_ig_i_ic_c_acha;
+	}
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -22,8 +25,6 @@
 	[conversation]
 	{
 	}
-	
-	// This store needs to be balanced for both 4-1 (level 12) and 4-3 (level 14)
 	[inventory]
 	{
 		[store_pcontent]
@@ -31,7 +32,6 @@
 			full_ratio = 0;
 			[armor]
 			{
-				// BODY
 				[all*]
 				{
 					il_main = #body,m/303-501;
@@ -49,7 +49,7 @@
 					il_main = #body,f/531-667;
 					max = 3;
 					min = 3;
-				}				
+				}
 				[all*]
 				{
 					il_main = #body/129-197;
@@ -67,14 +67,13 @@
 					il_main = #body/478-584;
 					max = 6;
 					min = 3;
-				}	
+				}
 				[all*]
 				{
 					il_main = #body/516-667;
 					max = 6;
 					min = 3;
-				}				
-				// HELMETS			
+				}
 				[all*]
 				{
 					il_main = #helm,m/;
@@ -110,8 +109,7 @@
 					il_main = #helm/516-667;
 					max = 6;
 					min = 4;
-				}				
-				// GLOVES
+				}
 				[all*]
 				{
 					il_main = #gloves,m/;
@@ -147,8 +145,7 @@
 					il_main = #gloves/516-667;
 					max = 6;
 					min = 4;
-				}				
-				// BOOTS			
+				}
 				[all*]
 				{
 					il_main = #boots,m/;
@@ -256,13 +253,13 @@
 					il_main = #melee/303-390;
 					max = 8;
 					min = 4;
-				}				
+				}
 				[all*]
 				{
 					il_main = #melee/404-512;
 					max = 6;
 					min = 4;
-				}								
+				}
 				[all*]
 				{
 					il_main = #ranged/65-94;

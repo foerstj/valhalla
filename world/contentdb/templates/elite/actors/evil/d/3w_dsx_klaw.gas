@@ -7,20 +7,24 @@
 	{
 		[skills]
 		{
-			strength =  37.3, 0;
-			intelligence =  11, 0;
-			dexterity =  19.9, 0;
-           		 melee =  76,  0;
+			strength = 37.3, 0;
+			intelligence = 11, 0;
+			dexterity = 19.9, 0;
+			melee = 76,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1039764;
 		life = 1376;
-       		max_life = 1376;
-        	mana = 144;
+		max_life = 1376;
+		mana = 144;
 		max_mana = 144;
-		textures:0 = b_c_edm_kw-02;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_kw-02;
+		}
 	}
 	[attack]
 	{
@@ -28,44 +32,64 @@
 		damage_max = 360.8;
 		damage_min = 273.6;
 	}
-	[common] { screen_name="Jungle Klaw"; }
-   	 [defend] { defense=381.3; }
+	[common]
+	{
+		screen_name = "Jungle Klaw";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 381.3;
+	}
 	[inventory]
 	{
 		[pcontent]
-	{
-	/* Generated: Tue Jun 17 11:13:15 2003
-		Level 10, Medium */
-		[oneof*]
 		{
-			[gold*]
-			{
-				chance = 0.2;
-				min = 157655;
-				max = 313939;
-			}
 			[oneof*]
 			{
-				chance = 0.2;
-				il_main = potion_mana_super;
-				il_main = potion_health_super;
+				[gold*]
+				{
+					chance = 0.2;
+					min = 157655;
+					max = 313939;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_super;
+					il_main = potion_health_super;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #weapon/151-211;
+					il_main = #armor/48-424;
+					il_main = #*/151-211;
+				}
+				[oneof*]
+				{
+					chance = 0.0075;
+					il_main = #weapon/-rare(1)/166-249;
+					il_main = #armor/-rare(1)/272-720;
+					il_main = #*/-rare(1)/166-249;
+				}
 			}
-			[oneof*]
-			{
-				chance = 0.15;
-				il_main = #weapon/151-211;
-				il_main = #armor/48-424;
-				il_main = #*/151-211;
-			}
-			[oneof*]
-			{
-				chance = 0.0075;
-				il_main = #weapon/-rare(1)/166-249;
-				il_main = #armor/-rare(1)/272-720;
-				il_main = #*/-rare(1)/166-249;
-			}
-			
 		}
-	}
 	}
 }

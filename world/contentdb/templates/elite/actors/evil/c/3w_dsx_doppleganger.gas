@@ -6,21 +6,39 @@
 	[aspect]
 	{
 		force_no_render = true;
-		// MRC 7/18/2003 Allow clicking on invisible objects.
 		force_no_render_click = true;
-		megamap_icon	= b_gui_ig_mnu_doppelganger;
+		megamap_icon = b_gui_ig_mnu_doppelganger;
 		megamap_orient = true;
 		model = m_c_edm_dg_pos_1;
 		material = flesh;
 		[voice]
 		{
-			[die]			{ priority = high;	* = s_e_die_doppelganger;		}
-			[enemy_spotted]	{ priority = high; * = s_e_call_doppelganger_SED; }
-			[hit_critical]	{ priority = low;	* = s_e_hit_doppelganger_SED;		}
-			[hit_glance]	{ priority = low;	* = s_e_hit_doppelganger_SED;		}
-			[hit_solid]		{ priority = low;	* = s_e_hit_doppelganger_SED;		}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_doppelganger;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_doppelganger_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_doppelganger_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_doppelganger_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_doppelganger_SED;
+			}
 		}
-
 	}
 	[attack]
 	{
@@ -48,25 +66,37 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=mg; }
+				[anim_files]
+				{
+					00 = mg;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=mg; }
+				[anim_files]
+				{
+					00 = mg;
+				}
 			}
 			[chore_misc]
 			{
@@ -82,17 +112,22 @@
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
-
 	[common]
 	{
 		screen_name = "Doppelganger";
@@ -107,29 +142,27 @@
 			}
 		}
 	}
-	[defend] { defense=702.6; }
+	[defend]
+	{
+		defense = 702.6;
+	}
 	[inventory]
 	{
 		spew_equipped_kill_count = ;
-
-  		
 	}
-
-	[doppelganger] {}
-
+	[doppelganger]
+	{
+	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party	= true;
-
-		jat_fidget 						= world\ai\jobs\common\job_fidget.skrit;
-
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
 		sight_range = 14.0;
 	}
-
 	[physics]
 	{
 		explode_when_killed = true;
@@ -137,9 +170,7 @@
 		gib_gore_good = true;
 	}
 }
-
 [t:template,n:3W_dsx_doppelganger]
-//balanced to Level 14
 {
 	category_name = "3W_evil_c";
 	doc = "3W_dsx_doppelganger";
@@ -147,12 +178,12 @@
 	[actor]
 	{
 		[skills]
-			{
-				strength 	=  45.3, 0;
-				intelligence = 12.3, 0;
-				dexterity 	=  24.7, 0;
-				melee 		=  83, 0;
-			}
+		{
+			strength = 45.3, 0;
+			intelligence = 12.3, 0;
+			dexterity = 24.7, 0;
+			melee = 83, 0;
+		}
 	}
 	[aspect]
 	{
@@ -161,21 +192,49 @@
 		max_life = 2590.4;
 		mana = 4.7;
 		max_mana = 4.7;
+	  f scale_base = 1.587401;
 	}
 	[common]
 	{
 		screen_name = "Doppelganger";
 		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("doppelganger_body");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-	[doppelganger]{ statsMultiplier = 0.8; }
-	[defend] { defense=873.6; }
+	[doppelganger]
+	{
+		statsMultiplier = 0.8;
+	}
+	[defend]
+	{
+		defense = 873.6;
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
 		{
-			/* Generated: Tue Jun 17 11:13:15 2003
-			Level 19, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -204,7 +263,6 @@
 					il_main = #armor/-rare(1)/422-815;
 					il_main = #*/-rare(1)/187-264;
 				}
-				
 			}
 		}
 	}
@@ -214,9 +272,7 @@
 		damage_max = 443.1;
 		damage_min = 337.3;
 	}
-
 }
-
 [t:template,n:3W_dsx_doppelganger_2]
 {
 	category_name = "3W_evil_c";
@@ -226,10 +282,10 @@
 	{
 		[skills]
 		{
-			strength 	=  44.5, 0;
+			strength = 44.5, 0;
 			intelligence = 12.3, 0;
-			dexterity 	=  24.5, 0;
-			melee 		=  84, 0;
+			dexterity = 24.5, 0;
+			melee = 84, 0;
 		}
 	}
 	[aspect]
@@ -239,22 +295,49 @@
 		max_life = 1660.5;
 		mana = 4.5;
 		max_mana = 4.5;
+	  f scale_base = 1.587401;
 	}
-
 	[common]
 	{
 		screen_name = "Doppelganger Knave";
 		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("doppelganger_body");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-	[doppelganger]{ statsMultiplier = 1.0; }
-	[defend] { defense=758.3; }
+	[doppelganger]
+	{
+		statsMultiplier = 1.0;
+	}
+	[defend]
+	{
+		defense = 758.3;
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
 		{
-			/* Generated: Tue Jun 17 11:13:15 2003
-			Level 19, Strong */
 			[oneof*]
 			{
 				[gold*]
@@ -289,7 +372,7 @@
 					il_main = #weapon/-unique(2)/241-276;
 					il_main = #armor/-unique(2)/450-828;
 					il_main = #*/-unique(2)/241-276;
-				}			
+				}
 			}
 		}
 	}
@@ -300,7 +383,6 @@
 		damage_min = 267.3;
 	}
 }
-
 [t:template,n:3W_dsx_doppelganger_boss]
 {
 	category_name = "3W_evil_c";
@@ -310,15 +392,15 @@
 	{
 		[skills]
 		{
-			strength 		= 45.3, 0;
-			intelligence 	=  12.4, 0;
-			dexterity 		= 24.9, 0;
-			melee 			= 85, 0;
+			strength = 45.3, 0;
+			intelligence = 12.4, 0;
+			dexterity = 24.9, 0;
+			melee = 85, 0;
 		}
 	}
 	[aspect]
 	{
-		scale_base = 2.0;
+	  f scale_base = 3.174802;
 		experience_value = 1685440;
 		life = 2543.8;
 		max_life = 2543.8;
@@ -328,7 +410,7 @@
 	[common]
 	{
 		screen_name = "Doppelganger Lord";
-		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;		
+		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
 		[template_triggers]
 		{
 			[*]
@@ -344,6 +426,20 @@
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_blue(sgx)");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[inventory]
@@ -351,8 +447,6 @@
 		drop_at_use_point = true;
 		[pcontent]
 		{
-			/* Generated: Tue Jun 17 11:13:15 2003
-			Level 19, Special */
 			[all*]
 			{
 				[gold*]
@@ -387,20 +481,22 @@
 					il_main = #weapon/-unique(2)/246-282;
 					il_main = #armor/-unique(2)/460-846;
 					il_main = #*/-unique(2)/246-282;
-				}			
+				}
 			}
 		}
 	}
-	[defend] { defense=903.9; }
+	[defend]
+	{
+		defense = 903.9;
+	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 450.3;
 		damage_min = 343.6;
 	}
-	
 	[doppelganger]
-	{ 
+	{
 		statsMultiplier = 2.5;
 		effect_script = doppelganger_glow_boss;
 	}

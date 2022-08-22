@@ -158,6 +158,7 @@
 		max_life = 5071.4;
 		mana = 14.4;
 		max_mana = 14.4;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -168,6 +169,23 @@
 	[common]
 	{
 		screen_name = "Dungeon Crawler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -231,6 +249,7 @@
 		max_life = 532.7;
 		mana = 94;
 		max_mana = 94;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -241,6 +260,23 @@
 	[common]
 	{
 		screen_name = "Tortured Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -290,6 +326,7 @@
 		max_life = 2560;
 		mana = 24;
 		max_mana = 24;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -300,6 +337,23 @@
 	[common]
 	{
 		screen_name = "Grave Crawler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

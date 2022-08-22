@@ -8,10 +8,26 @@
 		model = m_c_edm_SNDSKREECH_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_picker; }
-			[hit_critical]	{ priority = low; * = s_e_hit_picker_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_picker_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_picker_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_picker;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_picker_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_picker_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_picker_SED;
+			}
 		}
 	}
 	[body]
@@ -43,37 +59,47 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 	[mind]
 	{
-		jat_attack_object_melee	= world\ai\jobs\common\job_attack_object_melee.skrit
+		jat_attack_object_melee = world\ai\jobs\common\job_attack_object_melee.skrit
 			?cautious_chance	= 0.75
 			&min_cautious_distance = 2.00
 			&cautious_approach_distance = 1.5
 			&cautious_down_time = 2.0;
-
-
 		melee_engage_range = 13;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;
@@ -81,7 +107,6 @@
 	}
 }
 [t:template,n:3W_dsx_sandskreech]
-//balanced to Level 16
 {
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_sandskreech";
@@ -90,15 +115,19 @@
 	{
 		[skills]
 		{
-			strength =  	44.5, 0;
-			intelligence =  12.3, 0;
-			dexterity =  	24.5, 0;
-            melee = 		84, 0;
+			strength = 44.5, 0;
+			intelligence = 12.3, 0;
+			dexterity = 24.5, 0;
+			melee = 84, 0;
 		}
 	}
 	[aspect]
 	{
-		textures:0 = b_c_edm_sandskreech;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_sandskreech;
+		}
 		experience_value = 1491780;
 		life = 828;
 		max_life = 828;
@@ -106,7 +135,11 @@
 		max_mana = 45;
 		[voice]
 		{
-			[die]	{ priority = high; * = s_e_die_spider; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spider;
+			}
 		}
 	}
 	[attack]
@@ -116,11 +149,34 @@
 		damage_min = 267.3;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Sandskreech"; }
-	[defend] { defense=510.8; }
+	[common]
+	{
+		screen_name = "Sandskreech";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 510.8;
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?meander	= false
 			&still		= false;
 	}

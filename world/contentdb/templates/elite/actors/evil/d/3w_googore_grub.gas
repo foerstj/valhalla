@@ -22,6 +22,7 @@
 		max_life = 729.3;
 		mana = 16.8;
 		max_mana = 16.8;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -113,6 +114,23 @@
 	[common]
 	{
 		screen_name = "Googore Grub";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

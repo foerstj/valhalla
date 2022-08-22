@@ -7,46 +7,62 @@
 	{
 		[skills]
 		{
-			strength		= 42.4, 0;
-			intelligence 	= 11, 0;
-			dexterity		= 19.4, 0;
-			melee			= 79, 0;
-			combat_magic	= 78, 0;
-			nature_magic	= 78, 0;
+			strength = 42.4, 0;
+			intelligence = 11, 0;
+			dexterity = 19.4, 0;
+			melee = 79, 0;
+			combat_magic = 78, 0;
+			nature_magic = 78, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value 	= 1070880;
-		life				= 1503.3;
-		max_life			= 1503.3;
-		mana				= 307.5;
-		max_mana			= 307.5;
-
+		experience_value = 1070880;
+		life = 1503.3;
+		max_life = 1503.3;
+		mana = 307.5;
+		max_mana = 307.5;
 		model = m_c_edm_mw_pos_1;
-		textures:0 = b_c_edm_mantrap;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_mantrap;
+		}
 		material = flesh;
 		[voice]
 		{
-			[cast]			{ * = s_e_attack_mantrap_SED; }
-			[die]			{ priority = high;	* = s_e_die_mantrap;		}
-			[enemy_spotted]	{ priority = high; * = s_e_ground_burst_SED; }
+			[cast]
+			{
+				* = s_e_attack_mantrap_SED;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_mantrap;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_ground_burst_SED;
+			}
 		}
-
 	}
-	[defend] { defense = 749.4; }
+	[defend]
+	{
+		defense = 749.4;
+	}
 	[attack]
 	{
 		attack_range = 0.5;
 		damage_max = 413.4;
-		damage_min = 289.1; 
+		damage_min = 289.1;
 		damage_bonus_min_cmagic = 210;
 		damage_bonus_max_cmagic = 321;
 	}
 	[common]
 	{
-		screen_name = "Mantrap"; //--
-		membership=monster;//immune_freeze;
+		screen_name = "Mantrap";
+		membership = monster;
 		[template_triggers]
 		{
 			[*]
@@ -58,6 +74,20 @@
 			{
 				action* = call_sfx_script("mine_worm_die_dust");
 				condition* = receive_world_message("we_anim_die");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -74,15 +104,18 @@
 				skrit = select_attack;
 				[anim_files]
 				{
-					00=at;
-					01=at-02;
+					00 = at;
+					01 = at-02;
 				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_misc]
 			{
@@ -98,36 +131,48 @@
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_magic]
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=mg; }
+				[anim_files]
+				{
+					00 = mg;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 		}
 	}
-
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=dsx_mantrap_spell; }
+		[other]
+		{
+			il_active_primary_spell = dsx_mantrap_spell;
+		}
 	}
-
-
 	[generator_in_object]
 	{
 		child_template_name = hole_cav_01;
@@ -138,31 +183,26 @@
 	}
 	[mind]
 	{
-		jat_die									= world\ai\jobs\actors\evil\job_die_delete.skrit;
-		jat_startup								= world\ai\jobs\common\job_startup_reveal.skrit
+		jat_die = world\ai\jobs\actors\evil\job_die_delete.skrit;
+		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
 			?invisible							= true;
-
-		jat_flee_from_object					= jat_none;
-		jat_guard											= jat_none;
-		jat_move											= jat_none;
-		jat_patrol										= jat_none;
-
-		on_enemy_entered_icz_switch_to_melee	= true;
-
-		actor_weapon_preference					= WP_MAGIC;
-		actor_auto_switches_to_magic			= true;
-		actor_auto_switches_to_karate			= true;
-		actor_auto_switches_to_melee			= true;
-
-		actor_auto_fidgets						= false;
-		movement_orders							= mo_hold;
-		inner_comfort_zone_range				= 4.4;
-		melee_engage_range						= 4.5;
-		personal_space_range					= 2.0;
-		on_enemy_entered_ocz_attack				= true;
-		ranged_engage_range						= 10.0;
-		sight_range								= 14.0;
-		sight_origin_height						= 2;
+		jat_flee_from_object = jat_none;
+		jat_guard = jat_none;
+		jat_move = jat_none;
+		jat_patrol = jat_none;
+		on_enemy_entered_icz_switch_to_melee = true;
+		actor_weapon_preference = WP_MAGIC;
+		actor_auto_switches_to_magic = true;
+		actor_auto_switches_to_karate = true;
+		actor_auto_switches_to_melee = true;
+		actor_auto_fidgets = false;
+		movement_orders = mo_hold;
+		inner_comfort_zone_range = 4.4;
+		melee_engage_range = 4.5;
+		personal_space_range = 2.0;
+		on_enemy_entered_ocz_attack = true;
+		ranged_engage_range = 10.0;
+		sight_range = 14.0;
+		sight_origin_height = 2;
 	}
 }
-	

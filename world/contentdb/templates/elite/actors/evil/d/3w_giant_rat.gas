@@ -22,6 +22,7 @@
 		material = teeth;
 		max_mana = 42.7;
 		model = m_c_edm_gr_pos_1;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -115,6 +116,23 @@
 	{
 		screen_name = "Giant Rat";
 		membership = rat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -196,6 +214,7 @@
 		material = teeth;
 		max_mana = 42.7;
 		model = m_c_edm_gr_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_gr-02;
@@ -301,6 +320,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

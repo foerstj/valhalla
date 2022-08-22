@@ -4,37 +4,57 @@
 	doc = "3W_dsx_spiked_dweller";
 	specializes = base_maw;
 	material = flesh;
-
 	[actor]
 	{
 		[skills]
 		{
-			strength = 		42.3, 0;
-			intelligence = 	11.1, 0;
-			dexterity = 	20.2, 0;
-			melee =         76, 0;
-			nature_magic =	77, 0;
-			combat_magic =  77, 0;
+			strength = 42.3, 0;
+			intelligence = 11.1, 0;
+			dexterity = 20.2, 0;
+			melee = 76, 0;
+			nature_magic = 77, 0;
+			combat_magic = 77, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 1210560;
-		life 			= 1509.8;
-		max_life 		= 1509.8;
-		mana 			= 2291;
-		max_mana 		= 2291;
+		life = 1509.8;
+		max_life = 1509.8;
+		mana = 2291;
+		max_mana = 2291;
+	  f scale_base = 1.587401;
 		[voice]
 		{
-			[cast]		{	* = s_e_attack_spiker_SED;	}
-			[die]			{ priority = high; * = s_e_die_spiked_maw; }
-			[hit_critical]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_spiked_maw_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_spiked_maw_SED; }
+			[cast]
+			{
+				* = s_e_attack_spiker_SED;
+			}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_spiked_maw;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_spiked_maw_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_spiked_maw_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_spiked_maw_SED;
+			}
 		}
-		
-
-		textures:0 = b_c_edm_sm-03;
+		[textures]
+		{
+			0 = b_c_edm_sm-03;
+		}
 	}
 	[attack]
 	{
@@ -46,18 +66,41 @@
 	}
 	[common]
 	{
-		screen_name="Jungle Spiker";
+		screen_name = "Jungle Spiker";
 		membership = monster, party_spiked_dweller;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
-	[defend] { defense=813.4; }
+	[defend]
+	{
+		defense = 813.4;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
-		[other] { il_active_primary_spell=dsx_spell_spiked_dweller_spikes; }
+		[other]
+		{
+			il_active_primary_spell = dsx_spell_spiked_dweller_spikes;
+		}
 	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party	= true
 			&actor_creates_own_party	= true
 			&party_template				= "party_spiked_dweller";
@@ -76,7 +119,6 @@
 		}
 	}
 }
-
 [t:template,n:3W_dsx_spiker]
 {
 	category_name = "3W_evil_d";
@@ -86,12 +128,12 @@
 	{
 		[skills]
 		{
-			strength = 		57.3, 0;
-			intelligence = 	11.4, 0;
-			dexterity = 	22.7, 0;
-			melee =         76, 0;
-			nature_magic =	78, 0;
-			combat_magic =  78, 0;
+			strength = 57.3, 0;
+			intelligence = 11.4, 0;
+			dexterity = 22.7, 0;
+			melee = 76, 0;
+			nature_magic = 78, 0;
+			combat_magic = 78, 0;
 		}
 	}
 	[aspect]
@@ -101,7 +143,11 @@
 		max_life = 12212;
 		mana = 18531;
 		max_mana = 18531;
-		textures:0 = b_c_edm_sm-03;
+	  f scale_base = 1.587401;
+		[textures]
+		{
+			0 = b_c_edm_sm-03;
+		}
 	}
 	[attack]
 	{
@@ -110,11 +156,33 @@
 		damage_min = 1917;
 		reload_delay = 0;
 	}
-	[common] { screen_name="Jungle Spiker"; }
-	[defend] { defense = 5088.3; }
+	[common]
+	{
+		screen_name = "Jungle Spiker";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 5088.3;
+	}
 	[physics]
 	{
 		break_effect = mine_worm_die_dust;
 	}
 }
-

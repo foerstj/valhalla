@@ -21,6 +21,7 @@
 		mana = 16.5;
 		max_mana = 16.5;
 		model = m_c_edm_qs_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -118,6 +119,16 @@
 	[common]
 	{
 		screen_name = "Quadscale";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

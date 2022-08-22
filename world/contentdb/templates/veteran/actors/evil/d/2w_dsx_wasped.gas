@@ -1,5 +1,4 @@
 [t:template,n:2W_dsx_wasped]
-//balanced to Level 13
 {
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_wasped";
@@ -8,10 +7,10 @@
 	{
 		[skills]
 		{
-			strength =  	30.8, 0;
-			intelligence =  10.7, 0;
-			dexterity =  	18.1, 0;
-			melee =  	53, 0;
+			strength = 30.8, 0;
+			intelligence = 10.7, 0;
+			dexterity = 18.1, 0;
+			melee = 53, 0;
 		}
 	}
 	[aspect]
@@ -22,10 +21,19 @@
 		mana = 45.6;
 		max_mana = 45.6;
 		model = m_c_edm_wp_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_wasped; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_wasped;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
 		}
 	}
 	[attack]
@@ -64,30 +72,58 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dsf; }
+				[anim_files]
+				{
+					00 = dsf;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Giant Wasp"; }
-	[defend] { defense=319.2; }
+	[common]
+	{
+		screen_name = "Giant Wasp";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
+	[defend]
+	{
+		defense = 319.2;
+	}
 	[mind]
 	{
 		melee_engage_range = 14;

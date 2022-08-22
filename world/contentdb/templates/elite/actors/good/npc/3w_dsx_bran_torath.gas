@@ -13,12 +13,6 @@
 		draw_selection_indicator = TRUE;
 		is_ghost_usable = TRUE;
 		model = m_c_gbn_ja_pos_1;
-		/*
-		[textures]
-		{
-			0 = b_c_gah_fb_skin_24;
-			1 = b_c_pos_a7_013;
-		}*/
 	}
 	[common]
 	{
@@ -27,12 +21,10 @@
 	[conversation]
 	{
 	}
-
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_bran_torath.skrit;
- 	}
-
+	}
 	[respawn_shrine]
 	{
 	}

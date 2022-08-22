@@ -21,6 +21,7 @@
 		mana = 65.7;
 		max_mana = 65.7;
 		model = m_c_edm_sn_pos_1;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -111,6 +112,23 @@
 	[common]
 	{
 		screen_name = "Stalagnid";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

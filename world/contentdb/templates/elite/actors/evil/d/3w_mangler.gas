@@ -10,28 +10,28 @@
 		{
 			[die]
 			{
-							* = s_e_die_mangler;
+				* = s_e_die_mangler;
 			}
 		}
 		[voice]
 		{
 			[hit_glance]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_solid]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_critical]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 	}
@@ -139,6 +139,7 @@
 		max_life = 1540.8;
 		mana = 42.8;
 		max_mana = 42.8;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -149,6 +150,23 @@
 	[common]
 	{
 		screen_name = "Mangler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -187,7 +205,7 @@
 		max_life = 211.5;
 		mana = 178;
 		max_mana = 178;
-		scale_base = 0.60;
+	  f scale_base = 0.952441;
 		[textures]
 		{
 			0 = b_c_edm_mn-02;
@@ -202,6 +220,23 @@
 	[common]
 	{
 		screen_name = "Snapper";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -235,6 +270,7 @@
 		mana = 12.8;
 		material = teeth;
 		max_mana = 12.8;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_mn-03;
@@ -249,6 +285,23 @@
 	[common]
 	{
 		screen_name = "Sea Mangler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

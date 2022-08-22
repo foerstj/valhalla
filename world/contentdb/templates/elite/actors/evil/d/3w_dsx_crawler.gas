@@ -4,32 +4,56 @@
 	doc = "3W_dsx_crawler_dungeon";
 	specializes = base_dungeon_crawler;
 	[actor]
+	{
+		[skills]
 		{
-			[skills]
-				{
-					strength =	 43.7, 0;
-					intelligence =	12.5, 0;
-					dexterity =	21.3, 0;
-					melee =		79, 0;
-				}
+			strength = 43.7, 0;
+			intelligence = 12.5, 0;
+			dexterity = 21.3, 0;
+			melee = 79, 0;
 		}
+	}
 	[aspect]
-		{
-			experience_value = 977760;
-			life = 774;
-			max_life = 774;
-			mana = 36;
-			max_mana = 36;
-		}
+	{
+		experience_value = 977760;
+		life = 774;
+		max_life = 774;
+		mana = 36;
+		max_mana = 36;
+	  f scale_base = 1.587401;
+	}
 	[attack]
+	{
+		attack_range = 0.5;
+		damage_max = 283.8;
+		damage_min = 205.2;
+	}
+	[common]
+	{
+		screen_name = "Decomposing Corpse";
+		[template_triggers]
 		{
-			attack_range = 0.5;
-			damage_max = 283.8;
-			damage_min = 205.2;
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
-	[common] { screen_name = "Decomposing Corpse"; }
-	[defend] { defense = 408; }
+	}
+	[defend]
+	{
+		defense = 408;
+	}
 	[inventory]
-		{
-		}
+	{
+	}
 }

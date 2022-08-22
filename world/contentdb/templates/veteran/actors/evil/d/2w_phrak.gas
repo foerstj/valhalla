@@ -169,12 +169,26 @@
 }
 [t:template,n:2W_phrak]
 {
+	[aspect]
+	{
+	  f scale_base = 0.692957;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_phrak";
 	specializes = 2W_base_phrak;
 	[common]
 	{
 		membership = phrak,monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -205,7 +219,7 @@
 		max_life = 5.1;
 		mana = 5.1;
 		max_mana = 5.1;
-		scale_base = 1.05;
+	  f scale_base = 1.322917;
 	}
 	[attack]
 	{
@@ -216,6 +230,16 @@
 	[common]
 	{
 		screen_name = "Large Phrak";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 }
 [t:template,n:2W_phrak_piercer]
@@ -240,7 +264,7 @@
 		max_life = 116;
 		mana = 108;
 		max_mana = 108;
-		scale_base = 0.55;
+	  f scale_base = 0.692957;
 		[textures]
 		{
 			0 = b_c_edm_ph-02;
@@ -258,6 +282,16 @@
 	{
 		screen_name = "Phrak Piercer";
 		membership = phrak,monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -316,7 +350,7 @@
 		max_life = 310;
 		mana = 108;
 		max_mana = 108;
-		scale_base = 0.8;
+	  f scale_base = 1.007937;
 		[textures]
 		{
 			0 = b_c_edm_ph-03;
@@ -342,6 +376,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -396,7 +437,24 @@
 }
 [t:template,n:2W_caged_phrak]
 {
+	[aspect]
+	{
+	  f scale_base = 0.692957;
+	}
 	category_name = "2W_bad";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_phrak caged";
 	specializes = 2W_base_phrak;
 	[body]
@@ -491,7 +549,7 @@
 		max_life = 400;
 		mana = 4.4;
 		max_mana = 4.4;
-		scale_base = 0.40;
+	  f scale_base = 0.503968;
 	}
 	[attack]
 	{
@@ -503,6 +561,16 @@
 	{
 		screen_name = "Forest Phrak";
 		membership = monster, party_spiked_dweller;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

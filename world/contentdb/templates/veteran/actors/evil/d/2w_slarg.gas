@@ -140,6 +140,7 @@
 		max_life = 1108.1;
 		mana = 32.5;
 		max_mana = 32.5;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -150,6 +151,16 @@
 	[common]
 	{
 		screen_name = "Slarg";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -185,7 +196,7 @@
 		max_life = 927.2;
 		mana = 17.1;
 		max_mana = 17.1;
-		scale_base = 1.20;
+	  f scale_base = 1.511905;
 		[textures]
 		{
 			0 = b_c_edm_sl-02;
@@ -202,6 +213,16 @@
 	[common]
 	{
 		screen_name = "Spitter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

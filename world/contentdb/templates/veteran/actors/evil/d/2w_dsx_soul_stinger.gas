@@ -1,42 +1,53 @@
 [t:template,n:2W_dsx_soul_stinger]
-//balanced to Level 23
 {
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_soul_stinger";
 	specializes = actor_evil;
 	[actor]
-    {
+	{
 		[skills]
 		{
-			strength 		= 35.9, 0;
-			intelligence 	= 10.6, 0;
-			dexterity 	= 30.9, 0;
-			melee 		= 61, 0;
+			strength = 35.9, 0;
+			intelligence = 10.6, 0;
+			dexterity = 30.9, 0;
+			melee = 61, 0;
 		}
-    }
+	}
 	[aspect]
-    {
+	{
 		experience_value = 63336;
 		life = 688.7;
 		max_life = 688.7;
 		mana = 378.8;
 		max_mana = 378.8;
 		model = m_c_edm_ss_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_soul_stinger; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_soul_stinger;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
 		}
-    }
+	}
 	[attack]
-    {
+	{
 		attack_range = 0.5;
 		damage_max = 359.8;
 		damage_min = 271.2;
-    }
-	[defend] { defense = 536.6; }
+	}
+	[defend]
+	{
+		defense = 536.6;
+	}
 	[body]
-    {
+	{
 		avg_move_velocity = 4.990000;
 		[bone_translator]
 		{
@@ -52,51 +63,78 @@
 			chore_prefix = a_c_edm_ss_fs;
 			[chore_attack]
 			{
-			  chore_stances = 0;
-			  skrit = select_attack;
-			  [anim_files] { 00=at; }
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
-			  chore_stances = 0;
-			  skrit = infinite_loop;
-			  [anim_files] { 00=ds; }
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
-			  chore_stances = 0;
-			  skrit = select_transition;
-			  [anim_files] { 00=di; }
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
-			  chore_stances = 0;
-			  skrit = select_fidget;
-			  [anim_files] { 00=dff; }
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
-			  chore_stances = 0;
-			  skrit = select_walk;
-			  [anim_files] { 00=fl; }
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
-	[common] { screen_name = "Soul Stinger"; }
+	[common]
+	{
+		screen_name = "Soul Stinger";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?meander	= false
 		&still		= false;
-		
-		melee_engage_range 		= 14;
-		personal_space_range 	= 0.5;
-		ranged_engage_range 	= 14.0;
-		sight_range 			= 14.0;
+		melee_engage_range = 14;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
 	}
 	[physics]
 	{
-		explode_when_killed = true;		
+		explode_when_killed = true;
 		[break_particulate]
 		{
 			frag_glb_soul_stinger_01 = 1;

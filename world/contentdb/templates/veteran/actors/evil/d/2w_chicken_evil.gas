@@ -128,6 +128,7 @@
 		max_life = 26037.7;
 		mana = 10849.1;
 		max_mana = 10849.1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_na_ckn_red;
@@ -166,6 +167,13 @@
 			  b single_player = true;
 			  b single_shot = true;
 			  b start_active = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -258,6 +266,7 @@
 		max_life = 17054.7;
 		mana = 8679.2;
 		max_mana = 8679.2;
+	  f scale_base = 1.259921;
 		scale_multiplier = 3;
 		[textures]
 		{
@@ -286,6 +295,13 @@
 			  b single_player = true;
 			  b single_shot = true;
 			  b start_active = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

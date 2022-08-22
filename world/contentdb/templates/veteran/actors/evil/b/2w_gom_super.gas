@@ -24,7 +24,7 @@
 		mana = 5625.5;
 		max_mana = 5625.5;
 		model = m_c_ebb_sg_pos_1;
-		scale_base = 1.3;
+	  f scale_base = 1.637897;
 		[voice]
 		{
 			[die]
@@ -202,6 +202,13 @@
 			  b single_player = true;
 			  b single_shot = true;
 			  b start_active = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

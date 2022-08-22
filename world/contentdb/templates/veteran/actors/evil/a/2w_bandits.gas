@@ -195,6 +195,7 @@
 		mana = 63.5;
 		max_mana = 63.5;
 		experience_value = 67600;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_34;
@@ -204,6 +205,16 @@
 	[common]
 	{
 		membership = monster, party_bandit_ranged, bandit;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -299,6 +310,7 @@
 		max_mana = 63.5;
 		experience_value = 86970;
 		model = m_c_gah_fb_pos_a1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_34;
@@ -317,6 +329,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -408,6 +427,7 @@
 		mana = 63.5;
 		max_mana = 63.5;
 		experience_value = 59176;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_34;
@@ -418,6 +438,16 @@
 	{
 		screen_name = "Bandit Archer";
 		membership = monster, party_bandit_ranged, bandit;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -521,6 +551,13 @@
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[aspect]
@@ -530,6 +567,7 @@
 		mana = 1904.3;
 		max_mana = 1904.3;
 		experience_value = 81400;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_35;

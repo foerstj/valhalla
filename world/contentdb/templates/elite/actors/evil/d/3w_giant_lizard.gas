@@ -21,6 +21,7 @@
 		mana = 26.8;
 		max_mana = 26.8;
 		model = m_c_edm_gz_pos_1;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -105,6 +106,23 @@
 	[common]
 	{
 		screen_name = "Giant Lizard";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

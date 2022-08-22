@@ -3,7 +3,6 @@
 	category_name = "3W_character";
 	doc = "3W_dsx_librarian_base";
 	specializes = base_pm_fb;
-
 	[actor]
 	{
 		alignment = aa_neutral;
@@ -11,12 +10,11 @@
 	[aspect]
 	{
 		model = m_c_gah_fb_pos_a1;
-		force_no_render_click = true; // don't want to see him, but we'd like to click
+		force_no_render_click = true;
 		force_no_render = true;
 		is_visible = false;
 		is_selectable = false;
 		is_invincible = true;
-		
 		[textures]
 		{
 			0 = b_c_gan_utraean_skin_01;
@@ -27,7 +25,6 @@
 	{
 		screen_name = "Librarian";
 	}
-	
 	[conversation]
 	{
 		[conversations]
@@ -35,7 +32,6 @@
 			* = librarian_01;
 		}
 	}
-
 	[body]
 	{
 		can_turn_and_move = false;
@@ -43,12 +39,10 @@
 		max_move_velocity = 0.0;
 		min_move_velocity = 0.0;
 	}
-
 	[mind]
 	{
-        	jat_talk = world\ai\jobs\actors\good\job_talk_librarian.skrit;
-        	
-        	actor_may_attack = false;
-        	actor_may_be_attacked = false; 
-	}	
+		jat_talk = world\ai\jobs\actors\good\job_talk_librarian.skrit;
+		actor_may_attack = false;
+		actor_may_be_attacked = false;
+	}
 }
