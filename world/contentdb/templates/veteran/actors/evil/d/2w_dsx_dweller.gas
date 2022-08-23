@@ -23,6 +23,7 @@
 		max_life = 974.7;
 		mana = 1479;
 		max_mana = 1479;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[cast]
@@ -67,6 +68,16 @@
 	{
 		screen_name = "Jungle Spiker";
 		membership = monster, party_spiked_dweller;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -125,6 +136,7 @@
 		max_life = 7396;
 		mana = 11223;
 		max_mana = 11223;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_sm-03;
@@ -140,6 +152,16 @@
 	[common]
 	{
 		screen_name = "Jungle Spiker";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

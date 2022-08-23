@@ -180,6 +180,7 @@
 		mana = 202.5;
 		max_mana = 202.5;
 		model = m_c_edm_DEMURSAE_pos_1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_demonic_ursae;
@@ -215,6 +216,16 @@
 	{
 		screen_name = "Ursae";
 		membership = monster, undead;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -224,11 +235,25 @@
 [t:template,n:2W_dsx_ursae_demonic_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_summon_ursae_demonic";
 	specializes = 2W_dsx_ursae_demonic_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

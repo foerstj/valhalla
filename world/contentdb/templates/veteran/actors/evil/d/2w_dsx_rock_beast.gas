@@ -23,6 +23,7 @@
 		max_life = 1203.2;
 		mana = 27.9;
 		max_mana = 27.9;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -36,6 +37,47 @@
 	{
 		screen_name = "Rock Beast";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				action* = call_sfx_script("rock_beast_eye_glow");
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_r_foot");
+				condition* = receive_world_message("we_anim_other",'rfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_l_foot");
+				condition* = receive_world_message("we_anim_other",'lfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_smash");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_yell");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust_hands");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -106,6 +148,7 @@
 		max_life = 1576.9;
 		mana = 362.5;
 		max_mana = 362.5;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_rb-05;
@@ -124,6 +167,47 @@
 	{
 		screen_name = "Cobble Man";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				action* = call_sfx_script("rock_beast_eye_glow");
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_r_foot");
+				condition* = receive_world_message("we_anim_other",'rfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust","bip01_l_foot");
+				condition* = receive_world_message("we_anim_other",'lfdn');
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_smash");
+				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_yell");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("rock_beast_dust_hands");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

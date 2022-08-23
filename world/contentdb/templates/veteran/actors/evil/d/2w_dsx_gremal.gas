@@ -23,7 +23,7 @@
 		max_mana = 0;
 		megamap_icon = <none>;
 		model = m_c_edm_gm_pos_2;
-		scale_base = .85;
+	  f scale_base = 1.070933;
 		[voice]
 		{
 			[enemy_spotted]
@@ -65,6 +65,16 @@
 	[common]
 	{
 		screen_name = "Giant Rabid Gremal";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{

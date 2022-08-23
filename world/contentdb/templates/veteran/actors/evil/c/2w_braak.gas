@@ -140,6 +140,7 @@
 		max_life = 1039.5;
 		mana = 55;
 		max_mana = 55;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -151,6 +152,16 @@
 	{
 		screen_name = "Braak";
 		membership = party_braak_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -220,6 +231,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_bk-03;
@@ -248,6 +260,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -441,12 +460,33 @@
 }
 [t:template,n:2W_braak_magic]
 {
+	[aspect]
+	{
+	  f scale_base = 0.881945;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_braak magic";
 	specializes = 2W_braak_magic_base;
 }
 [t:template,n:2W_braak_magic_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 0.881945;
+	}
 	category_name = "2W_evil_c";
 	doc = "2W_revealing braak magic";
 	specializes = 2W_braak_magic_base;
@@ -467,11 +507,22 @@
 				action* = call_sfx_script("braak_magic_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 }
 [t:template,n:2W_braak_magic_reveal_act]
 {
+	[aspect]
+	{
+	  f scale_base = 0.881945;
+	}
 	category_name = "2W_evil_c";
 	doc = "2W_revealing braak magic activate";
 	specializes = 2W_braak_magic_base;
@@ -492,6 +543,13 @@
 				single_shot = true;
 				action* = call_sfx_script("braak_magic_reveal");
 				condition* = receive_world_message("we_req_activate");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -600,18 +658,49 @@
 }
 [t:template,n:2W_braak_desert]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "braak, melee (desert)";
 	specializes = 2W_braak_desert_base;
 }
 [t:template,n:2W_braak_desert_summon]
 {
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] braak, melee (desert)";
 	specializes = 2W_braak_desert_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -650,6 +739,7 @@
 		max_life = 4304.6;
 		mana = 18.9;
 		max_mana = 18.9;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_bk-04;
@@ -679,6 +769,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

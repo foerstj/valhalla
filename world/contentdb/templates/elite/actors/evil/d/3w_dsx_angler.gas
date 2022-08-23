@@ -14,21 +14,21 @@
 		{
 			[die]
 			{
-						* = s_e_die_angler_SED;
+				* = s_e_die_angler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_glance]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_critical]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 	}
@@ -131,6 +131,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_angler;
@@ -150,6 +151,23 @@
 	[common]
 	{
 		screen_name = "Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -177,7 +195,7 @@
 		max_life = 861.9;
 		mana = 46.8;
 		max_mana = 46.8;
-		scale_base = 0.60;
+	  f scale_base = 0.952441;
 		[textures]
 		{
 			0 = b_c_edm_shadow_angler;
@@ -192,6 +210,23 @@
 	[common]
 	{
 		screen_name = "Shadow Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -225,6 +260,7 @@
 		mana = 44;
 		material = teeth;
 		max_mana = 44;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_jungle_mangler;
@@ -239,6 +275,23 @@
 	[common]
 	{
 		screen_name = "Jungle Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -281,6 +334,7 @@
 		mana = 17.3;
 		material = teeth;
 		max_mana = 17.3;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_jungle_mangler;
@@ -295,6 +349,23 @@
 	[common]
 	{
 		screen_name = "Jungle Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -336,25 +407,26 @@
 		max_life = 870;
 		mana = 60;
 		max_mana = 60;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
 			{
-							* = s_e_die_angler_SED;
+				* = s_e_die_angler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_glance]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_critical]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 	}
@@ -367,6 +439,23 @@
 	[common]
 	{
 		screen_name = "Cave Angler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

@@ -21,6 +21,7 @@
 		mana = 270;
 		max_mana = 270;
 		model = m_c_edm_zo_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_mummy;
@@ -50,6 +51,23 @@
 	{
 		screen_name = "Mummy";
 		membership = monster, undead;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

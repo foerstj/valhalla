@@ -205,7 +205,7 @@
 		mana = 47.8;
 		max_mana = 47.8;
 		model = m_c_eam_kc_pos_1;
-		scale_base = 1.2;
+	  f scale_base = 1.511905;
 		selection_indicator_scale = 0.85;
 		material = steel;
 		[textures]
@@ -255,6 +255,16 @@
 	{
 		screen_name = "Mutated Goblin Warrior";
 		membership = goblin, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -345,7 +355,7 @@
 		max_life = 1289.8;
 		mana = 15.9;
 		max_mana = 15.9;
-		scale_base = 1.2;
+	  f scale_base = 1.511905;
 		selection_indicator_scale = 0.85;
 		[textures]
 		{
@@ -390,6 +400,16 @@
 	{
 		screen_name = "Mutant Goblin Hurler";
 		membership = monster, goblin;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

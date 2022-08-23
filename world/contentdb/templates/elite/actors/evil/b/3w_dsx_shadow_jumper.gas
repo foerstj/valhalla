@@ -165,6 +165,7 @@
 		mana = 169;
 		max_mana = 169;
 		model = m_c_ebb_sj_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_sj-01;
@@ -209,6 +210,23 @@
 	{
 		screen_name = "Shadowjumper Minion";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -286,6 +304,7 @@
 		mana = 989.6;
 		max_mana = 989.6;
 		model = m_c_ebb_sj_pos_2;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_sj-02;
@@ -399,6 +418,23 @@
 	{
 		screen_name = "Shadow Servant";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -488,6 +524,7 @@
 		mana = 314.1;
 		max_mana = 314.1;
 		model = m_c_ebb_sj_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_sj-01;
@@ -532,6 +569,23 @@
 	{
 		screen_name = "Shadowjumper Henchman";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -609,6 +663,7 @@
 		mana = 892.9;
 		max_mana = 892.9;
 		model = m_c_ebb_sj_pos_2;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_sj-02;
@@ -722,6 +777,23 @@
 	{
 		screen_name = "Shadow Servant";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -814,6 +886,7 @@
 		mana = 3535.7;
 		max_mana = 3535.7;
 		model = m_c_ebb_sj_pos_3;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_sj-03;
@@ -928,6 +1001,23 @@
 	{
 		screen_name = "Shadowjumper Lieutenant";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1201,6 +1291,44 @@
 [t:template,n:3W_dsx_shadow_bigboss]
 {
 	category_name = "3W_evil_b";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("shadow_jumper_boss");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("shadow_jumper_boss_dur");
+				action* = call_sfx_script("shadow_jumper_boss_die_right_arm");
+				action* = call_sfx_script("shadow_jumper_boss_die_left_arm");
+				action* = call_sfx_script("shadow_jumper_boss_die_right_leg");
+				action* = call_sfx_script("shadow_jumper_boss_die_left_leg");
+				action* = call_sfx_script("shadow_jumper_boss_die_torso");
+				action* = call_sfx_script("shadow_jumper_boss_die_flare");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_Shadowjumper Boss";
 	specializes = 3W_dsx_shadow_bigboss_base;
 	[actor]
@@ -1223,6 +1351,7 @@
 		max_life = 10870.3;
 		mana = 3642.9;
 		max_mana = 3642.9;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[enemy_spotted]
@@ -1521,18 +1650,87 @@
 }
 [t:template,n:3W_dsx_shadow_bigboss_nis_karate]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_b";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("shadow_jumper_boss_nis");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("dsx_shadow_jumper_nis_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_shadow_bigboss_nis_karate";
 	specializes = 3W_dsx_shadow_bigboss_nis_base;
 }
 [t:template,n:3W_dsx_shadow_bigboss_nis_staff]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_b";
 	doc = "3W_dsx_shadow_bigboss_nis_staff";
 	specializes = 3W_dsx_shadow_bigboss_nis_base;
 	[common]
 	{
 		screen_name = "Shadowjumper";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("shadow_jumper_boss_nis");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("dsx_shadow_jumper_nis_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -1609,6 +1807,7 @@
 		mana = 214.3;
 		max_mana = 214.3;
 		model = m_c_ebb_sj_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_sj-01;
@@ -1648,6 +1847,23 @@
 	{
 		screen_name = "ShadowJumper Disciple";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

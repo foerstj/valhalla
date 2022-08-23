@@ -176,18 +176,63 @@
 }
 [t:template,n:3W_picker]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_picker";
 	specializes = 3W_picker_base;
 }
 [t:template,n:3W_picker_summon]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] picker";
 	specializes = 3W_picker_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{
@@ -222,6 +267,7 @@
 		max_life = 1453.3;
 		mana = 36.3;
 		max_mana = 36.3;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_pr-02;
@@ -251,6 +297,23 @@
 	[common]
 	{
 		screen_name = "Kill Bot";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -304,6 +367,7 @@
 		max_life = 1703.2;
 		mana = 35.5;
 		max_mana = 35.5;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_pr-03;
@@ -333,6 +397,23 @@
 	[common]
 	{
 		screen_name = "Hunter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

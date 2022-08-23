@@ -22,6 +22,7 @@
 		mana = 77.5;
 		max_mana = 77.5;
 		model = m_c_ebb_gs_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[cast]
@@ -155,6 +156,13 @@
 			{
 				action* = call_sfx_script("giant_spider_foot_spark_4");
 				condition* = receive_world_message("we_anim_sfx",4);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

@@ -183,6 +183,7 @@
 		max_life = 3489.6;
 		max_mana = 2149.6;
 		mana = 2149.6;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -211,6 +212,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_red");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

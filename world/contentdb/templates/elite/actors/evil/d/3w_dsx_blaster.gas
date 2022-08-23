@@ -24,6 +24,7 @@
 		max_mana = 35.4;
 		model = m_c_edm_bl_pos_1;
 		material = wood;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -128,6 +129,20 @@
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				action* = call_sfx_script("tailpipe_steam_blaster");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

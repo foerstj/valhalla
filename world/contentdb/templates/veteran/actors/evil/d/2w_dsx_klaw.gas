@@ -20,6 +20,7 @@
 		max_life = 894.4;
 		mana = 93.6;
 		max_mana = 93.6;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_kw-02;
@@ -34,6 +35,16 @@
 	[common]
 	{
 		screen_name = "Jungle Klaw";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

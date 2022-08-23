@@ -15,6 +15,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_slime_zombie;
@@ -38,6 +39,16 @@
 	[common]
 	{
 		screen_name = "Slime Zombie";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -85,6 +96,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_muck_zombie;
@@ -110,6 +122,16 @@
 	{
 		screen_name = "Muck Zombie";
 		membership = monster, undead;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -236,6 +258,7 @@
 		max_life = 1161;
 		mana = 27;
 		max_mana = 27;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -246,6 +269,16 @@
 	[common]
 	{
 		screen_name = "Undead Body";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -274,6 +307,7 @@
 		max_life = 1057.5;
 		mana = 27;
 		max_mana = 27;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -284,6 +318,16 @@
 	[common]
 	{
 		screen_name = "Undead Body";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -395,6 +439,7 @@
 		max_life = 1057.5;
 		mana = 27;
 		max_mana = 27;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_zo-02;
@@ -409,6 +454,16 @@
 	[common]
 	{
 		screen_name = "Rotting Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -437,6 +492,7 @@
 		max_life = 1057.5;
 		mana = 27;
 		max_mana = 27;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_zo-02;
@@ -451,6 +507,16 @@
 	[common]
 	{
 		screen_name = "Rotting Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -573,6 +639,7 @@
 		mana = 36;
 		max_mana = 36;
 		model = m_c_edm_zo_pos_2;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_zo-03;
@@ -587,6 +654,16 @@
 	[common]
 	{
 		screen_name = "Living Dead";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -616,6 +693,7 @@
 		mana = 36;
 		max_mana = 36;
 		model = m_c_edm_zo_pos_2;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_zo-03;
@@ -630,6 +708,16 @@
 	[common]
 	{
 		screen_name = "Living Dead";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -743,6 +831,7 @@
 		mana = 36;
 		max_mana = 36;
 		model = m_c_edm_zo_pos_3;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_zo-04;
@@ -757,6 +846,16 @@
 	[common]
 	{
 		screen_name = "Headless Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -786,6 +885,7 @@
 		mana = 36;
 		max_mana = 36;
 		model = m_c_edm_zo_pos_3;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_zo-04;
@@ -800,6 +900,16 @@
 	[common]
 	{
 		screen_name = "Headless Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

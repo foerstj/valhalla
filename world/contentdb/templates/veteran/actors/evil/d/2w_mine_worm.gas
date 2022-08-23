@@ -22,6 +22,7 @@
 		max_mana = 64;
 		mana = 64;
 		model = m_c_edm_mw_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[cast]
@@ -159,6 +160,13 @@
 			{
 				action* = call_sfx_script("mine_worm_die_dust");
 				condition* = receive_world_message("we_anim_die");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

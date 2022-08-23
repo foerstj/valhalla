@@ -159,6 +159,26 @@
 [t:template,n:3W_dsx_lava_spirit]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_lava_spirit";
 	specializes = base_lava_spirit;
 	[actor]
@@ -178,6 +198,7 @@
 		max_life = 917.8;
 		mana = 3072;
 		max_mana = 3072;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -254,7 +275,31 @@
 }
 [t:template,n:3W_dsx_lava_spirit_magic]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_lava_spirit magic";
 	specializes = 3W_dsx_lava_spirit_magic_base;
 }

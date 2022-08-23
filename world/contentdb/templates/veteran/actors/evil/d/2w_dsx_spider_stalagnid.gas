@@ -21,6 +21,7 @@
 		mana = 138;
 		max_mana = 138;
 		model = m_c_edm_sn_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -111,6 +112,16 @@
 	[common]
 	{
 		screen_name = "Stalagnid";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -164,7 +175,7 @@
 		mana = 48;
 		max_mana = 48;
 		model = m_c_edm_sn_pos_1;
-		scale_base = 0.5;
+	  f scale_base = 0.629961;
 		[voice]
 		{
 			[die]
@@ -255,6 +266,16 @@
 	[common]
 	{
 		screen_name = "Stalagnid Impaler";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

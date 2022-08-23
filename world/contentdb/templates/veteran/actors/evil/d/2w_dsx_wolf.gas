@@ -83,7 +83,24 @@
 }
 [t:template,n:2W_dsx_wolf_white]
 {
+	[aspect]
+	{
+	  f scale_base = 1.070933;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_wolf_white";
 	specializes = 2W_dsx_wolf_white_base;
 }
@@ -111,7 +128,7 @@
 		experience_value = 11030;
 		life = 344;
 		max_life = 344;
-		scale_base = 0.55;
+	  f scale_base = 0.692957;
 		[voice]
 		{
 			[die]
@@ -157,5 +174,15 @@
 	[common]
 	{
 		screen_name = "Varg";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 }

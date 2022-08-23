@@ -23,6 +23,7 @@
 		max_mana = 154;
 		mana = 154;
 		model = m_c_ebb_lqb;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_lq;
@@ -138,6 +139,20 @@
 				condition* = receive_world_message("WE_KILLED");
 				single_shot = true;
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[inventory]
@@ -221,6 +236,7 @@
 		max_mana = 154;
 		mana = 154;
 		model = m_c_ebb_lqt;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_lq_b;
@@ -296,6 +312,20 @@
 				action* = call_sfx_script("lostqueen_tail_die");
 				condition* = receive_world_message("WE_KILLED");
 				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

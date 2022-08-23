@@ -181,7 +181,7 @@
 			life = 614.5;
 			max_life = 614.5;
 			model = m_c_edm_sc_pos_1;
-			scale_base = 0.4;
+		  f scale_base = 0.503968;
 		}
 		[actor]
 		{
@@ -202,6 +202,16 @@
 		[common]
 		{
 			screen_name = "Lesser Scrub Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_cyan(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[defend]
 		{
@@ -246,7 +256,7 @@
 			life = 1158.2;
 			max_life = 1158.2;
 			model = m_c_edm_sc_pos_1;
-			scale_base = 0.6;
+		  f scale_base = 0.755953;
 		}
 		[attack]
 		{
@@ -257,6 +267,16 @@
 		[common]
 		{
 			screen_name = "Greater Scrub Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_yellow(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[defend]
 		{
@@ -334,7 +354,7 @@
 			max_life = 1585.2;
 			mana = 28.9;
 			max_mana = 28.9;
-			scale_base = 1.5;
+		  f scale_base = 1.889882;
 			model = m_c_edm_sc_pos_1;
 			[textures]
 			{
@@ -452,6 +472,13 @@
 					no_trig_bits = true;
 					action* = call_sfx_script("unique_ray_red(sgx)");
 				}
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_red(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
 			}
 		}
 		[defend]
@@ -556,7 +583,7 @@
 			life = 1019.2;
 			max_life = 1019.2;
 			model = m_c_edm_sc_pos_1;
-			scale_base = .85;
+		  f scale_base = 1.070933;
 		}
 		[attack]
 		{
@@ -567,6 +594,16 @@
 		[common]
 		{
 			screen_name = "Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_yellow(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[inventory]
 		{
@@ -601,11 +638,21 @@
 			life = 465.5;
 			max_life = 465.5;
 			model = m_c_edm_sc_pos_1;
-			scale_base = 0.6;
+		  f scale_base = 0.755953;
 		}
 		[common]
 		{
 			screen_name = "Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_yellow(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[inventory]
 		{

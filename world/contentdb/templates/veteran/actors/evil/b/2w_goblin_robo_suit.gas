@@ -23,6 +23,7 @@
 		model = m_c_ebb_grs_pos_1;
 		bounding_volume_scale = 1.6;
 		material = wood;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -116,6 +117,13 @@
 			{
 				action* = call_sfx_script("robosuit_kill_sparks");
 				condition* = receive_world_message("we_killed");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -219,6 +227,7 @@
 		is_invincible = true;
 		model = m_c_ebb_grs_torso_1;
 		material = wood;
+	  f scale_base = 1.259921;
 	}
 	[body]
 	{
@@ -256,6 +265,16 @@
 	[common]
 	{
 		screen_name = "Goblin Robo Suit";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -332,6 +351,7 @@
 		is_invincible = true;
 		model = m_c_ebb_grs_minigun_1;
 		material = wood;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -357,6 +377,16 @@
 	[common]
 	{
 		screen_name = "Goblin Robo Suit";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -423,6 +453,7 @@
 		is_invincible = true;
 		model = m_c_ebb_grs_flamethrower_1;
 		material = wood;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -448,6 +479,16 @@
 	[common]
 	{
 		screen_name = "Goblin Robo Suit";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -520,6 +561,7 @@
 		is_invincible = true;
 		model = m_c_ebb_grs_lightninggun_1;
 		material = wood;
+	  f scale_base = 1.259921;
 	}
 	[body]
 	{
@@ -539,6 +581,16 @@
 	[common]
 	{
 		screen_name = "Goblin Robo Suit";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

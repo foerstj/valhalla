@@ -58,6 +58,10 @@
 }
 [t:template,n:3W_dsx_jungle_slinger]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_jungle_slinger";
 	specializes = 3W_dsx_jungle_slinger_base;
@@ -84,6 +88,29 @@
 	[common]
 	{
 		screen_name = "Jungle Slinger";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("lunger_eye_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -149,7 +176,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 1.6;
+	  f scale_base = 2.539842;
 	}
 	[attack]
 	{
@@ -171,6 +198,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

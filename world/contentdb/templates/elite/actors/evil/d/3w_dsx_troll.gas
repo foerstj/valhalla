@@ -1,6 +1,26 @@
 [t:template,n:3W_dsx_troll]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_DSX Troll Base";
 	specializes = troll_base;
 	[aspect]
@@ -12,6 +32,7 @@
 		max_mana = 87.8;
 		life_recovery_unit = 1;
 		life_recovery_period = 8;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -95,6 +116,7 @@
 		max_life = 1544.9;
 		mana = 87.8;
 		max_mana = 87.8;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_tl-03;
@@ -111,6 +133,23 @@
 	[common]
 	{
 		screen_name = "Troll";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -201,6 +240,7 @@
 		max_life = 2194.4;
 		mana = 87.8;
 		max_mana = 87.8;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_tl-03;
@@ -242,6 +282,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -319,7 +373,7 @@
 		max_mana = 37.3;
 		life_recovery_unit = 1;
 		life_recovery_period = 8;
-		scale_base = 0.7;
+	  f scale_base = 1.111181;
 	}
 	[attack]
 	{
@@ -330,6 +384,23 @@
 	[common]
 	{
 		screen_name = "Mountain Troll";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -411,7 +482,7 @@
 		max_life = 1599;
 		mana = 43.3;
 		max_mana = 43.3;
-		scale_base = 0.8;
+	  f scale_base = 1.269921;
 		[textures]
 		{
 			0 = b_c_edm_tl-02;
@@ -451,6 +522,23 @@
 	[common]
 	{
 		screen_name = "Scrub Troll";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

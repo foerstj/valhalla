@@ -286,6 +286,7 @@
 		max_life = 1826;
 		mana = 19.8;
 		max_mana = 19.8;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -305,6 +306,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -567,18 +575,49 @@
 }
 [t:template,n:2W_skeleton]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_Skeleton";
 	specializes = 2W_skeleton_base;
 }
 [t:template,n:2W_skeleton_summon]
 {
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] Skeleton";
 	specializes = 2W_skeleton_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -608,6 +647,7 @@
 		max_life = 270;
 		mana = 20;
 		max_mana = 20;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -619,6 +659,16 @@
 	[common]
 	{
 		screen_name = "Skeleton Archer";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -698,6 +748,7 @@
 		mana = 56;
 		max_mana = 56;
 		model = m_c_ecm_sk_pos_2;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -708,6 +759,16 @@
 	{
 		screen_name = "Skeleton Guard";
 		membership = skeleton, party_krug_shaman, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -781,7 +842,7 @@
 		{
 			0 = b_c_ecm_skg-02;
 		}
-		scale_base = 1.2;
+	  f scale_base = 1.511905;
 	}
 	[attack]
 	{
@@ -800,6 +861,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -850,7 +918,24 @@
 }
 [t:template,n:2W_skeleton_mercenary]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_skeleton mercenary";
 	specializes = 2W_skeleton_mercenary_base;
 }
@@ -861,6 +946,7 @@
 	specializes = 2W_skeleton_mercenary_base;
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[enemy_spotted]
@@ -878,6 +964,13 @@
 			{
 				condition* = receive_world_message("we_req_activate");
 				action* = call_sfx_script("skeleton_reveal");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -894,7 +987,24 @@
 }
 [t:template,n:2W_skeleton_mercenary_reveal_02]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_skeleton mercenary reveal";
 	specializes = 2W_skeleton_mercenary_base;
 	[mind]
@@ -909,7 +1019,24 @@
 }
 [t:template,n:2W_skeleton_mercenary_summon]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] skeleton mercenary";
 	specializes = 2W_skeleton_mercenary_base;
 	[mind]
@@ -919,7 +1046,24 @@
 }
 [t:template,n:2W_skeleton_mercenary_archer]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_skeleton mercenary archer";
 	specializes = 2W_skeleton_mercenary_archer_base;
 }
@@ -930,6 +1074,7 @@
 	specializes = 2W_skeleton_mercenary_archer_base;
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[enemy_spotted]
@@ -948,6 +1093,13 @@
 				condition* = receive_world_message("we_req_activate");
 				action* = call_sfx_script("skeleton_reveal");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[mind]
@@ -963,7 +1115,24 @@
 }
 [t:template,n:2W_skeleton_mercenary_archer_reveal_02]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_skeleton mercenary_archer reveal";
 	specializes = 2W_skeleton_mercenary_archer_base;
 	[mind]
@@ -978,7 +1147,24 @@
 }
 [t:template,n:2W_skeleton_mercenary_archer_summon]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] skeleton mercenary_archer";
 	specializes = 2W_skeleton_mercenary_archer_base;
 	[mind]
@@ -1012,7 +1198,7 @@
 		{
 			0 = b_c_ecm_sk-02;
 		}
-		scale_base = 1.5;
+	  f scale_base = 1.889882;
 	}
 	[attack]
 	{
@@ -1102,6 +1288,16 @@
 	[common]
 	{
 		screen_name = "Giant Skeleton";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1181,7 +1377,7 @@
 		{
 			0 = b_c_ecm_sk-02;
 		}
-		scale_base = 1.5;
+	  f scale_base = 1.889882;
 	}
 	[attack]
 	{
@@ -1281,6 +1477,13 @@
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[defend]
@@ -1351,7 +1554,7 @@
 		{
 			0 = b_c_ecm_sk-02;
 		}
-		scale_base = 1.25;
+	  f scale_base = 1.574901;
 	}
 	[attack]
 	{
@@ -1369,6 +1572,13 @@
 				no_trig_bits = true;
 				condition* = receive_world_message("we_enemy_spotted");
 				action* = call_sfx_script("unique_light_red(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

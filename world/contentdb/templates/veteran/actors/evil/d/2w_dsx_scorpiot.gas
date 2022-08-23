@@ -189,6 +189,7 @@
 		mana = 85.6;
 		max_mana = 85.6;
 		model = m_c_edm_scorpiot;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_scorpiot;
@@ -203,6 +204,16 @@
 	[common]
 	{
 		screen_name = "Scorpiot Slasher";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -255,6 +266,7 @@
 		mana = 159;
 		max_mana = 159;
 		model = m_c_edm_scorpiot;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_scorpiot-02;
@@ -269,6 +281,16 @@
 	[common]
 	{
 		screen_name = "Rusted Scorpiot";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -324,6 +346,7 @@
 		mana = 85.6;
 		max_mana = 85.6;
 		model = m_c_edm_scorpigun;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_scorpiot;
@@ -423,6 +446,16 @@
 	[common]
 	{
 		screen_name = "Scorpiot Gunner";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[generator_in_object]
 	{
@@ -565,7 +598,7 @@
 		{
 			0 = b_c_edm_scorpiot-02;
 		}
-		scale_base = 0.8;
+	  f scale_base = 1.007937;
 	}
 	[attack]
 	{
@@ -657,6 +690,16 @@
 	[common]
 	{
 		screen_name = "Ancient Scorpiot";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[generator_in_object]
 	{

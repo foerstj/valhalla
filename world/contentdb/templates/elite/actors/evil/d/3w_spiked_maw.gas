@@ -142,6 +142,7 @@
 		max_life = 977.6;
 		mana = 52;
 		max_mana = 52;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -155,6 +156,23 @@
 	{
 		screen_name = "Spiked Maw";
 		membership = party_spiked_maw_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -243,6 +261,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_sm-03;
@@ -273,6 +292,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -448,18 +481,63 @@
 }
 [t:template,n:3W_spiked_dweller]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_spiked_dweller";
 	specializes = 3W_spiked_dweller_base;
 }
 [t:template,n:3W_spiked_dweller_summon]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] spiked_dweller";
 	specializes = 3W_spiked_dweller_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

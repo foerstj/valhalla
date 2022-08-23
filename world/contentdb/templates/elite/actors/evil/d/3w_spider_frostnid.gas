@@ -138,6 +138,7 @@
 		max_life = 1276.9;
 		mana = 57.7;
 		max_mana = 57.7;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -148,6 +149,23 @@
 	[common]
 	{
 		screen_name = "Frostnid";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -176,6 +194,7 @@
 		max_life = 830.8;
 		mana = 61.5;
 		max_mana = 61.5;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[cast]
@@ -213,6 +232,23 @@
 	[common]
 	{
 		screen_name = "Frost Spitter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

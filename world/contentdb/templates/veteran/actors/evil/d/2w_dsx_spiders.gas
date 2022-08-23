@@ -25,7 +25,7 @@
 		mana = 0;
 		max_mana = 0;
 		model = m_c_edm_sp_pos_1;
-		scale_base = 1.5;
+	  f scale_base = 1.889882;
 		[voice]
 		{
 			[die]
@@ -121,6 +121,16 @@
 	[common]
 	{
 		screen_name = "Emerald Spider";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -196,6 +206,7 @@
 		max_life = 690;
 		mana = 0;
 		max_mana = 0;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -224,6 +235,16 @@
 	[common]
 	{
 		screen_name = "Frostnid";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -257,6 +278,7 @@
 		max_life = 585;
 		mana = 0;
 		max_mana = 0;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[cast]
@@ -294,6 +316,16 @@
 	[common]
 	{
 		screen_name = "Frostnid Spitter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -334,7 +366,7 @@
 		mana = 0;
 		max_mana = 0;
 		model = m_c_edm_as_pos_1;
-		scale_base = 0.5;
+	  f scale_base = 0.629961;
 		[textures]
 		{
 			0 = b_c_edm_as-yel;
@@ -434,6 +466,16 @@
 	[common]
 	{
 		screen_name = "Swarmer";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -485,6 +527,7 @@
 		mana = 0;
 		max_mana = 0;
 		model = m_c_edm_as_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -584,6 +627,16 @@
 	[common]
 	{
 		screen_name = "Dust Spider";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{

@@ -137,6 +137,7 @@
 		mana = 24.2;
 		max_mana = 24.2;
 		model = m_c_edm_li_pos_1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_li;
@@ -152,6 +153,16 @@
 	{
 		screen_name = "Lava Imp";
 		membership = monster, party_lava_imp_02;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -281,12 +292,26 @@
 }
 [t:template,n:2W_lava_imp_02]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_lava_imp_02";
 	specializes = 2W_lava_imp_02_base;
 	[common]
 	{
 		membership = monster, party_lava_imp_02;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -298,6 +323,10 @@
 }
 [t:template,n:2W_lava_imp_02_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_revealing lava_imp_02";
 	specializes = 2W_lava_imp_02_base;
@@ -318,11 +347,22 @@
 				action* = call_sfx_script("lava_imp_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 }
 [t:template,n:2W_lava_imp_02_reveal_act]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_revealing lava_imp_02 activate";
 	specializes = 2W_lava_imp_02_base;
@@ -343,6 +383,13 @@
 				single_shot = true;
 				action* = call_sfx_script("lava_imp_reveal");
 				condition* = receive_world_message("we_req_activate");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -433,12 +480,26 @@
 }
 [t:template,n:2W_lava_imp_03]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_lava_imp_03";
 	specializes = 2W_lava_imp_03_base;
 	[common]
 	{
 		membership = monster, party_lava_imp_03;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -450,6 +511,10 @@
 }
 [t:template,n:2W_lava_imp_03_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_revealing lava_imp_03";
 	specializes = 2W_lava_imp_03_base;
@@ -470,11 +535,22 @@
 				action* = call_sfx_script("lava_imp_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 }
 [t:template,n:2W_lava_imp_03_reveal_act]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_revealing lava_imp_03 activate";
 	specializes = 2W_lava_imp_03_base;
@@ -496,17 +572,38 @@
 				action* = call_sfx_script("lava_imp_reveal");
 				condition* = receive_world_message("we_req_activate");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 }
 [t:template,n:2W_lava_imp_03_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] lava_imp_03";
 	specializes = 2W_lava_imp_03_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -617,18 +714,49 @@
 }
 [t:template,n:2W_lava_imp_04]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_lava_imp_04";
 	specializes = 2W_lava_imp_04_base;
 }
 [t:template,n:2W_lava_imp_04_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] lava_imp_04";
 	specializes = 2W_lava_imp_04_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -679,6 +807,7 @@
 		mana = 27;
 		max_mana = 27;
 		model = m_c_edm_li_pos_1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_li-05;
@@ -701,6 +830,16 @@
 	[common]
 	{
 		screen_name = "Sand Ripper";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -826,12 +965,33 @@
 }
 [t:template,n:2W_sand_mage]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_sand mage";
 	specializes = 2W_sand_mage_base;
 }
 [t:template,n:2W_sand_mage_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_revealing sand mage";
 	specializes = 2W_sand_mage_base;
@@ -852,6 +1012,13 @@
 				single_shot = true;
 				action* = call_sfx_script("sand_mage_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -932,18 +1099,49 @@
 }
 [t:template,n:2W_sand_basher]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_sand_basher";
 	specializes = 2W_sand_basher_base;
 }
 [t:template,n:2W_sand_basher_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] sand_basher";
 	specializes = 2W_sand_basher_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

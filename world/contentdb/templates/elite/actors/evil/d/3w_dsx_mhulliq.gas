@@ -166,6 +166,7 @@
 		max_life = 884;
 		mana = 68;
 		max_mana = 68;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_hb-04;
@@ -214,6 +215,23 @@
 	{
 		screen_name = "Rending Mhulliq";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -252,6 +270,7 @@
 		max_life = 968;
 		mana = 132;
 		max_mana = 132;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_hb-03;
@@ -300,6 +319,23 @@
 	{
 		screen_name = "Mhulliq";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

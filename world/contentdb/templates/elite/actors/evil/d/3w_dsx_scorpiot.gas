@@ -189,6 +189,7 @@
 		mana = 119.8;
 		max_mana = 119.8;
 		model = m_c_edm_scorpiot;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_scorpiot;
@@ -203,6 +204,23 @@
 	[common]
 	{
 		screen_name = "Scorpiot Slasher";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -255,6 +273,7 @@
 		mana = 243;
 		max_mana = 243;
 		model = m_c_edm_scorpiot;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_scorpiot-02;
@@ -269,6 +288,23 @@
 	[common]
 	{
 		screen_name = "Rusted Scorpiot";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -324,6 +360,7 @@
 		mana = 119.8;
 		max_mana = 119.8;
 		model = m_c_edm_scorpigun;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_scorpiot;
@@ -423,6 +460,23 @@
 	[common]
 	{
 		screen_name = "Scorpiot Gunner";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[generator_in_object]
 	{
@@ -565,7 +619,7 @@
 		{
 			0 = b_c_edm_scorpiot-02;
 		}
-		scale_base = 0.8;
+	  f scale_base = 1.269921;
 	}
 	[attack]
 	{
@@ -657,6 +711,23 @@
 	[common]
 	{
 		screen_name = "Ancient Scorpiot";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[generator_in_object]
 	{

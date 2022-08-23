@@ -146,7 +146,7 @@
 	}
 	[aspect]
 	{
-		scale_base = .8;
+	  f scale_base = 1.269921;
 		experience_value = 1024320;
 		life = 2072;
 		max_life = 2072;
@@ -163,6 +163,23 @@
 	{
 		screen_name = "Hassat Runner";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -235,7 +252,7 @@
 	}
 	[aspect]
 	{
-		scale_base = .85;
+	  f scale_base = 1.349291;
 		[textures]
 		{
 			0 = b_c_eam_hg-02;
@@ -274,6 +291,23 @@
 	{
 		screen_name = "Hassat Panther";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -485,6 +519,7 @@
 		max_life = 2473.8;
 		mana = 88;
 		max_mana = 88;
+	  f scale_base = 1.349291;
 	}
 	[attack]
 	{
@@ -496,6 +531,23 @@
 	{
 		screen_name = "Hassat Slicer";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -573,7 +625,7 @@
 	[aspect]
 	{
 		model = m_c_eam_HS;
-		scale_base = .875;
+	  f scale_base = 1.388976;
 		experience_value = 1685020;
 		life = 1417;
 		max_life = 1417;
@@ -590,6 +642,23 @@
 	{
 		screen_name = "Hassat Fighter";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -786,7 +855,7 @@
 	}
 	[aspect]
 	{
-		scale_base = .85;
+	  f scale_base = 1.349291;
 		model = m_c_eam_ha-03;
 		experience_value = 1181550;
 		life = 1384;
@@ -806,6 +875,23 @@
 	{
 		screen_name = "Hassat Hunter";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -880,7 +966,7 @@
 	}
 	[aspect]
 	{
-		scale_base = .875;
+	  f scale_base = 1.388976;
 		model = m_c_eam_ha-02;
 		experience_value = 1266200;
 		life = 1647.6;
@@ -900,6 +986,23 @@
 	{
 		screen_name = "Hassat Archer";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -974,7 +1077,7 @@
 	}
 	[aspect]
 	{
-		scale_base = .9;
+	  f scale_base = 1.428661;
 		model = m_c_eam_ha;
 		experience_value = 1685020;
 		life = 1471.5;
@@ -994,6 +1097,23 @@
 	{
 		screen_name = "Hassat Ranger";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1328,6 +1448,7 @@
 		max_life = 1032;
 		mana = 208;
 		max_mana = 208;
+	  f scale_base = 1.349291;
 	}
 	[attack]
 	{
@@ -1341,6 +1462,23 @@
 	{
 		screen_name = "Hassat Shaman";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1349,7 +1487,31 @@
 }
 [t:template,n:3W_dsx_hassat_shaman_controlled]
 {
+	[aspect]
+	{
+	  f scale_base = 1.349291;
+	}
 	category_name = "3W_lw_evil_a";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_hassat_shaman_controlled";
 	specializes = 3W_dsx_hassat_shaman_base;
 	[mind]
@@ -1390,7 +1552,7 @@
 		max_life = 1892;
 		mana = 488888.9;
 		max_mana = 488888.9;
-		scale_base = .875;
+	  f scale_base = 1.388976;
 		model = m_c_eam_HM;
 	}
 	[attack]
@@ -1405,6 +1567,23 @@
 	{
 		screen_name = "Hassat Caster";
 		membership = hassat, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1582,13 +1761,61 @@
 }
 [t:template,n:3W_dsx_hassat_mage]
 {
+	[aspect]
+	{
+	  f scale_base = 1.428661;
+	}
 	category_name = "3W_evil_a";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_hassat_mage";
 	specializes = 3W_dsx_hassat_mage_base;
 }
 [t:template,n:3W_dsx_hassat_mage_lhaoc]
 {
+	[aspect]
+	{
+	  f scale_base = 1.428661;
+	}
 	category_name = "3W_1w_evil_a";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_hassat_mage_lhaoc";
 	specializes = 3W_dsx_hassat_mage_base;
 	[inventory]
@@ -1635,6 +1862,7 @@
 		max_life = 2352;
 		mana = 288;
 		max_mana = 288;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -1752,6 +1980,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

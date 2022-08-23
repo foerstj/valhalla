@@ -15,6 +15,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_slime_zombie;
@@ -38,6 +39,23 @@
 	[common]
 	{
 		screen_name = "Slime Zombie";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -85,6 +103,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_muck_zombie;
@@ -110,6 +129,23 @@
 	{
 		screen_name = "Muck Zombie";
 		membership = monster, undead;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -236,6 +272,7 @@
 		max_life = 1763;
 		mana = 41;
 		max_mana = 41;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -246,6 +283,23 @@
 	[common]
 	{
 		screen_name = "Undead Body";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -274,6 +328,7 @@
 		max_life = 1605.8;
 		mana = 41;
 		max_mana = 41;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -284,6 +339,23 @@
 	[common]
 	{
 		screen_name = "Undead Body";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -395,6 +467,7 @@
 		max_life = 1605.8;
 		mana = 41;
 		max_mana = 41;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_zo-02;
@@ -409,6 +482,23 @@
 	[common]
 	{
 		screen_name = "Rotting Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -437,6 +527,7 @@
 		max_life = 1605.8;
 		mana = 41;
 		max_mana = 41;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_zo-02;
@@ -451,6 +542,23 @@
 	[common]
 	{
 		screen_name = "Rotting Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -573,6 +681,7 @@
 		mana = 54.7;
 		max_mana = 54.7;
 		model = m_c_edm_zo_pos_2;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_zo-03;
@@ -587,6 +696,23 @@
 	[common]
 	{
 		screen_name = "Living Dead";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -616,6 +742,7 @@
 		mana = 54.7;
 		max_mana = 54.7;
 		model = m_c_edm_zo_pos_2;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_zo-03;
@@ -630,6 +757,23 @@
 	[common]
 	{
 		screen_name = "Living Dead";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -743,6 +887,7 @@
 		mana = 54.7;
 		max_mana = 54.7;
 		model = m_c_edm_zo_pos_3;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_zo-04;
@@ -757,6 +902,23 @@
 	[common]
 	{
 		screen_name = "Headless Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -786,6 +948,7 @@
 		mana = 54.7;
 		max_mana = 54.7;
 		model = m_c_edm_zo_pos_3;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_zo-04;
@@ -800,6 +963,23 @@
 	[common]
 	{
 		screen_name = "Headless Corpse";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

@@ -27,7 +27,7 @@
 		megamap_orient = true;
 		draw_shadow = false;
 		model = m_c_edm_ga_pos_1;
-		scale_base = 1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			damage_bonus_min_cmagic = 184;
@@ -162,6 +162,13 @@
 				action* = call_sfx_script("eyes_whelnar_die");
 				condition* = receive_world_message("WE_KILLED");
 				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

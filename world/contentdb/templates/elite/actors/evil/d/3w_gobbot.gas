@@ -160,6 +160,7 @@
 		max_life = 2220;
 		mana = 47.1;
 		max_mana = 47.1;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -170,6 +171,23 @@
 	[common]
 	{
 		screen_name = "Gobbot Gunner";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -244,6 +262,7 @@
 		max_life = 2341.9;
 		mana = 49.7;
 		max_mana = 49.7;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -258,6 +277,23 @@
 	[common]
 	{
 		screen_name = "Gobbot Igniter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -328,6 +364,7 @@
 		max_life = 2341.9;
 		mana = 49.7;
 		max_mana = 49.7;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -342,6 +379,23 @@
 	[common]
 	{
 		screen_name = "Gobbot Shocker";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -412,6 +466,7 @@
 		max_life = 2341.9;
 		mana = 49.7;
 		max_mana = 49.7;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -426,6 +481,23 @@
 	[common]
 	{
 		screen_name = "Gobbot Grenadier";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{

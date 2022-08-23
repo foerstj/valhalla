@@ -171,6 +171,7 @@
 		max_mana = 202.5;
 		material = flesh;
 		draw_shadow = false;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -210,6 +211,16 @@
 	{
 		screen_name = "Fleshrender";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -219,11 +230,25 @@
 [t:template,n:2W_dsx_fleshrender_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_summon_fleshrender";
 	specializes = 2W_dsx_fleshrender_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

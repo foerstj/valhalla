@@ -166,18 +166,63 @@
 }
 [t:template,n:3W_dsx_giant_rat]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_giant_rat";
 	specializes = 3W_dsx_giant_rat_base;
 }
 [t:template,n:3W_dsx_giant_rat_summon]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_summon_giant_rat";
 	specializes = 3W_dsx_giant_rat_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{
@@ -208,6 +253,7 @@
 		material = teeth;
 		max_mana = 20.5;
 		model = m_c_edm_gr_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_gr-02;
@@ -305,6 +351,23 @@
 	{
 		screen_name = "Monstrous Rat";
 		membership = rat,monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

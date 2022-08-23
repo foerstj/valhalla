@@ -178,6 +178,7 @@
 		max_life = 2289.2;
 		mana = 636.5;
 		max_mana = 636.5;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_kl-03;
@@ -199,6 +200,16 @@
 	{
 		screen_name = "Slithermage Master";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -375,18 +386,49 @@
 }
 [t:template,n:2W_dsx_slithermage_ranged]
 {
+	[aspect]
+	{
+	  f scale_base = 0.818949;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_slithermage_ranged";
 	specializes = 2W_dsx_slithermage_ranged_base;
 }
 [t:template,n:2W_dsx_slithermage_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_summon_slithermage";
 	specializes = 2W_dsx_slithermage_ranged_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 0.818949;
 	}
 	[inventory]
 	{

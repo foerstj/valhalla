@@ -234,18 +234,49 @@
 }
 [t:template,n:2W_mucosa]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_mucosa";
 	specializes = 2W_mucosa_base;
 }
 [t:template,n:2W_mucosa_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] mucosa";
 	specializes = 2W_mucosa_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -279,6 +310,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_mu-06;
@@ -329,6 +361,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -416,7 +455,7 @@
 		max_life = 620;
 		mana = 100;
 		max_mana = 100;
-		scale_base = 0.80;
+	  f scale_base = 1.007937;
 		[textures]
 		{
 			0 = b_c_edm_mu-02;
@@ -456,6 +495,16 @@
 	{
 		screen_name = "Vile Mucosa";
 		membership = party_mucosa_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -561,7 +610,7 @@
 		max_life = 592.6;
 		mana = 87.1;
 		max_mana = 87.1;
-		scale_base = 1.20;
+	  f scale_base = 1.511905;
 		[textures]
 		{
 			0 = b_c_edm_mu-03;
@@ -595,6 +644,16 @@
 	{
 		screen_name = "Dark Mucosa";
 		membership = party_mucosa_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -689,7 +748,7 @@
 		max_life = 2226.9;
 		mana = 18;
 		max_mana = 18;
-		scale_base = 1.20;
+	  f scale_base = 1.511905;
 		[textures]
 		{
 			0 = b_c_edm_mu-05;
@@ -722,6 +781,16 @@
 	[common]
 	{
 		screen_name = "Mucosa Raider";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -921,18 +990,49 @@
 }
 [t:template,n:2W_mucosa_predator]
 {
+	[aspect]
+	{
+	  f scale_base = 1.007937;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_mucosa_predator";
 	specializes = 2W_mucosa_predator_base;
 }
 [t:template,n:2W_mucosa_predator_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] mucosa_predator";
 	specializes = 2W_mucosa_predator_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.007937;
 	}
 	[inventory]
 	{

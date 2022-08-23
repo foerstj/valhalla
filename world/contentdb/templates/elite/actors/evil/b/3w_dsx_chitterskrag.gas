@@ -20,8 +20,7 @@
 		max_life = 2958;
 		mana = 255.9;
 		max_mana = 255.9;
-		scale_base = 1.5
-		model = m_c_edm_chs_pos_3;
+	  f scale_base = 2.381102;
 		[textures]
 		{
 			0 = b_c_edm_chs-02;
@@ -59,6 +58,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

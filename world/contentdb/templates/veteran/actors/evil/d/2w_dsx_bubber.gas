@@ -21,7 +21,7 @@
 		mana = 80;
 		max_mana = 80;
 		model = m_c_edm_gz_pos_1;
-		scale_base = .55;
+	  f scale_base = 0.692957;
 		[voice]
 		{
 			[die]
@@ -107,6 +107,16 @@
 	{
 		screen_name = "Island Lizard";
 		membership = bubber, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

@@ -83,7 +83,31 @@
 }
 [t:template,n:3W_dsx_wolf_white]
 {
+	[aspect]
+	{
+	  f scale_base = 1.349291;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_wolf_white";
 	specializes = 3W_dsx_wolf_white_base;
 }
@@ -111,7 +135,7 @@
 		experience_value = 448030;
 		life = 568;
 		max_life = 568;
-		scale_base = 0.55;
+	  f scale_base = 0.873071;
 		[voice]
 		{
 			[die]
@@ -157,5 +181,22 @@
 	[common]
 	{
 		screen_name = "Varg";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 }

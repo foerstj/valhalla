@@ -159,6 +159,19 @@
 [t:template,n:2W_dsx_lava_spirit]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_lava_spirit";
 	specializes = base_lava_spirit;
 	[actor]
@@ -178,6 +191,7 @@
 		max_life = 650.1;
 		mana = 2176;
 		max_mana = 2176;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -254,7 +268,24 @@
 }
 [t:template,n:2W_dsx_lava_spirit_magic]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_lava_spirit magic";
 	specializes = 2W_dsx_lava_spirit_magic_base;
 }

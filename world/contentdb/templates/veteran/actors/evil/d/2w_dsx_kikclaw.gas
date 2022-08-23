@@ -206,11 +206,21 @@
 				* = s_e_hit_kikclaw_SED;
 			}
 		}
-		scale_base = 0.7;
+	  f scale_base = 0.881945;
 	}
 	[common]
 	{
 		screen_name = "Skitterclaw";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[guts_manager]
 	{
@@ -236,9 +246,9 @@
 	{
 		[textures]
 		{
-			 0 = b_c_edm_klik-2;
+			0 = b_c_edm_klik-2;
 		}
-		scale_base = 0.4;
+	  f scale_base = 0.503968;
 		experience_value = 42108;
 		life = 576.7;
 		max_life = 576.7;
@@ -286,6 +296,16 @@
 	[common]
 	{
 		screen_name = "Skitterling";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

@@ -23,6 +23,7 @@
 		mana = 202.5;
 		max_mana = 202.5;
 		model = m_c_edm_mw_pos_1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_mantrap;
@@ -73,6 +74,13 @@
 			{
 				action* = call_sfx_script("mine_worm_die_dust");
 				condition* = receive_world_message("we_anim_die");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

@@ -22,6 +22,7 @@
 		mana = 51.2;
 		max_mana = 51.2;
 		model = m_c_edm_hy_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -140,6 +141,16 @@
 	{
 		screen_name = "Hydrack";
 		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

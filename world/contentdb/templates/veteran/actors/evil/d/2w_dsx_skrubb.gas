@@ -188,7 +188,7 @@
 		{
 			0 = b_c_edm_sb-03;
 		}
-		scale_base = 0.20;
+	  f scale_base = 0.251984;
 	}
 	[attack]
 	{
@@ -224,6 +224,13 @@
 			{
 				action* = call_sfx_script("skrubb_goo");
 				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

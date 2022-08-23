@@ -165,6 +165,7 @@
 		mana = 108;
 		max_mana = 108;
 		model = m_c_edm_kd_pos_1;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -174,6 +175,16 @@
 	[common]
 	{
 		screen_name = "Krug Dog";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -211,7 +222,7 @@
 		mana = 42;
 		max_mana = 42;
 		model = m_c_edm_kd_pos_1;
-		scale_base = 1.25;
+	  f scale_base = 1.574901;
 		[textures]
 		{
 			0 = b_c_edm_kd-02;
@@ -225,6 +236,16 @@
 	[common]
 	{
 		screen_name = "Krug Killer Dog";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -305,18 +326,49 @@
 }
 [t:template,n:2W_krug_dog_skeleton]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_krug_dog_skeleton";
 	specializes = 2W_krug_dog_skeleton_base;
 }
 [t:template,n:2W_krug_dog_skeleton_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] krug_dog_skeleton";
 	specializes = 2W_krug_dog_skeleton_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

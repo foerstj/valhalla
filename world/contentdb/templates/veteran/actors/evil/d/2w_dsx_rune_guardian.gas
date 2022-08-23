@@ -263,7 +263,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.85;
+	  f scale_base = 1.070933;
 		[textures]
 		{
 			0 = b_c_ecm_rg-02;
@@ -316,6 +316,16 @@
 	{
 		screen_name = "Rune Beast";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -357,11 +367,25 @@
 [t:template,n:2W_dsx_rune_guardian_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_rune_guardian_summon";
 	specializes = 2W_rune_guardian_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.070933;
 	}
 	[inventory]
 	{
@@ -479,7 +503,7 @@
 	[aspect]
 	{
 		model = m_c_ecm_rg_pos_3;
-		scale_base = 0.85;
+	  f scale_base = 1.070933;
 		[textures]
 		{
 			0 = b_c_ecm_rg-03;
@@ -502,6 +526,16 @@
 	{
 		screen_name = "Rune Fiend";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -556,11 +590,25 @@
 [t:template,n:2W_dsx_rune_guardian_r_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_rune_guardian_r_summon";
 	specializes = 2W_rune_guardian_r_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.070933;
 	}
 	[inventory]
 	{
@@ -574,6 +622,7 @@
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.070933;
 	}
 	[common]
 	{
@@ -605,6 +654,13 @@
 			  b single_shot = true;
 			  b start_active = true;
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[inventory]
@@ -619,6 +675,7 @@
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.070933;
 	}
 	[common]
 	{
@@ -649,6 +706,13 @@
 			  b single_player = true;
 			  b single_shot = true;
 			  b start_active = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -863,13 +927,59 @@
 }
 [t:template,n:2W_dsx_rune_guardian_boss]
 {
+	[aspect]
+	{
+	  f scale_base = 1.574901;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rune_guardian_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_rune_guardian_boss";
 	specializes = 2W_dsx_rune_guardian_boss_base;
 }
 [t:template,n:2W_dsx_rune_guardian_boss_mp]
 {
+	[aspect]
+	{
+	  f scale_base = 1.574901;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rune_guardian_die");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_rune_guardian_boss";
 	specializes = 2W_dsx_rune_guardian_boss_base;
 	[mind]

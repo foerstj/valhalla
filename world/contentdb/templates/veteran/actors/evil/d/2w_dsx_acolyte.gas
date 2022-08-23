@@ -21,6 +21,7 @@
 		mana = 190.4;
 		max_mana = 190.4;
 		model = m_c_ecm_wr_pos_1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_dacolyte;
@@ -142,6 +143,16 @@
 	{
 		screen_name = "Dark Acolyte";
 		membership = monster, undead;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{

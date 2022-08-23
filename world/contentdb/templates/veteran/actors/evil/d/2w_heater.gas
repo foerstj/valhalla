@@ -22,6 +22,7 @@
 		max_mana = 25.7;
 		model = m_c_edm_ht_pos_1;
 		material = steel;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -164,6 +165,13 @@
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				action* = call_sfx_script("tailpipe_steam_heater");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

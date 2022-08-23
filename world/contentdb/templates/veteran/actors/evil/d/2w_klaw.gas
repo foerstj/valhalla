@@ -132,6 +132,7 @@
 		max_life = 1193.6;
 		mana = 106.4;
 		max_mana = 106.4;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -143,6 +144,16 @@
 	{
 		screen_name = "Klaw";
 		membership = party_klaw_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -223,6 +234,7 @@
 		max_life = 1418.2;
 		mana = 106.4;
 		max_mana = 106.4;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_kw-03;
@@ -246,6 +258,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -395,18 +414,49 @@
 }
 [t:template,n:2W_forest_klaw]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_forest klaw";
 	specializes = 2W_forest_klaw_base;
 }
 [t:template,n:2W_forest_klaw_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] forest klaw";
 	specializes = 2W_forest_klaw_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

@@ -288,6 +288,19 @@
 [t:template,n:2W_dsx_knight_death]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_knight_death";
 	specializes = 2W_dsx_knight_death_base;
 	[actor]
@@ -309,6 +322,7 @@
 		max_mana = 190.4;
 		model = m_c_ecm_sk_pos_2;
 		material = steel;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -352,11 +366,25 @@
 [t:template,n:2W_dsx_knight_death_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_summon_knight_death";
 	specializes = 2W_dsx_knight_death_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -375,10 +403,21 @@
 		max_life = 1743.1;
 		mana = 190.4;
 		max_mana = 190.4;
+	  f scale_base = 1.259921;
 	}
 	[common]
 	{
 		screen_name = "Reaper";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{

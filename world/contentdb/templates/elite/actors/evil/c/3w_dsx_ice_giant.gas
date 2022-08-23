@@ -107,6 +107,7 @@
 		max_life = 1850;
 		mana = 0;
 		max_mana = 0;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -155,6 +156,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_cyan(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -316,18 +331,63 @@
 }
 [t:template,n:3W_dsx_troll_masher]
 {
+	[aspect]
+	{
+	  f scale_base = 2.063621;
+	}
 	category_name = "3W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_troll_masher";
 	specializes = 3W_dsx_troll_masher_base;
 }
 [t:template,n:3W_dsx_troll_masher_summon]
 {
 	category_name = "3W_evil_c";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_summon_troll_masher";
 	specializes = 3W_dsx_troll_masher_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 2.063621;
 	}
 	[inventory]
 	{

@@ -177,6 +177,16 @@
 	[common]
 	{
 		screen_name = "Teal Shard";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[actor]
 	{
@@ -190,7 +200,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.15;
+	  f scale_base = 0.188988;
 		[textures]
 		{
 			0 = b_i_cav_gems-01-static;
@@ -239,7 +249,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.6;
+	  f scale_base = 0.755953;
 		[textures]
 		{
 			0 = b_i_cav_gems-02-static;
@@ -282,6 +292,16 @@
 	[common]
 	{
 		screen_name = "Purple Shard";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -320,7 +340,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.2;
+	  f scale_base = 0.251984;
 		[textures]
 		{
 			0 = b_i_cav_gems-03-static;
@@ -346,6 +366,16 @@
 	[common]
 	{
 		screen_name = "Green Shard";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -392,7 +422,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.3;
+	  f scale_base = 0.377976;
 		[textures]
 		{
 			0 = b_i_cav_gems-04-static;
@@ -435,6 +465,16 @@
 	[common]
 	{
 		screen_name = "Blue Shard";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{

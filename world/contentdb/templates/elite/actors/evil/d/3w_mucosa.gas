@@ -234,18 +234,63 @@
 }
 [t:template,n:3W_mucosa]
 {
+	[aspect]
+	{
+	  f scale_base = 1.587401;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_mucosa";
 	specializes = 3W_mucosa_base;
 }
 [t:template,n:3W_mucosa_summon]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] mucosa";
 	specializes = 3W_mucosa_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{
@@ -279,6 +324,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_mu-06;
@@ -329,6 +375,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -416,7 +476,7 @@
 		max_life = 966.3;
 		mana = 156.7;
 		max_mana = 156.7;
-		scale_base = 0.80;
+	  f scale_base = 1.269921;
 		[textures]
 		{
 			0 = b_c_edm_mu-02;
@@ -456,6 +516,23 @@
 	{
 		screen_name = "Vile Mucosa";
 		membership = party_mucosa_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -561,7 +638,7 @@
 		max_life = 852.9;
 		mana = 135.7;
 		max_mana = 135.7;
-		scale_base = 1.20;
+	  f scale_base = 1.904881;
 		[textures]
 		{
 			0 = b_c_edm_mu-03;
@@ -595,6 +672,23 @@
 	{
 		screen_name = "Dark Mucosa";
 		membership = party_mucosa_boss, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -689,7 +783,7 @@
 		max_life = 3062;
 		mana = 24.7;
 		max_mana = 24.7;
-		scale_base = 1.20;
+	  f scale_base = 1.904881;
 		[textures]
 		{
 			0 = b_c_edm_mu-05;
@@ -722,6 +816,23 @@
 	[common]
 	{
 		screen_name = "Mucosa Raider";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -921,18 +1032,63 @@
 }
 [t:template,n:3W_mucosa_predator]
 {
+	[aspect]
+	{
+	  f scale_base = 1.269921;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_mucosa_predator";
 	specializes = 3W_mucosa_predator_base;
 }
 [t:template,n:3W_mucosa_predator_summon]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] mucosa_predator";
 	specializes = 3W_mucosa_predator_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.269921;
 	}
 	[inventory]
 	{

@@ -192,11 +192,28 @@
 		max_life = 1775.4;
 		mana = 3.2;
 		max_mana = 3.2;
+	  f scale_base = 1.259921;
 	}
 	[common]
 	{
 		screen_name = "Doppelganger";
 		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("doppelganger_body");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[doppelganger]
 	{
@@ -271,11 +288,28 @@
 		max_life = 1143.9;
 		mana = 3.1;
 		max_mana = 3.1;
+	  f scale_base = 1.259921;
 	}
 	[common]
 	{
 		screen_name = "Doppelganger Knave";
 		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("doppelganger_body");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[doppelganger]
 	{
@@ -352,7 +386,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 2.0;
+	  f scale_base = 2.519842;
 		experience_value = 63480;
 		life = 1769.6;
 		max_life = 1769.6;
@@ -377,6 +411,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_blue(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

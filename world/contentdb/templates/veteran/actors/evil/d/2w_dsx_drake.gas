@@ -130,7 +130,24 @@
 }
 [t:template,n:2W_dsx_drake]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_drake";
 	specializes = 2W_dsx_drake_base;
 }
@@ -151,6 +168,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_feathered_drakeling;
@@ -248,6 +266,16 @@
 	{
 		screen_name = "Feathered Drakeling";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -278,6 +306,7 @@
 		max_life = 1688;
 		mana = 180;
 		max_mana = 180;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_ddk-01;
@@ -309,6 +338,13 @@
 			{
 				action* = call_sfx_script("drake_scream");
 				condition* = receive_world_message("we_anim_sfx",3);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 		membership = monster;
@@ -471,7 +507,34 @@
 }
 [t:template,n:2W_dsx_drake_death_two]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("drake_wing");
+				condition* = receive_world_message("we_anim_sfx",2);
+			}
+			[*]
+			{
+				action* = call_sfx_script("drake_scream");
+				condition* = receive_world_message("we_anim_sfx",3);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_drake_death_two";
 	specializes = 2W_dsx_drake_death_two_base;
 }
@@ -482,6 +545,7 @@
 	specializes = 2W_dsx_drake_death_two_base;
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 	  f scale_multiplier = 1.500000;
 		life = 2340;
 		max_life = 2340;
@@ -498,6 +562,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

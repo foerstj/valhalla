@@ -153,6 +153,7 @@
 		mana = 749.7;
 		max_mana = 749.7;
 		material = flesh;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 		}
@@ -166,6 +167,23 @@
 	[common]
 	{
 		screen_name = "Great Krakbone";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -248,6 +266,7 @@
 		max_life = 1300;
 		mana = 749.7;
 		max_mana = 749.7;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_great_krakbone-03;
@@ -359,6 +378,23 @@
 	{
 		screen_name = "Krakbone Tentacle";
 		membership = krakbone,monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

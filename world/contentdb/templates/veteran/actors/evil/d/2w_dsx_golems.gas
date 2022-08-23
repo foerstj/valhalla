@@ -130,6 +130,7 @@
 		max_life = 11825;
 		mana = 11825;
 		max_mana = 11825;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_crg-02;
@@ -159,6 +160,16 @@
 	[common]
 	{
 		screen_name = "Crystal Golem";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -213,6 +224,7 @@
 		max_life = 11825;
 		mana = 11825;
 		max_mana = 11825;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_crg-01;
@@ -242,6 +254,16 @@
 	[common]
 	{
 		screen_name = "Diamond Golem";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -296,6 +318,7 @@
 		max_life = 682;
 		mana = 0;
 		max_mana = 0;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_rg-02;
@@ -326,6 +349,16 @@
 	{
 		screen_name = "Frost Golem";
 		membership = ice, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -428,6 +461,7 @@
 		mana = 220;
 		max_mana = 2200;
 		model = m_c_edm_mg_pos_1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_rg-02;
@@ -538,6 +572,16 @@
 	{
 		screen_name = "Frost Golem";
 		membership = ice, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -642,6 +686,7 @@
 		max_mana = 173.5;
 		model = m_c_edm_mrblg;
 		material = stone;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -666,6 +711,16 @@
 	[common]
 	{
 		screen_name = "Marble Golem";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

@@ -21,6 +21,7 @@
 		max_life = 2328;
 		mana = 84;
 		max_mana = 84;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -33,6 +34,29 @@
 	[common]
 	{
 		screen_name = "Possessed Skull";
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("rector_eye_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

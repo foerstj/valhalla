@@ -27,7 +27,7 @@
 		megamap_orient = true;
 		draw_shadow = false;
 		model = m_c_edm_ga_pos_1;
-		scale_base = 1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -145,6 +145,13 @@
 				action* = call_sfx_script("swirling_midges");
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

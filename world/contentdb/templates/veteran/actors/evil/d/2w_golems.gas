@@ -171,12 +171,39 @@
 }
 [t:template,n:2W_molten_golem]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("fire_elemental_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "summoned molten_golem";
 	specializes = 2w_molten_golem_base;
 }
 [t:template,n:2_molten_golem_summon_gom]
 {
+	[aspect]
+	{
+	  f scale_base = 1.000000;
+	}
 	category_name = "2W_evil_d";
 	doc = "summoned molten_golem";
 	specializes = 2w_molten_golem_base;
@@ -208,6 +235,7 @@
 		max_life = 1720.7;
 		mana = 1638;
 		max_mana = 1638;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_rg-04;
@@ -223,6 +251,16 @@
 	[common]
 	{
 		screen_name = "Rock Golem";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -272,7 +310,7 @@
 		max_mana = 355;
 		model = m_c_edm_cg_pos_1;
 		material = stone;
-		scale_base = 0.5;
+	  f scale_base = 0.629961;
 		is_usable = true;
 		use_range = 3;
 		[textures]
@@ -375,6 +413,16 @@
 	[common]
 	{
 		screen_name = "Clay Golem";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -524,18 +572,49 @@
 }
 [t:template,n:2W_golem_frost]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_golem_frost";
 	specializes = 2W_golem_frost_base;
 }
 [t:template,n:2W_golem_frost_summon]
 {
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "[summon] golem_frost";
 	specializes = 2W_golem_frost_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

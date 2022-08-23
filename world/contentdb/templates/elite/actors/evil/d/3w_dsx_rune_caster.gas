@@ -257,6 +257,7 @@
 		max_life = 1588.9;
 		mana = 195.6;
 		max_mana = 195.6;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -269,6 +270,23 @@
 	[common]
 	{
 		screen_name = "Rune Caster";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[generator_in_object]
 	{
@@ -362,6 +380,7 @@
 		max_life = 1588.9;
 		mana = 195.6;
 		max_mana = 195.6;
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{
@@ -374,6 +393,23 @@
 	[common]
 	{
 		screen_name = "Rune Caster";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[generator_in_object]
 	{
@@ -430,7 +466,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 1.4;
+	  f scale_base = 2.222361;
 		[textures]
 		{
 			0 = b_c_edm_rune_master;
@@ -461,6 +497,20 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_green(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

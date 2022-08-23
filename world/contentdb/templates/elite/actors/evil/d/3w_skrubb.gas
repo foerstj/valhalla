@@ -146,6 +146,7 @@
 		mana = 28.8;
 		max_mana = 28.8;
 		model = m_c_edm_sb_pos_1;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[cast]
@@ -194,6 +195,23 @@
 	{
 		screen_name = "Skrubb";
 		membership = monster,immune_freeze;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -238,7 +256,7 @@
 		{
 			0 = b_c_edm_sb-02;
 		}
-		scale_base = 0.20;
+	  f scale_base = 0.317480;
 		[voice]
 		{
 			[cast]
@@ -301,6 +319,20 @@
 				action* = call_sfx_script("skrubb_goo");
 				condition* = receive_world_message("we_anim_sfx",1);
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[mind]
@@ -347,7 +379,7 @@
 		{
 			0 = b_c_edm_sb-03;
 		}
-		scale_base = 0.14;
+	  f scale_base = 0.222236;
 		[voice]
 		{
 			[cast]
@@ -409,6 +441,20 @@
 			{
 				action* = call_sfx_script("skrubb_goo");
 				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

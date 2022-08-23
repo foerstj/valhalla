@@ -316,7 +316,24 @@
 }
 [t:template,n:2W_dsx_droc_archer]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_droc_archer";
 	specializes = 2W_droc_archer_base;
 	[guts_manager]
@@ -437,7 +454,24 @@
 }
 [t:template,n:2W_dsx_droc_grunt]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_dsx_droc_grunt";
 	specializes = 2W_droc_melee_base;
 }
@@ -464,6 +498,7 @@
 		mana = 79.2;
 		max_mana = 79.2;
 		model = m_c_edm_drc_pos_3;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_drc-03;
@@ -485,6 +520,13 @@
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				no_trig_bits = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

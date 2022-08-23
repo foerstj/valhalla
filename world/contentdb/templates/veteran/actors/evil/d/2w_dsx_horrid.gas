@@ -21,6 +21,7 @@
 		mana = 31.8;
 		max_mana = 31.8;
 		model = m_c_edm_hd_pos_1;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -122,6 +123,16 @@
 	[common]
 	{
 		screen_name = "Horrid";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

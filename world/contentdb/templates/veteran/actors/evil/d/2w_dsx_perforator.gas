@@ -24,6 +24,7 @@
 		max_mana = 25.4;
 		model = m_c_edm_pf_pos_1;
 		material = wood;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -136,6 +137,13 @@
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
 				action* = call_sfx_script("tailpipe_steam_perforator");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

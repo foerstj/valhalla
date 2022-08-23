@@ -6,6 +6,7 @@
 	[aspect]
 	{
 		model = m_c_eam_ggt_pos_1;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -97,6 +98,23 @@
 	[common]
 	{
 		membership = goblin, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[mind]
 	{
@@ -144,7 +162,7 @@
 		mana = 89.5;
 		max_mana = 89.5;
 		model = m_c_eam_ggt_pos_1;
-		scale_base = 1.2;
+	  f scale_base = 1.904881;
 		[textures]
 		{
 			0 = b_c_eam_ggt-02;
@@ -159,6 +177,23 @@
 	[common]
 	{
 		screen_name = "Goblin Blackguard";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -248,7 +283,7 @@
 		mana = 82.1;
 		max_mana = 82.1;
 		model = m_c_eam_ggt_pos_1;
-		scale_base = 1.2;
+	  f scale_base = 1.904881;
 		[textures]
 		{
 			0 = b_c_eam_ggt-03;
@@ -263,6 +298,23 @@
 	[common]
 	{
 		screen_name = "Goblin Headsman";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

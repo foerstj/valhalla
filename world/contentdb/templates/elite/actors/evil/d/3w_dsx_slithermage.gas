@@ -178,6 +178,7 @@
 		max_life = 3245.8;
 		mana = 902.5;
 		max_mana = 902.5;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ecm_kl-03;
@@ -199,6 +200,23 @@
 	{
 		screen_name = "Slithermage Master";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -375,18 +393,63 @@
 }
 [t:template,n:3W_dsx_slithermage_ranged]
 {
+	[aspect]
+	{
+	  f scale_base = 1.031811;
+	}
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_slithermage_ranged";
 	specializes = 3W_dsx_slithermage_ranged_base;
 }
 [t:template,n:3W_dsx_slithermage_summon]
 {
 	category_name = "3W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "3W_dsx_summon_slithermage";
 	specializes = 3W_dsx_slithermage_ranged_base;
 	[aspect]
 	{
 		experience_value = 0;
+	  f scale_base = 1.031811;
 	}
 	[inventory]
 	{

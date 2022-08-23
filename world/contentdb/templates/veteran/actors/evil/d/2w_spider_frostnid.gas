@@ -138,6 +138,7 @@
 		max_life = 847.1;
 		mana = 38.3;
 		max_mana = 38.3;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -148,6 +149,16 @@
 	[common]
 	{
 		screen_name = "Frostnid";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -176,6 +187,7 @@
 		max_life = 556.6;
 		mana = 41.2;
 		max_mana = 41.2;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[cast]
@@ -213,6 +225,16 @@
 	[common]
 	{
 		screen_name = "Frost Spitter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

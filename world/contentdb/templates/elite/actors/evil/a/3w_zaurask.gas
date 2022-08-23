@@ -171,7 +171,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.85;
+	  f scale_base = 1.349291;
 		experience_value = 945240;
 		life = 2135.3;
 		max_life = 2135.3;
@@ -187,6 +187,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Claw";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -252,7 +269,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.9;
+	  f scale_base = 1.428661;
 		experience_value = 2034213;
 		life = 3166.7;
 		max_life = 3166.7;
@@ -268,6 +285,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Fighter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -332,6 +366,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_eam_zmelee-01;
@@ -351,6 +386,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Fang";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -413,7 +465,7 @@
 		{
 			0 = b_c_eam_zmelee-01;
 		}
-		scale_base = 0.95;
+	  f scale_base = 1.508031;
 		experience_value = 1799024;
 		life = 1969.9;
 		max_life = 1969.9;
@@ -429,6 +481,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Whacker";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -497,7 +566,7 @@
 		max_life = 2526.3;
 		mana = 139.8;
 		max_mana = 139.8;
-		scale_base = 1.0;
+	  f scale_base = 1.587401;
 		model = m_c_eam_zcomm;
 		[textures]
 		{
@@ -535,6 +604,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Slavemaster";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -606,7 +692,7 @@
 		{
 			0 = b_c_eam_zmelee-02;
 		}
-		scale_base = 0.95;
+	  f scale_base = 1.508031;
 		experience_value = 1675153;
 		life = 1801;
 		max_life = 1801;
@@ -622,6 +708,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Slasher";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -690,7 +793,7 @@
 		max_life = 2605.3;
 		mana = 108.7;
 		max_mana = 108.7;
-		scale_base = 1.2;
+	  f scale_base = 1.904881;
 		[textures]
 		{
 			0 = b_c_eam_zmelee-02;
@@ -709,6 +812,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Leader";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -862,7 +982,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.8;
+	  f scale_base = 1.269921;
 		experience_value = 945240;
 		life = 2057.3;
 		max_life = 2057.3;
@@ -880,6 +1000,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Archer";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -963,7 +1100,7 @@
 		max_life = 1601.8;
 		mana = 290.3;
 		max_mana = 290.3;
-		scale_base = 0.85;
+	  f scale_base = 1.349291;
 		[textures]
 		{
 			0 = b_c_eam_zaurask2;
@@ -980,6 +1117,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Spine";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1056,7 +1210,7 @@
 		max_life = 850.1;
 		mana = 707;
 		max_mana = 707;
-		scale_base = 0.9;
+	  f scale_base = 1.428661;
 		[textures]
 		{
 			0 = b_c_eam_zaurask1;
@@ -1073,6 +1227,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Lightning";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1150,6 +1321,7 @@
 		max_life = 1892.1;
 		mana = 787.7;
 		max_mana = 787.7;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_eam_zaurask2;
@@ -1166,6 +1338,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Ranger";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1280,7 +1469,7 @@
 		max_life = 1755;
 		mana = 185.3;
 		max_mana = 185.3;
-		scale_base = 0.77;
+	  f scale_base = 1.222299;
 	}
 	[attack]
 	{
@@ -1293,6 +1482,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Incanter";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1374,7 +1580,7 @@
 		{
 			0 = b_c_eam_zcaster-01;
 		}
-		scale_base = 0.82;
+	  f scale_base = 1.301669;
 		experience_value = 1271256;
 		life = 1494.3;
 		max_life = 1494.3;
@@ -1392,6 +1598,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Adept";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1470,7 +1693,7 @@
 		{
 			0 = b_c_eam_zcaster-02;
 		}
-		scale_base = 0.87;
+	  f scale_base = 1.381039;
 		experience_value = 1789864;
 		life = 1638.9;
 		max_life = 1638.9;
@@ -1488,6 +1711,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Seer";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1558,6 +1798,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_eam_zcaster-02;
@@ -1579,6 +1820,23 @@
 	[common]
 	{
 		screen_name = "Zaurask Mage";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1661,6 +1919,7 @@
 		mana = 929.9;
 		max_mana = 929.9;
 		model = m_c_edm_iw_pos_1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_ph_melee;
@@ -1763,6 +2022,23 @@
 	{
 		screen_name = "Zaurask Skeleton";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -1802,6 +2078,7 @@
 		mana = 929.9;
 		max_mana = 929.9;
 		model = m_c_eam_zzomb;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_eam_zzomb;
@@ -1943,6 +2220,20 @@
 				condition* = receive_world_message("WE_KILLED");
 				single_shot = true;
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[defend]
@@ -1983,7 +2274,7 @@
 		mana = 929.9;
 		max_mana = 929.9;
 		model = m_c_eam_zzomb;
-		scale_base = 0.75;
+	  f scale_base = 1.190551;
 		[textures]
 		{
 			0 = b_c_eam_zzomb;
@@ -2127,6 +2418,20 @@
 				condition* = receive_world_message("WE_KILLED");
 				single_shot = true;
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[defend]
@@ -2173,7 +2478,7 @@
 		mana = 929.9;
 		max_mana = 929.9;
 		model = m_c_eam_zzomb;
-		scale_base = 1.15;
+	  f scale_base = 1.825511;
 		[textures]
 		{
 			0 = b_c_eam_zzomb;
@@ -2314,6 +2619,20 @@
 				action* = call_sfx_script("zaurask_zombie_sword_die");
 				condition* = receive_world_message("WE_KILLED");
 				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

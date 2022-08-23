@@ -26,6 +26,7 @@
 		model = m_c_ebb_grs_pos_1;
 		bounding_volume_scale = 1.6;
 		material = wood;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -119,6 +120,20 @@
 			{
 				action* = call_sfx_script("robosuit_kill_sparks");
 				condition* = receive_world_message("we_killed");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

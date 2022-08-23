@@ -176,6 +176,7 @@
 		mana = 181.3;
 		max_mana = 181.3;
 		model = m_c_edm_chs_pos_1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_chs;
@@ -191,6 +192,16 @@
 	{
 		screen_name = "Chitterskrag";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -256,7 +267,7 @@
 		mana = 181.3;
 		max_mana = 181.3;
 		model = m_c_edm_chs_pos_1;
-		scale_base = 0.35;
+	  f scale_base = 0.440972;
 		[voice]
 		{
 			[die]
@@ -285,6 +296,16 @@
 	{
 		screen_name = "Immature Chitterskrag";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -356,7 +377,7 @@
 		mana = 181.3;
 		max_mana = 181.3;
 		model = m_c_edm_chs_pos_2;
-		scale_base = 1.0;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_chs-03;
@@ -374,6 +395,16 @@
 	{
 		screen_name = "Spewing Chitterskrag";
 		membership = monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

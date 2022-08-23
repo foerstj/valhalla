@@ -47,7 +47,7 @@
 	specializes = 2W_dsx_shard_base;
 	[aspect]
 	{
-		scale_base = 0.6;
+	  f scale_base = 0.755953;
 		[textures]
 		{
 			0 = b_c_edm_shard-01-static;
@@ -77,6 +77,13 @@
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 	[defend]
@@ -99,7 +106,7 @@
 	specializes = 2W_dsx_shard_base;
 	[aspect]
 	{
-		scale_base = 0.7;
+	  f scale_base = 0.881945;
 		[textures]
 		{
 			0 = b_c_edm_shard-04-static;
@@ -128,6 +135,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_yellow");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -162,7 +176,7 @@
 	specializes = 2W_dsx_shard_base;
 	[aspect]
 	{
-		scale_base = 0.8;
+	  f scale_base = 1.007937;
 		[textures]
 		{
 			0 = b_c_edm_shard-03-static;
@@ -191,6 +205,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_yellow");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -236,7 +257,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 1.0;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_shard-02-static;
@@ -265,6 +286,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_red");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

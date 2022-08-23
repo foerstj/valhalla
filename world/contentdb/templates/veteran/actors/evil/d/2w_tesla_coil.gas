@@ -30,6 +30,7 @@
 		is_collidable = true;
 		draw_selection_indicator = false;
 		material = steel;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -43,6 +44,16 @@
 	{
 		screen_name = "Tesla Coil";
 		rollover_display = true;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -163,6 +174,7 @@
 		is_collidable = true;
 		draw_selection_indicator = false;
 		material = steel;
+	  f scale_base = 1.259921;
 		[voice]
 		{
 			[die]
@@ -177,6 +189,16 @@
 		screen_name = "Tesla Coil";
 		rollover_display = true;
 		membership = monster,coil;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{

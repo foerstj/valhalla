@@ -180,7 +180,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 1.4;
+	  f scale_base = 2.222361;
 		experience_value = 949520;
 		life = 754.9;
 		max_life = 754.9;
@@ -202,6 +202,23 @@
 	{
 		screen_name = "Gulik";
 		membership = monster, party_lava_imp_02;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

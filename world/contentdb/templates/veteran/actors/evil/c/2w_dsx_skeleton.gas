@@ -20,6 +20,7 @@
 		max_life = 723.8;
 		mana = 18.8;
 		max_mana = 18.8;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_sk-02;
@@ -37,6 +38,16 @@
 	[common]
 	{
 		membership = skeleton, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[physics]
 	{
@@ -123,6 +134,7 @@
 		max_life = 911.8;
 		mana = 18.8;
 		max_mana = 18.8;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_sk-02;
@@ -140,6 +152,16 @@
 	[common]
 	{
 		membership = skeleton, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[physics]
 	{
@@ -226,6 +248,7 @@
 		max_life = 1095.8;
 		mana = 8.5;
 		max_mana = 8.5;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_sk-02;
@@ -243,6 +266,16 @@
 	[common]
 	{
 		membership = skeleton, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[physics]
 	{
@@ -333,7 +366,7 @@
 		{
 			0 = b_c_ecm_sk-02;
 		}
-		scale_base = 1.5;
+	  f scale_base = 1.889882;
 	}
 	[attack]
 	{
@@ -424,6 +457,16 @@
 	{
 		screen_name = "Giant Skeleton Stalker";
 		membership = skeleton, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -506,6 +549,7 @@
 		max_life = 1036;
 		mana = 8;
 		max_mana = 8;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -517,6 +561,16 @@
 	[common]
 	{
 		screen_name = "Skeletal Archer";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -596,6 +650,7 @@
 		max_life = 1136;
 		mana = 8;
 		max_mana = 8;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_ecm_sk-02;
@@ -613,6 +668,16 @@
 	[common]
 	{
 		membership = skeleton, monster;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[physics]
 	{
@@ -664,6 +729,7 @@
 		max_life = 918.1;
 		mana = 8.5;
 		max_mana = 8.5;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -680,6 +746,13 @@
 				action* = call_sfx_script("dsx_skeleton_cicatrix_minion");
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -739,6 +812,7 @@
 		max_life = 918.1;
 		mana = 8.5;
 		max_mana = 8.5;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -757,6 +831,13 @@
 				action* = call_sfx_script("dsx_skeleton_cicatrix_minion");
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

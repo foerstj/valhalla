@@ -258,7 +258,24 @@
 }
 [t:template,n:2W_droog_archer]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_droog archer";
 	specializes = 2W_droog_archer_base;
 	[guts_manager]
@@ -268,6 +285,10 @@
 }
 [t:template,n:2W_droog_archer_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
 	doc = "2W_droog archer reveal";
 	specializes = 2W_droog_archer_base;
@@ -288,11 +309,22 @@
 				action* = call_sfx_script("droog_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 }
 [t:template,n:2W_droog_archer_reveal_act]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
 	doc = "2W_droog archer reveal_act";
 	specializes = 2W_droog_archer_base;
@@ -313,6 +345,13 @@
 				single_shot = true;
 				action* = call_sfx_script("droog_reveal");
 				condition* = receive_world_message("we_req_activate");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -416,7 +455,24 @@
 }
 [t:template,n:2W_droog_grunt]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_droog grunt";
 	specializes = 2W_droog_grunt_base;
 }
@@ -442,6 +498,7 @@
 		max_life = 2767.3;
 		mana = 49.7;
 		max_mana = 49.7;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_eam_dgg-02;
@@ -465,6 +522,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -527,6 +591,10 @@
 }
 [t:template,n:2W_droog_grunt_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
 	doc = "2W_droog grunt reveal";
 	specializes = 2W_droog_grunt_base;
@@ -547,11 +615,22 @@
 				action* = call_sfx_script("droog_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 }
 [t:template,n:2W_droog_grunt_reveal_act]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
 	doc = "2W_droog grunt reveal activate";
 	specializes = 2W_droog_grunt_base;
@@ -572,6 +651,13 @@
 				single_shot = true;
 				action* = call_sfx_script("droog_reveal");
 				condition* = receive_world_message("we_req_activate");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -682,12 +768,33 @@
 }
 [t:template,n:2W_droog_mage]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_droog mage";
 	specializes = 2W_droog_mage_base;
 }
 [t:template,n:2W_droog_mage_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
 	doc = "2W_droog mage reveal";
 	specializes = 2W_droog_mage_base;
@@ -708,11 +815,22 @@
 				action* = call_sfx_script("droog_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
 			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
 		}
 	}
 }
 [t:template,n:2W_droog_mage_reveal_act]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_a";
 	doc = "2W_droog mage reveal activate";
 	specializes = 2W_droog_mage_base;
@@ -733,6 +851,13 @@
 				single_shot = true;
 				action* = call_sfx_script("droog_reveal");
 				condition* = receive_world_message("we_req_activate");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

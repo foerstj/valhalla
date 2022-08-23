@@ -180,6 +180,7 @@
 		max_life = 8502.4;
 		max_mana = 1558.8;
 		mana = 1558.8;
+	  f scale_base = 1.259921;
 	}
 	[attack]
 	{
@@ -246,6 +247,16 @@
 	{
 		screen_name = "Fury";
 		membership = monster,immune_charm,immune_control,immune_freeze,immune_polymorph,immune_align_change,immune_explode;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -284,7 +295,7 @@
 		max_life = 3967.8;
 		max_mana = 668;
 		mana = 668;
-		scale_base = 0.25;
+	  f scale_base = 0.314980;
 	}
 	[attack]
 	{
@@ -341,6 +352,16 @@
 	[common]
 	{
 		screen_name = "Fury Spawn";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -384,7 +405,7 @@
 		max_life = 3967.8;
 		max_mana = 668;
 		mana = 668;
-		scale_base = 0.25;
+	  f scale_base = 0.314980;
 	}
 	[attack]
 	{
@@ -443,6 +464,16 @@
 	[common]
 	{
 		screen_name = "Fury Pest";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

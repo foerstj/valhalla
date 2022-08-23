@@ -162,7 +162,7 @@
 	}
 	[aspect]
 	{
-		scale_base = 0.3;
+	  f scale_base = 0.377976;
 		experience_value = 0;
 		life = 1685.3;
 		max_life = 1685.3;
@@ -194,6 +194,16 @@
 	[common]
 	{
 		screen_name = "Lesser Krakbone";
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{

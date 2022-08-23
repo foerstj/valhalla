@@ -225,7 +225,24 @@
 }
 [t:template,n:2W_swamp_witch]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_Swamp Witch";
 	specializes = 2W_swamp_witch_base;
 }
@@ -246,6 +263,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_sw-02;
@@ -276,6 +294,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -340,6 +365,7 @@
 	}
 	[aspect]
 	{
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_sw-03;
@@ -369,6 +395,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_purple(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -418,6 +451,10 @@
 }
 [t:template,n:2W_swamp_witch_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_Swamp Witch reveal";
 	specializes = 2W_swamp_witch_base;
@@ -437,6 +474,13 @@
 				single_shot = true;
 				action* = call_sfx_script("swamp_witch_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -533,7 +577,24 @@
 }
 [t:template,n:2W_ice_mage]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	doc = "2W_ice mage";
 	specializes = 2W_ice_mage_base;
 }
@@ -559,6 +620,7 @@
 		max_life = 616.4;
 		mana = 250.1;
 		max_mana = 250.1;
+	  f scale_base = 1.259921;
 		[textures]
 		{
 			0 = b_c_edm_img-02;
@@ -584,6 +646,13 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_blue(sgx)");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -620,6 +689,10 @@
 }
 [t:template,n:2W_ice_mage_reveal]
 {
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
 	category_name = "2W_evil_d";
 	doc = "2W_ice mage reveal";
 	specializes = 2W_ice_mage_base;
@@ -639,6 +712,13 @@
 				single_shot = true;
 				action* = call_sfx_script("ice_mage_reveal");
 				condition* = receive_world_message("we_enemy_spotted");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

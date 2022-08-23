@@ -181,7 +181,7 @@
 			life = 869.8;
 			max_life = 869.8;
 			model = m_c_edm_sc_pos_1;
-			scale_base = 0.4;
+		  f scale_base = 0.634960;
 		}
 		[actor]
 		{
@@ -202,6 +202,23 @@
 		[common]
 		{
 			screen_name = "Lesser Scrub Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_yellow(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_ray_yellow(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[defend]
 		{
@@ -246,7 +263,7 @@
 			life = 1639.3;
 			max_life = 1639.3;
 			model = m_c_edm_sc_pos_1;
-			scale_base = 0.6;
+		  f scale_base = 0.952441;
 		}
 		[attack]
 		{
@@ -257,6 +274,23 @@
 		[common]
 		{
 			screen_name = "Greater Scrub Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_red(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_ray_red(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[defend]
 		{
@@ -334,7 +368,7 @@
 			max_life = 2422.6;
 			mana = 44.2;
 			max_mana = 44.2;
-			scale_base = 1.5;
+		  f scale_base = 2.381102;
 			model = m_c_edm_sc_pos_1;
 			[textures]
 			{
@@ -452,6 +486,20 @@
 					no_trig_bits = true;
 					action* = call_sfx_script("unique_ray_red(sgx)");
 				}
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_blue(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_ray_blue(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
 			}
 		}
 		[defend]
@@ -556,7 +604,7 @@
 			life = 1568;
 			max_life = 1568;
 			model = m_c_edm_sc_pos_1;
-			scale_base = .85;
+		  f scale_base = 1.349291;
 		}
 		[attack]
 		{
@@ -567,6 +615,23 @@
 		[common]
 		{
 			screen_name = "Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_purple(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_ray_purple(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[inventory]
 		{
@@ -601,11 +666,28 @@
 			life = 679.2;
 			max_life = 679.2;
 			model = m_c_edm_sc_pos_1;
-			scale_base = 0.6;
+		  f scale_base = 0.952441;
 		}
 		[common]
 		{
 			screen_name = "Scorpion";
+			[template_triggers]
+			{
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_light_yellow(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+				[*]
+				{
+					condition* = receive_world_message("WE_ENTERED_WORLD");
+					action* = call_sfx_script("unique_ray_yellow(sgx)");
+				  b no_trig_bits = true;
+				  b single_shot = true;
+				}
+			}
 		}
 		[inventory]
 		{

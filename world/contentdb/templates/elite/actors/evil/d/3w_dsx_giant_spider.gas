@@ -22,6 +22,7 @@
 		mana = 185;
 		max_mana = 185;
 		model = m_c_ebb_gs_pos_1;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			damage_bonus_min_cmagic = 362;
@@ -158,6 +159,20 @@
 			{
 				action* = call_sfx_script("dsx_giant_spider_foot_spark_4");
 				condition* = receive_world_message("we_anim_sfx",4);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

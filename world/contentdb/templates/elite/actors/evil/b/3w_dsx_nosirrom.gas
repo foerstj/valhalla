@@ -25,6 +25,7 @@
 		max_mana = 1268.9;
 		model = m_c_ebb_nossirom;
 		material = flesh;
+	  f scale_base = 1.587401;
 		[voice]
 		{
 			[die]
@@ -156,6 +157,20 @@
 				action* = call_sfx_script("nosirrom_die");
 				condition* = receive_world_message("WE_KILLED");
 				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

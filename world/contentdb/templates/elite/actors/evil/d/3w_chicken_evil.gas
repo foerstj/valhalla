@@ -128,6 +128,7 @@
 		max_life = 28075.5;
 		mana = 11698.1;
 		max_mana = 11698.1;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_na_ckn_red;
@@ -166,6 +167,20 @@
 			  b single_player = true;
 			  b single_shot = true;
 			  b start_active = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -258,6 +273,7 @@
 		max_life = 18389.4;
 		mana = 9358.5;
 		max_mana = 9358.5;
+	  f scale_base = 1.587401;
 		scale_multiplier = 3;
 		[textures]
 		{
@@ -286,6 +302,20 @@
 			  b single_player = true;
 			  b single_shot = true;
 			  b start_active = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
