@@ -214,7 +214,6 @@
 		maxMeleeToSummon = 2;
 		maxRangedToSummon = 2;
 		summonEffect = "fire_column_emitter";
-		initialDelay = .1;
 		minDistanceFromCicatrix = 2;
 		maxDistanceFromCicatrix = 4;
 		waitInterval = 6;
