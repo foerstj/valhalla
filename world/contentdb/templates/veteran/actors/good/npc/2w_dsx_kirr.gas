@@ -3,7 +3,6 @@
 	category_name = "2W_npc";
 	doc = "2W_kirr";
 	specializes = 2W_base_giant;
-	
 	[aspect]
 	{
 		draw_selection_indicator = TRUE;
@@ -13,7 +12,6 @@
 			1 = b_c_pos_a1_300;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "kirr";
@@ -30,8 +28,7 @@
 	[mind]
 	{
 		actor_may_attack = false;
-        	actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 		jat_talk = world\ai\jobs\actors\good\job_talk_kirr.skrit;
- 	}
+	}
 }
-

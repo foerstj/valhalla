@@ -7,28 +7,51 @@
 	{
 		[skills]
 		{
-			strength =  	25, 0;
-			intelligence =  9.5, 0;
-			dexterity =  	15.5, 0;
-            melee = 	45, 0;
+			strength = 25, 0;
+			intelligence = 9.5, 0;
+			dexterity = 15.5, 0;
+			melee = 45, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 32108;
 		life = 368.8;
-        	max_life = 368.8;
-        	mana = 12.5;
+		max_life = 368.8;
+		mana = 12.5;
 		max_mana = 12.5;
 		scale_base = 0.40;
-		textures:0 = b_c_edm_ph-02;
+		[textures]
+		{
+			0 = b_c_edm_ph-02;
+		}
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_phrak_SED; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_dsx_phrak_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_phrak_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_phrak_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_phrak_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_phrak_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_dsx_phrak_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_phrak_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_phrak_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_phrak_SED;
+			}
 		}
 	}
 	[attack]
@@ -39,13 +62,16 @@
 	}
 	[common]
 	{
-		screen_name="Jungle Phrak";
+		screen_name = "Jungle Phrak";
 		membership = monster;
 	}
-    [defend] { defense=160.4; }
+	[defend]
+	{
+		defense = 160.4;
+	}
 	[mind]
 	{
-		jat_brain						= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true;
 	}
 	[physics]
@@ -60,17 +86,14 @@
 		}
 	}
 }
-
 [t:template,n:2W_dsx_phrak_jungle]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_phrak_jungle";
 	specializes = 2W_dsx_phrak_jungle_base;
 }
-
 [t:template,n:2W_dsx_phrak_piercer]
 {
-// Balanced to level 26, easy melee
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_phrak_piercer";
 	specializes = 2W_dsx_phrak_jungle_base;
@@ -78,21 +101,24 @@
 	{
 		[skills]
 		{
-			strength 	 = 36.6, 0;
-			intelligence =  10.5, 0;
-			dexterity 	 = 20.2, 0;
-			melee		 = 62, 0;
+			strength = 36.6, 0;
+			intelligence = 10.5, 0;
+			dexterity = 20.2, 0;
+			melee = 62, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 68310;
-		life 			= 644.9;
-        max_life 		= 644.9;
-        mana 			= 5.3;
-		max_mana 		= 5.3;
-		scale_base 		= 0.55;
-		textures:0 = b_c_edm_ph;
+		life = 644.9;
+		max_life = 644.9;
+		mana = 5.3;
+		max_mana = 5.3;
+		scale_base = 0.55;
+		[textures]
+		{
+			0 = b_c_edm_ph;
+		}
 	}
 	[attack]
 	{
@@ -101,9 +127,11 @@
 	}
 	[common]
 	{
-		screen_name="Mountain Phrak";
+		screen_name = "Mountain Phrak";
 		membership = phrak,monster;
 	}
-
-	[defend] { defense=392.8; }
+	[defend]
+	{
+		defense = 392.8;
+	}
 }

@@ -10,28 +10,28 @@
 		{
 			[die]
 			{
-							* = s_e_die_mangler;
+				* = s_e_die_mangler;
 			}
 		}
 		[voice]
 		{
 			[hit_glance]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_solid]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 		[voice]
 		{
 			[hit_critical]
 			{
-					* = s_e_hit_mangler_SED;
+				* = s_e_hit_mangler_SED;
 			}
 		}
 	}

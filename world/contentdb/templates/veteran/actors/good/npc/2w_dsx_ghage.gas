@@ -33,5 +33,5 @@
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_ghage.skrit;
- 	}
+	}
 }

@@ -7,36 +7,49 @@
 	{
 		[skills]
 		{
-			strength =     27.3, 0;
+			strength = 27.3, 0;
 			intelligence = 9.5, 0;
-			dexterity =    16, 0;
-			melee =        46, 0;
+			dexterity = 16, 0;
+			melee = 46, 0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 23275;
-		life             = 564;
-		max_life         = 564;
-		mana             = 141;
-		max_mana         = 141;
+		life = 564;
+		max_life = 564;
+		mana = 141;
+		max_mana = 141;
 		model = m_c_edm_st_pos_1;
 		scale_base = 0.5;
-		textures:0 = b_c_edm_st-02;
+		[textures]
+		{
+			0 = b_c_edm_st-02;
+		}
 		[voice]
 		{
-			[die]			{ priority = high;	* = s_e_die_swarmling_SED;		}
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED; }
-			//[hit_critical]	{ priority = low;	* = s_e_hit_phrak;		}
-			//[hit_glance]	{ priority = low;	* = s_e_hit_phrak;		}
-			[hit_solid]		{ priority = low;	* = s_e_hit_phrak;		}
-		}	
+			[die]
+			{
+				priority = high;
+				* = s_e_die_swarmling_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_phrak;
+			}
+		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 217.1; //! Do by hand, on a curve.  For low values, ~==XP (6xp => 6damage; 90xp=> 50damage)
-		damage_min = 126.9; //! Same as damage_max
+		damage_max = 217.1;
+		damage_min = 126.9;
 	}
 	[body]
 	{
@@ -67,45 +80,58 @@
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=fl; }
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
 	[common]
 	{
 		screen_name = "Swarmling";
-		membership = swarmling, monster; //--
+		membership = swarmling, monster;
 	}
-	[defend] { defense = 250.7; }
-	
+	[defend]
+	{
+		defense = 250.7;
+	}
 	[mind]
 	{
-			
-		on_enemy_spotted_alert_friends 		= true;
-		jat_brain				= world\ai\jobs\common\brain_hero.skrit
+		on_enemy_spotted_alert_friends = true;
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 		?actor_joins_existing_party		= true
 		&actor_creates_own_party		= true
 		&party_template				= "party_dsx_swarmling";
-		com_channels				= dyn_party, swarmling;
-		com_range				= 14.0;
+		com_channels = dyn_party, swarmling;
+		com_range = 14.0;
 		melee_engage_range = 14;
 		personal_space_range = 0.5;
 		ranged_engage_range = 14.0;

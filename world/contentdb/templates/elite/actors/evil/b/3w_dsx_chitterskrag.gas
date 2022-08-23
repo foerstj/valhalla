@@ -1,5 +1,4 @@
 [t:template,n:3W_dsx_chitterskrag_boss]
-//balanced for Level 14
 {
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_chitterskrag_boss";
@@ -8,34 +7,45 @@
 	{
 		[skills]
 		{
-		strength 		= 50.3, 0;
-		intelligence 	= 15.5, 0;
-		dexterity 		= 27.5, 0;
-		melee 			= 85, 0;
+			strength = 50.3, 0;
+			intelligence = 15.5, 0;
+			dexterity = 27.5, 0;
+			melee = 85, 0;
 		}
-    }
+	}
 	[aspect]
 	{
 		experience_value = 1470740;
-		life             = 2958;
-		max_life         = 2958;
-		mana             = 255.9;
-		max_mana         = 255.9;
-		scale_base 		= 1.5
+		life = 2958;
+		max_life = 2958;
+		mana = 255.9;
+		max_mana = 255.9;
+		scale_base = 1.5
 		model = m_c_edm_chs_pos_3;
-		textures:0 = b_c_edm_chs-02;
+		[textures]
+		{
+			0 = b_c_edm_chs-02;
+		}
 		material = flesh;
 		[voice]
 		{
-			[die]			{ priority = high;	* = s_e_die_chitterskrag_boss_SED;		}
-			[enemy_spotted]	{ priority = high; * = s_e_call_chitterskrag_boss_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_chitterskrag_boss_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_chitterskrag_boss_SED;
+			}
 		}
-	    }
-  [attack]
+	}
+	[attack]
 	{
 		attack_range = 0.5;
-		damage_max 	= 833.2;
-		damage_min 	= 552.7;
+		damage_max = 833.2;
+		damage_min = 552.7;
 	}
 	[common]
 	{
@@ -51,8 +61,9 @@
 				action* = call_sfx_script("unique_ray_purple");
 			}
 		}
-    }
-	[defend] { defense = 1392; }
+	}
+	[defend]
+	{
+		defense = 1392;
+	}
 }
- 
-

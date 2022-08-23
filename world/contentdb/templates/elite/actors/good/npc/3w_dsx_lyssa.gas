@@ -1,20 +1,20 @@
-[t:template,n:3W_lyssa] {
+[t:template,n:3W_lyssa]
+{
 	category_name = "3W_character";
 	doc = "3W_lyssa";
-	specializes = base_pm_fg;	
+	specializes = base_pm_fg;
 	[actor]
 	{
 		portrait_icon = b_gui_ig_i_ic_c_lyssa;
 		[skills]
 		{
-			strength 		=   1.5, 0, 10;
-			dexterity 		=   6.7, 0, 10;
-			intelligence 	=  	0.4, 0, 10;
-			
-			Ranged 			= 	72, 0, 0;
-			uber 			= 	2, 0, 0;
+			strength = 1.5, 0, 10;
+			dexterity = 6.7, 0, 10;
+			intelligence = 0.4, 0, 10;
+			Ranged = 72, 0, 0;
+			uber = 2, 0, 0;
 		}
-	}	
+	}
 	[aspect]
 	{
 		[textures]
@@ -24,16 +24,17 @@
 		}
 		[voice]
 		{
-			[die]		{ priority = high; * = s_v_lyssa_die; }
-			//	[hit_critical]	{ priority = low; * = s_v_lyssa_hit_03_SED;  }
-			//	[hit_glance]	{ priority = low; * = s_v_lyssa_hit_01_SED;  }
-			//	[hit_solid]	{ priority = low; * = s_v_lyssa_hit_02_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_v_lyssa_die;
+			}
 		}
 		[vo_voice]
 		{
 			[select_char]
-			{ 
-				priority = vo; 
+			{
+				priority = vo;
 				* = s_v_lyssa_select_01;
 				* = s_v_lyssa_select_02;
 				* = s_v_lyssa_select_03;
@@ -52,7 +53,7 @@
 			}
 			[order_move]
 			{
-				priority = vo; 
+				priority = vo;
 				* = s_v_lyssa_ack_01;
 				* = s_v_lyssa_ack_02;
 				* = s_v_lyssa_ack_03;
@@ -71,7 +72,7 @@
 			}
 			[order_attack]
 			{
-				priority = vo; 
+				priority = vo;
 				* = s_v_lyssa_attack_01;
 				* = s_v_lyssa_attack_02;
 				* = s_v_lyssa_attack_03;
@@ -94,7 +95,9 @@
 	{
 		screen_name = "Lyssa";
 	}
-	[conversation]{}
+	[conversation]
+	{
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_ranged_weapon;

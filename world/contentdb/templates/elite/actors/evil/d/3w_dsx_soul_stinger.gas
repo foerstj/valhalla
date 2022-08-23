@@ -1,21 +1,20 @@
 [t:template,n:3W_dsx_soul_stinger]
-//balanced to Level 23
 {
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_soul_stinger";
 	specializes = actor_evil;
 	[actor]
-    {
+	{
 		[skills]
 		{
-			strength 		= 48.2, 0;
-			intelligence 	= 12.2, 0;
-			dexterity 	= 39.3, 0;
-			melee 		= 89, 0;
+			strength = 48.2, 0;
+			intelligence = 12.2, 0;
+			dexterity = 39.3, 0;
+			melee = 89, 0;
 		}
-    }
+	}
 	[aspect]
-    {
+	{
 		experience_value = 1694760;
 		life = 980.9;
 		max_life = 980.9;
@@ -24,19 +23,30 @@
 		model = m_c_edm_ss_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_soul_stinger; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_insectoid_SED;  }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_soul_stinger;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_insectoid_SED;
+			}
 		}
-    }
+	}
 	[attack]
-    {
+	{
 		attack_range = 0.5;
 		damage_max = 512.5;
 		damage_min = 386.2;
-    }
-	[defend] { defense = 764.3; }
+	}
+	[defend]
+	{
+		defense = 764.3;
+	}
 	[body]
-    {
+	{
 		avg_move_velocity = 4.990000;
 		[bone_translator]
 		{
@@ -52,51 +62,68 @@
 			chore_prefix = a_c_edm_ss_fs;
 			[chore_attack]
 			{
-			  chore_stances = 0;
-			  skrit = select_attack;
-			  [anim_files] { 00=at; }
+				chore_stances = 0;
+				skrit = select_attack;
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
-			  chore_stances = 0;
-			  skrit = infinite_loop;
-			  [anim_files] { 00=ds; }
+				chore_stances = 0;
+				skrit = infinite_loop;
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
-			  chore_stances = 0;
-			  skrit = select_transition;
-			  [anim_files] { 00=di; }
+				chore_stances = 0;
+				skrit = select_transition;
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
-			  chore_stances = 0;
-			  skrit = select_fidget;
-			  [anim_files] { 00=dff; }
+				chore_stances = 0;
+				skrit = select_fidget;
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
-			  chore_stances = 0;
-			  skrit = select_walk;
-			  [anim_files] { 00=fl; }
+				chore_stances = 0;
+				skrit = select_walk;
+				[anim_files]
+				{
+					00 = fl;
+				}
 			}
 		}
 	}
-	[common] { screen_name = "Soul Stinger"; }
+	[common]
+	{
+		screen_name = "Soul Stinger";
+	}
 	[mind]
 	{
-		jat_fidget	= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 		?meander	= false
 		&still		= false;
-		
-		melee_engage_range 		= 14;
-		personal_space_range 	= 0.5;
-		ranged_engage_range 	= 14.0;
-		sight_range 			= 14.0;
+		melee_engage_range = 14;
+		personal_space_range = 0.5;
+		ranged_engage_range = 14.0;
+		sight_range = 14.0;
 	}
 	[physics]
 	{
-		explode_when_killed = true;		
+		explode_when_killed = true;
 		[break_particulate]
 		{
 			frag_glb_soul_stinger_01 = 1;

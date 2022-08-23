@@ -32,7 +32,6 @@
 		[store_pcontent]
 		{
 			full_ratio = 0;
-
 			[weapons]
 			{
 				[all*]
@@ -53,7 +52,6 @@
 					max = 6;
 					min = 6;
 				}
-
 				[all*]
 				{
 					il_main = #ranged/208-223;
@@ -78,14 +76,12 @@
 	[mind]
 	{
 		jat_talk = world\ai\jobs\actors\good\job_talk_dynll.skrit;
- 	}
-
+	}
 	[respawn_shrine]
 	{
 	}
 	[store]
 	{
 		item_markup = 2;
-		
 	}
 }

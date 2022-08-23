@@ -1,5 +1,3 @@
-// JCD 8/28/03
-// had to specialize these so that they used the correct talk animation
 [t:template,n:2W_dsx_guard_corthell]
 {
 	specializes = mp_guard;
@@ -109,16 +107,13 @@
 		jat_talk = world\ai\jobs\actors\good\job_talk_guard_corthell.skrit;
 	}
 }
-
 [t:template,n:2W_dsx_guard_dunlop]
 {
 	specializes = 2W_guard_captain_of_elddim;
-
 	[common]
 	{
 		screen_name = "Guard Dunlop";
 	}
-		
 	[body]
 	{
 		armor_version = gah_fb;

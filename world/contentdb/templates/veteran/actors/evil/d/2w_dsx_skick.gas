@@ -3,39 +3,58 @@
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_skick";
 	specializes = skick_base;
-
 	[actor]
 	{
 		[skills]
 		{
-			strength 	 =  35.9, 0;
-			intelligence =   10.6, 0;
-			dexterity 	 =  18.9, 0;
-            melee 		 =  61,  0;
+			strength = 35.9, 0;
+			intelligence = 10.6, 0;
+			dexterity = 18.9, 0;
+			melee = 61,  0;
 		}
 	}
 	[aspect]
 	{
 		experience_value = 63336;
 		life = 820.7;
-        max_life = 820.7;
-        mana = 23;
+		max_life = 820.7;
+		mana = 23;
 		max_mana = 23;
 		model = m_c_edm_sk_pos_1;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_skick_SED;			}
-			[enemy_spotted]	{ priority = high; * = s_e_call_skick_SED;	}
-			[hit_critical]	{ priority = low; * = s_e_hit_skick_SED;		}
-			[hit_glance]	{ priority = low; * = s_e_hit_skick_SED;		}
-			[hit_solid]		{ priority = low; * = s_e_hit_skick_SED;		}
+			[die]
+			{
+				priority = high;
+				* = s_e_die_skick_SED;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skick_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_skick_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skick_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_skick_SED;
+			}
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max 	 = 328.3;
-		damage_min 	 = 219.5;
+		damage_max = 328.3;
+		damage_min = 219.5;
 	}
 	[body]
 	{
@@ -56,42 +75,61 @@
 			{
 				chore_stances = 0;
 				skrit = select_attack;
-				[anim_files] { 00=at; }
+				[anim_files]
+				{
+					00 = at;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Skick"; }
-    [defend] { defense=457.7; }
-   	[inventory]
+	[common]
+	{
+		screen_name = "Skick";
+	}
+	[defend]
+	{
+		defense = 457.7;
+	}
+	[inventory]
 	{
 		[pcontent]
 		{
-			/* Generated: Tue Jun 17 11:13:15 2003
-			Level 23, Weak */
 			[oneof*]
 			{
 				[gold*]
@@ -120,15 +158,13 @@
 					il_main = #armor/-rare(1)/287-419;
 					il_main = #*/-rare(1)/115-186;
 				}
-				
 			}
 		}
 	}
 	[mind]
 	{
-		jat_fidget		= world\ai\jobs\common\job_fidget.skrit
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?still			= false;
-
 		melee_engage_range = 14;
 		personal_space_range = 0.7;
 		ranged_engage_range = 14.0;

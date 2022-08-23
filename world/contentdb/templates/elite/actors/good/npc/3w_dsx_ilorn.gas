@@ -16,7 +16,6 @@
 		[store_pcontent]
 		{
 			full_ratio = 0;
-			
 			[magic]
 			{
 				[all*]
@@ -83,27 +82,26 @@
 					min = 1;
 				}
 			}
-			
 			[armor]
 			{
 				[all*]
 				{
-				   il_main = #body,m/401-455;
-				   max = 6;
-				   min = 3;
+					il_main = #body,m/401-455;
+					max = 6;
+					min = 3;
 				}
 				[all*]
 				{
-				   il_main = #body,r/401-455;
-				   max = 6;
-				   min = 3;
+					il_main = #body,r/401-455;
+					max = 6;
+					min = 3;
 				}
 				[all*]
 				{
-				   il_main = #body,f/401-455;
-				   max = 3;
-				   min = 2;
-				}				
+					il_main = #body,f/401-455;
+					max = 3;
+					min = 2;
+				}
 				[all*]
 				{
 					il_main = #body/345-400;
@@ -122,7 +120,6 @@
 					max = 4;
 					min = 2;
 				}
-				
 				[all*]
 				{
 					il_main = #helm,m/401-455;
@@ -153,19 +150,18 @@
 					max = 2;
 					min = 2;
 				}
-
 				[all*]
 				{
 					il_main = #gloves,m/401-455;
 					max = 4;
 					min = 4;
-				}				
+				}
 				[all*]
 				{
 					il_main = #gloves,r/401-455;
 					max = 4;
 					min = 4;
-				}				
+				}
 				[all*]
 				{
 					il_main = #gloves/345-400;
@@ -184,7 +180,6 @@
 					max = 2;
 					min = 2;
 				}
-				
 				[all*]
 				{
 					il_main = #boots,m/401-455;
@@ -214,7 +209,7 @@
 					il_main = #boots/456-510;
 					max = 2;
 					min = 2;
-				}				
+				}
 			}
 			[shields]
 			{
@@ -241,7 +236,7 @@
 					il_main = #shield/456-510;
 					max = 4;
 					min = 4;
-				}				
+				}
 			}
 			[weapons]
 			{
@@ -263,7 +258,6 @@
 					max = 2;
 					min = 2;
 				}
-				
 				[all*]
 				{
 					il_main = #ranged/186-216;
@@ -281,11 +275,10 @@
 					il_main = #ranged/246-275;
 					max = 4;
 					min = 2;
-				}	   
+				}
 			}
 		}
 	}
-		
 	[store]
 	{
 		item_markup = 2;
@@ -293,13 +286,10 @@
 		{
 			potion_health_large = 9;
 			potion_mana_large = 9;
-
 			potion_health_super = 10;
 			potion_mana_super = 10;
-
 			potion_rejuvenation_large = 5;
 			potion_rejuvenation_super = 4;
-			
 			scroll_resurrect = 2;
 			spell_resurrect = 2;
 			spell_revive = 2;

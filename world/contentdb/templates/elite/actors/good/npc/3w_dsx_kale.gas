@@ -30,11 +30,8 @@
 		[store_pcontent]
 		{
 			full_ratio = 0;
-// NOTE: Use caution when increasing number of items in the store - max items must
-//		not exceed 255		
 			[armor]
 			{
-				// BODY ARMOR
 				[all*]
 				{
 					il_main = #body,m/148-234;
@@ -71,9 +68,6 @@
 					max = 5;
 					min = 2;
 				}
-				
-				
-				// HELMETS
 				[all*]
 				{
 					il_main = #helm,m/;
@@ -104,8 +98,6 @@
 					max = 8;
 					min = 6;
 				}
-				
-				// GLOVES
 				[all*]
 				{
 					il_main = #gloves,m/;
@@ -136,8 +128,6 @@
 					max = 6;
 					min = 3;
 				}
-				
-				// BOOTS			
 				[all*]
 				{
 					il_main = #boots,m/;
@@ -167,7 +157,7 @@
 					il_main = #boots/234-297;
 					max = 6;
 					min = 4;
-				}	
+				}
 			}
 			[shields]
 			{
@@ -200,7 +190,7 @@
 					il_main = #shield/234-297;
 					max = 4;
 					min = 2;
-				}				
+				}
 			}
 			[weapons]
 			{
@@ -251,7 +241,7 @@
 					il_main = #ranged/158-210;
 					max = 8;
 					min = 4;
-				}					   
+				}
 			}
 			[magic]
 			{
@@ -337,12 +327,10 @@
 		{
 			potion_health_large = 7;
 			potion_mana_large = 7;
-
 			potion_health_large = 8;
 			potion_mana_large = 8;
 			potion_rejuvenation_large = 4;
 			potion_rejuvenation_large = 4;
-			
 			scroll_resurrect = 2;
 			spell_resurrect = 2;
 			spell_revive = 1;

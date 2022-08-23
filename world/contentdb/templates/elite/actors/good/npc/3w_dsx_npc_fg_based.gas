@@ -84,13 +84,12 @@
 			}
 		}
 	}
-    [mind]
-    {
+	[mind]
+	{
 		actor_may_attack = false;
-        actor_may_be_attacked = false;
+		actor_may_be_attacked = false;
 	}
 }
-
 [t:template,n:3W_dsx_base_npc_fg_multiplayer]
 {
 	category_name = "3W_character";
@@ -104,6 +103,3 @@
 	{
 	}
 }
-
-
-

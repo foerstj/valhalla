@@ -7,41 +7,60 @@
 	{
 		[skills]
 		{
-			strength		= 32.1, 0;
-			intelligence 	= 10.7, 0;
-			dexterity		= 16.6, 0;
-			melee			= 52, 0;
+			strength = 32.1, 0;
+			intelligence = 10.7, 0;
+			dexterity = 16.6, 0;
+			melee = 52, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value 	= 46434;
-		life				= 1121.2;
-		max_life			= 1121.2;
-		mana				= 190.4;
-		max_mana			= 190.4;
-
+		experience_value = 46434;
+		life = 1121.2;
+		max_life = 1121.2;
+		mana = 190.4;
+		max_mana = 190.4;
 		model = m_c_ecm_sk_pos_2;
-		//		model = m_c_edm_iw_pos_1;
-		//		textures:0 = b_c_edm_ph_melee;
 		material = steel;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_wraith; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_skeleton_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_skeleton_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_skeleton_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_skeleton_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_wraith;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skeleton_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 554.9; 
-		damage_min = 381.3; 
+		damage_max = 554.9;
+		damage_min = 381.3;
 	}
-	[defend] { defense = 520.4; }
-
+	[defend]
+	{
+		defense = 520.4;
+	}
 	[body]
 	{
 		avg_move_velocity = 2.5;
@@ -66,56 +85,71 @@
 				chore_stances = 0,1;
 				skrit = select_attack;
 				[anim_files]
-					{
-						00 = at;
-						01 = at-02;
-					}
+				{
+					00 = at;
+					01 = at-02;
+				}
 			}
 			[chore_default]
 			{
 				chore_stances = 0,1;
 				skrit = infinite_loop;
-				[anim_files] { 00=ds; }
+				[anim_files]
+				{
+					00 = ds;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_fidget]
 			{
 				chore_stances = 0,1;
 				skrit = select_fidget;
-				[anim_files] { 00=dff; }
+				[anim_files]
+				{
+					00 = dff;
+				}
 			}
 			[chore_walk]
 			{
 				chore_stances = 0,1;
 				skrit = select_walk;
-				[anim_files] { 00=rl; }
+				[anim_files]
+				{
+					00 = rl;
+				}
 			}
 		}
 	}
 	[common]
 	{
-		screen_name = "Death Knight"; //--
-		membership = monster,skeleton; //--
+		screen_name = "Death Knight";
+		membership = monster,skeleton;
 	}
-
-
 	[inventory]
 	{
-		// TAT 8/1/2003 - delete your equipped stuff
 		spew_equipped_kill_count = ;
 		[pcontent]
 		{
-			[oneof*] { es_shield_hand = sh_m_g_c_r_s_avg; } // adds 7 to armor
-			[oneof*] { es_weapon_hand = ax_d_c_1h1b_avg_dsx; }
-			[oneof*] { es_chest = bd_pl_f_g_c_death_knight; } // adds 1 to armor
-			
-			/* Generated: Tue Jun 17 11:13:15 2003
-			Level 13, Strong */
+			[oneof*]
+			{
+				es_shield_hand = sh_m_g_c_r_s_avg;
+			}
+			[oneof*]
+			{
+				es_weapon_hand = ax_d_c_1h1b_avg_dsx;
+			}
+			[oneof*]
+			{
+				es_chest = bd_pl_f_g_c_death_knight;
+			}
 			[oneof*]
 			{
 				[gold*]
@@ -126,7 +160,6 @@
 				}
 				[oneof*]
 				{
-				
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
@@ -151,15 +184,15 @@
 					il_main = #weapon/-unique(2)/158-191;
 					il_main = #armor/-unique(2)/262-542;
 					il_main = #*/-unique(2)/158-191;
-				}			
+				}
 			}
-		}	
+		}
 	}
 	[mind]
 	{
-		jat_brain					= world\ai\jobs\common\brain_hero.skrit
+		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party	= true;
-		jat_fidget					= world\ai\jobs\common\job_fidget.skrit;
+		jat_fidget = world\ai\jobs\common\job_fidget.skrit;
 	}
 	[body]
 	{
@@ -193,13 +226,19 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = infinite_loop;
-				[anim_files] { 00=dfs; }
+				[anim_files]
+				{
+					00 = dfs;
+				}
 			}
 			[chore_die]
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_transition;
-				[anim_files] { 00=di; }
+				[anim_files]
+				{
+					00 = di;
+				}
 			}
 			[chore_misc]
 			{
@@ -238,110 +277,121 @@
 			{
 				chore_stances = 0,1,2,3,4,5,6;
 				skrit = select_walk;
-				[anim_files] { 00=wl; }
+				[anim_files]
+				{
+					00 = wl;
+				}
 			}
 		}
 	}
 }
-
-
-/* mostly copied from:
-[t:template,n:skeleton_base]
-*/ 
-
 [t:template,n:2W_dsx_knight_death]
 {
-// Balanced for level 14, hard melee
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_knight_death";
 	specializes = 2W_dsx_knight_death_base;
-
 	[actor]
 	{
 		[skills]
 		{
-			strength	= 32.1, 0;
+			strength = 32.1, 0;
 			intelligence = 10.7, 0;
-			dexterity	= 16.6, 0;
-			melee		= 53, 0;
+			dexterity = 16.6, 0;
+			melee = 53, 0;
 		}
 	}
 	[aspect]
 	{
-		experience_value 	= 46494;
-		life				= 1641.5;
-		max_life			= 1641.5;
-		mana				= 190.4;
-		max_mana			= 190.4;
-
+		experience_value = 46494;
+		life = 1641.5;
+		max_life = 1641.5;
+		mana = 190.4;
+		max_mana = 190.4;
 		model = m_c_ecm_sk_pos_2;
-		//		model = m_c_edm_iw_pos_1;
-		//		textures:0 = b_c_edm_ph_melee;
 		material = steel;
 		[voice]
 		{
-			[die]			{ priority = high; * = s_e_die_wraith; }
-			[enemy_spotted]	{ priority = high; * = s_e_call_skeleton_SED; }
-			[hit_critical]	{ priority = low; * = s_e_hit_skeleton_SED; }
-			[hit_glance]	{ priority = low; * = s_e_hit_skeleton_SED; }
-			[hit_solid]		{ priority = low; * = s_e_hit_skeleton_SED; }
+			[die]
+			{
+				priority = high;
+				* = s_e_die_wraith;
+			}
+			[enemy_spotted]
+			{
+				priority = high;
+				* = s_e_call_skeleton_SED;
+			}
+			[hit_critical]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
+			[hit_glance]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
+			[hit_solid]
+			{
+				priority = low;
+				* = s_e_hit_skeleton_SED;
+			}
 		}
 	}
 	[attack]
 	{
 		attack_range = 0.5;
-		damage_max = 648; 
-		damage_min = 449.8; 
+		damage_max = 648;
+		damage_min = 449.8;
 	}
-	[defend] { defense = 554.2; }
+	[defend]
+	{
+		defense = 554.2;
+	}
 }
-
-
 [t:template,n:2W_dsx_knight_death_summon]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_summon_knight_death";
 	specializes = 2W_dsx_knight_death_base;
- 	aspect:experience_value = 0;
+	[aspect]
+	{
+		experience_value = 0;
+	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
 	}
 }
-
 [t:template,n:2W_dsx_knight_death_cicatrix_minion]
 {
 	category_name = "2W_evil_d";
 	doc = "2W_dsx_knight_death_cicatrix_minion";
 	specializes = 2W_dsx_knight_death_base;
-	
 	[aspect]
 	{
-		experience_value 	= 46434;
-		life				= 1743.1;
-		max_life			= 1743.1;
-		mana				= 190.4;
-		max_mana			= 190.4;
+		experience_value = 46434;
+		life = 1743.1;
+		max_life = 1743.1;
+		mana = 190.4;
+		max_mana = 190.4;
 	}
 	[common]
 	{
 		screen_name = "Reaper";
 	}
-	
 	[mind]
 	{
 		jat_fidget = world\ai\jobs\common\job_fidget.skrit
 			?still					= false;
-		
 		jat_brain = world\ai\jobs\common\brain_hero.skrit
 			?actor_joins_existing_party		= true
 			&actor_creates_own_party		= true
 			&party_template			= "party_dsx_cicatrix";
-
-			com_channels			= dyn_party,cicatrix;
-			com_range				= 20.0;
-			melee_engage_range		= 20.0;
-			ranged_engage_range	 	= 20.0;
-			sight_range				= 20.0;
+		com_channels = dyn_party,cicatrix;
+		com_range = 20.0;
+		melee_engage_range = 20.0;
+		ranged_engage_range = 20.0;
+		sight_range = 20.0;
 	}
 }

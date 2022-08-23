@@ -1,16 +1,20 @@
-//HOUSE BASEMENT: starting items
-
 [t:template,n:2W_crate_dsx_a1_r1a-01]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_a1_r1a-01 chest";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-07;
-		[textures] { 0 = b_i_csl_chest-06; }
+		[textures]
+		{
+			0 = b_i_csl_chest-06;
+		}
 	}
 	[body]
 	{
@@ -20,14 +24,16 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-07-open; }
+				[anim_files]
+				{
+					00 = chest-07-open;
+				}
 			}
 		}
 	}
 	[inventory]
 	{
 		drop_at_use_point = true;
-		
 		[pcontent]
 		{
 			[all*]
@@ -38,7 +44,6 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r1a-02]
 {
 	category_name = "dsx_a1";
@@ -46,7 +51,7 @@
 	specializes = base_chest;
 	[aspect]
 	{
-		model=m_i_glb_chest;
+		model = m_i_glb_chest;
 		material = steel;
 	}
 	[body]
@@ -57,15 +62,20 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Ornate Chest"; }
+	[common]
+	{
+		screen_name = "Ornate Chest";
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
-		
 		[pcontent]
 		{
 			[all*]
@@ -77,19 +87,18 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r1a-03]
 {
 	category_name = "container";
-	doc			= "dsx_a1_r1a-03 basement rack";
-	specializes			= prop;
+	doc = "dsx_a1_r1a-03 basement rack";
+	specializes = prop;
 	[aspect]
 	{
 		model = m_i_csl_rack-weapon;
 		[textures]
 		{
-			0 =			b_w_weapons;
-			1 =			b_i_csl_rack-weapon;
+			0 = b_w_weapons;
+			1 = b_i_csl_rack-weapon;
 		}
 	}
 	[generator_object_pcontent]
@@ -118,15 +127,11 @@
 		}
 	}
 }
-
-//
-//Hero's house; shelf for first lorebook
-//
 [t:template,n:2W_bookcase_dsx_a1_r1_journal]
 {
-	category_name =	"dsx_a1";
-	doc	= "dsx_bookcase_lorebook_journal";
-	specializes	= prop;
+	category_name = "dsx_a1";
+	doc = "dsx_bookcase_lorebook_journal";
+	specializes = prop;
 	[aspect]
 	{
 		model = m_i_glb_bookcase-01;
@@ -134,7 +139,6 @@
 		lodfi_upper = -1;
 		does_block_path = true;
 	}
-	
 	[generator_object_pcontent]
 	{
 		create_msg = WE_REQ_USE;
@@ -153,34 +157,29 @@
 			{
 				[all*]
 				{
-					il_main	= book_glb_lore_hero;
+					il_main = book_glb_lore_hero;
 					chance = 1.0;
 				}
 			}
 		}
 	}
 }
-
-////////////////////////////////////////
-//A1
-////////////////////////////////////////
-
-//note that region 2 is sequentially after region 3 in gameplay, so they
-//give better rewards
 [t:template,n:2W_crate_dsx_a1_r2-01]
 {
-	specializes	 = base_container_barrel;
-	doc	 = "dsx_a1_r2-01 barrel_weathered_ice";
-	category_name	 = "dsx_a1";
+	specializes = base_container_barrel;
+	doc = "dsx_a1_r2-01 barrel_weathered_ice";
+	category_name = "dsx_a1";
 	[aspect]
 	{
-		model	 = m_i_glb_barrel-01;
-		[textures]	{ 0 = b_i_ice_supplies-01; }
+		model = m_i_glb_barrel-01;
+		[textures]
+		{
+			0 = b_i_ice_supplies-01;
+		}
 	}
 	[inventory]
 	{
 		drop_at_use_point = true;
-		
 		[pcontent]
 		{
 			[oneof*]
@@ -206,21 +205,22 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r2-02]
 {
-	specializes	 = base_container_barrel;
-	doc	 = "dsx_a1_r2-02 barrel_weathered_ice sideways";
-	category_name	 = "dsx_a1";
+	specializes = base_container_barrel;
+	doc = "dsx_a1_r2-02 barrel_weathered_ice sideways";
+	category_name = "dsx_a1";
 	[aspect]
 	{
-		model	 = m_i_glb_barrel-02;
-		[textures]	{ 0 = b_i_ice_supplies-01; }
+		model = m_i_glb_barrel-02;
+		[textures]
+		{
+			0 = b_i_ice_supplies-01;
+		}
 	}
 	[inventory]
 	{
 		drop_at_use_point = true;
-		
 		[pcontent]
 		{
 			[oneof*]
@@ -246,16 +246,18 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r2-03]
 {
 	specializes = base_container_wood;
-	doc	 = "dsx_a1_r2-03 crate";
+	doc = "dsx_a1_r2-03 crate";
 	category_name = "dsx_a1";
 	[aspect]
 	{
-		model	 = m_i_glb_crate;
-		[textures]	{0=b_i_ice_crate;}
+		model = m_i_glb_crate;
+		[textures]
+		{
+			0 = b_i_ice_crate;
+		}
 	}
 	[inventory]
 	{
@@ -289,18 +291,23 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r2-spec]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_a1_r2-spec chest_cedar_ice";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-03;
-		[textures]	{ 0 = b_i_ice_chest-open; }
+		[textures]
+		{
+			0 = b_i_ice_chest-open;
+		}
 	}
 	[body]
 	{
@@ -310,7 +317,10 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00 = chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -345,16 +355,18 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1-icebarrel_smallhealthpotion]
 {
-	specializes	 = base_container_barrel;
-	doc	 = "dsx_a1-icebarrel_smallhealthpotion";
-	category_name	 = "dsx_a1";
+	specializes = base_container_barrel;
+	doc = "dsx_a1-icebarrel_smallhealthpotion";
+	category_name = "dsx_a1";
 	[aspect]
 	{
-		model	 = m_i_glb_barrel-01;
-		[textures]	{ 0 = b_i_ice_supplies-01; }
+		model = m_i_glb_barrel-01;
+		[textures]
+		{
+			0 = b_i_ice_supplies-01;
+		}
 	}
 	[inventory]
 	{
@@ -369,16 +381,18 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r3-01]
 {
-	specializes	 = base_container_barrel;
-	doc	 = "dsx_a1_r3-01 barrel_weathered_ice";
-	category_name	 = "dsx_a1";
+	specializes = base_container_barrel;
+	doc = "dsx_a1_r3-01 barrel_weathered_ice";
+	category_name = "dsx_a1";
 	[aspect]
 	{
-		model	 = m_i_glb_barrel-01;
-		[textures]	{ 0 = b_i_ice_supplies-01; }
+		model = m_i_glb_barrel-01;
+		[textures]
+		{
+			0 = b_i_ice_supplies-01;
+		}
 	}
 	[inventory]
 	{
@@ -403,16 +417,18 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r3-02]
 {
-	specializes	 = base_container_barrel;
-	doc	 = "dsx_a1_r3-02 barrel_weathered_ice sideways";
-	category_name	 = "dsx_a1";
+	specializes = base_container_barrel;
+	doc = "dsx_a1_r3-02 barrel_weathered_ice sideways";
+	category_name = "dsx_a1";
 	[aspect]
 	{
-		model	 = m_i_glb_barrel-02;
-		[textures]	{ 0 = b_i_ice_supplies-01; }
+		model = m_i_glb_barrel-02;
+		[textures]
+		{
+			0 = b_i_ice_supplies-01;
+		}
 	}
 	[inventory]
 	{
@@ -440,16 +456,18 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r3-03]
 {
 	specializes = base_container_wood;
-	doc	 = "dsx_a1_r3-03 crate";
+	doc = "dsx_a1_r3-03 crate";
 	category_name = "dsx_a1";
 	[aspect]
 	{
-		model	 = m_i_glb_crate;
-		[textures]	{0=b_i_ice_crate;}
+		model = m_i_glb_crate;
+		[textures]
+		{
+			0 = b_i_ice_crate;
+		}
 	}
 	[inventory]
 	{
@@ -477,18 +495,23 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r3-spec]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_a1_r3-spec chest_cedar_ice";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-03;
-		[textures]	{ 0 = b_i_ice_chest-open; }
+		[textures]
+		{
+			0 = b_i_ice_chest-open;
+		}
 	}
 	[body]
 	{
@@ -498,7 +521,10 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -541,55 +567,50 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r4-01]
 {
-	doc	 = "dsx_a1_r5-01 clay pot";
+	doc = "dsx_a1_r5-01 clay pot";
 	category_name = "dsx_a1";
-	specializes		= base_container_barrel;
-	
-	aspect:model	= m_i_glb_barrel;
-	   
-	   [inventory] 
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [oneof*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.2;
-					   min = 17289;
-					   max = 25933;
-				   }
-				   
-				   [oneof*]
-				   {
-					   chance = 0.088888888888889;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-				   
-				   [oneof*]
-				   {
-					   chance = 0.2;
-					   il_main = #weapon/161-202;
-					   il_main = #armor/0-405;
-					   il_main = #*/161-202;
-				   }
-			   }
-		   }
-	   }
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 17289;
+					max = 25933;
+				}
+				[oneof*]
+				{
+					chance = 0.088888888888889;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/161-202;
+					il_main = #armor/0-405;
+					il_main = #*/161-202;
+				}
+			}
+		}
+	}
 }
-
-//a1r5
 [t:template,n:2W_crate_dsx_a1_r5-01]
 {
-	specializes	 = base_pot_des_clay_05;
-	doc	 = "dsx_a1_r5-01 clay pot";
+	specializes = base_pot_des_clay_05;
+	doc = "dsx_a1_r5-01 clay pot";
 	category_name = "dsx_a1";
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -616,64 +637,38 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r5-04]
 {
 	category_name = "dsx_a1";
-	doc	 = "dsx_a1_r5-04 sarcophagus_wood with lid";
-	specializes	 = base_chest;
-	
-	common:screen_name	 = "Sarcophagus";
-	aspect:model	 = m_i_csl_sarcophagus-02;
-	aspect:material	= stone;
-	   
-	   [body]
-	   {
-		   [chore_dictionary]
-		   {
-			   chore_prefix = a_i_csl;
-			   [chore_open]
-			   {
-				   skrit = transition;
-				   [anim_files] { 00 = sarcophagus-02-open; }
-			   }
-		   }
-	   }
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [oneof*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.4;
-					   max = 27662;
-					   min = 18442;
-					   min_pile = 4;
-					   piles = 2 - 3;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.01;
-					   il_main = #weapon/-mod(1)/156-180;
-					   il_main = #armor/-mod(1)/56-476;
-					   il_main = #*/-mod(1)/156-180;
-				   }
-			   }
-		   }
-	   }
-}
-
-[t:template,n:2W_crate_dsx_a1_r5-03]
-{
-	specializes	 = base_container_wood;
-	doc	 = "dsx_a1_r5-03 chest_footlocker";
-	category_name = "dsx_a1";
-	
-	aspect:model	 = m_i_glb_footlocker-01;
+	doc = "dsx_a1_r5-04 sarcophagus_wood with lid";
+	specializes = base_chest;
+	[common]
+	{
+		screen_name = "Sarcophagus";
+	}
+	[aspect]
+	{
+		model = m_i_csl_sarcophagus-02;
+	}
+	[aspect]
+	{
+		material = stone;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = sarcophagus-02-open;
+				}
+			}
+		}
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -683,70 +678,110 @@
 			{
 				[gold*]
 				{
-					   chance = 0.4;
-					   max = 27662;
-					   min = 18442;
-					   min_pile = 4;
-					   piles = 2 - 5;
+					chance = 0.4;
+					max = 27662;
+					min = 18442;
+					min_pile = 4;
+					piles = 2 - 3;
 				}
 				[oneof*]
 				{
-					   chance = 0.2;
-					   il_main = #*/156-180;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
+					chance = 0.01;
+					il_main = #weapon/-mod(1)/156-180;
+					il_main = #armor/-mod(1)/56-476;
+					il_main = #*/-mod(1)/156-180;
 				}
-			   }
-		   }
-	   }
+			}
+		}
+	}
 }
-
+[t:template,n:2W_crate_dsx_a1_r5-03]
+{
+	specializes = base_container_wood;
+	doc = "dsx_a1_r5-03 chest_footlocker";
+	category_name = "dsx_a1";
+	[aspect]
+	{
+		model = m_i_glb_footlocker-01;
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.4;
+					max = 27662;
+					min = 18442;
+					min_pile = 4;
+					piles = 2 - 5;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/156-180;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
+}
 [t:template,n:2W_crate_dsx_a1_r5-02]
 {
 	specializes = base_container_wood;
 	doc = "dsx_a1_r5-02 crate_base";
 	category_name = "dsx_a1";
-	
-	aspect:model = m_i_glb_crate;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [oneof*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.4;
-					   max = 24896;
-					   min = 16597;
-					   min_pile = 4;
-					   piles = 1 - 2;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.2;
-					   il_main = #*/156-180;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-			   }
-		   }
-	   }
+	[aspect]
+	{
+		model = m_i_glb_crate;
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.4;
+					max = 24896;
+					min = 16597;
+					min_pile = 4;
+					piles = 1 - 2;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #*/156-180;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r5-spec]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_a1_r5-spec chest_weathered_ornate";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-06;
-		[textures]	{ 0 = b_i_glb_chest-stone; }
+		[textures]
+		{
+			0 = b_i_glb_chest-stone;
+		}
 	}
 	[body]
 	{
@@ -756,7 +791,10 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-06-open; }
+				[anim_files]
+				{
+					00 = chest-06-open;
+				}
 			}
 		}
 	}
@@ -793,20 +831,18 @@
 		}
 	}
 }
-//a1r6
-
 [t:template,n:2W_crate_dsx_a1_r6-01]
 {
-	doc	 = "dsx_a1_r6-01 vase_red_ornate";
-	category_name	 = "dsx_a1";
-	specializes	 = base_container_clay;
+	doc = "dsx_a1_r6-01 vase_red_ornate";
+	category_name = "dsx_a1";
+	specializes = base_container_clay;
 	[aspect]
 	{
-		model	 = m_i_glb_vase-02;
+		model = m_i_glb_vase-02;
 	}
 	[generator_in_object]
 	{
-		child_template_name	 = vase_glb_broken_02;
+		child_template_name = vase_glb_broken_02;
 	}
 	[inventory]
 	{
@@ -834,19 +870,18 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r6-02]
 {
-	doc	 = "dsx_a1_r6-02 vase_tan_ornate";
-	category_name	 = "dsx_a1";
-	specializes	 = base_container_clay;
+	doc = "dsx_a1_r6-02 vase_tan_ornate";
+	category_name = "dsx_a1";
+	specializes = base_container_clay;
 	[aspect]
 	{
-		model	 = m_i_glb_vase-03;
+		model = m_i_glb_vase-03;
 	}
 	[generator_in_object]
 	{
-		child_template_name	 = vase_glb_broken_03;
+		child_template_name = vase_glb_broken_03;
 	}
 	[inventory]
 	{
@@ -874,11 +909,10 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r6-02-5]
 {
-	doc	 = "dsx_a1_r6-02-5 barrel";
-	category_name	 = "dsx_a1";
+	doc = "dsx_a1_r6-02-5 barrel";
+	category_name = "dsx_a1";
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -904,135 +938,146 @@
 			}
 		}
 	}
-	specializes		= base_container_barrel;
-	aspect:model	= m_i_glb_barrel;
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r6-03]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_a1_r6-03 locker_open";
 	specializes = base_chest;
-	
-	common:screen_name	 = "Locker";
-	   
-	   [aspect]
-	   {
-		   model = m_i_glb_locker-01;
-	   }
-	   [body]
-	   {
-		   [chore_dictionary]
-		   {
-			   chore_prefix = a_i_glb;
-			   [chore_open]
-			   {
-				   skrit = transition;
-				   [anim_files] { 00=locker-01-open; }
-			   }
-		   }
-	   }
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   //modified to not drop gold (and more of the other things)
-		   {
-			   [oneof*]
-			   {
-				   [oneof*]
-				   {
-					   chance = 0.25
+	[common]
+	{
+		screen_name = "Locker";
+	}
+	[aspect]
+	{
+		model = m_i_glb_locker-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = locker-01-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[oneof*]
+				{
+					chance = 0.25
 					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.25;
-					   il_main = #weapon/159-179;
-					   il_main = #armor/67-482;
-					   il_main = #*/159-179;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.0075;
-					   il_main = #weapon/-rare(1)/169-248;
-					   il_main = #armor/-rare(1)/67-594;
-					   il_main = #*/-rare(1)/169-248;
-				   }
-			   }
-		   }
-	   }
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.25;
+					il_main = #weapon/159-179;
+					il_main = #armor/67-482;
+					il_main = #*/159-179;
+				}
+				[oneof*]
+				{
+					chance = 0.0075;
+					il_main = #weapon/-rare(1)/169-248;
+					il_main = #armor/-rare(1)/67-594;
+					il_main = #*/-rare(1)/169-248;
+				}
+			}
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a1_r6-spec]
 {
-	specializes	 = base_chest;
-	doc	 = "dsx_a1_r6-spec crate_metal_lg";
-	category_name	 = "dsx_a1";
-	
-	common:screen_name	 = "Metal Crate";
-	   
-	aspect:model	 = m_i_gob_crate-02;
-	aspect:material = steel;
-	   [body]
-	   {
-		   [chore_dictionary]
-		   {
-			   chore_prefix = a_i_gob;
-			   [chore_open]
-			   {
-				   skrit = transition;
-				   [anim_files] { 00=crate-02-open; }
-			   }
-		   }
-	   }
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [oneof*]
-				   {
-					   il_main = #weapon/159-179;
-					   il_main = #body/67-482;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #spell/45-67;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/-rare(1)/169-248;
-					   il_main = #body/-rare(1)/67-594;
-				   }
-				   [oneof*]
-				   {
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-			   }
-		   }
-	   }
+	specializes = base_chest;
+	doc = "dsx_a1_r6-spec crate_metal_lg";
+	category_name = "dsx_a1";
+	[common]
+	{
+		screen_name = "Metal Crate";
+	}
+	[aspect]
+	{
+		model = m_i_gob_crate-02;
+	}
+	[aspect]
+	{
+		material = steel;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_gob;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = crate-02-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					il_main = #weapon/159-179;
+					il_main = #body/67-482;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #spell/45-67;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/169-248;
+					il_main = #body/-rare(1)/67-594;
+				}
+				[oneof*]
+				{
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+			}
+		}
+	}
 }
-
-////////////////////////////////////////
-// A2
-////////////////////////////////////////
 [t:template,n:2W_crate_dsx_a2_r0-00]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r0-00 barrel";
-	
-	specializes	= base_container_barrel;
-	aspect:model	= m_i_glb_barrel;
-	
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -1069,18 +1114,19 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r0-01]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r0-01 crate";
-	specializes		= base_container_wood;
+	specializes = base_container_wood;
 	[aspect]
 	{
-		model	= m_i_glb_crate-krug;
-		[textures]	{0=b_i_glb_crate-02;}
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_glb_crate-02;
+		}
 	}
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -1112,14 +1158,15 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r0-02]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r0-02 footlocker";
-	specializes 		= base_container_wood;
-	aspect:model 		= m_i_glb_footlocker-01;
-	
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_footlocker-01;
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -1151,72 +1198,73 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r0-03]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r0r1r2-00 locker_open";
 	specializes = base_chest;
-	
-	common:screen_name = "Locker";
-	   
-	   [aspect]
-	   {
-		   model = m_i_glb_locker-01;
-	   }
-	   [body]
-	   {
-		   [chore_dictionary]
-		   {
-			   chore_prefix = a_i_glb;
-			   [chore_open]
-			   {
-				   skrit = transition;
-				   [anim_files] { 00=locker-01-open; }
-			   }
-		   }
-	   }
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [oneof*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.2;
-					   max = 29474;
-					   min = 19650;
-					   min_pile = 4;
-					   piles = 2 - 3;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.2;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.2;
-					   il_main = #weapon/159-179;
-					   il_main = #armor/67-482;
-				   }
-			   }
-		   }
-	   }
-}
-
-[t:template,n:2W_crate_dsx_a2_r0a-00]
-//vase_glb_05]
-{
-	doc															= "dsx_a2_r3r4r5-01 vase_peach_ornate";
-	specializes = base_container_clay;
-	category_name		= "dsx_a2";
+	[common]
+	{
+		screen_name = "Locker";
+	}
 	[aspect]
 	{
-		model		= m_i_glb_vase-05;
+		model = m_i_glb_locker-01;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_glb;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = locker-01-open;
+				}
+			}
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					max = 29474;
+					min = 19650;
+					min_pile = 4;
+					piles = 2 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.2;
+					il_main = #weapon/159-179;
+					il_main = #armor/67-482;
+				}
+			}
+		}
+	}
+}
+[t:template,n:2W_crate_dsx_a2_r0a-00]
+{
+	doc = "dsx_a2_r3r4r5-01 vase_peach_ornate";
+	specializes = base_container_clay;
+	category_name = "dsx_a2";
+	[aspect]
+	{
+		model = m_i_glb_vase-05;
 	}
 	[inventory]
 	{
@@ -1240,7 +1288,7 @@
 					max = 2;
 					min = 1;
 				}
-				[oneof*] //rareness
+				[oneof*]
 				{
 					chance = 0.05;
 					il_main = #weapon/-rare(1)/169-248;
@@ -1251,9 +1299,7 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r0a-01]
-//pot_des_clay_05]
 {
 	specializes = base_pot_des_clay_05;
 	doc = "dsx_a2_r0a pot_clay_sm_black";
@@ -1270,7 +1316,6 @@
 					chance = 0.2;
 					max = 29474;
 					min = 19650;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1292,13 +1337,11 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r0a-02]
-//pot_des_clay_03]
 {
 	specializes = base_pot_des_clay_03;
 	doc = "dsx_a2_r0a pot_clay_lg_terracotta";
-	category_name						= "dsx_a2";
+	category_name = "dsx_a2";
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -1311,7 +1354,6 @@
 					chance = 0.2;
 					max = 26527;
 					min = 17685;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1331,54 +1373,58 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r0a-03]
-//trunk_csl_golden
 {
 	specializes = base_container_wood;
 	doc = "dsx_a2_r0a-03 chest_long_gld";
 	category_name = "dsx_a2";
-	
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_csl_trunk-golden;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [oneof*]
-				   {
-					   chance = 0.3;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-					   il_main = #*/159-179;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.1;
-					   il_main = #spell/45-78;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.1;
-					   il_main = #*/159-179;
-				   }
-			   }
-		   }
-	   }
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = #*/159-179;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #spell/45-78;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #*/159-179;
+				}
+			}
+		}
+	}
 }
 [t:template,n:2W_crate_dsx_a2_r0a-04]
-//vase_glb_04]
 {
 	specializes = base_container_clay;
 	doc = "dsx_a2_r0a-04 vase_blue_ornate";
 	category_name = "dsx_a2";
 	[aspect]
 	{
-		model		= m_i_glb_vase-04;
+		model = m_i_glb_vase-04;
 	}
 	[inventory]
 	{
@@ -1413,10 +1459,7 @@
 		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a2_r1-01]
-//pot_des_clay_05]
 {
 	specializes = base_pot_des_clay_05;
 	doc = "dsx_a2_r1-01 pot_clay_sm_black";
@@ -1433,7 +1476,6 @@
 					chance = 0.2;
 					max = 29474;
 					min = 19650;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1456,7 +1498,6 @@
 	}
 }
 [t:template,n:2W_crate_dsx_a2_r1-02]
-//pot_des_clay_03]
 {
 	specializes = base_pot_des_clay_03;
 	doc = "dsx_a2_r0r1r2-02 pot_clay_lg_terracotta";
@@ -1473,7 +1514,6 @@
 					chance = 0.2;
 					max = 26527;
 					min = 17685;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1494,54 +1534,66 @@
 	}
 }
 [t:template,n:2W_crate_dsx_a2_r1-03]
-//trunk_csl_golden
 {
 	specializes = base_container_wood;
 	doc = "dsx_a2_r1-03 chest_long_gld";
 	category_name = "dsx_a2";
-	
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_csl_trunk-golden;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [oneof*]
-				   {
-					   chance = 0.3;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-					   il_main = #*/146-172;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.1;
-					   il_main = #spell/38-67;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.1;
-					   il_main = #*/146-172;
-				   }
-			   }
-		   }
-	   }
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = #*/146-172;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #spell/38-67;
+				}
+				[oneof*]
+				{
+					chance = 0.1;
+					il_main = #*/146-172;
+				}
+			}
+		}
+	}
 }
-[t:template,n:2W_crate_dsx_a2_r1-spec] //chest_grs_02
+[t:template,n:2W_crate_dsx_a2_r1-spec]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r1-spec grass crate";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-04;
-		[textures] { 0 = b_i_glb_chest-open-02; }
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
 	}
 	[body]
 	{
@@ -1551,7 +1603,10 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -1592,10 +1647,7 @@
 		}
 	}
 }
-
-// A2_R2
 [t:template,n:2W_crate_dsx_a2_r2-01]
-//pot_des_clay_05]
 {
 	specializes = base_pot_des_clay_05;
 	doc = "dsx_a2_r2-01 pot_clay_sm_black";
@@ -1612,7 +1664,6 @@
 					chance = 0.2;
 					max = 31370;
 					min = 20914;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1635,7 +1686,6 @@
 	}
 }
 [t:template,n:2W_crate_dsx_a2_r2-02]
-//pot_des_clay_03]
 {
 	specializes = base_pot_des_clay_03;
 	doc = "dsx_a2_r2-02 pot_clay_lg_terracotta";
@@ -1652,7 +1702,6 @@
 					chance = 0.2;
 					max = 28233;
 					min = 18822;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1672,57 +1721,67 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r2-03]
-//trunk_csl_golden
 {
 	specializes = base_container_wood;
 	doc = "dsx_a2_r0r1r2-03 chest_long_gld";
 	category_name = "dsx_a2";
-	
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_csl_trunk-golden;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [oneof*]
-				   {
-					   chance = 0.3;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-					   il_main = #*/146-172;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #spell/48-67;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #*/146-172;
-				   }
-			   }
-		   }
-	   }
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = #*/146-172;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #spell/48-67;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #*/146-172;
+				}
+			}
+		}
+	}
 }
-[t:template,n:2W_crate_dsx_a2_r2-spec] //chest_grs_02
+[t:template,n:2W_crate_dsx_a2_r2-spec]
 {
-	// a2_r2 is no longer the same level as a2_r0 and a2_r1 so this needs to be changed.
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r2-spec grass crate";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-04;
-		[textures]							{ 0 = b_i_glb_chest-open-02; }
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
 	}
 	[body]
 	{
@@ -1732,7 +1791,10 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -1770,20 +1832,15 @@
 		}
 	}
 }
-
-// A2_R3 - LEVEL 7
 [t:template,n:2W_crate_dsx_a2_r3-00]
-//vase_glb_05]
 {
 	doc = "dsx_a2_r3r4r5-01 vase_peach_ornate";
-	category_name		= "dsx_a2";
+	category_name = "dsx_a2";
 	specializes = base_container_clay;
-	
 	[aspect]
 	{
-		model		= m_i_glb_vase-05;
+		model = m_i_glb_vase-05;
 	}
-		
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -1806,7 +1863,7 @@
 					max = 2;
 					min = 1;
 				}
-				[oneof*] //rareness
+				[oneof*]
 				{
 					chance = 0.05;
 					il_main = #weapon/-rare(1)/167-228;
@@ -1817,9 +1874,7 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r3-01]
-//pot_des_clay_05]
 {
 	specializes = base_pot_des_clay_05;
 	doc = "dsx_a2_r3-01 pot_clay_sm_black";
@@ -1836,7 +1891,6 @@
 					chance = 0.2;
 					max = 35425;
 					min = 23617;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1858,11 +1912,8 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r3-02]
-//pot_des_clay_03]
 {
-	// a2_r2 is no longer the same level as a2_r0 and a2_r1 so this needs to be changed.
 	specializes = base_pot_des_clay_03;
 	doc = "dsx_a2_r3-02 pot_clay_lg_terracotta";
 	category_name = "dsx_a2";
@@ -1878,7 +1929,6 @@
 					chance = 0.2;
 					max = 31882;
 					min = 21255;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -1898,47 +1948,51 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r3-03]
-//trunk_csl_golden
 {
 	specializes = base_container_wood;
 	doc = "dsx_a2_r0r1r2-03 chest_long_gld";
 	category_name = "dsx_a2";
-	
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_csl_trunk-golden;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [oneof*]
-				   {
-					   chance = 0.3;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-					   il_main = #*/152-167;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #spell/41-66;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #*/152-167;
-				   }
-			   }
-		   }
-	   }
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = #*/152-167;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #spell/41-66;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #*/152-167;
+				}
+			}
+		}
+	}
 }
 [t:template,n:2W_crate_dsx_a2_r3-04]
-//pot_des_clay_04]
 {
 	specializes = base_pot_des_clay_04;
 	doc = "dsx_a2_r3-04 pot_clay_sm_peach";
@@ -1977,14 +2031,13 @@
 	}
 }
 [t:template,n:2W_crate_dsx_a2_r3-05]
-//vase_glb_04]
 {
 	specializes = base_container_clay;
 	doc = "dsx_a2_r3-05 vase_blue_ornate";
-	category_name		= "dsx_a2";
+	category_name = "dsx_a2";
 	[aspect]
 	{
-		model		= m_i_glb_vase-04;
+		model = m_i_glb_vase-04;
 	}
 	[inventory]
 	{
@@ -2019,8 +2072,7 @@
 		}
 	}
 }
-
-[t:template,n:2W_crate_dsx_a2_r3-spec] //chest_wood_use_toggle
+[t:template,n:2W_crate_dsx_a2_r3-spec]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r3r4r5-spec chest_wood_use_toggle";
@@ -2033,13 +2085,11 @@
 			{
 				[gold*]
 				{
-					//chance = 0.1;
 					max = 56680;
 					min = 37786;
 				}
 				[oneof*]
 				{
-					//chance = 0.5;
 					il_main = #weapon/152-167;
 					il_main = #armor/166-439;
 					max = 2;
@@ -2047,7 +2097,6 @@
 				}
 				[oneof*]
 				{
-					//chance = 0.004;
 					il_main = #weapon/-rare(1)/167-228;
 					il_main = #armor/-rare(1)/124-588;
 				}
@@ -2060,18 +2109,23 @@
 			}
 		}
 	}
-	//CHANGED: This model is for a magically sealed chest.  We want it to just open.
-	[base_chest]  
+	[base_chest]
 	{
 		wait_for_activate = false;
-	}	//copied:
+	}
 	specializes = base_chest_use_toggle;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = wood;
 		model = m_i_glb_chest-07;
-		[textures]		{ 0 = b_i_csl_chest-06; }
+		[textures]
+		{
+			0 = b_i_csl_chest-06;
+		}
 	}
 	[body]
 	{
@@ -2081,27 +2135,23 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-07-open; }
+				[anim_files]
+				{
+					00 = chest-07-open;
+				}
 			}
 		}
 	}
 }
-
-
-
-
-// A2_R4 - LEVEL 7
 [t:template,n:2W_crate_dsx_a2_r4-00]
-//vase_glb_05]
 {
-	doc															= "dsx_a2_r3r4r5-01 vase_peach_ornate";
+	doc = "dsx_a2_r3r4r5-01 vase_peach_ornate";
 	category_name = "dsx_a2";
 	specializes = base_container_clay;
 	[aspect]
 	{
-		model		= m_i_glb_vase-05;
+		model = m_i_glb_vase-05;
 	}
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -2124,7 +2174,7 @@
 					max = 2;
 					min = 1;
 				}
-				[oneof*] //rareness
+				[oneof*]
 				{
 					chance = 0.05;
 					il_main = #weapon/-rare(1)/167-228;
@@ -2135,10 +2185,7 @@
 		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a2_r4-01]
-//pot_des_clay_03]
 {
 	specializes = base_pot_des_clay_03;
 	doc = "dsx_a2_r4-01 pot_clay_lg_terracotta";
@@ -2155,7 +2202,6 @@
 					chance = 0.2;
 					max = 35425;
 					min = 23617;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -2176,56 +2222,58 @@
 	}
 }
 [t:template,n:2W_crate_dsx_a2_r4-02]
-//trunk_csl_golden
 {
 	specializes = base_container_wood;
 	doc = "dsx_a2_r4-02 chest_long_gld";
 	category_name = "dsx_a2";
-	
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_csl_trunk-golden;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-			   	[gold*]
-			   	{
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
 					chance = 0.3;
 					max = 31882;
 					min = 21255;
-			   
 					min_pile = 8;
 					piles = 2 - 3;
-				} 
-
-				   [oneof*]
-				   {
-					   chance = 0.3;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-					   il_main = #*/152-167;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #spell/41-66;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #*/152-167;
-				   }
-			   }
-		   }
-	   }
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = #*/152-167;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #spell/41-66;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #*/152-167;
+				}
+			}
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r4-03]
-//pot_des_clay_04]
 {
 	specializes = base_pot_des_clay_04;
 	doc = "dsx_a2_r4-03 pot_clay_sm_peach";
@@ -2263,20 +2311,23 @@
 		}
 	}
 }
-
-
-[t:template,n:2W_crate_dsx_a2_r4-spec] //chest_grs_02
+[t:template,n:2W_crate_dsx_a2_r4-spec]
 {
-	// a2_r2 is no longer the same level as a2_r0 and a2_r1 so this needs to be changed.
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r0r1r2-spec grass crate";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-04;
-		[textures]							{ 0 = b_i_glb_chest-open-02; }
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
 	}
 	[body]
 	{
@@ -2286,7 +2337,10 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -2324,21 +2378,15 @@
 		}
 	}
 }
-
-
-
-// A2_R5 - LEVEL 8
 [t:template,n:2W_crate_dsx_a2_r5-00]
-//vase_glb_05]
 {
 	doc = "dsx_a2_r5-00 vase_peach_ornate";
 	category_name = "dsx_a2";
 	specializes = base_container_clay;
 	[aspect]
 	{
-		model		= m_i_glb_vase-05;
+		model = m_i_glb_vase-05;
 	}
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -2361,7 +2409,7 @@
 					max = 2;
 					min = 1;
 				}
-				[oneof*] //rareness
+				[oneof*]
 				{
 					chance = 0.01;
 					il_main = #weapon/-rare(1)/168-222;
@@ -2372,9 +2420,7 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r5-01]
-//pot_des_clay_05]
 {
 	specializes = base_pot_des_clay_05;
 	doc = "dsx_a2_r5-01 pot_clay_sm_black";
@@ -2391,7 +2437,6 @@
 					chance = 0.2;
 					max = 37633;
 					min = 25089;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -2414,7 +2459,6 @@
 	}
 }
 [t:template,n:2W_crate_dsx_a2_r5-02]
-//pot_des_clay_03]
 {
 	specializes = base_pot_des_clay_03;
 	doc = "dsx_a2_r5-02 pot_clay_lg_terracotta";
@@ -2431,7 +2475,6 @@
 					chance = 0.2;
 					max = 33869;
 					min = 22580;
-					
 					min_pile = 8;
 					piles = 2 - 3;
 				}
@@ -2451,63 +2494,63 @@
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r5-03]
-//trunk_csl_golden
 {
 	specializes = base_container_wood;
 	doc = "dsx_a2_r5-03 chest_long_gld";
 	category_name = "dsx_a2";
-	
-	aspect:model		= m_i_glb_trunk-long;
- aspect:textures:0	= b_i_csl_trunk-golden;
-	   
-	[inventory]
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
 		{
-			drop_at_use_point = true;
-			[pcontent]
-				{
-					[all*]
-						{
-					 
-							[gold*]
-								{
-									chance = 0.3;
-									max = 37633;
-									min = 25089;
-			   
-									min_pile = 8;
-									piles = 2 - 3;
-								} 
-
-							[oneof*]
-								{
-									chance = 0.3;
-									il_main = potion_mana_large;
-									il_main = potion_health_large;
-									il_main = #*/148-168;
-								}
-							[oneof*]
-								{
-									chance = 0.15;
-									il_main = #spell/44-65;
-								}
-							[oneof*]
-								{
-									chance = 0.15;
-									il_main = #*/148-168;
-								}
-						}
-				}
+			0 = b_i_csl_trunk-golden;
 		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.3;
+					max = 37633;
+					min = 25089;
+					min_pile = 8;
+					piles = 2 - 3;
+				}
+				[oneof*]
+				{
+					chance = 0.3;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					il_main = #*/148-168;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #spell/44-65;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #*/148-168;
+				}
+			}
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a2_r5-04]
-//pot_des_clay_04]
 {
 	specializes = base_pot_des_clay_04;
 	doc = "dsx_a2_r5-04 pot_clay_sm_peach";
-	category_name						= "dsx_a2";
+	category_name = "dsx_a2";
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -2542,14 +2585,13 @@
 	}
 }
 [t:template,n:2W_crate_dsx_a2_r5-05]
-//vase_glb_04]
 {
 	specializes = base_container_clay;
 	doc = "dsx_a2_r5-05 vase_blue_ornate";
-	category_name		= "dsx_a2";
+	category_name = "dsx_a2";
 	[aspect]
 	{
-		model		= m_i_glb_vase-04;
+		model = m_i_glb_vase-04;
 	}
 	[inventory]
 	{
@@ -2584,20 +2626,23 @@
 		}
 	}
 }
-
-
-
-[t:template,n:2W_crate_dsx_a2_r5-spec] //chest_grs_02
+[t:template,n:2W_crate_dsx_a2_r5-spec]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r5-spec grass crate";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-04;
-		[textures]							{ 0 = b_i_glb_chest-open-02; }
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
 	}
 	[body]
 	{
@@ -2607,7 +2652,10 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -2645,7 +2693,7 @@
 		}
 	}
 }
-[t:template,n:2W_crate_dsx_a2_r5-spec2] //chest_wood_use_toggle
+[t:template,n:2W_crate_dsx_a2_r5-spec2]
 {
 	category_name = "dsx_a2";
 	doc = "dsx_a2_r3r4r5-spec chest_wood_use_toggle";
@@ -2658,13 +2706,11 @@
 			{
 				[gold*]
 				{
-					//chance = 0.1;
 					max = 60212;
 					min = 40142;
 				}
 				[oneof*]
 				{
-					//chance = 0.5;
 					il_main = #weapon/148-168;
 					il_main = #armor/73-450;
 					max = 2;
@@ -2672,7 +2718,6 @@
 				}
 				[oneof*]
 				{
-					//chance = 0.004;
 					il_main = #weapon/-rare(1)/168-222;
 					il_main = #armor/-rare(1)/254-587;
 				}
@@ -2685,18 +2730,23 @@
 			}
 		}
 	}
-	//CHANGED: This model is for a magically sealed chest.  We want it to just open.
-	[base_chest]  
+	[base_chest]
 	{
 		wait_for_activate = false;
-	}	//copied:
+	}
 	specializes = base_chest_use_toggle;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = wood;
 		model = m_i_glb_chest-07;
-		[textures]		{ 0 = b_i_csl_chest-06; }
+		[textures]
+		{
+			0 = b_i_csl_chest-06;
+		}
 	}
 	[body]
 	{
@@ -2706,15 +2756,14 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-07-open; }
+				[anim_files]
+				{
+					00 = chest-07-open;
+				}
 			}
 		}
 	}
 }
-
-////////////////////////////////////////
-//A3
-////////////////////////////////////////
 [t:template,n:2W_crate_dsx_a3_r1-01]
 {
 	category_name = "dsx_a3";
@@ -2734,11 +2783,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.2;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.1;
@@ -2762,11 +2811,8 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes							= base_pot_cav_03;
+	specializes = base_pot_cav_03;
 }
-
 [t:template,n:2W_crate_dsx_a3_r1-02]
 {
 	category_name = "dsx_a3";
@@ -2786,11 +2832,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.2;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.2;
@@ -2809,16 +2855,12 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	//	specializes = non_interactive_blocking;
-	specializes							= base_pot_cav_03; //THIS IS A BIG CHEAT
+	specializes = base_pot_cav_03;
 	[aspect]
 	{
 		model = m_i_grs_pot-01;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r1-03]
 {
 	category_name = "dsx_a3";
@@ -2838,11 +2880,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.1;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.1;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.3;
@@ -2861,18 +2903,16 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes							= base_container_barrel;
-	
+	specializes = base_container_barrel;
 	[aspect]
 	{
-		model		= m_i_swp_barrel-01;
-		[textures]			{0=b_i_swp_barrel-01;}
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a3_r1-spec]
 {
 	category_name = "dsx_a3";
@@ -2891,11 +2931,11 @@
 					min_pile = 40;
 				}
 				[oneof*]
-					{
-						chance = 0.2;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					il_main = #weapon/135-172;
@@ -2920,15 +2960,19 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-04;
-		[textures]							{ 0 = b_i_glb_chest-open-02; }
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
 	}
 	[body]
 	{
@@ -2938,12 +2982,14 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r2-01]
 {
 	category_name = "dsx_a3";
@@ -2980,11 +3026,8 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes	= base_pot_cav_03;
+	specializes = base_pot_cav_03;
 }
-
 [t:template,n:2W_crate_dsx_a3_r2-02]
 {
 	category_name = "dsx_a3";
@@ -3021,16 +3064,12 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	//	specializes = non_interactive_blocking;
-	specializes	= base_pot_cav_03; //THIS IS A BIG CHEAT
+	specializes = base_pot_cav_03;
 	[aspect]
 	{
 		model = m_i_grs_pot-01;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r2-03]
 {
 	category_name = "dsx_a3";
@@ -3050,11 +3089,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.2;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.3;
@@ -3073,17 +3112,16 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes							= base_container_barrel;
-	
+	specializes = base_container_barrel;
 	[aspect]
 	{
-		model		= m_i_swp_barrel-01;
-		[textures]			{0=b_i_swp_barrel-01;}
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r2-spec]
 {
 	category_name = "dsx_a3";
@@ -3102,10 +3140,10 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					il_main = #weapon/125-170;
@@ -3133,15 +3171,19 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-04;
-		[textures]							{ 0 = b_i_glb_chest-open-02; }
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
 	}
 	[body]
 	{
@@ -3151,12 +3193,14 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3-01]
 {
 	category_name = "dsx_a3";
@@ -3194,12 +3238,18 @@
 		}
 	}
 	specializes = base_chest;
-	[common] { screen_name="Hanging Basket"; }
+	[common]
+	{
+		screen_name = "Hanging Basket";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_hbasket;
-		[textures]	{ 0 = b_i_glb_hbasket; }
+		[textures]
+		{
+			0 = b_i_glb_hbasket;
+		}
 	}
 	[body]
 	{
@@ -3208,18 +3258,18 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=a_i_glb_hbasket-open; }
+				[anim_files]
+				{
+					00 = a_i_glb_hbasket-open;
+				}
 			}
 		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a3_r3-01a]
 {
 	category_name = "dsx_a3";
 	doc = "dsx_a3_r3-01a crate";
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -3261,17 +3311,16 @@
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
-	aspect:model = m_i_cav_crate-sm;
+	[aspect]
+	{
+		model = m_i_cav_crate-sm;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3-02]
 {
 	category_name = "dsx_a3";
 	doc = "dsx_a3_r3-02";
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -3287,11 +3336,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.15;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.15;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.2;
@@ -3319,20 +3368,20 @@
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
-		model   = m_i_glb_crate-03;
-		[textures]      {0=b_i_glb_crate-03;}
+		model = m_i_glb_crate-03;
+		[textures]
+		{
+			0 = b_i_glb_crate-03;
+		}
 	}
 }
 [t:template,n:2W_crate_dsx_a3_r3-03]
 {
 	category_name = "dsx_a3";
 	doc = "dsx_a3_r3-03";
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -3348,11 +3397,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.15;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.15;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.3;
@@ -3380,21 +3429,20 @@
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_wood;
+	specializes = base_container_wood;
 	[aspect]
 	{
-		model	= m_i_glb_crate-krug;
-		[textures]	{0=b_i_swp_crate-01;}
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_swp_crate-01;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3-03a]
 {
 	category_name = "dsx_a3";
 	doc = "dsx_a3_r3-03a barrel";
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -3410,11 +3458,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.15;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.15;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.3;
@@ -3442,22 +3490,20 @@
 	{
 		trap = trp_dsx_generator_arrow_barrel;
 	}
-	
-	//everything from here is copied:
-	specializes							= base_container_barrel;
-	
+	specializes = base_container_barrel;
 	[aspect]
 	{
-		model		= m_i_swp_barrel-01;
-		[textures]			{0=b_i_swp_barrel-01;}
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3-spec]
 {
 	category_name = "dsx_a3";
 	doc = "dsx_a3_r3-spec";
-	
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -3472,11 +3518,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.15;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.15;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					il_main = #weapon/125-170;
@@ -3508,15 +3554,19 @@
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
-	specializes			= base_container_wood;
-		
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_glb_trunk-long;
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_trunk-long;
+		}
+	}
 }
-
-
 [t:template,n:2W_crate_dsx_a3_r3a-00]
 {
 	category_name = "dsx_a3";
@@ -3556,12 +3606,12 @@
 	{
 		trap = trp_dsx_generator_arrow_barrel;
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_barrel;
-	aspect:model	= m_i_glb_barrel;
+	specializes = base_container_barrel;
+	[aspect]
+	{
+		model = m_i_glb_barrel;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-01]
 {
 	category_name = "dsx_a3";
@@ -3607,12 +3657,12 @@
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
-	aspect:model = m_i_cav_crate-sm;
+	[aspect]
+	{
+		model = m_i_cav_crate-sm;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-01a]
 {
 	category_name = "dsx_a3";
@@ -3632,11 +3682,11 @@
 					min_pile = 20;
 				}
 				[oneof*]
-					{
-						chance = 0.15;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.15;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.1;
@@ -3660,11 +3710,8 @@
 			}
 		}
 	}
-			
-	//everything from here is copied:
-	specializes	= base_pot_cav_03;
+	specializes = base_pot_cav_03;
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-01c]
 {
 	category_name = "dsx_a3";
@@ -3702,12 +3749,18 @@
 		}
 	}
 	specializes = base_chest;
-	[common] { screen_name="Hanging Basket"; }
+	[common]
+	{
+		screen_name = "Hanging Basket";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_hbasket;
-		[textures]	{ 0 = b_i_glb_hbasket; }
+		[textures]
+		{
+			0 = b_i_glb_hbasket;
+		}
 	}
 	[body]
 	{
@@ -3716,12 +3769,14 @@
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=a_i_glb_hbasket-open; }
+				[anim_files]
+				{
+					00 = a_i_glb_hbasket-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-02]
 {
 	category_name = "dsx_a3";
@@ -3767,16 +3822,16 @@
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
-		model   = m_i_glb_crate-03;
-		[textures]      {0=b_i_glb_crate-03;}
+		model = m_i_glb_crate-03;
+		[textures]
+		{
+			0 = b_i_glb_crate-03;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-02a]
 {
 	category_name = "dsx_a3";
@@ -3813,16 +3868,12 @@
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	//	specializes = non_interactive_blocking;
-	specializes	= base_pot_cav_03; //THIS IS A BIG CHEAT
+	specializes = base_pot_cav_03;
 	[aspect]
 	{
 		model = m_i_grs_pot-01;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-02b]
 {
 	category_name = "dsx_a3";
@@ -3868,16 +3919,16 @@
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
-		model   = m_i_glb_crate-03;
-		[textures]      {0=b_i_glb_crate-03;}
+		model = m_i_glb_crate-03;
+		[textures]
+		{
+			0 = b_i_glb_crate-03;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-03]
 {
 	category_name = "dsx_a3";
@@ -3914,38 +3965,42 @@
 			}
 		}
 	}
-	
-	specializes		= base_container_wood;
-common:screen_name	= "Hanging Basket";
-aspect:model	= m_i_glb_hbasket;
-	   [physics]
-	   {
-		   [break_particulate]
-		   {
-			   frag_glb_hbasket_01 = 2;
-			   frag_glb_hbasket_02 = 2;
-			   frag_glb_hbasket_03 = 2;
-			   frag_glb_hbasket_04 = 2;
-			   frag_glb_hbasket_05 = 2;
-		   }
-	   }
-	   [generator_in_object]
-	   {
-		   spawn_chance = 1;
-		   child_template_name = dsx_hanging_basket-broken;
-	   }
+	specializes = base_container_wood;
+	[common]
+	{
+		screen_name = "Hanging Basket";
+	}
+	[aspect]
+	{
+		model = m_i_glb_hbasket;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_hbasket_01 = 2;
+			frag_glb_hbasket_02 = 2;
+			frag_glb_hbasket_03 = 2;
+			frag_glb_hbasket_04 = 2;
+			frag_glb_hbasket_05 = 2;
+		}
+	}
+	[generator_in_object]
+	{
+		spawn_chance = 1;
+		child_template_name = dsx_hanging_basket-broken;
+	}
 }
 [t:template,n:2W_dsx_hanging_basket-broken]
-{ //THIS IS REQUIRED FOR THE TEMPLATE JUST PRIOR, THE BREAKABLE HANGING BASKET
+{
 	category_name = "dsx_a3";
 	doc = "dsx_hanging_basket-broken";
 	specializes = non_interactive_nonblocking;
-	[aspect] 
-	{ 
+	[aspect]
+	{
 		model = m_i_glb_hbasket-broken;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-03a]
 {
 	category_name = "dsx_a3";
@@ -3991,17 +4046,16 @@ aspect:model	= m_i_glb_hbasket;
 	{
 		trap = trp_dsx_generator_arrow_barrel;
 	}
-	
-	//everything from here is copied:
-	specializes	= base_container_barrel;
-	
+	specializes = base_container_barrel;
 	[aspect]
 	{
-		model		= m_i_swp_barrel-01;
-		[textures]			{0=b_i_swp_barrel-01;}
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a3_r3a-spec]
 {
 	category_name = "dsx_a3";
@@ -4050,18 +4104,19 @@ aspect:model	= m_i_glb_hbasket;
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	
-	//everything from here is copied:
-	specializes			= base_container_wood;
-	
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_glb_trunk-long;
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_trunk-long;
+		}
+	}
 }
-
-////////////////////////////////////////
-//A4
-////////////////////////////////////////
-
 [t:template,n:2W_crate_dsx_a4_r1-01]
 {
 	category_name = "dsx_a4";
@@ -4102,25 +4157,31 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//copied stuff
-	specializes		= base_container_clay;
-	common:screen_name = "Gourd";
-	aspect:model = m_i_glb_gourd;
-	aspect:scale_base = 2.0;
-	   [physics]
-	   {
-		   [break_particulate]
-		   {
-			   frag_glb_gourd_01 = 2;
-			   frag_glb_gourd_02 = 2;
-			   frag_glb_gourd_03 = 2;
-			   frag_glb_gourd_04 = 2;
-			   frag_glb_gourd_05 = 2;
-		   }
-	   }
+	specializes = base_container_clay;
+	[common]
+	{
+		screen_name = "Gourd";
+	}
+	[aspect]
+	{
+		model = m_i_glb_gourd;
+	}
+	[aspect]
+	{
+		scale_base = 2.0;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_gourd_01 = 2;
+			frag_glb_gourd_02 = 2;
+			frag_glb_gourd_03 = 2;
+			frag_glb_gourd_04 = 2;
+			frag_glb_gourd_05 = 2;
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r1-02]
 {
 	category_name = "dsx_a4";
@@ -4156,25 +4217,24 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_clay;
-	
-	
-	common:screen_name	= "Pot";
-		   
-	aspect:model	= m_i_cav_pot-02;
-	   
-	   [physics]
-	   {
-		   [break_particulate]
-		   {
-			   frag_glb_pot_clay_16 = 2;
-			   frag_glb_pot_clay_17 = 6;
-		   }
-	   }
+	specializes = base_container_clay;
+	[common]
+	{
+		screen_name = "Pot";
+	}
+	[aspect]
+	{
+		model = m_i_cav_pot-02;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_pot_clay_16 = 2;
+			frag_glb_pot_clay_17 = 6;
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r1-03]
 {
 	category_name = "dsx_a4";
@@ -4193,11 +4253,11 @@ aspect:model	= m_i_glb_hbasket;
 					min = 26563;
 				}
 				[oneof*]
-					{
-						chance = 0.2;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.2;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.3;
@@ -4216,19 +4276,16 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_barrel;
-	
-	
+	specializes = base_container_barrel;
 	[aspect]
 	{
-		model	= m_i_swp_barrel-01;
-		[textures]	{0=b_i_swp_barrel-01;}
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a4_r1-spec]
 {
 	category_name = "dsx_a4";
@@ -4264,22 +4321,21 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes			= base_container_clay;
-	
-	aspect:model		= m_i_des_pot-clay-05;
-	   [physics]
-	   {
-		   [break_particulate]
-		   {
-			   frag_glb_pot_clay_08 = 2;
-			   frag_glb_pot_clay_09 = 3;
-			   frag_glb_pot_clay_10 = 2;
-		   }
-	   }
+	specializes = base_container_clay;
+	[aspect]
+	{
+		model = m_i_des_pot-clay-05;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_pot_clay_08 = 2;
+			frag_glb_pot_clay_09 = 3;
+			frag_glb_pot_clay_10 = 2;
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r1-DarkAcolyte-spec]
 {
 	category_name = "dsx_a4";
@@ -4334,30 +4390,35 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes			= base_chest;
-	
-	
-	common:screen_name	 = "Sarcophagus";
-	aspect:model	 = m_i_csl_sarcophagus-02;
-	aspect:material	= stone;
-	   
-	   [body]
-	   {
-		   [chore_dictionary]
-		   {
-			   chore_prefix = a_i_csl;
-			   [chore_open]
-			   {
-				   skrit = transition;
-				   [anim_files] { 00 = sarcophagus-02-open; }
-			   }
-		   }
-	   }
+	specializes = base_chest;
+	[common]
+	{
+		screen_name = "Sarcophagus";
+	}
+	[aspect]
+	{
+		model = m_i_csl_sarcophagus-02;
+	}
+	[aspect]
+	{
+		material = stone;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = sarcophagus-02-open;
+				}
+			}
+		}
+	}
 }
-
-
 [t:template,n:2W_crate_dsx_a4_r2-01]
 {
 	category_name = "dsx_a4";
@@ -4393,16 +4454,12 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	//	specializes = non_interactive_blocking;
-	specializes							= base_pot_cav_03; //THIS IS A BIG CHEAT
+	specializes = base_pot_cav_03;
 	[aspect]
 	{
 		model = m_i_grs_pot-01;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r2-02]
 {
 	category_name = "dsx_a4";
@@ -4421,11 +4478,11 @@ aspect:model	= m_i_glb_hbasket;
 					min = 23907;
 				}
 				[oneof*]
-					{
-						chance = 0.1;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.1;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.2;
@@ -4443,16 +4500,12 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	//	specializes = non_interactive_blocking;
-	specializes	= base_pot_cav_03; //THIS IS A BIG CHEAT
+	specializes = base_pot_cav_03;
 	[aspect]
 	{
 		model = m_i_grs_pot-01;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r2-03]
 {
 	category_name = "dsx_a4";
@@ -4490,15 +4543,13 @@ aspect:model	= m_i_glb_hbasket;
 	}
 	[common]
 	{
-		screen_name	= "Death Cage";
+		screen_name = "Death Cage";
 	}
-	   
 	[aspect]
 	{
-		model		= m_i_csl_cage-02;
+		model = m_i_csl_cage-02;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r2-04]
 {
 	category_name = "dsx_a4";
@@ -4517,11 +4568,11 @@ aspect:model	= m_i_glb_hbasket;
 					min = 26563;
 				}
 				[oneof*]
-					{
-						chance = 0.1;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.1;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.3;
@@ -4539,17 +4590,16 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes							= base_container_barrel;
-	
+	specializes = base_container_barrel;
 	[aspect]
 	{
-		model		= m_i_swp_barrel-01;
-		[textures]			{0=b_i_swp_barrel-01;}
+		model = m_i_swp_barrel-01;
+		[textures]
+		{
+			0 = b_i_swp_barrel-01;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r2-spec]
 {
 	category_name = "dsx_a4";
@@ -4590,15 +4640,19 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-04;
-		[textures]							{ 0 = b_i_glb_chest-open-02; }
+		[textures]
+		{
+			0 = b_i_glb_chest-open-02;
+		}
 	}
 	[body]
 	{
@@ -4608,12 +4662,14 @@ aspect:model	= m_i_glb_hbasket;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r3-01]
 {
 	category_name = "dsx_a4";
@@ -4649,12 +4705,16 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	specializes			= base_container_metal;
-	common:screen_name	= "Death Cage";
-	aspect:model		= m_i_csl_cage-02;
+	specializes = base_container_metal;
+	[common]
+	{
+		screen_name = "Death Cage";
+	}
+	[aspect]
+	{
+		model = m_i_csl_cage-02;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r3-02]
 {
 	category_name = "dsx_a4";
@@ -4673,11 +4733,11 @@ aspect:model	= m_i_glb_hbasket;
 					min = 23907;
 				}
 				[oneof*]
-					{
-						chance = 0.1;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.1;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.2;
@@ -4696,15 +4756,12 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//copied
-	specializes							= base_container_clay;
+	specializes = base_container_clay;
 	[aspect]
 	{
-		model		= m_i_glb_vase-05;
+		model = m_i_glb_vase-05;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r3-03]
 {
 	category_name = "dsx_a4";
@@ -4739,16 +4796,19 @@ aspect:model	= m_i_glb_hbasket;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	//	specializes = non_interactive_blocking;
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-03;
-textures:0 = b_i_glb_chest-01;
+		[textures]
+		{
+			0 = b_i_glb_chest-01;
+		}
 	}
 	[body]
 	{
@@ -4758,12 +4818,14 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r3-spec-krakemaw]
 {
 	category_name = "dsx_a4";
@@ -4774,7 +4836,7 @@ textures:0 = b_i_glb_chest-01;
 		[pcontent]
 		{
 			[all*]
-		{
+			{
 				[gold*]
 				{
 					max = 63751;
@@ -4788,19 +4850,22 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #armor/62-386;
 					il_main = #*/-rare(1)/178-215;
 				}
-		}
+			}
 		}
 	}
-	
-	//everything from here is copied:
-	//	specializes = non_interactive_blocking;
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-03;
-textures:0 = b_i_glb_chest-01;
+		[textures]
+		{
+			0 = b_i_glb_chest-01;
+		}
 	}
 	[body]
 	{
@@ -4810,12 +4875,14 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r3-04]
 {
 	category_name = "dsx_a4";
@@ -4850,15 +4917,19 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
-	[common] { screen_name="Cauldron"; }
+	[common]
+	{
+		screen_name = "Cauldron";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_coldron;
-		[textures]	{ 0 = b_i_glb_cauldron; }
+		[textures]
+		{
+			0 = b_i_glb_cauldron;
+		}
 	}
 	[body]
 	{
@@ -4867,12 +4938,14 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=a_i_glb_cauldron-open; }
+				[anim_files]
+				{
+					00 = a_i_glb_cauldron-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r3-spec]
 {
 	category_name = "dsx_a4";
@@ -4923,14 +4996,19 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-03;
-		[textures]		{ 0 = b_i_csl_chest-04; }
+		[textures]
+		{
+			0 = b_i_csl_chest-04;
+		}
 	}
 	[body]
 	{
@@ -4940,12 +5018,14 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4-01]
 {
 	category_name = "dsx_a4";
@@ -4983,12 +5063,12 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
-	aspect:model = m_i_cav_crate-sm;
+	[aspect]
+	{
+		model = m_i_cav_crate-sm;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4-02]
 {
 	category_name = "dsx_a4";
@@ -5023,16 +5103,16 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_wood;
+	specializes = base_container_wood;
 	[aspect]
 	{
-		model	= m_i_glb_crate-krug;
-		[textures]	{0=b_i_swp_crate-01;}
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_swp_crate-01;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4-03]
 {
 	category_name = "dsx_a4";
@@ -5051,11 +5131,11 @@ textures:0 = b_i_glb_chest-01;
 					min = 28132;
 				}
 				[oneof*]
-					{
-						chance = 0.1;
-						il_main = potion_mana_large;
-						il_main = potion_health_large;
-					}
+				{
+					chance = 0.1;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5073,16 +5153,16 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_wood;
+	specializes = base_container_wood;
 	[aspect]
 	{
-		model	= m_i_glb_crate-krug;
-		[textures]	{0=b_i_swp_crate-01;}
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_swp_crate-01;
+		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4-spec]
 {
 	category_name = "dsx_a4";
@@ -5125,15 +5205,19 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes			= base_container_wood;
-	
-	
-	aspect:model		= m_i_glb_trunk-long;
-	aspect:textures:0	= b_i_glb_trunk-long;
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_trunk-long;
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4a-01]
 {
 	category_name = "dsx_a4";
@@ -5168,12 +5252,12 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
-	aspect:model = m_i_cav_crate-sm;
+	[aspect]
+	{
+		model = m_i_cav_crate-sm;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4a-02]
 {
 	category_name = "dsx_a4";
@@ -5208,29 +5292,35 @@ textures:0 = b_i_glb_chest-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes			= base_chest;
-	
-	
-common:screen_name	 = "Sarcophagus";
-aspect:model	 = m_i_csl_sarcophagus-02;
-aspect:material	= stone;
-	   
-	   [body]
-	   {
-		   [chore_dictionary]
-		   {
-			   chore_prefix = a_i_csl;
-			   [chore_open]
-			   {
-				   skrit = transition;
-				   [anim_files] { 00 = sarcophagus-02-open; }
-			   }
-		   }
-	   }
+	specializes = base_chest;
+	[common]
+	{
+		screen_name = "Sarcophagus";
+	}
+	[aspect]
+	{
+		model = m_i_csl_sarcophagus-02;
+	}
+	[aspect]
+	{
+		material = stone;
+	}
+	[body]
+	{
+		[chore_dictionary]
+		{
+			chore_prefix = a_i_csl;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
+				{
+					00 = sarcophagus-02-open;
+				}
+			}
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4a-03]
 {
 	category_name = "dsx_a4";
@@ -5266,15 +5356,16 @@ aspect:material	= stone;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes			= base_container_wood;
-	
-common:screen_name	= "Casket";
-	   
-aspect:model		= m_i_cav_casket-01;
+	specializes = base_container_wood;
+	[common]
+	{
+		screen_name = "Casket";
+	}
+	[aspect]
+	{
+		model = m_i_cav_casket-01;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a4_r4a-spec]
 {
 	category_name = "dsx_a4";
@@ -5313,14 +5404,19 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
 	specializes = base_chest;
-	[common] { screen_name="Ironmaiden"; }
+	[common]
+	{
+		screen_name = "Ironmaiden";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_ironmaiden;
-		[textures]	{ 0 = b_i_glb_ironmaiden; }
+		[textures]
+		{
+			0 = b_i_glb_ironmaiden;
+		}
 	}
 	[body]
 	{
@@ -5329,21 +5425,19 @@ aspect:model		= m_i_cav_casket-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=a_i_glb_ironmaiden-open; }
+				[anim_files]
+				{
+					00 = a_i_glb_ironmaiden-open;
+				}
 			}
 		}
 	}
 }
-////////////////////////////////////////
-//A5
-////////////////////////////////////////
-
 [t:template,n:2W_crate_dsx_a5_r1-01]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r1-01 vase";
-	
-	[inventory] // container: 1 of 4, generated: Thu Jun 12 18:27:41 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5356,14 +5450,12 @@ aspect:model		= m_i_cav_casket-01;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5386,20 +5478,17 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	//everything from here is copied:
-	specializes		= base_container_clay;
+	specializes = base_container_clay;
 	[aspect]
 	{
-		model	= m_i_glb_vase-03;
+		model = m_i_glb_vase-03;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a5_r1-02]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r1-02 vase";
-	
-	[inventory] // container: 2 of 4, generated: Thu Jun 12 18:27:41 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5412,14 +5501,12 @@ aspect:model		= m_i_cav_casket-01;
 					min = 25319;
 					max = 37978;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5437,19 +5524,17 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	//everything from here is copied:
-	specializes		= base_container_clay;
+	specializes = base_container_clay;
 	[aspect]
 	{
-		model	= m_i_glb_vase-04;
+		model = m_i_glb_vase-04;
 	}
 }
 [t:template,n:2W_crate_dsx_a5_r1-03]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r1-03 crate";
-	
-	[inventory] // container: 3 of 4, generated: Thu Jun 12 18:27:41 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5462,14 +5547,12 @@ aspect:model		= m_i_cav_casket-01;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5487,8 +5570,6 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -5498,7 +5579,6 @@ aspect:model		= m_i_cav_casket-01;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -5522,14 +5602,12 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
 }
-
 [t:template,n:2W_crate_dsx_a5_r1-spec]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r1-spec trunk";
-	[inventory] // container: 4 of 4, generated: Thu Jun 12 18:27:41 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5538,28 +5616,22 @@ aspect:model		= m_i_cav_casket-01;
 			{
 				[gold*]
 				{
-					//								chance = 0.2;
 					min = 45011;
 					max = 67517;
 				}
-				
 				[oneof*]
 				{
-					//								chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
-					//								chance = 0.2;
 					il_main = #weapon/130-178;
 					il_main = #armor/68-405;
 					il_main = #*/130-178;
 				}
 				[oneof*]
 				{
-					//								chance = 0.01;
 					il_main = #weapon/-rare(1)/178-212;
 					il_main = #armor/-rare(1)/279-617;
 					il_main = #*/130-178;
@@ -5573,8 +5645,6 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -5584,19 +5654,16 @@ aspect:model		= m_i_cav_casket-01;
 			0 = b_i_csl_trunk-golden;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Trunk";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a5_r2-01]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r2-01 pot";
-	
-	[inventory] // container: 1 of 5, generated: Thu Jun 12 18:30:33 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5609,14 +5676,12 @@ aspect:model		= m_i_cav_casket-01;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5634,15 +5699,11 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_02;
 	[aspect]
 	{
 		model = m_i_des_pot-clay-02;
 	}
-	
 	[common]
 	{
 		screen_name = "Clay Pot";
@@ -5652,8 +5713,7 @@ aspect:model		= m_i_cav_casket-01;
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r2-02 barrel";
-	
-	[inventory] // container: 2 of 5, generated: Thu Jun 12 18:30:33 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5666,14 +5726,12 @@ aspect:model		= m_i_cav_casket-01;
 					min = 25319;
 					max = 37978;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5691,22 +5749,17 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_container_barrel;
 	[aspect]
 	{
 		model = m_i_glb_barrel;
 	}
-	
 }
 [t:template,n:2W_crate_dsx_a5_r2-03]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r2-03 crate1";
-	
-	[inventory] // container: 3 of 5, generated: Thu Jun 12 18:30:33 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5719,14 +5772,12 @@ aspect:model		= m_i_cav_casket-01;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5744,9 +5795,6 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -5756,7 +5804,6 @@ aspect:model		= m_i_cav_casket-01;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -5785,8 +5832,7 @@ aspect:model		= m_i_cav_casket-01;
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r2-04 crate";
-	
-	[inventory] // container: 4 of 5, generated: Thu Jun 12 18:30:33 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5799,14 +5845,12 @@ aspect:model		= m_i_cav_casket-01;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5824,31 +5868,17 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	
 	specializes = base_container_wood;
-aspect:model = m_i_glb_crate;
-	   
-/*
-specializes = base_chest;
-[aspect]
-{
-model = m_i_glb_chest-03;
-[textures]
-{
-0 = b_i_csl_chest-04;
-}
-}
-	   */
-	   
+	[aspect]
+	{
+		model = m_i_glb_crate;
+	}
 }
 [t:template,n:2W_crate_dsx_a5_r2-spec]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r2-spec bookcase";
-	
-	[inventory] // container: 5 of 5, generated: Thu Jun 12 18:30:33 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5872,9 +5902,7 @@ model = m_i_glb_chest-03;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes	= prop;
+	specializes = prop;
 	[aspect]
 	{
 		model = m_i_glb_bookcase-01;
@@ -5882,10 +5910,6 @@ model = m_i_glb_chest-03;
 		lodfi_upper = -1;
 		does_block_path = true;
 	}
-	//--FIX--
-	// right now this requires clicking on three times, and then stays
-	// selectable.  this should change.
-	
 	[generator_object_pcontent]
 	{
 		create_msg = WE_REQ_USE;
@@ -5897,13 +5921,11 @@ model = m_i_glb_chest-03;
 		rollover_display = true;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a5_r3-01]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r3-01 footlocker";
-	
-	[inventory] // container: 1 of 5, generated: Thu Jun 12 19:35:12 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5916,14 +5938,12 @@ model = m_i_glb_chest-03;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -5941,9 +5961,6 @@ model = m_i_glb_chest-03;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -5953,7 +5970,6 @@ model = m_i_glb_chest-03;
 			0 = b_i_csl_trunk-golden;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Trunk";
@@ -5963,7 +5979,7 @@ model = m_i_glb_chest-03;
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r3-01 vase";
-	[inventory] // container: 2 of 5, generated: Thu Jun 12 19:35:12 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -5976,14 +5992,12 @@ model = m_i_glb_chest-03;
 					min = 25319;
 					max = 37978;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -6001,20 +6015,17 @@ model = m_i_glb_chest-03;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
-	specializes		= base_container_clay;
+	specializes = base_container_clay;
 	[aspect]
 	{
-		model	= m_i_glb_vase-03;
+		model = m_i_glb_vase-03;
 	}
 }
 [t:template,n:2W_crate_dsx_a5_r3-03]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r3-01 crate";
-	[inventory] // container: 3 of 5, generated: Thu Jun 12 19:35:12 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -6027,14 +6038,12 @@ model = m_i_glb_chest-03;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -6052,9 +6061,6 @@ model = m_i_glb_chest-03;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -6064,7 +6070,6 @@ model = m_i_glb_chest-03;
 			0 = b_i_glb_crate-02;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
@@ -6074,8 +6079,7 @@ model = m_i_glb_chest-03;
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r3-04 chest2";
-	
-	[inventory] // container: 4 of 5, generated: Thu Jun 12 19:35:12 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -6088,14 +6092,12 @@ model = m_i_glb_chest-03;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -6113,9 +6115,6 @@ model = m_i_glb_chest-03;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -6125,7 +6124,6 @@ model = m_i_glb_chest-03;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -6150,13 +6148,11 @@ model = m_i_glb_chest-03;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a5_r3-spec]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r3-spec chest";
-	
-	[inventory] // container: 5 of 5, generated: Thu Jun 12 19:35:12 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -6169,14 +6165,12 @@ model = m_i_glb_chest-03;
 					min = 45011;
 					max = 67517;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.92;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.92;
@@ -6203,8 +6197,6 @@ model = m_i_glb_chest-03;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -6219,13 +6211,11 @@ model = m_i_glb_chest-03;
 		screen_name = "Trunk";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a5_r4-01]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r4-01 vase";
-	
-	[inventory] // container: 1 of 4, generated: Thu Jun 12 19:37:20 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -6238,14 +6228,12 @@ model = m_i_glb_chest-03;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -6272,19 +6260,17 @@ model = m_i_glb_chest-03;
 	{
 		trap = trp_dsx_generator_explosion_urn;
 	}
-	//everything from here is copied:
-	specializes		= base_container_clay;
+	specializes = base_container_clay;
 	[aspect]
 	{
-		model	= m_i_glb_vase-04;
+		model = m_i_glb_vase-04;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a5_r4-02]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r4-02";
-	[inventory] // container: 2 of 4, generated: Thu Jun 12 19:37:20 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -6297,14 +6283,12 @@ model = m_i_glb_chest-03;
 					min = 25319;
 					max = 37978;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -6331,31 +6315,31 @@ model = m_i_glb_chest-03;
 	{
 		trap = trp_dsx_generator_explosion_urn;
 	}
-	specializes		= base_container_clay;
-	doc				= "pot_green swirls";
-	category_name	= "container";
-	
-common:screen_name	= "Pot";
-	   
-aspect:model	= m_i_cav_pot-01;
-	   
-	   
-	   [physics]
-	   {
-		   [break_particulate]
-		   {
-			   frag_glb_pot_clay_14 = 5;
-			   frag_glb_pot_clay_15 = 6;
-		   }
-	   }
+	specializes = base_container_clay;
+	doc = "pot_green swirls";
+	category_name = "container";
+	[common]
+	{
+		screen_name = "Pot";
+	}
+	[aspect]
+	{
+		model = m_i_cav_pot-01;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_pot_clay_14 = 5;
+			frag_glb_pot_clay_15 = 6;
+		}
+	}
 }
-
-
 [t:template,n:2W_crate_dsx_a5_r4-03]
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r4-03";
-	[inventory] // container: 3 of 4, generated: Thu Jun 12 19:37:20 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -6368,14 +6352,12 @@ aspect:model	= m_i_cav_pot-01;
 					min = 28132;
 					max = 42198;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -6393,7 +6375,6 @@ aspect:model	= m_i_cav_pot-01;
 			}
 		}
 	}
-	
 	[attack]
 	{
 		damage_max = 211;
@@ -6403,7 +6384,6 @@ aspect:model	= m_i_cav_pot-01;
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -6413,7 +6393,6 @@ aspect:model	= m_i_cav_pot-01;
 			0 = b_i_csl_trunk-golden;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Trunk";
@@ -6423,7 +6402,7 @@ aspect:model	= m_i_cav_pot-01;
 {
 	category_name = "dsx_a5";
 	doc = "dsx_a5_r4-spec";
-	[inventory] // container: 4 of 4, generated: Thu Jun 12 19:37:20 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -6436,14 +6415,12 @@ aspect:model	= m_i_cav_pot-01;
 					min = 45011;
 					max = 67517;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -6480,7 +6457,6 @@ aspect:model	= m_i_cav_pot-01;
 		trap = trp_dsx_generator_arrow_chest;
 		fire_event = WE_REQ_USE;
 	}
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -6490,7 +6466,6 @@ aspect:model	= m_i_cav_pot-01;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -6515,11 +6490,6 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
-////////////////////////////////////////
-//A6
-////////////////////////////////////////
-
 [t:template,n:2W_crate_dsx_a6_r1-01]
 {
 	category_name = "dsx_a6";
@@ -6589,7 +6559,6 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r1-02]
 {
 	category_name = "dsx_a6";
@@ -6629,7 +6598,6 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r1-spec]
 {
 	category_name = "dsx_a6";
@@ -6643,7 +6611,6 @@ aspect:model	= m_i_cav_pot-01;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -6713,12 +6680,11 @@ aspect:model	= m_i_cav_pot-01;
 		damage_max = 211;
 		damage_min = 141;
 	}
-	[trapped] 
+	[trapped]
 	{
 		trap = trp_dsx_generator_explosion_crate;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r2-01]
 {
 	category_name = "dsx_a6";
@@ -6766,7 +6732,6 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r2-02]
 {
 	category_name = "dsx_a6";
@@ -6837,7 +6802,6 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r2-spec]
 {
 	category_name = "dsx_a6";
@@ -6896,9 +6860,6 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
-////////////////////
-// A6_R3
 [t:template,n:2W_crate_dsx_a6_r3-spec-a]
 {
 	category_name = "dsx_a6";
@@ -6917,52 +6878,56 @@ aspect:model	= m_i_cav_pot-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-02-open; }
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Small Metal Chest"; }
+	[common]
+	{
+		screen_name = "Small Metal Chest";
+	}
 	[inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.33;
-					   max = 67517;
-					   min = 45011;
-					   min_pile = 19;
-					   piles = 2 - 4;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/137-183;
-					   il_main = #armor/76-426;
-					   il_main = #*/137-183;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/-rare(1)/183-211;
-					   il_main = #armor/-rare(1)/325-628;
-					   il_main = #*/-rare(1)/183-211;
-				   }
-				   [all*]
-				   {
-					   il_main = #spell/54-69;
-					   max = 2;
-					   min = 1;
-				   }
-			   }
-		   }
-	   }
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 67517;
+					min = 45011;
+					min_pile = 19;
+					piles = 2 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/137-183;
+					il_main = #armor/76-426;
+					il_main = #*/137-183;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/183-211;
+					il_main = #armor/-rare(1)/325-628;
+					il_main = #*/-rare(1)/183-211;
+				}
+				[all*]
+				{
+					il_main = #spell/54-69;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
 }
-
-
 [t:template,n:2W_crate_dsx_a6_r3-01]
 {
 	category_name = "dsx_a6";
@@ -6981,11 +6946,17 @@ aspect:model	= m_i_cav_pot-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-02-open; }
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Small Metal Chest"; }
+	[common]
+	{
+		screen_name = "Small Metal Chest";
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -7006,18 +6977,22 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a6_r3-02]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r3-02 chest";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		model = m_i_csl_chest-04;
-		[textures] {0 = b_i_csl_chest-02;}
+		[textures]
+		{
+			0 = b_i_csl_chest-02;
+		}
 	}
 	[body]
 	{
@@ -7027,15 +7002,18 @@ aspect:model	= m_i_cav_pot-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-04-open; }
+				[anim_files]
+				{
+					00 = chest-04-open;
+				}
 			}
 		}
-	} 
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
-			v				{
+		{
 			[oneof*]
 			{
 				[gold*]
@@ -7057,18 +7035,23 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r3-03]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r3-03 chest";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_glb_chest-03;
-		[textures]	{ 0 = b_i_csl_chest-03; }
+		[textures]
+		{
+			0 = b_i_csl_chest-03;
+		}
 	}
 	[body]
 	{
@@ -7078,10 +7061,13 @@ aspect:model	= m_i_cav_pot-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
-	} 
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -7108,12 +7094,11 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r3-04]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r3-04 pot";
-	specializes	 = base_pot_cav_01;
+	specializes = base_pot_cav_01;
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -7140,7 +7125,6 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r3-05]
 {
 	category_name = "dsx_a6";
@@ -7172,59 +7156,64 @@ aspect:model	= m_i_cav_pot-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r3-spec]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r3-spec trunk";
-	specializes	 = base_container_wood;
-aspect:model	 = m_i_glb_trunk-long;
-aspect:textures:0	= b_i_csl_trunk-golden;
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.33;
-					   max = 67517;
-					   min = 45011;
-					   min_pile = 19;
-					   piles = 2 - 4;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/137-183;
-					   il_main = #armor/76-426;
-					   il_main = #*/137-183;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/-rare(1)/183-211;
-					   il_main = #armor/-rare(1)/325-628;
-					   il_main = #*/-rare(1)/183-211;
-					   il_main = #weapon/-unique(2)/183-211;
-					   il_main = #armor/-unique(2)/325-628;
-					   il_main = #*/-unique(2)/183-211;
-				   }
-				   [all*]
-				   {
-					   il_main = #spell/54-69;
-					   max = 2;
-					   min = 1;
-				   }
-			   }
-		   }
-	   }
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 67517;
+					min = 45011;
+					min_pile = 19;
+					piles = 2 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/137-183;
+					il_main = #armor/76-426;
+					il_main = #*/137-183;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/183-211;
+					il_main = #armor/-rare(1)/325-628;
+					il_main = #*/-rare(1)/183-211;
+					il_main = #weapon/-unique(2)/183-211;
+					il_main = #armor/-unique(2)/325-628;
+					il_main = #*/-unique(2)/183-211;
+				}
+				[all*]
+				{
+					il_main = #spell/54-69;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
 }
-
-////////////////////
-// A6_R4
 [t:template,n:2W_crate_dsx_a6_r4-01]
 {
 	category_name = "dsx_a6";
@@ -7243,11 +7232,17 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-02-open; }
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Small Metal Chest"; }
+	[common]
+	{
+		screen_name = "Small Metal Chest";
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -7268,18 +7263,22 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a6_r4-02]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r4-02 chest";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
-		model=m_i_csl_chest-04;
-		[textures] {0 = b_i_csl_chest-02;}
+		model = m_i_csl_chest-04;
+		[textures]
+		{
+			0 = b_i_csl_chest-02;
+		}
 	}
 	[body]
 	{
@@ -7289,7 +7288,10 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-04-open; }
+				[anim_files]
+				{
+					00 = chest-04-open;
+				}
 			}
 		}
 	}
@@ -7319,63 +7321,66 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r4-spec]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r4-spec trunk";
-	specializes	 = base_container_wood;
-	
-aspect:model	 = m_i_glb_trunk-long;
-aspect:textures:0	= b_i_csl_trunk-golden;
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.33;
-					   max = 71440;
-					   min = 47626;
-					   min_pile = 19;
-					   piles = 2 - 4;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/139-186;
-					   il_main = #armor/80-445;
-					   il_main = #*/139-186;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/-rare(1)/186-213;
-					   il_main = #armor/-rare(1)/347-639;
-					   il_main = #*/-rare(1)/183-291;
-				   }
-				   [all*]
-				   {
-					   il_main = #spell/56-69;
-					   max = 2;
-					   min = 1;
-				   }
-			   }
-		   }
-	   }
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 71440;
+					min = 47626;
+					min_pile = 19;
+					piles = 2 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/139-186;
+					il_main = #armor/80-445;
+					il_main = #*/139-186;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/186-213;
+					il_main = #armor/-rare(1)/347-639;
+					il_main = #*/-rare(1)/183-291;
+				}
+				[all*]
+				{
+					il_main = #spell/56-69;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
 }
-
-
-////////////////////
-// A6_R5
 [t:template,n:2W_crate_dsx_a6_r5-01]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r5-01 crate";
-	specializes = base_container_wood; //get chores & sundry
+	specializes = base_container_wood;
 	[aspect]
 	{
 		model = m_i_gob_crate-01;
@@ -7404,25 +7409,15 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a6_r5-02]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r5-02 footlocker";
 	specializes = base_container_wood;
-	
 	[aspect]
 	{
 		model = m_i_glb_footlocker-01;
-		/*
-		[textures]
-		{
-		0 = b_i_csl_chest-02;
-		}
-		*/
 	}
-	
 	[common]
 	{
 		screen_name = "Chest";
@@ -7453,18 +7448,15 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r5-03]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r5-03 barrel";
 	specializes = base_container_barrel;
-	
 	[aspect]
 	{
 		model = m_i_glb_cask-ale;
 	}
-	
 	[common]
 	{
 		screen_name = "Chest";
@@ -7495,24 +7487,15 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r5-04]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r5-04 trunk";
 	specializes = base_container_wood;
-	
 	[aspect]
 	{
 		model = m_i_glb_trunk-long;
-		/*
-		[textures]
-		{
-		0 = b_i_csl_chest-02;
-		}
-		*/
 	}
-	
 	[common]
 	{
 		screen_name = "Chest";
@@ -7543,57 +7526,61 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r5-spec]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r5-spec trunk";
-	specializes	 = base_container_wood;
-	
-aspect:model	 = m_i_glb_trunk-long;
-aspect:textures:0	= b_i_csl_trunk-golden;
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.33;
-					   max = 67517;
-					   min = 45011;
-					   min_pile = 19;
-					   piles = 2 - 4;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/139-186;
-					   il_main = #armor/80-445;
-					   il_main = #*/139-186;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/-rare(1)/186-213;
-					   il_main = #armor/-rare(1)/347-639;
-					   il_main = #*/-rare(1)/186-213;
-				   }
-				   [all*]
-				   {
-					   il_main = #spell/56-69;
-					   max = 2;
-					   min = 1;
-				   }
-			   }
-		   }
-	   }
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 67517;
+					min = 45011;
+					min_pile = 19;
+					piles = 2 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/139-186;
+					il_main = #armor/80-445;
+					il_main = #*/139-186;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/186-213;
+					il_main = #armor/-rare(1)/347-639;
+					il_main = #*/-rare(1)/186-213;
+				}
+				[all*]
+				{
+					il_main = #spell/56-69;
+					max = 2;
+					min = 1;
+				}
+			}
+		}
+	}
 }
-
-////////////////////
-// A6_R6
 [t:template,n:2W_crate_dsx_a6_r6-01]
 {
 	category_name = "dsx_a6";
@@ -7612,11 +7599,17 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-02-open; }
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Small Metal Chest"; }
+	[common]
+	{
+		screen_name = "Small Metal Chest";
+	}
 	[inventory]
 	{
 		drop_at_use_point = true;
@@ -7637,18 +7630,22 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a6_r6-02]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r6-02 chest";
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
 	{
-		model=m_i_csl_chest-04;
-		[textures] {0 = b_i_csl_chest-02;}
+		model = m_i_csl_chest-04;
+		[textures]
+		{
+			0 = b_i_csl_chest-02;
+		}
 	}
 	[body]
 	{
@@ -7658,7 +7655,10 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-04-open; }
+				[anim_files]
+				{
+					00 = chest-04-open;
+				}
 			}
 		}
 	}
@@ -7688,61 +7688,63 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a6_r6-spec]
 {
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r6-spec trunk";
-	specializes	 = base_container_wood;
-	
-aspect:model	 = m_i_glb_trunk-long;
-aspect:textures:0	= b_i_csl_trunk-golden;	 
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.33;
-					   max = 71440;
-					   min = 47626;
-					   min_pile = 19;
-					   piles = 2 - 4;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/144-190;
-					   il_main = #armor/84-459;
-					   il_main = #*/144-190;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/-rare(1)/190-216;
-					   il_main = #armor/-rare(1)/335-647;
-					   il_main = #*/-rare(1)/177-281;
-				   }
-				   [all*]
-				   {
-					   il_main = #spell/57-70;
-					   max = 3;
-					   min = 2;
-				   }
-			   }
-		   }
-	   }
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_csl_trunk-golden;
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 71440;
+					min = 47626;
+					min_pile = 19;
+					piles = 2 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/144-190;
+					il_main = #armor/84-459;
+					il_main = #*/144-190;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/190-216;
+					il_main = #armor/-rare(1)/335-647;
+					il_main = #*/-rare(1)/177-281;
+				}
+				[all*]
+				{
+					il_main = #spell/57-70;
+					max = 3;
+					min = 2;
+				}
+			}
+		}
+	}
 }
-
-
-
 [t:template,n:2W_crate_dsx_a6_r6-spec-a]
 {
-	//this could theoretically go away; it's still in area six, but no
-	//longer giving out a set item, it is now giving a rare.
 	category_name = "dsx_a6";
 	doc = "dsx_a6_r6-spec-a chest giving rare";
 	specializes = base_chest;
@@ -7759,62 +7761,61 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-02-open; }
+				[anim_files]
+				{
+					00 = chest-02-open;
+				}
 			}
 		}
 	}
-	[common] { screen_name="Small Metal Chest"; }
+	[common]
+	{
+		screen_name = "Small Metal Chest";
+	}
 	[inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-			   [all*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.33;
-					   max = 71440;
-					   min = 47626;
-					   min_pile = 19;
-					   piles = 2 - 4;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/144-190;
-					   il_main = #armor/84-459;
-					   il_main = #*/144-190;
-					   max = 2;
-					   min = 1;
-				   }
-				   [oneof*]
-				   {
-					   il_main = #weapon/-rare(1)/190-216;
-					   il_main = #armor/-rare(1)/335-647;
-					   il_main = #*/-rare(1)/177-281;
-				   }
-				   [all*]
-				   {
-					   il_main = #spell/57-70;
-					   max = 3;
-					   min = 2;
-				   }
-			   }
-		   }
-	   }
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[all*]
+			{
+				[gold*]
+				{
+					chance = 0.33;
+					max = 71440;
+					min = 47626;
+					min_pile = 19;
+					piles = 2 - 4;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/144-190;
+					il_main = #armor/84-459;
+					il_main = #*/144-190;
+					max = 2;
+					min = 1;
+				}
+				[oneof*]
+				{
+					il_main = #weapon/-rare(1)/190-216;
+					il_main = #armor/-rare(1)/335-647;
+					il_main = #*/-rare(1)/177-281;
+				}
+				[all*]
+				{
+					il_main = #spell/57-70;
+					max = 3;
+					min = 2;
+				}
+			}
+		}
+	}
 }
-
-////////////////////////////////////////
-//A7
-////////////////////////////////////////
-
 [t:template,n:2W_crate_dsx_a7_r1-01]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r1-01 pot";
-	
-	
-	[inventory] // container: 1 of 4, generated: Thu Jun 12 19:44:19 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -7827,14 +7828,12 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 					min = 29767;
 					max = 44650;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -7857,32 +7856,29 @@ aspect:textures:0	= b_i_csl_trunk-golden;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
-	specializes		= base_container_clay;
-	
-	
-common:screen_name	= "Pot";
-	   
-aspect:model	= m_i_des_pot-clay-01;
-	   
-	   
-	   [physics]
-	   {
-		   [break_particulate]
-		   {
-			   frag_glb_pot_clay_17 = 5;
-			   frag_glb_pot_clay_15 = 6;
-		   }
-	   }
+	specializes = base_container_clay;
+	[common]
+	{
+		screen_name = "Pot";
+	}
+	[aspect]
+	{
+		model = m_i_des_pot-clay-01;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_pot_clay_17 = 5;
+			frag_glb_pot_clay_15 = 6;
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r1-02]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r1-02 pot";
-	[inventory] // container: 2 of 4, generated: Thu Jun 12 19:44:19 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -7895,14 +7891,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 26790;
 					max = 40185;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -7920,31 +7914,29 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
-	specializes		= base_container_clay;
-	
-	
-common:screen_name	= "Pot";
-	   
-aspect:model	= m_i_des_pot-clay-01;
-	   
-	   [physics]
-	   {
-		   [break_particulate]
-		   {
-			   frag_glb_pot_clay_16 = 2;
-			   frag_glb_pot_clay_17 = 6;
-		   }
-	   }
+	specializes = base_container_clay;
+	[common]
+	{
+		screen_name = "Pot";
+	}
+	[aspect]
+	{
+		model = m_i_des_pot-clay-01;
+	}
+	[physics]
+	{
+		[break_particulate]
+		{
+			frag_glb_pot_clay_16 = 2;
+			frag_glb_pot_clay_17 = 6;
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r1-03]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r1-03 pot";
-	[inventory] // container: 3 of 4, generated: Thu Jun 12 19:44:19 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -7957,14 +7949,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 29767;
 					max = 44650;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -7982,27 +7972,21 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_03;
 	[aspect]
 	{
 		model = m_i_des_pot-clay-03;
 	}
-	
 	[common]
 	{
 		screen_name = "Clay Pot";
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a7_r1-spec]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r1-spec urn";
-	[inventory] // container: 4 of 4, generated: Thu Jun 12 19:44:19 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8015,14 +7999,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 47626;
 					max = 71440;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8046,26 +8028,21 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_04;
 	[aspect]
 	{
 		model = m_i_des_pot-clay-04;
 	}
-	
 	[common]
 	{
 		screen_name = "Clay Pot";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r2-01]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r2-01 urn";
-	
-	[inventory] // container: 1 of 5, generated: Thu Jun 12 19:51:21 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8078,14 +8055,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8096,9 +8071,6 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_04;
 	[aspect]
 	{
@@ -8116,12 +8088,11 @@ aspect:model	= m_i_des_pot-clay-01;
 		screen_name = "Clay Pot";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r2-02]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r2-02 crate";
-	[inventory] // container: 2 of 5, generated: Thu Jun 12 19:51:21 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8134,14 +8105,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 28322;
 					max = 42482;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8159,8 +8128,6 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -8170,19 +8137,16 @@ aspect:model	= m_i_des_pot-clay-01;
 			0 = b_i_des_crate-01;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r2-03]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r2-03 crate1";
-	
-	[inventory] // container: 3 of 5, generated: Thu Jun 12 19:51:21 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8195,14 +8159,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8220,7 +8182,6 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -8230,20 +8191,16 @@ aspect:model	= m_i_des_pot-clay-01;
 			0 = b_i_des_crate-01;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r2-04]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r2-04 chest";
-	
-	
-	[inventory] // container: 4 of 5, generated: Thu Jun 12 19:51:21 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8256,14 +8213,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8281,14 +8236,11 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
 		model = m_i_glb_chest-02;
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -8313,13 +8265,11 @@ aspect:model	= m_i_des_pot-clay-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r2-spec]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r2-spec chest";
-	
-	[inventory] // container: 5 of 5, generated: Thu Jun 12 19:51:21 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8332,14 +8282,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 50350;
 					max = 75524;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
@@ -8363,14 +8311,19 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
 	specializes = base_chest;
-	[common] { screen_name="Wicker Barrel"; }
+	[common]
+	{
+		screen_name = "Wicker Barrel";
+	}
 	[aspect]
 	{
 		material = steel;
 		model = m_i_jng_wicker-barrel;
-		[textures]	{ 0 = b_i_jng_wicker-barrel; }
+		[textures]
+		{
+			0 = b_i_jng_wicker-barrel;
+		}
 	}
 	[body]
 	{
@@ -8379,7 +8332,10 @@ aspect:model	= m_i_des_pot-clay-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=a_i_jng_wicker-barrel-open; }
+				[anim_files]
+				{
+					00 = a_i_jng_wicker-barrel-open;
+				}
 			}
 		}
 	}
@@ -8388,9 +8344,7 @@ aspect:model	= m_i_des_pot-clay-01;
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r3-01 footlocker";
-	
-	
-	[inventory] // container: 1 of 5, generated: Thu Jun 12 19:56:24 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8403,14 +8357,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8428,26 +8380,21 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
 		model = m_i_glb_footlocker-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Footlocker";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r3-02]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r3-02 pot";
-	
-	[inventory] // container: 2 of 5, generated: Thu Jun 12 19:56:24 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8460,14 +8407,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 28322;
 					max = 42482;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8485,14 +8430,11 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_01;
 	[aspect]
 	{
 		model = m_i_des_pot-clay-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Clay Pot";
@@ -8502,8 +8444,7 @@ aspect:model	= m_i_des_pot-clay-01;
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r3-03 chest1";
-	
-	[inventory] // container: 3 of 5, generated: Thu Jun 12 19:56:24 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8516,14 +8457,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8541,14 +8480,11 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
 		model = m_i_glb_chest-02;
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -8573,13 +8509,11 @@ aspect:model	= m_i_des_pot-clay-01;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r3-04]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r3-02 chest2";
-	
-	[inventory] // container: 4 of 5, generated: Thu Jun 12 19:56:24 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8592,14 +8526,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8617,8 +8549,6 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -8628,19 +8558,16 @@ aspect:model	= m_i_des_pot-clay-01;
 			0 = b_i_des_crate-01;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_r3-spec]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_r3-spec chest";
-	
-	[inventory] // container: 5 of 5, generated: Thu Jun 12 19:56:24 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8653,14 +8580,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 50350;
 					max = 75524;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
@@ -8688,26 +8613,21 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
 		model = m_i_glb_footlocker-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Footlocker";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_droc-01]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_droc-01";
-	
-	
-	[inventory] // container: 1 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8720,14 +8640,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 475;
 					max = 943;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8745,8 +8663,6 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -8755,18 +8671,14 @@ aspect:model	= m_i_des_pot-clay-01;
 		{
 			0 = b_i_glb_chest-01;
 		}
-		
 		scale_base = 0.7;
 	}
-	
 }
-
 [t:template,n:2W_crate_dsx_a7_droc-02]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_droc-02";
-	
-	[inventory] // container: 2 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8779,14 +8691,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 712;
 					max = 1414;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8804,27 +8714,21 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_clay;
 	[aspect]
 	{
 		model = m_i_cav_urn-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Urn";
 	}
 }
-	
-
 [t:template,n:2W_crate_dsx_a7_droc-03]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_droc-03";
-	
-	[inventory] // container: 3 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8837,14 +8741,12 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 831;
 					max = 1650;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8862,22 +8764,21 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_wood;
+	specializes = base_container_wood;
 	[aspect]
 	{
-		model	= m_i_glb_crate-krug;
-		[textures]	{0=b_i_swp_crate-01;}
+		model = m_i_glb_crate-krug;
+		[textures]
+		{
+			0 = b_i_swp_crate-01;
+		}
 	}
 }
-	
 [t:template,n:2W_crate_dsx_a7_droc-spec]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_droc-spec";
-	
-	[inventory] // container: 4 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8889,13 +8790,11 @@ aspect:model	= m_i_des_pot-clay-01;
 					min = 1069;
 					max = 2122;
 				}
-				
 				[oneof*]
 				{
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					il_main = #weapon/147-187;
@@ -8917,21 +8816,24 @@ aspect:model	= m_i_des_pot-clay-01;
 			}
 		}
 	}
-	//everything from here is copied:
-	specializes			= base_container_wood;
-	
-	
-aspect:model		= m_i_glb_trunk-long;
-aspect:textures:0	= b_i_glb_trunk-long;
+	specializes = base_container_wood;
+	[aspect]
+	{
+		model = m_i_glb_trunk-long;
+	}
+	[aspect]
+	{
+		[textures]
+		{
+			0 = b_i_glb_trunk-long;
+		}
+	}
 }
-
 [t:template,n:2W_crate_dsx_a7_caves-01]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_caves-01 crate";
-	
-	
-	[inventory] // container: 1 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8944,14 +8846,12 @@ aspect:textures:0	= b_i_glb_trunk-long;
 					min = 475;
 					max = 943;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -8969,18 +8869,17 @@ aspect:textures:0	= b_i_glb_trunk-long;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
-aspect:model = m_i_cav_crate-sm;
+	[aspect]
+	{
+		model = m_i_cav_crate-sm;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a7_caves-02]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_caves-02 ale";
-	
-	[inventory] // container: 2 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -8993,14 +8892,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 712;
 					max = 1414;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9018,26 +8915,21 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_barrel;
 	[aspect]
 	{
 		model = m_i_glb_cask-ale;
 	}
-	
 	[common]
 	{
 		screen_name = "Cask";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_caves-03]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_caves-03 pot";
-	
-	[inventory] // container: 3 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9050,14 +8942,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 831;
 					max = 1650;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9075,26 +8965,21 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_03;
 	[aspect]
 	{
 		model = m_i_des_pot-clay-03;
 	}
-	
 	[common]
 	{
 		screen_name = "Clay Pot";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a7_caves-spec]
 {
 	category_name = "dsx_a7";
 	doc = "dsx_a7_caves-spec pot";
-	
-	[inventory] // container: 4 of 4, generated: Thu Jun 12 19:57:09 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9107,14 +8992,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 1069;
 					max = 2122;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
@@ -9138,31 +9021,21 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_05;
 	[aspect]
 	{
 		model = m_i_des_pot-clay-05;
 	}
-	
 	[common]
 	{
 		screen_name = "Clay Pot";
 	}
 }
-
-////////////////////////////////////////
-//A8
-////////////////////////////////////////
-
 [t:template,n:2W_crate_dsx_a8_r1-01]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r1-01 chest";
-	
-	
-	[inventory] // container: 1 of 4, generated: Thu Jun 12 20:33:37 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9175,14 +9048,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9205,8 +9076,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -9216,7 +9085,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -9241,13 +9109,11 @@ aspect:model = m_i_cav_crate-sm;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_r1-02]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r1-02 rack";
-	
-	[inventory] // container: 2 of 4, generated: Thu Jun 12 20:33:37 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[delayed_pcontent]
@@ -9267,8 +9133,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = prop;
 	[aspect]
 	{
@@ -9291,13 +9155,11 @@ aspect:model = m_i_cav_crate-sm;
 		one_shot = TRUE;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_r1-03]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r1-03 pot";
-	
-	[inventory] // container: 3 of 4, generated: Thu Jun 12 20:33:37 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9310,14 +9172,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 31469;
 					max = 47203;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9335,27 +9195,21 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_pot_des_clay_03;
 	[aspect]
 	{
 		model = m_i_des_pot-clay-03;
 	}
-	
 	[common]
 	{
 		screen_name = "Clay Pot";
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a8_r1-spec]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r1-spec armor stand";
-	
-	[inventory] // container: 4 of 4, generated: Thu Jun 12 20:33:37 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[delayed_pcontent]
@@ -9375,7 +9229,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = prop;
 	[aspect]
 	{
@@ -9397,14 +9250,11 @@ aspect:model = m_i_cav_crate-sm;
 		one_shot = TRUE;
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_r2-01]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r2-01 trunk";
-	
-	
-	[inventory] // container: 1 of 5, generated: Thu Jun 12 21:02:35 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9417,14 +9267,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 33240;
 					max = 49860;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9451,7 +9299,6 @@ aspect:model = m_i_cav_crate-sm;
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -9461,7 +9308,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_csl_trunk-golden;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Trunk";
@@ -9471,8 +9317,7 @@ aspect:model = m_i_cav_crate-sm;
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r2-02 crate";
-	
-	[inventory] // container: 2 of 5, generated: Thu Jun 12 21:02:35 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9485,14 +9330,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 29916;
 					max = 44874;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9520,7 +9363,6 @@ aspect:model = m_i_cav_crate-sm;
 		trap = trp_dsx_generator_arrow_chest;
 		fire_event = WE_REQ_USE;
 	}
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -9530,7 +9372,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -9555,13 +9396,11 @@ aspect:model = m_i_cav_crate-sm;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_r2-03]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r2-03 crate1";
-	
-	[inventory] // container: 3 of 5, generated: Thu Jun 12 21:02:35 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9574,14 +9413,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 33240;
 					max = 49860;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9608,7 +9445,6 @@ aspect:model = m_i_cav_crate-sm;
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -9618,7 +9454,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_glb_trunk-long;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Trunk";
@@ -9628,9 +9463,7 @@ aspect:model = m_i_cav_crate-sm;
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r2-04 chest";
-	
-	//everything from here is copied:
-	specializes	= prop;
+	specializes = prop;
 	[aspect]
 	{
 		model = m_i_glb_bookcase-01;
@@ -9638,7 +9471,6 @@ aspect:model = m_i_cav_crate-sm;
 		lodfi_upper = -1;
 		does_block_path = true;
 	}
-	
 	[generator_object_pcontent]
 	{
 		create_msg = WE_REQ_USE;
@@ -9649,7 +9481,6 @@ aspect:model = m_i_cav_crate-sm;
 		screen_name = "Bookcase";
 		rollover_display = true;
 	}
-	
 	[inventory]
 	{
 		[pcontent]
@@ -9675,16 +9506,12 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
 }
-
 [t:template,n:2W_crate_dsx_a8_r3-01]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r3-01 footlocker";
-	
-	
-	[inventory] // container: 1 of 5, generated: Thu Jun 12 21:03:30 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9697,7 +9524,6 @@ aspect:model = m_i_cav_crate-sm;
 					min = 35082;
 					max = 52623;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.088888888888889;
@@ -9710,7 +9536,6 @@ aspect:model = m_i_cav_crate-sm;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9728,8 +9553,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_clay;
 	[aspect]
 	{
@@ -9753,8 +9576,7 @@ aspect:model = m_i_cav_crate-sm;
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r3-02 armor stand";
-	
-	[inventory] // container: 2 of 5, generated: Thu Jun 12 21:03:30 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[delayed_pcontent]
@@ -9774,8 +9596,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = prop;
 	[aspect]
 	{
@@ -9801,8 +9621,7 @@ aspect:model = m_i_cav_crate-sm;
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r3-03 crate";
-	
-	[inventory] // container: 3 of 5, generated: Thu Jun 12 21:03:30 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9815,7 +9634,6 @@ aspect:model = m_i_cav_crate-sm;
 					min = 35082;
 					max = 52623;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.088888888888889;
@@ -9828,7 +9646,6 @@ aspect:model = m_i_cav_crate-sm;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9846,8 +9663,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -9857,7 +9672,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_glb_crate-02;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
@@ -9867,8 +9681,7 @@ aspect:model = m_i_cav_crate-sm;
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r3-04 chest2";
-	
-	[inventory] // container: 4 of 5, generated: Thu Jun 12 21:03:30 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9881,7 +9694,6 @@ aspect:model = m_i_cav_crate-sm;
 					min = 35082;
 					max = 52623;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.088888888888889;
@@ -9894,7 +9706,6 @@ aspect:model = m_i_cav_crate-sm;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -9912,8 +9723,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -9923,7 +9732,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -9948,13 +9756,11 @@ aspect:model = m_i_cav_crate-sm;
 		}
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_r3-spec]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_r3-spec chest";
-	
-	[inventory] // container: 5 of 5, generated: Thu Jun 12 21:03:30 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -9967,7 +9773,6 @@ aspect:model = m_i_cav_crate-sm;
 					min = 56131;
 					max = 84197;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
@@ -9980,7 +9785,6 @@ aspect:model = m_i_cav_crate-sm;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
@@ -10004,7 +9808,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -10014,20 +9817,16 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_csl_trunk-golden;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Trunk";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_secret-01]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_secret-01";
-	
-	
-	[inventory] // container: 1 of 4, generated: Thu Jun 12 21:04:54 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -10040,14 +9839,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 742;
 					max = 1474;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -10065,26 +9862,21 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_clay;
 	[aspect]
 	{
 		model = m_i_cav_urn-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Urn";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_secret-02]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_secret-02";
-	
-	[inventory] // container: 2 of 4, generated: Thu Jun 12 21:04:54 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -10097,14 +9889,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 1114;
 					max = 2212;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -10122,26 +9912,21 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_barrel;
 	[aspect]
 	{
 		model = m_i_glb_cask-ale;
 	}
-	
 	[common]
 	{
 		screen_name = "Cask";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a8_secret-03]
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_secret-03";
-	
-	[inventory] // container: 3 of 4, generated: Thu Jun 12 21:04:54 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -10154,14 +9939,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 1300;
 					max = 2580;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.2;
@@ -10179,8 +9962,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -10190,7 +9971,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_csl_trunk-golden;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Trunk";
@@ -10200,8 +9980,7 @@ aspect:model = m_i_cav_crate-sm;
 {
 	category_name = "dsx_a8";
 	doc = "dsx_a8_secret-spec";
-	
-	[inventory] // container: 4 of 4, generated: Thu Jun 12 21:04:54 2003
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[pcontent]
@@ -10214,14 +9993,12 @@ aspect:model = m_i_cav_crate-sm;
 					min = 1671;
 					max = 3318;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 				[oneof*]
 				{
 					chance = 1;
@@ -10259,7 +10036,6 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -10269,7 +10045,6 @@ aspect:model = m_i_cav_crate-sm;
 			0 = b_i_csl_chest-02;
 		}
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -10294,14 +10069,6 @@ aspect:model = m_i_cav_crate-sm;
 		}
 	}
 }
-
-
-
-////////////////////////////////////////
-//A9
-////////////////////////////////////////
-
-
 [t:template,n:2W_crate_dsx_a9_r1-01]
 {
 	category_name = "dsx_a9";
@@ -10311,8 +10078,6 @@ aspect:model = m_i_cav_crate-sm;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 26, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -10347,7 +10112,6 @@ aspect:model = m_i_cav_crate-sm;
 					il_main = #armor/-rare(1)/399-680;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 				[oneof*]
 				{
 					chance = 0.05;
@@ -10356,12 +10120,16 @@ aspect:model = m_i_cav_crate-sm;
 			}
 		}
 	}
-	//everything from here is copied:
-	specializes		= base_container_metal;
-common:screen_name	= "Metal Barrel";
-aspect:model	= m_i_gob_barrel-03;
+	specializes = base_container_metal;
+	[common]
+	{
+		screen_name = "Metal Barrel";
+	}
+	[aspect]
+	{
+		model = m_i_gob_barrel-03;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r1-02]
 {
 	category_name = "dsx_a9";
@@ -10371,8 +10139,6 @@ aspect:model	= m_i_gob_barrel-03;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 26, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -10407,24 +10173,19 @@ aspect:model	= m_i_gob_barrel-03;
 					il_main = #armor/-rare(1)/399-680;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
 		model = m_i_gob_crate-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r1-03]
 {
 	category_name = "dsx_a9";
@@ -10434,8 +10195,6 @@ aspect:model	= m_i_gob_barrel-03;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 26, Strong */
 			[oneof*]
 			{
 				[gold*]
@@ -10470,12 +10229,9 @@ aspect:model	= m_i_gob_barrel-03;
 					il_main = #armor/-rare(1)/399-680;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_metal;
 	[aspect]
 	{
@@ -10516,8 +10272,6 @@ aspect:model	= m_i_gob_barrel-03;
 		explosion_magnitude = 7;
 	}
 }
-
-
 [t:template,n:2W_crate_dsx_a9_r1-04]
 {
 	category_name = "dsx_a9";
@@ -10527,8 +10281,6 @@ aspect:model	= m_i_gob_barrel-03;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 26, Strong */
 			[oneof*]
 			{
 				[gold*]
@@ -10563,11 +10315,9 @@ aspect:model	= m_i_gob_barrel-03;
 					il_main = #armor/-rare(1)/399-680;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
@@ -10577,13 +10327,11 @@ aspect:model	= m_i_gob_barrel-03;
 			0 = b_i_des_crate-01;
 		}
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r1-05]
 {
 	category_name = "dsx_a9";
@@ -10593,8 +10341,6 @@ aspect:model	= m_i_gob_barrel-03;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 26, Strong */
 			[oneof*]
 			{
 				[gold*]
@@ -10629,11 +10375,9 @@ aspect:model	= m_i_gob_barrel-03;
 					il_main = #armor/-rare(1)/399-680;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -10643,9 +10387,7 @@ aspect:model	= m_i_gob_barrel-03;
 			0 = b_i_gob_chest-01;
 		}
 	}
-	
 }
-
 [t:template,n:2W_crate_dsx_a9_r1-spec]
 {
 	category_name = "dsx_a9";
@@ -10655,8 +10397,6 @@ aspect:model	= m_i_gob_barrel-03;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 26, Special */
 			[all*]
 			{
 				[gold*]
@@ -10687,24 +10427,19 @@ aspect:model	= m_i_gob_barrel-03;
 					il_main = #armor/-rare(1)/399-680;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
 		model = m_i_glb_footlocker-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Footlocker";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r2-01]
 {
 	category_name = "dsx_a9";
@@ -10714,8 +10449,6 @@ aspect:model	= m_i_gob_barrel-03;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 27, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -10750,7 +10483,6 @@ aspect:model	= m_i_gob_barrel-03;
 					il_main = #armor/-rare(1)/410-681;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
@@ -10763,12 +10495,16 @@ aspect:model	= m_i_gob_barrel-03;
 	{
 		trap = trp_dsx_generator_arrow_barrel;
 	}
-	//everything from here is copied:
-	specializes		= base_container_metal;
-common:screen_name	= "Metal Barrel";
-aspect:model	= m_i_gob_barrel-02;
+	specializes = base_container_metal;
+	[common]
+	{
+		screen_name = "Metal Barrel";
+	}
+	[aspect]
+	{
+		model = m_i_gob_barrel-02;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r2-02]
 {
 	category_name = "dsx_a9";
@@ -10778,8 +10514,6 @@ aspect:model	= m_i_gob_barrel-02;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 27, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -10814,17 +10548,19 @@ aspect:model	= m_i_gob_barrel-02;
 					il_main = #armor/-rare(1)/410-681;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
-	
-	//everything from here is copied:
-	specializes		= base_container_metal;
-common:screen_name	= "Metal Barrel";
-aspect:model	= m_i_gob_barrel-01;
+	specializes = base_container_metal;
+	[common]
+	{
+		screen_name = "Metal Barrel";
+	}
+	[aspect]
+	{
+		model = m_i_gob_barrel-01;
+	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r2-03]
 {
 	category_name = "dsx_a9";
@@ -10834,8 +10570,6 @@ aspect:model	= m_i_gob_barrel-01;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 27, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -10870,7 +10604,6 @@ aspect:model	= m_i_gob_barrel-01;
 					il_main = #armor/-rare(1)/410-681;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
@@ -10883,19 +10616,16 @@ aspect:model	= m_i_gob_barrel-01;
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
 		model = m_i_gob_crate-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Crate";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r2-04]
 {
 	category_name = "dsx_a9";
@@ -10905,8 +10635,6 @@ aspect:model	= m_i_gob_barrel-01;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 27, Strong */
 			[oneof*]
 			{
 				[gold*]
@@ -10941,12 +10669,9 @@ aspect:model	= m_i_gob_barrel-01;
 					il_main = #armor/-rare(1)/410-681;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_metal;
 	[aspect]
 	{
@@ -10996,8 +10721,6 @@ aspect:model	= m_i_gob_barrel-01;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 27, Special */
 			[all*]
 			{
 				[gold*]
@@ -11032,7 +10755,6 @@ aspect:model	= m_i_gob_barrel-01;
 					il_main = #armor/-rare(1)/410-681;
 					il_main = #*/-rare(1)/199-220;
 				}
-				
 			}
 		}
 	}
@@ -11046,7 +10768,6 @@ aspect:model	= m_i_gob_barrel-01;
 		trap = trp_dsx_generator_arrow_chest;
 		fire_event = WE_REQ_USE;
 	}
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -11056,124 +10777,119 @@ aspect:model	= m_i_gob_barrel-01;
 			0 = b_i_gob_chest-01;
 		}
 	}
-	
 }
-
-
 [t:template,n:2W_crate_dsx_a9_r2a-01]
 {
 	category_name = "dsx_a9";
 	doc = "dsx_a9_r2a-01 barrel";
-	
-common:screen_name	= "Metal Barrel";
-aspect:model	= m_i_gob_barrel-03;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-		   /* Generated: Tue Jun 17 11:13:15 2003
-			   Level 27, Medium */
-			   [oneof*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.2;
-					   min = 41052;
-					   max = 61577;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.088888888888889;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.111111111111111;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #weapon/163-204;
-					   il_main = #armor/100-531;
-					   il_main = #*/163-204;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.0075;
-					   il_main = #weapon/-rare(1)/204-225;
-					   il_main = #armor/-rare(1)/434-705;
-					   il_main = #*/-rare(1)/204-225;
-				   }
-				   
-			   }
-		   }
-	   }
-	   specializes		= base_container_metal;
+	[common]
+	{
+		screen_name = "Metal Barrel";
+	}
+	[aspect]
+	{
+		model = m_i_gob_barrel-03;
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 41052;
+					max = 61577;
+				}
+				[oneof*]
+				{
+					chance = 0.088888888888889;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.111111111111111;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #weapon/163-204;
+					il_main = #armor/100-531;
+					il_main = #*/163-204;
+				}
+				[oneof*]
+				{
+					chance = 0.0075;
+					il_main = #weapon/-rare(1)/204-225;
+					il_main = #armor/-rare(1)/434-705;
+					il_main = #*/-rare(1)/204-225;
+				}
+			}
+		}
+	}
+	specializes = base_container_metal;
 }
-
 [t:template,n:2W_crate_dsx_a9_r2a-02]
 {
 	category_name = "dsx_a9";
 	doc = "dsx_a9_r2a-02 barrel";
-	
-common:screen_name	= "Metal Barrel";
-aspect:model	= m_i_gob_barrel-01;
-	   
-	   [inventory]
-	   {
-		   drop_at_use_point = true;
-		   [pcontent]
-		   {
-		   /* Generated: Tue Jun 17 11:13:15 2003
-			   Level 27, Medium */
-			   [oneof*]
-			   {
-				   [gold*]
-				   {
-					   chance = 0.2;
-					   min = 36946;
-					   max = 55420;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.088888888888889;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.111111111111111;
-					   il_main = potion_mana_large;
-					   il_main = potion_health_large;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.15;
-					   il_main = #weapon/163-204;
-					   il_main = #armor/100-531;
-					   il_main = #*/163-204;
-				   }
-				   [oneof*]
-				   {
-					   chance = 0.0075;
-					   il_main = #weapon/-rare(1)/204-225;
-					   il_main = #armor/-rare(1)/434-705;
-					   il_main = #*/-rare(1)/204-225;
-				   }
-				   
-			   }
-		   }
-	   }
-	   specializes		= base_container_metal;
+	[common]
+	{
+		screen_name = "Metal Barrel";
+	}
+	[aspect]
+	{
+		model = m_i_gob_barrel-01;
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				[gold*]
+				{
+					chance = 0.2;
+					min = 36946;
+					max = 55420;
+				}
+				[oneof*]
+				{
+					chance = 0.088888888888889;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.111111111111111;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+				}
+				[oneof*]
+				{
+					chance = 0.15;
+					il_main = #weapon/163-204;
+					il_main = #armor/100-531;
+					il_main = #*/163-204;
+				}
+				[oneof*]
+				{
+					chance = 0.0075;
+					il_main = #weapon/-rare(1)/204-225;
+					il_main = #armor/-rare(1)/434-705;
+					il_main = #*/-rare(1)/204-225;
+				}
+			}
+		}
+	}
+	specializes = base_container_metal;
 }
-
-
-
 [t:template,n:2W_crate_dsx_a9_r3-01]
 {
 	category_name = "dsx_a9";
@@ -11183,8 +10899,6 @@ aspect:model	= m_i_gob_barrel-01;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 28, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -11209,17 +10923,16 @@ aspect:model	= m_i_gob_barrel-01;
 				{
 					chance = 0.15;
 					il_main = #weapon/160-200;
-					   il_main = #armor/98-519;
-					   il_main = #*/160-200;
+					il_main = #armor/98-519;
+					il_main = #*/160-200;
 				}
 				[oneof*]
 				{
 					chance = 0.0075;
 					il_main = #weapon/-rare(1)/200-220;
-					   il_main = #armor/-rare(1)/424-689;
-					   il_main = #*/-rare(1)/200-220;
+					il_main = #armor/-rare(1)/424-689;
+					il_main = #*/-rare(1)/200-220;
 				}
-				
 			}
 		}
 	}
@@ -11233,14 +10946,12 @@ aspect:model	= m_i_gob_barrel-01;
 		trap = trp_dsx_generator_arrow_chest;
 		fire_event = WE_REQ_USE;
 	}
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
 		material = steel;
 		model = m_i_gob_crate-02;
 	}
-	
 	[body]
 	{
 		[chore_dictionary]
@@ -11261,7 +10972,6 @@ aspect:model	= m_i_gob_barrel-01;
 		screen_name = "Metal Crate";
 	}
 }
-
 [t:template,n:2W_crate_dsx_a9_r3-02]
 {
 	category_name = "dsx_a9";
@@ -11271,8 +10981,6 @@ aspect:model	= m_i_gob_barrel-01;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 28, Medium */
 			[oneof*]
 			{
 				[gold*]
@@ -11297,30 +11005,25 @@ aspect:model	= m_i_gob_barrel-01;
 				{
 					chance = 0.15;
 					il_main = #weapon/160-200;
-					   il_main = #armor/98-519;
-					   il_main = #*/160-200;
+					il_main = #armor/98-519;
+					il_main = #*/160-200;
 				}
 				[oneof*]
 				{
 					chance = 0.0075;
 					il_main = #weapon/-rare(1)/200-220;
-					   il_main = #armor/-rare(1)/424-689;
-					   il_main = #*/-rare(1)/200-220;
+					il_main = #armor/-rare(1)/424-689;
+					il_main = #*/-rare(1)/200-220;
 				}
-				
 			}
 		}
 	}
-	
-	//everything from here is copied:
 	specializes = base_container_barrel;
 	[aspect]
 	{
 		model = m_i_cav_barrel-01;
 	}
-	
 }
-
 [t:template,n:2W_crate_dsx_a9_r3-03]
 {
 	category_name = "dsx_a9";
@@ -11330,8 +11033,6 @@ aspect:model	= m_i_gob_barrel-01;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 28, Strong */
 			[oneof*]
 			{
 				[gold*]
@@ -11366,7 +11067,6 @@ aspect:model	= m_i_gob_barrel-01;
 					il_main = #armor/-rare(1)/424-689;
 					il_main = #*/-rare(1)/200-220;
 				}
-				
 			}
 		}
 	}
@@ -11380,7 +11080,6 @@ aspect:model	= m_i_gob_barrel-01;
 		trap = trp_dsx_generator_arrow_chest;
 		fire_event = WE_REQ_USE;
 	}
-	//everything from here is copied:
 	specializes = base_chest;
 	[aspect]
 	{
@@ -11390,7 +11089,6 @@ aspect:model	= m_i_gob_barrel-01;
 			0 = b_i_gob_chest-01;
 		}
 	}
-	
 }
 [t:template,n:2W_crate_dsx_a9_r3-spec]
 {
@@ -11401,8 +11099,6 @@ aspect:model	= m_i_gob_barrel-01;
 		drop_at_use_point = true;
 		[pcontent]
 		{
-		/* Generated: Tue Jun 17 11:13:15 2003
-			Level 28, Special */
 			[all*]
 			{
 				[gold*]
@@ -11422,20 +11118,19 @@ aspect:model	= m_i_gob_barrel-01;
 					il_main = potion_health_large;
 				}
 				[oneof*]
-					{
-						il_main = #weapon/160-200;
-						il_main = #armor/98-519;
-						il_main = #*/160-200;
-						min = 1;
-						max = 3;
-					}
+				{
+					il_main = #weapon/160-200;
+					il_main = #armor/98-519;
+					il_main = #*/160-200;
+					min = 1;
+					max = 3;
+				}
 				[oneof*]
 				{
 					il_main = #weapon/-rare(1)/200-220;
-					   il_main = #armor/-rare(1)/424-689;
-					   il_main = #*/-rare(1)/200-220;
+					il_main = #armor/-rare(1)/424-689;
+					il_main = #*/-rare(1)/200-220;
 				}
-				
 			}
 		}
 	}
@@ -11448,57 +11143,50 @@ aspect:model	= m_i_gob_barrel-01;
 	{
 		trap = trp_dsx_generator_arrow_crate;
 	}
-	//everything from here is copied:
 	specializes = base_container_wood;
 	[aspect]
 	{
 		model = m_i_glb_footlocker-01;
 	}
-	
 	[common]
 	{
 		screen_name = "Footlocker";
 	}
 }
-
-// SPECIAL CHESTS FOR THE CLOCKROOM
-// --from Scott
 [t:template,n:2W_crate_dsx_a9_r3-spec_clockroom]
 {
 	category_name = "dsx_a9";
 	doc = "dsx_a9 Clockroom Container";
 	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
 		{
-			drop_at_use_point = true;
-			[pcontent] //delayed_
+			[all*]
+			{
+				[all*]
 				{
-					[all*]
-						{
-							[all*]
-								{
-									il_main = potion_health_super;
-								}
-							[all*]
-								{
-									il_main = potion_mana_super;
-								}
-							[all*]
-								{
-									il_main = potion_rejuvenation_large;
-								}
-							[all*]
-								{
-									il_main = potion_rejuvenation_large;
-									il_main = potion_mana_large;
-									il_main = potion_health_large;
-
-									min = 1;
-									max = 3;
-								}
-						}
+					il_main = potion_health_super;
 				}
+				[all*]
+				{
+					il_main = potion_mana_super;
+				}
+				[all*]
+				{
+					il_main = potion_rejuvenation_large;
+				}
+				[all*]
+				{
+					il_main = potion_rejuvenation_large;
+					il_main = potion_mana_large;
+					il_main = potion_health_large;
+					min = 1;
+					max = 3;
+				}
+			}
 		}
-	
+	}
 	[attack]
 	{
 		damage_max = 25;
@@ -11509,294 +11197,285 @@ aspect:model	= m_i_gob_barrel-01;
 		trap = trp_dsx_generator_arrow_chest;
 		fire_event = WE_REQ_USE;
 	}
-	//COPIED PART HERE:
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
-	
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-elemental;
+		[textures]
 		{
-			material = steel;
-			model = m_i_glb_chest-elemental;
-			[textures]
-				{
-					0 = b_i_glb_chest_clockroom-diffuse;
-					1 = b_i_glb_chest_clockroom-static;
-					2 = b_i_glb_chest_clockroom-dynamic;
-				}
+			0 = b_i_glb_chest_clockroom-diffuse;
+			1 = b_i_glb_chest_clockroom-static;
+			2 = b_i_glb_chest_clockroom-dynamic;
 		}
+	}
 	[body]
+	{
+		[chore_dictionary]
 		{
-			[chore_dictionary]
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
 				{
-					chore_prefix = a_i_ice;
-					[chore_open]
-						{
-							skrit = transition;
-							[anim_files] { 00=chest-open; }
-						}
+					00 = chest-open;
 				}
+			}
 		}
+	}
 }
-// SPECIAL CHESTS FOR THE ELEMENTALS
-//AIR
 [t:template,n:2W_crate_dsx_a9_r3-spec_air]
 {
 	category_name = "dsx_a9";
 	doc = "Elemental Air Container";
 	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
 		{
-			drop_at_use_point = true;
-			[pcontent] //delayed_
-				{
-					[all*]
-						{
-							il_main = #*/200-250/-unique(2);
-							il_main = #*/200-250/-unique(2);
-							il_main = #*/200-250/-unique(2);
-							il_main = #*/200-250/-unique(2);
-						}
-				}
+			[all*]
+			{
+				il_main = #*/200-250/-unique(2);
+				il_main = #*/200-250/-unique(2);
+				il_main = #*/200-250/-unique(2);
+				il_main = #*/200-250/-unique(2);
+			}
 		}
-	//COPIED PART HERE:
+	}
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-elemental;
+		[textures]
 		{
-			material = steel;
-			model = m_i_glb_chest-elemental;
-			[textures]
-				{
-					0 = b_i_glb_chest_air-diffuse; 
-					1 = b_i_glb_chest_air-static; 
-					2 = b_i_glb_chest_air-dynamic;
-				}
+			0 = b_i_glb_chest_air-diffuse;
+			1 = b_i_glb_chest_air-static;
+			2 = b_i_glb_chest_air-dynamic;
 		}
+	}
 	[body]
+	{
+		[chore_dictionary]
 		{
-			[chore_dictionary]
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
 				{
-					chore_prefix = a_i_ice;
-					[chore_open]
-						{
-							skrit = transition;
-							[anim_files] { 00=chest-open; }
-						}
+					00 = chest-open;
 				}
+			}
 		}
+	}
 }
-
-
-//EARTH
 [t:template,n:2W_crate_dsx_a9_r3-spec_earth]
 {
 	category_name = "dsx_a9";
 	doc = "Elemental Earth Container";
 	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
 		{
-			drop_at_use_point = true;
-			[pcontent] //delayed_
-				{
-					[all*]
-						{
-							il_main = #armor,f/400-480/-unique(2);
-							il_main = #armor,r/400-480/-unique(2);
-							il_main = #armor,m/400-480/-unique(2);
-							il_main = #armor,m/400-480/-unique(2);
-						}
-				}
+			[all*]
+			{
+				il_main = #armor,f/400-480/-unique(2);
+				il_main = #armor,r/400-480/-unique(2);
+				il_main = #armor,m/400-480/-unique(2);
+				il_main = #armor,m/400-480/-unique(2);
+			}
 		}
-	//COPIED PART HERE:
+	}
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-elemental;
+		[textures]
 		{
-			material = steel;
-			model = m_i_glb_chest-elemental;
-			[textures]
-				{
-					0 = b_i_glb_chest_earth-diffuse; 
-					1 = b_i_glb_chest_earth-static; 
-					2 = b_i_glb_chest_earth-dynamic;
-				}
+			0 = b_i_glb_chest_earth-diffuse;
+			1 = b_i_glb_chest_earth-static;
+			2 = b_i_glb_chest_earth-dynamic;
 		}
+	}
 	[body]
+	{
+		[chore_dictionary]
 		{
-			[chore_dictionary]
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
 				{
-					chore_prefix = a_i_ice;
-					[chore_open]
-						{
-							skrit = transition;
-							[anim_files] { 00=chest-open; }
-						}
+					00 = chest-open;
 				}
+			}
 		}
+	}
 }
-
-//FIRE
 [t:template,n:2W_crate_dsx_a9_r3-spec_fire]
 {
 	category_name = "dsx_a9";
 	doc = "Elemental Fire Container";
 	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
 		{
-			drop_at_use_point = true;
-			[pcontent] //delayed_
-				{
-					[all*]
-						{
-							il_main = #melee,f/200-250/-unique(2);
-							il_main = #ranged/200-250/-unique(2);
-							il_main = #staff/200-250/-unique(2);
-							il_main = #weapon/200-250/-unique(2);
-						}
-				}
+			[all*]
+			{
+				il_main = #melee,f/200-250/-unique(2);
+				il_main = #ranged/200-250/-unique(2);
+				il_main = #staff/200-250/-unique(2);
+				il_main = #weapon/200-250/-unique(2);
+			}
 		}
-	//COPIED PART HERE:
+	}
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-elemental;
+		[textures]
 		{
-			material = steel;
-			model = m_i_glb_chest-elemental;
-			[textures]
-				{
-					0 = b_i_glb_chest_fire-diffuse; 
-					1 = b_i_glb_chest_fire-static; 
-					2 = b_i_glb_chest_fire-dynamic;
-				}
+			0 = b_i_glb_chest_fire-diffuse;
+			1 = b_i_glb_chest_fire-static;
+			2 = b_i_glb_chest_fire-dynamic;
 		}
+	}
 	[body]
+	{
+		[chore_dictionary]
 		{
-			[chore_dictionary]
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
 				{
-					chore_prefix = a_i_ice;
-					[chore_open]
-						{
-							skrit = transition;
-							[anim_files] { 00=chest-open; }
-						}
+					00 = chest-open;
 				}
+			}
 		}
+	}
 }
-
-//WATER
 [t:template,n:2W_crate_dsx_a9_r3-spec_water]
 {
 	category_name = "dsx_a9";
 	doc = "Elemental Water Container";
 	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
 		{
-			drop_at_use_point = true;
-			[pcontent] //delayed_
-				{
-					[all*]
-						{
-							il_main = #amulet/200-250/-unique(2);
-							il_main = #ring/200-250/-unique(2);
-							il_main = #amulet/200-250/-unique(2);
-							il_main = #ring/200-250/-unique(2);
-						}
-				}
+			[all*]
+			{
+				il_main = #amulet/200-250/-unique(2);
+				il_main = #ring/200-250/-unique(2);
+				il_main = #amulet/200-250/-unique(2);
+				il_main = #ring/200-250/-unique(2);
+			}
 		}
-	//COPIED PART HERE:
+	}
 	specializes = base_chest;
-	[common] { screen_name="Chest"; }
+	[common]
+	{
+		screen_name = "Chest";
+	}
 	[aspect]
+	{
+		material = steel;
+		model = m_i_glb_chest-elemental;
+		[textures]
 		{
-			material = steel;
-			model = m_i_glb_chest-elemental;
-			[textures]
-				{
-					0 = b_i_glb_chest_water-diffuse; 
-					1 = b_i_glb_chest_water-static; 
-					2 = b_i_glb_chest_water-dynamic;
-				}
+			0 = b_i_glb_chest_water-diffuse;
+			1 = b_i_glb_chest_water-static;
+			2 = b_i_glb_chest_water-dynamic;
 		}
+	}
 	[body]
+	{
+		[chore_dictionary]
 		{
-			[chore_dictionary]
+			chore_prefix = a_i_ice;
+			[chore_open]
+			{
+				skrit = transition;
+				[anim_files]
 				{
-					chore_prefix = a_i_ice;
-					[chore_open]
-						{
-							skrit = transition;
-							[anim_files] { 00=chest-open; }
-						}
+					00 = chest-open;
 				}
+			}
 		}
+	}
 }
-
-
-
-////////////////////////////////////////
-// a10
-// OTHER CONTAINERS:
-////////////////////////////////////////
-
-////////////////////////////////////////////////////////////
-//GENERATORS: Chris' wacky monster spewing containers
 [t:template,n:2W_dsx_cage_glb_wraith]
 {
-	specializes		= "base_container_metal";
-	doc				= "dsx_cage_metal_long-wraith";
-	category_name	= "container";
-	
-aspect:model	= m_i_csl_cage-02;
-	   
-	   [generator_in_object]
-	   {
-		   child_template_name	= 2w_dsx_wraith;
-	   }
-	   
+	specializes = "base_container_metal";
+	doc = "dsx_cage_metal_long-wraith";
+	category_name = "container";
+	[aspect]
+	{
+		model = m_i_csl_cage-02;
+	}
+	[generator_in_object]
+	{
+		child_template_name = 2w_dsx_wraith;
+	}
 }
-
-
 [t:template,n:2W_dsx_casket-wraith]
 {
 	category_name = "container";
 	doc = "dsx_casket-wraith";
-	specializes			= base_container_wood;
-	
-common:screen_name	= "Casket";
-	   
-aspect:model		= m_i_cav_casket-01;
-	   
-	   [generator_in_object]
-	   {
-		   child_template_name	= 2w_dsx_wraith;
-	   }
-}
-
-[t:template,n:2W_dsx_pot-ghost]
-{
-	specializes		= base_pot_cav_02;
-	doc				= "dsx_pot-ghost";
-	category_name	= "container";
-	
+	specializes = base_container_wood;
+	[common]
+	{
+		screen_name = "Casket";
+	}
+	[aspect]
+	{
+		model = m_i_cav_casket-01;
+	}
 	[generator_in_object]
 	{
-		child_template_name	= 2w_dsx_ghost;
+		child_template_name = 2w_dsx_wraith;
 	}
 }
-
-////////////////////////////////////////
-// ITEM SET CHESTS
-////////////////////////////////////////
-
-
-// armor rack for the basement of the hero's house. Should drop Arhok's
-// Leather
-
+[t:template,n:2W_dsx_pot-ghost]
+{
+	specializes = base_pot_cav_02;
+	doc = "dsx_pot-ghost";
+	category_name = "container";
+	[generator_in_object]
+	{
+		child_template_name = 2w_dsx_ghost;
+	}
+}
 [t:template,n:2W_crate_dsx_a1_r1a-rack]
 {
-	// This particulary piece was added later, and is an armor rack, but
-	// it's just another container for an Arhok piece
-	
 	category_name = "dsx_a1";
 	doc = "dsx_a1_r1a armor stand SP";
-	
-	[inventory] 
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[delayed_pcontent]
@@ -11807,7 +11486,6 @@ aspect:model		= m_i_cav_casket-01;
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = prop;
 	[aspect]
 	{
@@ -11830,8 +11508,6 @@ aspect:model		= m_i_cav_casket-01;
 		one_shot = TRUE;
 	}
 }
-
-//ARHOK
 [t:template,n:2W_dsx_set_arhok_base]
 {
 	category_name = "dsx_a1";
@@ -11841,7 +11517,10 @@ aspect:model		= m_i_cav_casket-01;
 	{
 		material = set_item;
 		model = m_i_glb_chest-03;
-textures:0 = b_i_glb_chest-01;
+		[textures]
+		{
+			0 = b_i_glb_chest-01;
+		}
 	}
 	[body]
 	{
@@ -11851,7 +11530,10 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -11860,10 +11542,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_arhok_1";
 	specializes = dsx_set_arhok_base;
-	[common] 
-	{ 
-		
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -11899,9 +11580,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_arhok_2";
 	specializes = dsx_set_arhok_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -11937,9 +11618,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_arhok_3";
 	specializes = dsx_set_arhok_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -11971,16 +11652,14 @@ textures:0 = b_i_glb_chest-01;
 		}
 	}
 }
-
-//DEMLOCK
 [t:template,n:2W_dsx_set_demlock_base]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_set_demlock_base";
 	specializes = base_chest;
-	[aspect] 
-	{ 
-		model=m_i_glb_chest; 
+	[aspect]
+	{
+		model = m_i_glb_chest;
 		material = set_item;
 	}
 	[body]
@@ -11991,7 +11670,10 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -12000,9 +11682,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_demlock_1";
 	specializes = dsx_set_demlock_base;
-	[common] 
-	{ 
-		screen_name="Ornate Chest"; 
+	[common]
+	{
+		screen_name = "Ornate Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12029,7 +11711,7 @@ textures:0 = b_i_glb_chest-01;
 		{
 			[oneof*]
 			{
-				il_main = spellbook_dsx_set_demlock; //GIVEN OUT BY A QUEST
+				il_main = spellbook_dsx_set_demlock;
 			}
 		}
 	}
@@ -12038,9 +11720,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_demlock_2";
 	specializes = dsx_set_demlock_base;
-	[common] 
-	{ 
-		screen_name="Ornate Chest"; 
+	[common]
+	{
+		screen_name = "Ornate Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12076,9 +11758,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_demlock_3";
 	specializes = dsx_set_demlock_base;
-	[common] 
-	{ 
-		screen_name="Ornate Chest"; 
+	[common]
+	{
+		screen_name = "Ornate Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12110,8 +11792,6 @@ textures:0 = b_i_glb_chest-01;
 		}
 	}
 }
-
-//ILLICOR
 [t:template,n:2W_dsx_set_illicor_base]
 {
 	category_name = "dsx_a1";
@@ -12121,7 +11801,10 @@ textures:0 = b_i_glb_chest-01;
 	{
 		material = set_item;
 		model = m_i_glb_chest-03;
-		[textures]		{ 0 = b_i_csl_chest-skull; }
+		[textures]
+		{
+			0 = b_i_csl_chest-skull;
+		}
 	}
 	[body]
 	{
@@ -12131,7 +11814,10 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
@@ -12140,9 +11826,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_illicor_1";
 	specializes = dsx_set_illicor_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12178,9 +11864,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_illicor_2";
 	specializes = dsx_set_illicor_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12216,9 +11902,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_illicor_3";
 	specializes = dsx_set_illicor_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12254,9 +11940,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_illicor_4";
 	specializes = dsx_set_illicor_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12292,9 +11978,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_illicor_5";
 	specializes = dsx_set_illicor_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12326,8 +12012,6 @@ textures:0 = b_i_glb_chest-01;
 		}
 	}
 }
-
-//KAJJ
 [t:template,n:2W_dsx_set_kajj_base]
 {
 	category_name = "dsx_a1";
@@ -12337,7 +12021,10 @@ textures:0 = b_i_glb_chest-01;
 	{
 		material = set_item;
 		model = m_i_glb_chest-03;
-		[textures]		{ 0 = b_i_csl_chest-05; }
+		[textures]
+		{
+			0 = b_i_csl_chest-05;
+		}
 	}
 	[body]
 	{
@@ -12347,19 +12034,21 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_dsx_set_kajj_1]
 {
 	doc = "dsx_set_kajj_1";
 	specializes = dsx_set_kajj_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12395,9 +12084,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_kajj_2";
 	specializes = dsx_set_kajj_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12433,9 +12122,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_kajj_3";
 	specializes = dsx_set_kajj_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12471,9 +12160,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_kajj_4";
 	specializes = dsx_set_kajj_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12505,8 +12194,6 @@ textures:0 = b_i_glb_chest-01;
 		}
 	}
 }
-
-//CLOCKWORK
 [t:template,n:2W_dsx_set_clockwork_base]
 {
 	category_name = "dsx_a1";
@@ -12516,7 +12203,10 @@ textures:0 = b_i_glb_chest-01;
 	{
 		material = set_item;
 		model = m_i_glb_chest-03;
-		[textures]		{ 0 = b_i_csl_chest-04; }
+		[textures]
+		{
+			0 = b_i_csl_chest-04;
+		}
 	}
 	[body]
 	{
@@ -12526,19 +12216,21 @@ textures:0 = b_i_glb_chest-01;
 			[chore_open]
 			{
 				skrit = transition;
-				[anim_files] { 00=chest-open; }
+				[anim_files]
+				{
+					00 = chest-open;
+				}
 			}
 		}
 	}
 }
-
 [t:template,n:2W_dsx_set_clockwork_1]
 {
 	doc = "dsx_set_clockwork_1";
 	specializes = dsx_set_clockwork_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12574,9 +12266,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_clockwork_2";
 	specializes = dsx_set_clockwork_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12612,9 +12304,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_clockwork_3";
 	specializes = dsx_set_clockwork_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12650,9 +12342,9 @@ textures:0 = b_i_glb_chest-01;
 {
 	doc = "dsx_set_clockwork_4";
 	specializes = dsx_set_clockwork_base;
-	[common] 
-	{ 
-		screen_name="Chest"; 
+	[common]
+	{
+		screen_name = "Chest";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12684,112 +12376,36 @@ textures:0 = b_i_glb_chest-01;
 		}
 	}
 }
-
-
 [t:template,n:2W_dsx_set_solov_base]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_set_solov_base";
-	//copied from ds1 pot_des_clay_03
-	specializes			= base_container_clay;
-	aspect:model		= m_i_des_pot-clay-03;
-	   [physics]
-	   {
-		fire_resistance		= 1.0;
-
-		break_dependents	= true;
-		break_sound	= s_e_set_item_clay_break;
-		   [break_particulate]
-		   {
-			   frag_glb_pot_clay_01 = 2;
-			   frag_glb_pot_clay_02 = 2;
-			   frag_glb_pot_clay_03 = 3;
-			   frag_glb_pot_clay_04 = 2;
-		   }
-	   }
+	specializes = base_container_clay;
+	[aspect]
+	{
+		model = m_i_des_pot-clay-03;
+	}
+	[physics]
+	{
+		fire_resistance = 1.0;
+		break_dependents = true;
+		break_sound = s_e_set_item_clay_break;
+		[break_particulate]
+		{
+			frag_glb_pot_clay_01 = 2;
+			frag_glb_pot_clay_02 = 2;
+			frag_glb_pot_clay_03 = 3;
+			frag_glb_pot_clay_04 = 2;
+		}
+	}
 }
 [t:template,n:2W_dsx_set_solov_1]
 {
 	doc = "dsx_set_solov_1";
 	specializes = dsx_set_solov_base;
-	[common] 
-	{ 
-		screen_name="Pot"; 
-		is_multi_player = false;
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-				no_trig_bits = true;
-				action* = call_sfx_script("unique_ray_dsx_cyan");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-				no_trig_bits = true;
-				action* = call_sfx_script("unique_light_dsx_cyan");
-			}
-		}
-	}
-	[inventory]{ 
-		drop_at_use_point = true;
-		[pcontent]
-		{
-			[oneof*]
-			{
-				il_main = sh_w_m_g_c_t_m_avg_ward_blood_dsx_set_inventor;
-			}
-		}
-	}
-}
-
-[t:template,n:2W_dsx_set_solov_2]
-{
-	doc = "dsx_set_solov_2";
-	specializes = dsx_set_solov_base;
-	[common] 
-	{ 
-		screen_name="Pot"; 
-		is_multi_player = false;
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-				no_trig_bits = true;
-				action* = call_sfx_script("unique_ray_dsx_cyan");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-				no_trig_bits = true;
-				action* = call_sfx_script("unique_light_dsx_cyan");
-			}
-		}
-	}
-	[inventory]{ 
-		drop_at_use_point = true;
-		[pcontent]
-		{
-			[oneof*]
-			{
-				il_main = spellbook_dsx_set_inventor;
-			}
-		}
-	}
-}
-[t:template,n:2W_dsx_set_solov_3]
-{
-	doc = "dsx_set_solov_3";
-	specializes = dsx_set_solov_base;
-	[common] 
-	{ 
-		screen_name="Pot"; 
+	[common]
+	{
+		screen_name = "Pot";
 		is_multi_player = false;
 		[template_triggers]
 		{
@@ -12810,7 +12426,83 @@ textures:0 = b_i_glb_chest-01;
 		}
 	}
 	[inventory]
-	{ 
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = sh_w_m_g_c_t_m_avg_ward_blood_dsx_set_inventor;
+			}
+		}
+	}
+}
+[t:template,n:2W_dsx_set_solov_2]
+{
+	doc = "dsx_set_solov_2";
+	specializes = dsx_set_solov_base;
+	[common]
+	{
+		screen_name = "Pot";
+		is_multi_player = false;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_dsx_cyan");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_light_dsx_cyan");
+			}
+		}
+	}
+	[inventory]
+	{
+		drop_at_use_point = true;
+		[pcontent]
+		{
+			[oneof*]
+			{
+				il_main = spellbook_dsx_set_inventor;
+			}
+		}
+	}
+}
+[t:template,n:2W_dsx_set_solov_3]
+{
+	doc = "dsx_set_solov_3";
+	specializes = dsx_set_solov_base;
+	[common]
+	{
+		screen_name = "Pot";
+		is_multi_player = false;
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_ray_dsx_cyan");
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+				no_trig_bits = true;
+				action* = call_sfx_script("unique_light_dsx_cyan");
+			}
+		}
+	}
+	[inventory]
+	{
 		drop_at_use_point = true;
 		[pcontent]
 		{
@@ -12821,28 +12513,22 @@ textures:0 = b_i_glb_chest-01;
 		}
 	}
 }
-
-//// MULTPLAYER REPLACEMENTS FOR THE SET ITEM CONTAINERS ////
-// ARHOK MP
-// MULTIPLAYER VERSION of arhok's leather armor rack
 [t:template,n:2W_crate_dsx_a1_r1a-rack-mp]
 {
 	category_name = "dsx_a1";
 	doc = "dsx_a1_r1a armor stand MP";
-	
-	[inventory] 
+	[inventory]
 	{
 		drop_at_use_point = true;
 		[delayed_pcontent]
 		{
 			[all*]
 			{
-				il_main = #armor/-unique(2)/0-1080;						
-				il_main = #armor/-mod(1)/0-1080;						
+				il_main = #armor/-unique(2)/0-1080;
+				il_main = #armor/-mod(1)/0-1080;
 			}
 		}
 	}
-	//everything from here is copied:
 	specializes = prop;
 	[aspect]
 	{
@@ -12865,7 +12551,6 @@ textures:0 = b_i_glb_chest-01;
 		one_shot = TRUE;
 	}
 }
-
 [t:template,n:2W_dsx_set_arhok_1-MP]
 {
 	doc = "dsx_set_arhok_1-MP";
@@ -12909,12 +12594,10 @@ textures:0 = b_i_glb_chest-01;
 					il_main = potion_mana_large;
 					il_main = potion_health_large;
 				}
-				
 			}
 		}
 	}
 }
-
 [t:template,n:2W_dsx_set_arhok_2-MP]
 {
 	doc = "dsx_set_arhok_2-MP";
@@ -12940,7 +12623,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-unique(2)/443-605;
 					il_main = #armor/-unique(2)/405-1917;
 					il_main = #*/-unique(2)/443-605;
-				}	
+				}
 				[oneof*]
 				{
 					il_main = potion_mana_large;
@@ -12957,7 +12640,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/443-605;
 					il_main = #armor/-rare(1)/405-1917;
 					il_main = #*/-rare(1)/443-605;
-				}		
+				}
 			}
 		}
 	}
@@ -12987,7 +12670,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-unique(2)/450-585;
 					il_main = #armor/-unique(2)/788-1833;
 					il_main = #*/-unique(2)/450-585;
-				}	
+				}
 				[oneof*]
 				{
 					il_main = potion_mana_large;
@@ -13004,13 +12687,11 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/450-585;
 					il_main = #armor/-rare(1)/788-1833;
 					il_main = #*/-rare(1)/450-585;
-				}		
-			}	
+				}
+			}
 		}
 	}
 }
-
-//DEMLOCK MP
 [t:template,n:2W_dsx_set_demlock_1-MP]
 {
 	doc = "dsx_set_demlock_1-MP";
@@ -13053,7 +12734,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/722-818;
 					il_main = #armor/-rare(1)/1526-2828;
 					il_main = #*/-rare(1)/722-818;
-				}			
+				}
 			}
 		}
 	}
@@ -13083,7 +12764,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-unique(2)/596-675;
 					il_main = #armor/-unique(2)/1221-2262;
 					il_main = #*/-unique(2)/596-675;
-				}	
+				}
 				[oneof*]
 				{
 					il_main = potion_mana_large;
@@ -13100,7 +12781,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/596-675;
 					il_main = #armor/-rare(1)/1221-2262;
 					il_main = #*/-rare(1)/596-675;
-				}		
+				}
 			}
 		}
 	}
@@ -13147,13 +12828,11 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/585-662;
 					il_main = #armor/-rare(1)/1216-2185;
 					il_main = #*/-rare(1)/585-662;
-				}			
+				}
 			}
 		}
 	}
 }
-
-//ILLICOR MP
 [t:template,n:2W_dsx_set_illicor_1-MP]
 {
 	doc = "dsx_set_illicor_1-MP";
@@ -13243,7 +12922,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/189-243;
 					il_main = #armor/-rare(1)/247-653;
 					il_main = #*/-rare(1)/189-243;
-				}			
+				}
 			}
 		}
 	}
@@ -13290,7 +12969,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/221-270;
 					il_main = #armor/-rare(1)/347-774;
 					il_main = #*/-rare(1)/221-270;
-				}			
+				}
 			}
 		}
 	}
@@ -13337,7 +13016,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/266-312;
 					il_main = #armor/-rare(1)/426-936;
 					il_main = #*/-rare(1)/266-312;
-				}			
+				}
 			}
 		}
 	}
@@ -13384,13 +13063,11 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/306-348;
 					il_main = #armor/-rare(1)/555-1070;
 					il_main = #*/-rare(1)/306-348;
-				}			
-			}	
+				}
+			}
 		}
 	}
 }
-
-//KAJJ MP
 [t:template,n:2W_dsx_set_kajj_1-MP]
 {
 	doc = "dsx_set_kajj_1-MP";
@@ -13433,7 +13110,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/199-238;
 					il_main = #armor/-rare(1)/315-696;
 					il_main = #*/-rare(1)/199-238;
-				}		
+				}
 			}
 		}
 	}
@@ -13463,7 +13140,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-unique(2)/201-238;
 					il_main = #armor/-unique(2)/339-696;
 					il_main = #*/-unique(2)/201-238;
-				}	
+				}
 				[oneof*]
 				{
 					il_main = potion_mana_large;
@@ -13480,8 +13157,8 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/201-238;
 					il_main = #armor/-rare(1)/339-696;
 					il_main = #*/-rare(1)/201-238;
-				}		
-			}	
+				}
+			}
 		}
 	}
 }
@@ -13528,7 +13205,6 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #armor/-rare(1)/405-783;
 					il_main = #*/-rare(1)/225-260;
 				}
-							
 			}
 		}
 	}
@@ -13575,13 +13251,11 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/255-288;
 					il_main = #armor/-rare(1)/496-890;
 					il_main = #*/-rare(1)/255-288;
-				}			
-			}	
+				}
+			}
 		}
 	}
 }
-
-//CLOCKWORK MP
 [t:template,n:2W_dsx_set_clockwork_1-MP]
 {
 	doc = "dsx_set_clockwork_1-MP";
@@ -13624,7 +13298,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/256-287;
 					il_main = #armor/-rare(1)/512-884;
 					il_main = #*/-rare(1)/256-287;
-				}			
+				}
 			}
 		}
 	}
@@ -13676,7 +13350,7 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/263-293;
 					il_main = #armor/-rare(1)/524-918;
 					il_main = #*/-rare(1)/263-293;
-				}			
+				}
 			}
 		}
 	}
@@ -13723,12 +13397,12 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #armor/116-628;
 					il_main = #*/193-249;
 				}
-				[oneof*]	
+				[oneof*]
 				{
 					il_main = #weapon/-rare(1)/249-277;
 					il_main = #armor/-rare(1)/495-867;
 					il_main = #*/-rare(1)/249-277;
-				}			
+				}
 			}
 		}
 	}
@@ -13749,7 +13423,7 @@ textures:0 = b_i_glb_chest-01;
 			[all*]
 			{
 				[gold*]
-				{	
+				{
 					min = 2165;
 					max = 4298;
 				}
@@ -13780,8 +13454,8 @@ textures:0 = b_i_glb_chest-01;
 					il_main = #weapon/-rare(1)/267-294;
 					il_main = #armor/-rare(1)/573-931;
 					il_main = #*/-rare(1)/267-294;
-				}			
-			}	
+				}
+			}
 		}
 	}
 }
