@@ -23,7 +23,6 @@
 		max_mana = 154;
 		mana = 154;
 		model = m_c_ebb_lqb;
-	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_lq;
@@ -236,7 +235,6 @@
 		max_mana = 154;
 		mana = 154;
 		model = m_c_ebb_lqt;
-	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_ebb_lq_b;
