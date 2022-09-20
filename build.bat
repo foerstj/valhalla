@@ -12,7 +12,8 @@ set tc=..\TankCreator
 
 :: Compile resource file
 rmdir /S /Q "%tmp%\Bits"
-robocopy "%doc_dsloa%\Bits\world" "%tmp%\Bits\world" /E
+robocopy "%doc_dsloa%\Bits\world\contentdb\templates\veteran" "%tmp%\Bits\world\contentdb\templates\veteran" /E
+robocopy "%doc_dsloa%\Bits\world\contentdb\templates\elite" "%tmp%\Bits\world\contentdb\templates\elite" /E
 %tc%\RTC.exe -source "%tmp%\Bits" -out "%ds%\DSLOA\%mod_cs%.dsres" -copyright "CC-BY-SA" -title "%mod_cs%" -author "Johannes Förstner"
 if %errorlevel% neq 0 pause
 
