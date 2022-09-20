@@ -259,7 +259,7 @@
 		force_no_render_click = true;
 		is_visible = true;
 		model = m_c_edm_rb_pos_1;
-	  f scale_base = 1.904881;
+	  f scale_base = 2.400000;
 		[voice]
 		{
 			[die]
@@ -405,13 +405,6 @@
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
 		}
 	}
 	[defend]
@@ -483,7 +476,7 @@
 		force_no_render_click = true;
 		is_visible = true;
 		model = m_c_edm_rb_pos_1;
-	  f scale_base = 1.904881;
+	  f scale_base = 2.400000;
 		[voice]
 		{
 			[attack]
@@ -631,13 +624,6 @@
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_red(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
 		}
 	}
 	[defend]
@@ -696,7 +682,7 @@
 		mana = 1439.3;
 		max_mana = 1439.3;
 		model = m_c_edm_we;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_edm_we-static;
@@ -822,13 +808,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_purple(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_purple(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
@@ -1162,7 +1141,7 @@
 		mana = 1439.3;
 		max_mana = 1439.3;
 		model = m_c_edm_ee;
-	  f scale_base = 2.063621;
+	  f scale_base = 2.600000;
 		[textures]
 		{
 			0 = b_c_edm_ee;
@@ -1317,13 +1296,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_green(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_green(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
@@ -1587,7 +1559,7 @@
 		mana = 1439.3;
 		max_mana = 1439.3;
 		model = m_c_edm_ae;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		scale_multiplier = 1.5;
 		[textures]
 		{
@@ -1745,13 +1717,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_green(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_green(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}

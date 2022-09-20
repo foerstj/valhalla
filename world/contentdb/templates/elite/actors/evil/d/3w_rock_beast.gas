@@ -565,7 +565,7 @@
 		max_life = 3140;
 		mana = 23.2;
 		max_mana = 23.2;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.519842;
 		[textures]
 		{
 			0 = b_c_edm_rb-03;
@@ -618,20 +618,6 @@
 			{
 				action* = call_sfx_script("rock_beast_dust_hands");
 				condition* = receive_world_message("we_anim_sfx",3);
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 		}
 	}

@@ -317,7 +317,7 @@
 		max_mana = 92.2;
 		experience_value = 2323660;
 		model = m_c_gah_fb_pos_a1;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_34;
@@ -341,13 +341,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_blue(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_blue(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
@@ -579,13 +572,6 @@
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
 		}
 	}
 	[aspect]
@@ -595,7 +581,7 @@
 		mana = 2765.2;
 		max_mana = 2765.2;
 		experience_value = 2197800;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_gah_fb_skin_35;

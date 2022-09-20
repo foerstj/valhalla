@@ -922,7 +922,7 @@
 		max_life = 2679.4;
 		mana = 55.4;
 		max_mana = 55.4;
-	  f scale_base = 1.259921;
+	  f scale_base = 1.587401;
 		[textures]
 		{
 			0 = b_c_edm_dl-06;
@@ -946,13 +946,6 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_cyan(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_blue(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 		}
 	}

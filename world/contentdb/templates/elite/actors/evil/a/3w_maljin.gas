@@ -724,7 +724,7 @@
 		mana = 2779.9;
 		max_mana = 2779.9;
 		model = m_c_edm_li_pos_4;
-	  f scale_base = 2.222361;
+	  f scale_base = 2.800000;
 		[textures]
 		{
 			0 = b_c_edm_li-05;
@@ -753,13 +753,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_purple(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_purple(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}

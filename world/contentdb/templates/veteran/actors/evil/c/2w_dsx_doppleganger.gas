@@ -386,7 +386,7 @@
 	}
 	[aspect]
 	{
-	  f scale_base = 2.519842;
+	  f scale_base = 3.174802;
 		experience_value = 63480;
 		life = 1769.6;
 		max_life = 1769.6;
@@ -411,13 +411,6 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_blue(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_green(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 		}
 	}

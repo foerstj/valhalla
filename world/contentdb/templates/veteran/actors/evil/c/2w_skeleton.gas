@@ -842,7 +842,7 @@
 		{
 			0 = b_c_ecm_skg-02;
 		}
-	  f scale_base = 1.511905;
+	  f scale_base = 1.904881;
 	}
 	[attack]
 	{
@@ -861,13 +861,6 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_red(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_red(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 		}
 	}
@@ -1554,7 +1547,7 @@
 		{
 			0 = b_c_ecm_sk-02;
 		}
-	  f scale_base = 1.574901;
+	  f scale_base = 1.984251;
 	}
 	[attack]
 	{
@@ -1572,13 +1565,6 @@
 				no_trig_bits = true;
 				condition* = receive_world_message("we_enemy_spotted");
 				action* = call_sfx_script("unique_light_red(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_purple(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 		}
 	}

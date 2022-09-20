@@ -1862,7 +1862,7 @@
 		max_life = 2352;
 		mana = 288;
 		max_mana = 288;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[voice]
 		{
 			[die]
@@ -1985,13 +1985,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_cyan(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}

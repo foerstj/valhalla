@@ -273,7 +273,7 @@
 	}
 	[aspect]
 	{
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_edm_dl-07;
@@ -307,13 +307,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_blue(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_blue(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
@@ -964,7 +957,7 @@
 		max_life = 3771;
 		mana = 78;
 		max_mana = 78;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_edm_dl-06;
@@ -988,13 +981,6 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_cyan(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_purple(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 			[*]
 			{

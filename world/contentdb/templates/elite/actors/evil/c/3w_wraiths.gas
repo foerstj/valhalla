@@ -409,7 +409,7 @@
 		mana = 51.8;
 		max_mana = 51.8;
 		model = m_c_ecm_wr_pos_1;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_ecm_wr-05;
@@ -518,13 +518,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_yellow(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
@@ -1515,7 +1508,7 @@
 		mana = 50.5;
 		max_mana = 50.5;
 		model = m_c_ecm_wr_pos_1;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_ecm_wr-06;
@@ -1636,13 +1629,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_red(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_red(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}

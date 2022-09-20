@@ -252,7 +252,7 @@
 		{
 			0 = b_c_edm_wf-04;
 		}
-	  f scale_base = 1.133929;
+	  f scale_base = 1.428661;
 	}
 	[attack]
 	{
@@ -277,13 +277,6 @@
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_ray_blue(sgx)");
 				action* = call_sfx_script("unique_light_blue(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 		}
 	}

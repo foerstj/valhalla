@@ -286,7 +286,7 @@
 		max_life = 2552;
 		mana = 27.6;
 		max_mana = 27.6;
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 	}
 	[attack]
 	{
@@ -311,13 +311,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_cyan(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
@@ -877,7 +870,7 @@
 		{
 			0 = b_c_ecm_skg-02;
 		}
-	  f scale_base = 1.904881;
+	  f scale_base = 2.400000;
 	}
 	[attack]
 	{
@@ -896,13 +889,6 @@
 				single_shot = true;
 				no_trig_bits = true;
 				action* = call_sfx_script("unique_light_red(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_green(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 			[*]
 			{
@@ -1482,7 +1468,7 @@
 		{
 			0 = b_c_ecm_sk-02;
 		}
-	  f scale_base = 2.381102;
+	  f scale_base = 3.000000;
 	}
 	[attack]
 	{
@@ -1589,13 +1575,6 @@
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
 		}
 	}
 	[defend]
@@ -1666,7 +1645,7 @@
 		{
 			0 = b_c_ecm_sk-02;
 		}
-	  f scale_base = 1.984251;
+	  f scale_base = 2.500000;
 	}
 	[attack]
 	{
@@ -1684,13 +1663,6 @@
 				no_trig_bits = true;
 				condition* = receive_world_message("we_enemy_spotted");
 				action* = call_sfx_script("unique_light_red(sgx)");
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_blue(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
 			}
 			[*]
 			{

@@ -47,7 +47,7 @@
 	specializes = 3W_dsx_shard_base;
 	[aspect]
 	{
-	  f scale_base = 0.952441;
+	  f scale_base = 1.200000;
 		[textures]
 		{
 			0 = b_c_edm_shard-01-static;
@@ -84,13 +84,6 @@
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_blue(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
 		}
 	}
 	[defend]
@@ -113,7 +106,7 @@
 	specializes = 3W_dsx_shard_base;
 	[aspect]
 	{
-	  f scale_base = 1.111181;
+	  f scale_base = 1.400000;
 		[textures]
 		{
 			0 = b_c_edm_shard-04-static;
@@ -150,13 +143,6 @@
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
 		}
 	}
 	[defend]
@@ -190,7 +176,7 @@
 	specializes = 3W_dsx_shard_base;
 	[aspect]
 	{
-	  f scale_base = 1.269921;
+	  f scale_base = 1.600000;
 		[textures]
 		{
 			0 = b_c_edm_shard-03-static;
@@ -224,13 +210,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_yellow(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}
@@ -278,7 +257,7 @@
 	}
 	[aspect]
 	{
-	  f scale_base = 1.587401;
+	  f scale_base = 2.000000;
 		[textures]
 		{
 			0 = b_c_edm_shard-02-static;
@@ -312,13 +291,6 @@
 			{
 				condition* = receive_world_message("WE_ENTERED_WORLD");
 				action* = call_sfx_script("unique_light_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_yellow(sgx)");
 			  b no_trig_bits = true;
 			  b single_shot = true;
 			}

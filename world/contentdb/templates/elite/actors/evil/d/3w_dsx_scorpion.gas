@@ -368,7 +368,7 @@
 			max_life = 2422.6;
 			mana = 44.2;
 			max_mana = 44.2;
-		  f scale_base = 2.381102;
+		  f scale_base = 3.000000;
 			model = m_c_edm_sc_pos_1;
 			[textures]
 			{
@@ -490,13 +490,6 @@
 				{
 					condition* = receive_world_message("WE_ENTERED_WORLD");
 					action* = call_sfx_script("unique_light_blue(sgx)");
-				  b no_trig_bits = true;
-				  b single_shot = true;
-				}
-				[*]
-				{
-					condition* = receive_world_message("WE_ENTERED_WORLD");
-					action* = call_sfx_script("unique_ray_blue(sgx)");
 				  b no_trig_bits = true;
 				  b single_shot = true;
 				}
