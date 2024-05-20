@@ -198,7 +198,7 @@
 	doc = "summoned molten_golem";
 	specializes = 2w_molten_golem_base;
 }
-[t:template,n:2_molten_golem_summon_gom]
+[t:template,n:2W_molten_golem_summon_gom]
 {
 	[aspect]
 	{
