@@ -171,11 +171,13 @@
 }
 [t:template,n:3W_molten_golem]
 {
+	category_name = "3W_evil_d";
+	doc = "summoned molten_golem";
+	specializes = 3w_molten_golem_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -202,16 +204,16 @@
 			}
 		}
 	}
-	doc = "summoned molten_golem";
-	specializes = 3w_molten_golem_base;
 }
 [t:template,n:3W_molten_golem_summon_gom]
 {
+	category_name = "3W_evil_d";
+	doc = "summoned molten_golem";
+	specializes = 3w_molten_golem_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -238,8 +240,6 @@
 			}
 		}
 	}
-	doc = "summoned molten_golem";
-	specializes = 3w_molten_golem_base;
 	[self_destruct]
 	{
 		delete_time = 20.0;
@@ -619,11 +619,13 @@
 }
 [t:template,n:3W_golem_frost]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_golem_frost";
+	specializes = 3W_golem_frost_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -644,12 +646,17 @@
 			}
 		}
 	}
-	doc = "3W_golem_frost";
-	specializes = 3W_golem_frost_base;
 }
 [t:template,n:3W_golem_frost_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] golem_frost";
+	specializes = 3W_golem_frost_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -669,13 +676,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] golem_frost";
-	specializes = 3W_golem_frost_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

@@ -1,26 +1,6 @@
 [t:template,n:3W_dsx_troll]
 {
 	category_name = "3W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_purple(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_purple(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "3W_DSX Troll Base";
 	specializes = troll_base;
 	[aspect]
@@ -49,6 +29,26 @@
 			{
 				priority = low;
 				* = s_e_hit_troll_SED;
+			}
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_purple(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

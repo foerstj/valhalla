@@ -326,11 +326,13 @@
 }
 [t:template,n:2W_krug_dog_skeleton]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_krug_dog_skeleton";
+	specializes = 2W_krug_dog_skeleton_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -344,31 +346,29 @@
 			}
 		}
 	}
-	doc = "2W_krug_dog_skeleton";
-	specializes = 2W_krug_dog_skeleton_base;
 }
 [t:template,n:2W_krug_dog_skeleton_summon]
 {
 	category_name = "2W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "[summon] krug_dog_skeleton";
 	specializes = 2W_krug_dog_skeleton_base;
 	[aspect]
 	{
 		experience_value = 0;
 	  f scale_base = 1.259921;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{

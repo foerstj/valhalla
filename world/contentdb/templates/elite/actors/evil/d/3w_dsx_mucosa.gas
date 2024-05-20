@@ -212,26 +212,6 @@
 [t:template,n:3W_dsx_twisted_mucosa]
 {
 	category_name = "3W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "3W_dsx_twisted_mucosa";
 	specializes = 3W_twisted_mucosa_base;
 	[actor]
@@ -277,6 +257,26 @@
 		damage_max = 330;
 		damage_min = 202.5;
 	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[defend]
 	{
 		defense = 620;
@@ -285,6 +285,13 @@
 [t:template,n:3W_dsx_twisted_mucosa_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "3W_dsx_twisted_mucosa_summon";
+	specializes = 3W_twisted_mucosa_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -304,13 +311,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_dsx_twisted_mucosa_summon";
-	specializes = 3W_twisted_mucosa_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 }
 [t:template,n:3W_dsx_twisted_mucosa_boss]
@@ -1077,6 +1077,13 @@
 [t:template,n:3W_dsx_vile_twisted_mucosa_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "3W_dsx_vile_twisted_mucosa_summon";
+	specializes = 3W_vile_twisted_mucosa_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -1096,13 +1103,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_dsx_vile_twisted_mucosa_summon";
-	specializes = 3W_vile_twisted_mucosa_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

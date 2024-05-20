@@ -292,13 +292,13 @@
 }
 [t:template,n:2W_lava_imp_02]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_lava_imp_02";
+	specializes = 2W_lava_imp_02_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_lava_imp_02";
-	specializes = 2W_lava_imp_02_base;
 	[common]
 	{
 		membership = monster, party_lava_imp_02;
@@ -323,13 +323,13 @@
 }
 [t:template,n:2W_lava_imp_02_reveal]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_revealing lava_imp_02";
+	specializes = 2W_lava_imp_02_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_revealing lava_imp_02";
-	specializes = 2W_lava_imp_02_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -359,13 +359,13 @@
 }
 [t:template,n:2W_lava_imp_02_reveal_act]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_revealing lava_imp_02 activate";
+	specializes = 2W_lava_imp_02_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_revealing lava_imp_02 activate";
-	specializes = 2W_lava_imp_02_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -480,13 +480,13 @@
 }
 [t:template,n:2W_lava_imp_03]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_lava_imp_03";
+	specializes = 2W_lava_imp_03_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_lava_imp_03";
-	specializes = 2W_lava_imp_03_base;
 	[common]
 	{
 		membership = monster, party_lava_imp_03;
@@ -511,13 +511,13 @@
 }
 [t:template,n:2W_lava_imp_03_reveal]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_revealing lava_imp_03";
+	specializes = 2W_lava_imp_03_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_revealing lava_imp_03";
-	specializes = 2W_lava_imp_03_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -547,13 +547,13 @@
 }
 [t:template,n:2W_lava_imp_03_reveal_act]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_revealing lava_imp_03 activate";
+	specializes = 2W_lava_imp_03_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_revealing lava_imp_03 activate";
-	specializes = 2W_lava_imp_03_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -585,6 +585,13 @@
 [t:template,n:2W_lava_imp_03_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] lava_imp_03";
+	specializes = 2W_lava_imp_03_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -597,13 +604,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] lava_imp_03";
-	specializes = 2W_lava_imp_03_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -714,11 +714,13 @@
 }
 [t:template,n:2W_lava_imp_04]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_lava_imp_04";
+	specializes = 2W_lava_imp_04_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -732,12 +734,17 @@
 			}
 		}
 	}
-	doc = "2W_lava_imp_04";
-	specializes = 2W_lava_imp_04_base;
 }
 [t:template,n:2W_lava_imp_04_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] lava_imp_04";
+	specializes = 2W_lava_imp_04_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -750,13 +757,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] lava_imp_04";
-	specializes = 2W_lava_imp_04_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -965,11 +965,13 @@
 }
 [t:template,n:2W_sand_mage]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_sand mage";
+	specializes = 2W_sand_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -983,18 +985,16 @@
 			}
 		}
 	}
-	doc = "2W_sand mage";
-	specializes = 2W_sand_mage_base;
 }
 [t:template,n:2W_sand_mage_reveal]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_revealing sand mage";
+	specializes = 2W_sand_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_revealing sand mage";
-	specializes = 2W_sand_mage_base;
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit;
@@ -1099,11 +1099,13 @@
 }
 [t:template,n:2W_sand_basher]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_sand_basher";
+	specializes = 2W_sand_basher_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1117,12 +1119,17 @@
 			}
 		}
 	}
-	doc = "2W_sand_basher";
-	specializes = 2W_sand_basher_base;
 }
 [t:template,n:2W_sand_basher_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] sand_basher";
+	specializes = 2W_sand_basher_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -1135,13 +1142,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] sand_basher";
-	specializes = 2W_sand_basher_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

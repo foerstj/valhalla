@@ -270,11 +270,13 @@
 }
 [t:template,n:2W_cave_giant]
 {
+	category_name = "2W_evil_c";
+	doc = "2W_cave_giant";
+	specializes = 2W_cave_giant_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -288,12 +290,17 @@
 			}
 		}
 	}
-	doc = "2W_cave_giant";
-	specializes = 2W_cave_giant_base;
 }
 [t:template,n:2W_cave_giant_summon]
 {
 	category_name = "2W_evil_c";
+	doc = "[summon] cave_giant";
+	specializes = 2W_cave_giant_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -306,12 +313,5 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] cave_giant";
-	specializes = 2W_cave_giant_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 }

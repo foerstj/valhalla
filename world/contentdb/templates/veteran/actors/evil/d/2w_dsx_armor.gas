@@ -188,19 +188,6 @@
 [t:template,n:2W_dsx_armor_deadly]
 {
 	category_name = "2W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_blue(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "2W_dsx_armor_deadly";
 	specializes = 2W_dsx_armor_deadly_base;
 	[actor]
@@ -248,6 +235,19 @@
 		damage_max = 387.2;
 		damage_min = 252;
 	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_blue(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[defend]
 	{
 		defense = 642;
@@ -256,6 +256,13 @@
 [t:template,n:2W_dsx_deadly_armor_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "2W_dsx_summon_dsx_armor_deadly";
+	specializes = 2W_dsx_armor_deadly_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -268,13 +275,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "2W_dsx_summon_dsx_armor_deadly";
-	specializes = 2W_dsx_armor_deadly_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

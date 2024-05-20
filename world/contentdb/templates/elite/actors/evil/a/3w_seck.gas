@@ -251,11 +251,13 @@
 }
 [t:template,n:3W_seck_archer]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck archer";
+	specializes = 3W_seck_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -287,18 +289,16 @@
 			}
 		}
 	}
-	doc = "3W_seck archer";
-	specializes = 3W_seck_archer_base;
 }
 [t:template,n:3W_seck_archer_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck archer reveal";
+	specializes = 3W_seck_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_seck archer reveal";
-	specializes = 3W_seck_archer_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -587,11 +587,13 @@
 }
 [t:template,n:3W_seck_grunt]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck grunt";
+	specializes = 3W_seck_grunt_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -623,18 +625,16 @@
 			}
 		}
 	}
-	doc = "3W_seck grunt";
-	specializes = 3W_seck_grunt_base;
 }
 [t:template,n:3W_seck_grunt_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck grunt reveal";
+	specializes = 3W_seck_grunt_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_seck grunt reveal";
-	specializes = 3W_seck_grunt_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -869,11 +869,13 @@
 }
 [t:template,n:3W_seck_mage]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck mage";
+	specializes = 3W_seck_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -905,18 +907,16 @@
 			}
 		}
 	}
-	doc = "3W_seck mage";
-	specializes = 3W_seck_mage_base;
 }
 [t:template,n:3W_seck_mage_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck mage reveal";
+	specializes = 3W_seck_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_seck mage reveal";
-	specializes = 3W_seck_mage_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -1115,11 +1115,13 @@
 }
 [t:template,n:3W_seck_mage_high]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck_mage_high";
+	specializes = 3W_seck_mage_high_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -1151,18 +1153,16 @@
 			}
 		}
 	}
-	doc = "3W_seck_mage_high";
-	specializes = 3W_seck_mage_high_base;
 }
 [t:template,n:3W_seck_mage_high_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck mage_high reveal";
+	specializes = 3W_seck_mage_high_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_seck mage_high reveal";
-	specializes = 3W_seck_mage_high_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -1314,11 +1314,13 @@
 }
 [t:template,n:3W_seck_archer_elite]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck archer_elite";
+	specializes = 3W_seck_archer_elite_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -1350,18 +1352,16 @@
 			}
 		}
 	}
-	doc = "3W_seck archer_elite";
-	specializes = 3W_seck_archer_elite_base;
 }
 [t:template,n:3W_seck_archer_elite_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck archer_elite reveal";
+	specializes = 3W_seck_archer_elite_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_seck archer_elite reveal";
-	specializes = 3W_seck_archer_elite_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -1496,11 +1496,13 @@
 }
 [t:template,n:3W_seck_guard_elite]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck guard_elite";
+	specializes = 3W_seck_guard_elite_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -1532,18 +1534,16 @@
 			}
 		}
 	}
-	doc = "3W_seck guard_elite";
-	specializes = 3W_seck_guard_elite_base;
 }
 [t:template,n:3W_seck_guard_elite_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_seck guard_elite reveal";
+	specializes = 3W_seck_guard_elite_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_seck guard_elite reveal";
-	specializes = 3W_seck_guard_elite_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit

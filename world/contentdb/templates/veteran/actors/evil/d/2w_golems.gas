@@ -171,11 +171,13 @@
 }
 [t:template,n:2W_molten_golem]
 {
+	category_name = "2W_evil_d";
+	doc = "summoned molten_golem";
+	specializes = 2w_molten_golem_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -195,18 +197,35 @@
 			}
 		}
 	}
-	doc = "summoned molten_golem";
-	specializes = 2w_molten_golem_base;
 }
 [t:template,n:2W_molten_golem_summon_gom]
 {
-	[aspect]
-	{
-	  f scale_base = 1.000000;
-	}
 	category_name = "2W_evil_d";
 	doc = "summoned molten_golem";
 	specializes = 2w_molten_golem_base;
+	[aspect]
+	{
+	  f scale_base = 1.259921;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("fire_elemental_glow");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[self_destruct]
 	{
 		delete_time = 20.0;
@@ -572,11 +591,13 @@
 }
 [t:template,n:2W_golem_frost]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_golem_frost";
+	specializes = 2W_golem_frost_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -590,31 +611,29 @@
 			}
 		}
 	}
-	doc = "2W_golem_frost";
-	specializes = 2W_golem_frost_base;
 }
 [t:template,n:2W_golem_frost_summon]
 {
 	category_name = "2W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_green(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "[summon] golem_frost";
 	specializes = 2W_golem_frost_base;
 	[aspect]
 	{
 		experience_value = 0;
 	  f scale_base = 1.259921;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{

@@ -149,11 +149,13 @@
 }
 [t:template,n:2W_hell_boar]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_hell_boar";
+	specializes = 2W_hell_boar_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -167,12 +169,17 @@
 			}
 		}
 	}
-	doc = "2W_hell_boar";
-	specializes = 2W_hell_boar_base;
 }
 [t:template,n:2W_hell_boar_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] hell_boar";
+	specializes = 2W_hell_boar_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -185,13 +192,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] hell_boar";
-	specializes = 2W_hell_boar_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

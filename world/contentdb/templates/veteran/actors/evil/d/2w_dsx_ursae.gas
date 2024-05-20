@@ -235,6 +235,13 @@
 [t:template,n:2W_dsx_ursae_demonic_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "2W_dsx_summon_ursae_demonic";
+	specializes = 2W_dsx_ursae_demonic_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -247,13 +254,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "2W_dsx_summon_ursae_demonic";
-	specializes = 2W_dsx_ursae_demonic_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

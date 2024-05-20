@@ -1291,44 +1291,6 @@
 [t:template,n:3W_dsx_shadow_bigboss]
 {
 	category_name = "3W_evil_b";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				action* = call_sfx_script("shadow_jumper_boss");
-				condition* = receive_world_message("WE_REQ_ACTIVATE");
-				single_shot = true;
-			}
-			[*]
-			{
-				action* = call_sfx_script("shadow_jumper_boss_dur");
-				action* = call_sfx_script("shadow_jumper_boss_die_right_arm");
-				action* = call_sfx_script("shadow_jumper_boss_die_left_arm");
-				action* = call_sfx_script("shadow_jumper_boss_die_right_leg");
-				action* = call_sfx_script("shadow_jumper_boss_die_left_leg");
-				action* = call_sfx_script("shadow_jumper_boss_die_torso");
-				action* = call_sfx_script("shadow_jumper_boss_die_flare");
-				condition* = receive_world_message("WE_KILLED");
-				single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_green(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_green(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "3W_Shadowjumper Boss";
 	specializes = 3W_dsx_shadow_bigboss_base;
 	[actor]
@@ -1378,6 +1340,44 @@
 			{
 				priority = low;
 				* = s_e_hit_skeleton_SED;
+			}
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("shadow_jumper_boss");
+				condition* = receive_world_message("WE_REQ_ACTIVATE");
+				single_shot = true;
+			}
+			[*]
+			{
+				action* = call_sfx_script("shadow_jumper_boss_dur");
+				action* = call_sfx_script("shadow_jumper_boss_die_right_arm");
+				action* = call_sfx_script("shadow_jumper_boss_die_left_arm");
+				action* = call_sfx_script("shadow_jumper_boss_die_right_leg");
+				action* = call_sfx_script("shadow_jumper_boss_die_left_leg");
+				action* = call_sfx_script("shadow_jumper_boss_die_torso");
+				action* = call_sfx_script("shadow_jumper_boss_die_flare");
+				condition* = receive_world_message("WE_KILLED");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_green(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}
@@ -1650,11 +1650,13 @@
 }
 [t:template,n:3W_dsx_shadow_bigboss_nis_karate]
 {
+	category_name = "3W_evil_b";
+	doc = "3W_dsx_shadow_bigboss_nis_karate";
+	specializes = 3W_dsx_shadow_bigboss_nis_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_b";
 	[common]
 	{
 		[template_triggers]
@@ -1687,18 +1689,16 @@
 			}
 		}
 	}
-	doc = "3W_dsx_shadow_bigboss_nis_karate";
-	specializes = 3W_dsx_shadow_bigboss_nis_base;
 }
 [t:template,n:3W_dsx_shadow_bigboss_nis_staff]
 {
+	category_name = "3W_evil_b";
+	doc = "3W_dsx_shadow_bigboss_nis_staff";
+	specializes = 3W_dsx_shadow_bigboss_nis_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_b";
-	doc = "3W_dsx_shadow_bigboss_nis_staff";
-	specializes = 3W_dsx_shadow_bigboss_nis_base;
 	[common]
 	{
 		screen_name = "Shadowjumper";

@@ -169,13 +169,13 @@
 }
 [t:template,n:2W_phrak]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_phrak";
+	specializes = 2W_base_phrak;
 	[aspect]
 	{
 	  f scale_base = 0.692957;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_phrak";
-	specializes = 2W_base_phrak;
 	[common]
 	{
 		membership = phrak,monster;
@@ -437,26 +437,13 @@
 }
 [t:template,n:2W_caged_phrak]
 {
+	category_name = "2W_bad";
+	doc = "2W_phrak caged";
+	specializes = 2W_base_phrak;
 	[aspect]
 	{
 	  f scale_base = 0.692957;
 	}
-	category_name = "2W_bad";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
-	doc = "2W_phrak caged";
-	specializes = 2W_base_phrak;
 	[body]
 	{
 		[chore_dictionary]
@@ -517,6 +504,19 @@
 				{
 					00 = fl;
 				}
+			}
+		}
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

@@ -209,11 +209,13 @@
 }
 [t:template,n:2W_ice_warrior]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_ice_warrior";
+	specializes = 2W_ice_warrior_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -233,16 +235,16 @@
 			}
 		}
 	}
-	doc = "2W_ice_warrior";
-	specializes = 2W_ice_warrior_base;
 }
 [t:template,n:2W_ice_warrior_summon]
 {
+	category_name = "2W_evil_d";
+	doc = "[summon] ice_warrior";
+	specializes = 2W_ice_warrior_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -262,8 +264,6 @@
 			}
 		}
 	}
-	doc = "[summon] ice_warrior";
-	specializes = 2W_ice_warrior_base;
 }
 [t:template,n:2W_ice_warrior_boss_01]
 {

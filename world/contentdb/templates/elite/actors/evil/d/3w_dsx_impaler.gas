@@ -138,11 +138,13 @@
 }
 [t:template,n:3W_dsx_impaler]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_impaler";
+	specializes = 3W_dsx_impaler_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -163,6 +165,4 @@
 			}
 		}
 	}
-	doc = "3W_dsx_impaler";
-	specializes = 3W_dsx_impaler_base;
 }

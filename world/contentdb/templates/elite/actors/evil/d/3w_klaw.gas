@@ -421,11 +421,13 @@
 }
 [t:template,n:3W_forest_klaw]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_forest klaw";
+	specializes = 3W_forest_klaw_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -446,12 +448,17 @@
 			}
 		}
 	}
-	doc = "3W_forest klaw";
-	specializes = 3W_forest_klaw_base;
 }
 [t:template,n:3W_forest_klaw_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] forest klaw";
+	specializes = 3W_forest_klaw_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -471,13 +478,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] forest klaw";
-	specializes = 3W_forest_klaw_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

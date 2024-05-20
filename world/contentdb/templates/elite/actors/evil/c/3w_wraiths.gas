@@ -298,11 +298,13 @@
 }
 [t:template,n:3W_wraith]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_wraith";
+	specializes = 3W_base_battle_wraith;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -330,45 +332,43 @@
 			}
 		}
 	}
-	doc = "3W_wraith";
-	specializes = 3W_base_battle_wraith;
 }
 [t:template,n:3W_wraith_summon]
 {
 	category_name = "3W_evil_c";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				action* = call_sfx_script("wraith_tracer","shield_grip");
-				action* = call_sfx_script("wraith_tracer","weapon_grip");
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_yellow(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "[summon] wraith";
 	specializes = 3W_base_battle_wraith;
 	[aspect]
 	{
 		experience_value = 0;
 	  f scale_base = 1.587401;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				action* = call_sfx_script("wraith_tracer","shield_grip");
+				action* = call_sfx_script("wraith_tracer","weapon_grip");
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_yellow(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[inventory]
 	{
@@ -799,11 +799,13 @@
 }
 [t:template,n:3W_wraith_terror]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_wraith_terror reveal";
+	specializes = 3W_wraith_terror_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -824,16 +826,16 @@
 			}
 		}
 	}
-	doc = "3W_wraith_terror reveal";
-	specializes = 3W_wraith_terror_base;
 }
 [t:template,n:3W_wraith_terror_act]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_wraith_terror reveal activate";
+	specializes = 3W_wraith_terror_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -854,8 +856,6 @@
 			}
 		}
 	}
-	doc = "3W_wraith_terror reveal activate";
-	specializes = 3W_wraith_terror_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -1192,11 +1192,13 @@
 }
 [t:template,n:3W_wraith_archer]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_wraith_archer";
+	specializes = 3W_wraith_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1217,12 +1219,17 @@
 			}
 		}
 	}
-	doc = "3W_wraith_archer";
-	specializes = 3W_wraith_archer_base;
 }
 [t:template,n:3W_wraith_archer_summon]
 {
 	category_name = "3W_evil_c";
+	doc = "[summon] wraith_archer";
+	specializes = 3W_wraith_archer_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -1242,13 +1249,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] wraith_archer";
-	specializes = 3W_wraith_archer_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{
@@ -1908,11 +1908,13 @@
 }
 [t:template,n:3W_warlock]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_warlock";
+	specializes = 3W_warlock_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1940,16 +1942,16 @@
 			}
 		}
 	}
-	doc = "3W_warlock";
-	specializes = 3W_warlock_base;
 }
 [t:template,n:3W_warlock_act]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_warlock activate";
+	specializes = 3W_warlock_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1977,8 +1979,6 @@
 			}
 		}
 	}
-	doc = "3W_warlock activate";
-	specializes = 3W_warlock_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit

@@ -1431,11 +1431,13 @@
 }
 [t:template,n:2W_dsx_hassat_shaman_controlled]
 {
+	category_name = "2W_lw_evil_a";
+	doc = "2W_dsx_hassat_shaman_controlled";
+	specializes = 2W_dsx_hassat_shaman_base;
 	[aspect]
 	{
 	  f scale_base = 1.070933;
 	}
-	category_name = "2W_lw_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -1449,8 +1451,6 @@
 			}
 		}
 	}
-	doc = "2W_dsx_hassat_shaman_controlled";
-	specializes = 2W_dsx_hassat_shaman_base;
 	[mind]
 	{
 		jat_brain = jat_none;
@@ -1691,11 +1691,13 @@
 }
 [t:template,n:2W_dsx_hassat_mage]
 {
+	category_name = "2W_evil_a";
+	doc = "2W_dsx_hassat_mage";
+	specializes = 2W_dsx_hassat_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.133929;
 	}
-	category_name = "2W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -1709,16 +1711,16 @@
 			}
 		}
 	}
-	doc = "2W_dsx_hassat_mage";
-	specializes = 2W_dsx_hassat_mage_base;
 }
 [t:template,n:2W_dsx_hassat_mage_lhaoc]
 {
+	category_name = "2W_1w_evil_a";
+	doc = "2W_dsx_hassat_mage_lhaoc";
+	specializes = 2W_dsx_hassat_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.133929;
 	}
-	category_name = "2W_1w_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -1732,8 +1734,6 @@
 			}
 		}
 	}
-	doc = "2W_dsx_hassat_mage_lhaoc";
-	specializes = 2W_dsx_hassat_mage_base;
 	[inventory]
 	{
 		spew_equipped_kill_count = <ignore>;

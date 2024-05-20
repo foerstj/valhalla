@@ -225,11 +225,13 @@
 }
 [t:template,n:3W_drake_red]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_drake_red";
+	specializes = 3W_drake_red_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -260,16 +262,16 @@
 			}
 		}
 	}
-	doc = "3W_drake_red";
-	specializes = 3W_drake_red_base;
 }
 [t:template,n:3W_drake_red_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "[reveal] drake_red";
+	specializes = 3W_drake_red_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -300,8 +302,6 @@
 			}
 		}
 	}
-	doc = "[reveal] drake_red";
-	specializes = 3W_drake_red_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
@@ -416,11 +416,13 @@
 }
 [t:template,n:3W_drake_green]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_drake_green";
+	specializes = 3W_drake_green_base;
 	[aspect]
 	{
 	  f scale_base = 1.190551;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -451,16 +453,16 @@
 			}
 		}
 	}
-	doc = "3W_drake_green";
-	specializes = 3W_drake_green_base;
 }
 [t:template,n:3W_drake_green_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "[reveal] drake_green";
+	specializes = 3W_drake_green_base;
 	[aspect]
 	{
 	  f scale_base = 1.190551;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -491,8 +493,6 @@
 			}
 		}
 	}
-	doc = "[reveal] drake_green";
-	specializes = 3W_drake_green_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
@@ -501,6 +501,13 @@
 [t:template,n:3W_drake_green_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] drake_green";
+	specializes = 3W_drake_green_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.190551;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -530,13 +537,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] drake_green";
-	specializes = 3W_drake_green_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.190551;
 	}
 	[inventory]
 	{
@@ -632,11 +632,13 @@
 }
 [t:template,n:3W_drake_white]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_drake_white";
+	specializes = 3W_drake_white_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -667,16 +669,16 @@
 			}
 		}
 	}
-	doc = "3W_drake_white";
-	specializes = 3W_drake_white_base;
 }
 [t:template,n:3W_drake_white_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_revealing drake_white";
+	specializes = 3W_drake_white_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -707,8 +709,6 @@
 			}
 		}
 	}
-	doc = "3W_revealing drake_white";
-	specializes = 3W_drake_white_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
@@ -812,11 +812,13 @@
 }
 [t:template,n:3W_drake_blue]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_drake_blue";
+	specializes = 3W_drake_blue_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -847,16 +849,16 @@
 			}
 		}
 	}
-	doc = "3W_drake_blue";
-	specializes = 3W_drake_blue_base;
 }
 [t:template,n:3W_drake_blue_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_revealing drake_blue";
+	specializes = 3W_drake_blue_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -887,8 +889,6 @@
 			}
 		}
 	}
-	doc = "3W_revealing drake_blue";
-	specializes = 3W_drake_blue_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
@@ -1001,11 +1001,13 @@
 }
 [t:template,n:3W_drake_black]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_drake_black";
+	specializes = 3W_drake_black_base;
 	[aspect]
 	{
 	  f scale_base = 1.031811;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1036,16 +1038,16 @@
 			}
 		}
 	}
-	doc = "3W_drake_black";
-	specializes = 3W_drake_black_base;
 }
 [t:template,n:3W_drake_black_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_revealing drake_black";
+	specializes = 3W_drake_black_base;
 	[aspect]
 	{
 	  f scale_base = 1.031811;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1076,8 +1078,6 @@
 			}
 		}
 	}
-	doc = "3W_revealing drake_black";
-	specializes = 3W_drake_black_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;
@@ -1086,6 +1086,13 @@
 [t:template,n:3W_drake_black_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] drake_black";
+	specializes = 3W_drake_black_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.031811;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -1115,13 +1122,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] drake_black";
-	specializes = 3W_drake_black_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.031811;
 	}
 	[inventory]
 	{
@@ -1248,11 +1248,13 @@
 }
 [t:template,n:3W_drake_molten]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_drake_molten";
+	specializes = 3W_drake_molten_base;
 	[aspect]
 	{
 	  f scale_base = 1.031811;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1283,16 +1285,16 @@
 			}
 		}
 	}
-	doc = "3W_drake_molten";
-	specializes = 3W_drake_molten_base;
 }
 [t:template,n:3W_drake_molten_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_revealing drake_molten";
+	specializes = 3W_drake_molten_base;
 	[aspect]
 	{
 	  f scale_base = 1.031811;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1323,8 +1325,6 @@
 			}
 		}
 	}
-	doc = "3W_revealing drake_molten";
-	specializes = 3W_drake_molten_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;

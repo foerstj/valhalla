@@ -234,11 +234,13 @@
 }
 [t:template,n:2W_mucosa]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_mucosa";
+	specializes = 2W_mucosa_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -252,12 +254,17 @@
 			}
 		}
 	}
-	doc = "2W_mucosa";
-	specializes = 2W_mucosa_base;
 }
 [t:template,n:2W_mucosa_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] mucosa";
+	specializes = 2W_mucosa_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -270,13 +277,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] mucosa";
-	specializes = 2W_mucosa_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -990,11 +990,13 @@
 }
 [t:template,n:2W_mucosa_predator]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_mucosa_predator";
+	specializes = 2W_mucosa_predator_base;
 	[aspect]
 	{
 	  f scale_base = 1.007937;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1008,12 +1010,17 @@
 			}
 		}
 	}
-	doc = "2W_mucosa_predator";
-	specializes = 2W_mucosa_predator_base;
 }
 [t:template,n:2W_mucosa_predator_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] mucosa_predator";
+	specializes = 2W_mucosa_predator_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.007937;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -1026,13 +1033,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] mucosa_predator";
-	specializes = 2W_mucosa_predator_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.007937;
 	}
 	[inventory]
 	{

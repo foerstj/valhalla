@@ -225,11 +225,13 @@
 }
 [t:template,n:3W_swamp_witch]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_Swamp Witch";
+	specializes = 3W_swamp_witch_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -250,8 +252,6 @@
 			}
 		}
 	}
-	doc = "3W_Swamp Witch";
-	specializes = 3W_swamp_witch_base;
 }
 [t:template,n:3W_swamp_witch_boss_01]
 {
@@ -458,13 +458,13 @@
 }
 [t:template,n:3W_swamp_witch_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_Swamp Witch reveal";
+	specializes = 3W_swamp_witch_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
-	doc = "3W_Swamp Witch reveal";
-	specializes = 3W_swamp_witch_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -591,11 +591,13 @@
 }
 [t:template,n:3W_ice_mage]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_ice mage";
+	specializes = 3W_ice_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -616,8 +618,6 @@
 			}
 		}
 	}
-	doc = "3W_ice mage";
-	specializes = 3W_ice_mage_base;
 }
 [t:template,n:3W_ice_mage_boss_01]
 {
@@ -710,13 +710,13 @@
 }
 [t:template,n:3W_ice_mage_reveal]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_ice mage reveal";
+	specializes = 3W_ice_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
-	doc = "3W_ice mage reveal";
-	specializes = 3W_ice_mage_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit

@@ -176,13 +176,13 @@
 }
 [t:template,n:2W_gargoyle]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_gargoyle";
+	specializes = 2W_base_gargoyle;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_gargoyle";
-	specializes = 2W_base_gargoyle;
 	[common]
 	{
 		membership = gargoyle,gargoyle_friend,monster;
@@ -288,11 +288,13 @@
 }
 [t:template,n:2W_gargoyle_ranged]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_gargoyle ranged";
+	specializes = 2W_gargoyle_ranged_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -317,12 +319,17 @@
 			}
 		}
 	}
-	doc = "2W_gargoyle ranged";
-	specializes = 2W_gargoyle_ranged_base;
 }
 [t:template,n:2W_gargoyle_ranged_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] gargoyle ranged";
+	specializes = 2W_gargoyle_ranged_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -346,13 +353,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] gargoyle ranged";
-	specializes = 2W_gargoyle_ranged_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -467,11 +467,13 @@
 }
 [t:template,n:2W_gargoyle_reveal]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_gargoyle reveal";
+	specializes = 2W_base_gargoyle;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -496,8 +498,6 @@
 			}
 		}
 	}
-	doc = "2W_gargoyle reveal";
-	specializes = 2W_base_gargoyle;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit;

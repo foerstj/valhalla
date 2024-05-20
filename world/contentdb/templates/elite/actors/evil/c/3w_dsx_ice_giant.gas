@@ -324,11 +324,13 @@
 }
 [t:template,n:3W_dsx_troll_masher]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_dsx_troll_masher";
+	specializes = 3W_dsx_troll_masher_base;
 	[aspect]
 	{
 	  f scale_base = 2.063621;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -349,12 +351,17 @@
 			}
 		}
 	}
-	doc = "3W_dsx_troll_masher";
-	specializes = 3W_dsx_troll_masher_base;
 }
 [t:template,n:3W_dsx_troll_masher_summon]
 {
 	category_name = "3W_evil_c";
+	doc = "3W_dsx_summon_troll_masher";
+	specializes = 3W_dsx_troll_masher_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 2.063621;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -374,13 +381,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_dsx_summon_troll_masher";
-	specializes = 3W_dsx_troll_masher_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 2.063621;
 	}
 	[inventory]
 	{

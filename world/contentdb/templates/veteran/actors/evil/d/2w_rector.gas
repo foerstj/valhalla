@@ -302,11 +302,13 @@
 }
 [t:template,n:2W_punisher]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_punisher";
+	specializes = 2W_punisher_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -326,12 +328,17 @@
 			}
 		}
 	}
-	doc = "2W_punisher";
-	specializes = 2W_punisher_base;
 }
 [t:template,n:2W_punisher_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] punisher";
+	specializes = 2W_punisher_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -350,13 +357,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] punisher";
-	specializes = 2W_punisher_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

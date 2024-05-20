@@ -340,11 +340,13 @@
 }
 [t:template,n:3W_krug_dog_skeleton]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_krug_dog_skeleton";
+	specializes = 3W_krug_dog_skeleton_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -365,12 +367,17 @@
 			}
 		}
 	}
-	doc = "3W_krug_dog_skeleton";
-	specializes = 3W_krug_dog_skeleton_base;
 }
 [t:template,n:3W_krug_dog_skeleton_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] krug_dog_skeleton";
+	specializes = 3W_krug_dog_skeleton_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -390,13 +397,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] krug_dog_skeleton";
-	specializes = 3W_krug_dog_skeleton_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

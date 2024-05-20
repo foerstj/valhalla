@@ -467,11 +467,13 @@
 }
 [t:template,n:3W_braak_magic]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_braak magic";
+	specializes = 3W_braak_magic_base;
 	[aspect]
 	{
 	  f scale_base = 1.111181;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -492,18 +494,16 @@
 			}
 		}
 	}
-	doc = "3W_braak magic";
-	specializes = 3W_braak_magic_base;
 }
 [t:template,n:3W_braak_magic_reveal]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_revealing braak magic";
+	specializes = 3W_braak_magic_base;
 	[aspect]
 	{
 	  f scale_base = 1.111181;
 	}
-	category_name = "3W_evil_c";
-	doc = "3W_revealing braak magic";
-	specializes = 3W_braak_magic_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -540,13 +540,13 @@
 }
 [t:template,n:3W_braak_magic_reveal_act]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_revealing braak magic activate";
+	specializes = 3W_braak_magic_base;
 	[aspect]
 	{
 	  f scale_base = 1.111181;
 	}
-	category_name = "3W_evil_c";
-	doc = "3W_revealing braak magic activate";
-	specializes = 3W_braak_magic_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -686,11 +686,13 @@
 }
 [t:template,n:3W_braak_desert]
 {
+	category_name = "3W_evil_c";
+	doc = "braak, melee (desert)";
+	specializes = 3W_braak_desert_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -711,12 +713,17 @@
 			}
 		}
 	}
-	doc = "braak, melee (desert)";
-	specializes = 3W_braak_desert_base;
 }
 [t:template,n:3W_braak_desert_summon]
 {
 	category_name = "3W_evil_c";
+	doc = "[summon] braak, melee (desert)";
+	specializes = 3W_braak_desert_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -736,13 +743,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] braak, melee (desert)";
-	specializes = 3W_braak_desert_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

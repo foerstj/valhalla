@@ -58,10 +58,6 @@
 }
 [t:template,n:3W_dsx_jungle_slinger]
 {
-	[aspect]
-	{
-	  f scale_base = 1.587401;
-	}
 	category_name = "3W_evil_d";
 	doc = "3W_dsx_jungle_slinger";
 	specializes = 3W_dsx_jungle_slinger_base;
@@ -76,6 +72,10 @@
 			combat_magic = 74, 0;
 			nature_magic = 74, 0;
 		}
+	}
+	[aspect]
+	{
+	  f scale_base = 1.587401;
 	}
 	[attack]
 	{

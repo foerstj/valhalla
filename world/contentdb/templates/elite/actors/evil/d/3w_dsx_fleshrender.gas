@@ -237,6 +237,13 @@
 [t:template,n:3W_dsx_fleshrender_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "3W_dsx_summon_fleshrender";
+	specializes = 3W_dsx_fleshrender_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -256,13 +263,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_dsx_summon_fleshrender";
-	specializes = 3W_dsx_fleshrender_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

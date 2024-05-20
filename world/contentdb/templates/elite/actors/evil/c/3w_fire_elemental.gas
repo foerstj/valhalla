@@ -103,6 +103,27 @@
 [t:template,n:3W_fire_elemental]
 {
 	category_name = "3W_evil_c";
+	doc = "3W_fire_elemental";
+	specializes = 3W_fire_elemental_base;
+	[actor]
+	{
+		[skills]
+		{
+			strength = 45.5, 0;
+			intelligence = 25.5, 0;
+			dexterity = 52.5, 0;
+			melee = 105, 0;
+		}
+	}
+	[aspect]
+	{
+		experience_value = 0;
+		life = 2615.3;
+		max_life = 2615.3;
+		mana = 1488;
+		max_mana = 1488;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -128,27 +149,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_fire_elemental";
-	specializes = 3W_fire_elemental_base;
-	[actor]
-	{
-		[skills]
-		{
-			strength = 45.5, 0;
-			intelligence = 25.5, 0;
-			dexterity = 52.5, 0;
-			melee = 105, 0;
-		}
-	}
-	[aspect]
-	{
-		experience_value = 0;
-		life = 2615.3;
-		max_life = 2615.3;
-		mana = 1488;
-		max_mana = 1488;
-	  f scale_base = 1.587401;
 	}
 	[defend]
 	{

@@ -212,11 +212,13 @@
 }
 [t:template,n:3W_larch]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_larch";
+	specializes = 3W_larch_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -237,12 +239,17 @@
 			}
 		}
 	}
-	doc = "3W_larch";
-	specializes = 3W_larch_base;
 }
 [t:template,n:3W_larch_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] larch";
+	specializes = 3W_larch_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -262,13 +269,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] larch";
-	specializes = 3W_larch_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{
@@ -516,11 +516,13 @@
 }
 [t:template,n:3W_swamp_creature]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_swamp creature";
+	specializes = 3W_swamp_creature_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -541,16 +543,16 @@
 			}
 		}
 	}
-	doc = "3W_swamp creature";
-	specializes = 3W_swamp_creature_base;
 }
 [t:template,n:3W_swamp_creature_summon]
 {
+	category_name = "3W_evil_d";
+	doc = "[summon] swamp creature";
+	specializes = 3W_swamp_creature_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -571,8 +573,6 @@
 			}
 		}
 	}
-	doc = "[summon] swamp creature";
-	specializes = 3W_swamp_creature_base;
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit;
@@ -813,11 +813,13 @@
 }
 [t:template,n:3W_swamp_slinger]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_swamp slinger";
+	specializes = 3W_swamp_slinger_base;
 	[aspect]
 	{
 	  f scale_base = 0.873071;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -838,16 +840,16 @@
 			}
 		}
 	}
-	doc = "3W_swamp slinger";
-	specializes = 3W_swamp_slinger_base;
 }
 [t:template,n:3W_swamp_slinger_summon]
 {
+	category_name = "3W_evil_d";
+	doc = "[summon] swamp slinger";
+	specializes = 3W_swamp_slinger_base;
 	[aspect]
 	{
 	  f scale_base = 0.873071;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -868,8 +870,6 @@
 			}
 		}
 	}
-	doc = "[summon] swamp slinger";
-	specializes = 3W_swamp_slinger_base;
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit;

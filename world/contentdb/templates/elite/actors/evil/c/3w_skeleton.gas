@@ -575,11 +575,13 @@
 }
 [t:template,n:3W_skeleton]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_Skeleton";
+	specializes = 3W_skeleton_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -600,12 +602,17 @@
 			}
 		}
 	}
-	doc = "3W_Skeleton";
-	specializes = 3W_skeleton_base;
 }
 [t:template,n:3W_skeleton_summon]
 {
 	category_name = "3W_evil_c";
+	doc = "[summon] Skeleton";
+	specializes = 3W_skeleton_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -625,13 +632,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] Skeleton";
-	specializes = 3W_skeleton_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{
@@ -946,11 +946,13 @@
 }
 [t:template,n:3W_skeleton_mercenary]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_skeleton mercenary";
+	specializes = 3W_skeleton_mercenary_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -971,8 +973,6 @@
 			}
 		}
 	}
-	doc = "3W_skeleton mercenary";
-	specializes = 3W_skeleton_mercenary_base;
 }
 [t:template,n:3W_skeleton_mercenary_reveal]
 {
@@ -1029,11 +1029,13 @@
 }
 [t:template,n:3W_skeleton_mercenary_reveal_02]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_skeleton mercenary reveal";
+	specializes = 3W_skeleton_mercenary_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1054,8 +1056,6 @@
 			}
 		}
 	}
-	doc = "3W_skeleton mercenary reveal";
-	specializes = 3W_skeleton_mercenary_base;
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit;
@@ -1068,11 +1068,13 @@
 }
 [t:template,n:3W_skeleton_mercenary_summon]
 {
+	category_name = "3W_evil_c";
+	doc = "[summon] skeleton mercenary";
+	specializes = 3W_skeleton_mercenary_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1093,8 +1095,6 @@
 			}
 		}
 	}
-	doc = "[summon] skeleton mercenary";
-	specializes = 3W_skeleton_mercenary_base;
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit;
@@ -1102,11 +1102,13 @@
 }
 [t:template,n:3W_skeleton_mercenary_archer]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_skeleton mercenary archer";
+	specializes = 3W_skeleton_mercenary_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1127,8 +1129,6 @@
 			}
 		}
 	}
-	doc = "3W_skeleton mercenary archer";
-	specializes = 3W_skeleton_mercenary_archer_base;
 }
 [t:template,n:3W_skeleton_mercenary_archer_reveal]
 {
@@ -1185,11 +1185,13 @@
 }
 [t:template,n:3W_skeleton_mercenary_archer_reveal_02]
 {
+	category_name = "3W_evil_c";
+	doc = "3W_skeleton mercenary_archer reveal";
+	specializes = 3W_skeleton_mercenary_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1210,8 +1212,6 @@
 			}
 		}
 	}
-	doc = "3W_skeleton mercenary_archer reveal";
-	specializes = 3W_skeleton_mercenary_archer_base;
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit;
@@ -1224,11 +1224,13 @@
 }
 [t:template,n:3W_skeleton_mercenary_archer_summon]
 {
+	category_name = "3W_evil_c";
+	doc = "[summon] skeleton mercenary_archer";
+	specializes = 3W_skeleton_mercenary_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_c";
 	[common]
 	{
 		[template_triggers]
@@ -1249,8 +1251,6 @@
 			}
 		}
 	}
-	doc = "[summon] skeleton mercenary_archer";
-	specializes = 3W_skeleton_mercenary_archer_base;
 	[mind]
 	{
 		jat_brain = world\ai\jobs\common\brain_hero.skrit;

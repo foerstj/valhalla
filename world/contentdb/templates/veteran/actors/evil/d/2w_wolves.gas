@@ -362,11 +362,13 @@
 }
 [t:template,n:2W_wolf_black]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_wolf_black";
+	specializes = 2W_wolf_black_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -380,12 +382,17 @@
 			}
 		}
 	}
-	doc = "2W_wolf_black";
-	specializes = 2W_wolf_black_base;
 }
 [t:template,n:2W_wolf_black_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] wolf_black";
+	specializes = 2W_wolf_black_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -398,13 +405,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] wolf_black";
-	specializes = 2W_wolf_black_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

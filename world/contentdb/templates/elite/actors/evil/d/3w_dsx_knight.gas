@@ -288,26 +288,6 @@
 [t:template,n:3W_dsx_knight_death]
 {
 	category_name = "3W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_red(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_red(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "3W_dsx_knight_death";
 	specializes = 3W_dsx_knight_death_base;
 	[actor]
@@ -365,6 +345,26 @@
 		damage_max = 1017.6;
 		damage_min = 713.5;
 	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
+	}
 	[defend]
 	{
 		defense = 836.4;
@@ -373,6 +373,13 @@
 [t:template,n:3W_dsx_knight_death_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "3W_dsx_summon_knight_death";
+	specializes = 3W_dsx_knight_death_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -392,13 +399,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_dsx_summon_knight_death";
-	specializes = 3W_dsx_knight_death_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

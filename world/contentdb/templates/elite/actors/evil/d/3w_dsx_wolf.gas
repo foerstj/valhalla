@@ -83,11 +83,13 @@
 }
 [t:template,n:3W_dsx_wolf_white]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_wolf_white";
+	specializes = 3W_dsx_wolf_white_base;
 	[aspect]
 	{
 	  f scale_base = 1.349291;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -108,8 +110,6 @@
 			}
 		}
 	}
-	doc = "3W_dsx_wolf_white";
-	specializes = 3W_dsx_wolf_white_base;
 }
 [t:template,n:3W_dsx_wolf_white_punk-ass]
 {

@@ -143,6 +143,7 @@
 		life_recovery_period = 30;
 		mana = 4301.8;
 		max_mana = 4301.8;
+	  f scale_base = 1.259921;
 	}
 	[body]
 	{
@@ -172,6 +173,13 @@
 			{
 				action* = call_sfx_script("gom_spirits");
 				condition* = receive_world_message("we_anim_sfx",1);
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
 			}
 		}
 	}

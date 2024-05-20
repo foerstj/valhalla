@@ -251,11 +251,13 @@
 }
 [t:template,n:2W_zombie_01]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie";
+	specializes = 2W_base_zombie_01;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -269,16 +271,16 @@
 			}
 		}
 	}
-	doc = "2W_zombie";
-	specializes = 2W_base_zombie_01;
 }
 [t:template,n:2W_zombie_01_ar]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie auto-reveal";
+	specializes = 2W_base_zombie_01;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -292,8 +294,6 @@
 			}
 		}
 	}
-	doc = "2W_zombie auto-reveal";
-	specializes = 2W_base_zombie_01;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -390,11 +390,13 @@
 }
 [t:template,n:2W_zombie_02]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie_decayed";
+	specializes = 2W_base_zombie_02;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -408,8 +410,6 @@
 			}
 		}
 	}
-	doc = "2W_zombie_decayed";
-	specializes = 2W_base_zombie_02;
 }
 [t:template,n:2W_zombie_02_boss_01]
 {
@@ -522,11 +522,13 @@
 }
 [t:template,n:2W_zombie_02_ar]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie_decayed auto-reveal";
+	specializes = 2W_base_zombie_02;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -540,8 +542,6 @@
 			}
 		}
 	}
-	doc = "2W_zombie_decayed auto-reveal";
-	specializes = 2W_base_zombie_02;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -648,11 +648,13 @@
 }
 [t:template,n:2W_zombie_03]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie_pudgy";
+	specializes = 2W_base_zombie_03;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -666,16 +668,16 @@
 			}
 		}
 	}
-	doc = "2W_zombie_pudgy";
-	specializes = 2W_base_zombie_03;
 }
 [t:template,n:2W_zombie_03_ar]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie_pudgy auto-reveal";
+	specializes = 2W_base_zombie_03;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -689,8 +691,6 @@
 			}
 		}
 	}
-	doc = "2W_zombie_pudgy auto-reveal";
-	specializes = 2W_base_zombie_03;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -1095,11 +1095,13 @@
 }
 [t:template,n:2W_zombie_headless]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie_headless";
+	specializes = 2W_base_zombie_headless;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1113,16 +1115,16 @@
 			}
 		}
 	}
-	doc = "2W_zombie_headless";
-	specializes = 2W_base_zombie_headless;
 }
 [t:template,n:2W_zombie_headless_ar]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_zombie_headless auto-reveal";
+	specializes = 2W_base_zombie_headless;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1136,8 +1138,6 @@
 			}
 		}
 	}
-	doc = "2W_zombie_headless auto-reveal";
-	specializes = 2W_base_zombie_headless;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -1147,6 +1147,13 @@
 [t:template,n:2W_zombie_headless_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] zombie_headless";
+	specializes = 2W_base_zombie_headless;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -1159,13 +1166,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] zombie_headless";
-	specializes = 2W_base_zombie_headless;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{
@@ -1293,11 +1293,13 @@
 }
 [t:template,n:2W_goo_walker]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_goo walker";
+	specializes = 2W_base_goo_walker;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1311,16 +1313,16 @@
 			}
 		}
 	}
-	doc = "2W_goo walker";
-	specializes = 2W_base_goo_walker;
 }
 [t:template,n:2W_goo_walker_ar]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_goo walker auto-reveal";
+	specializes = 2W_base_goo_walker;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1334,8 +1336,6 @@
 			}
 		}
 	}
-	doc = "2W_goo walker auto-reveal";
-	specializes = 2W_base_goo_walker;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit

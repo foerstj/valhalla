@@ -316,11 +316,13 @@
 }
 [t:template,n:2W_dsx_droc_archer]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_droc_archer";
+	specializes = 2W_droc_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -334,8 +336,6 @@
 			}
 		}
 	}
-	doc = "2W_dsx_droc_archer";
-	specializes = 2W_droc_archer_base;
 	[guts_manager]
 	{
 		effect_name = melee_hit_2;
@@ -454,11 +454,13 @@
 }
 [t:template,n:2W_dsx_droc_grunt]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_droc_grunt";
+	specializes = 2W_droc_melee_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -472,8 +474,6 @@
 			}
 		}
 	}
-	doc = "2W_dsx_droc_grunt";
-	specializes = 2W_droc_melee_base;
 }
 [t:template,n:2W_dsx_droc_commander]
 {

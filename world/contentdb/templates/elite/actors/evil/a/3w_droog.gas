@@ -258,11 +258,13 @@
 }
 [t:template,n:3W_droog_archer]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog archer";
+	specializes = 3W_droog_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -283,8 +285,6 @@
 			}
 		}
 	}
-	doc = "3W_droog archer";
-	specializes = 3W_droog_archer_base;
 	[guts_manager]
 	{
 		effect_name = melee_hit_2;
@@ -292,13 +292,13 @@
 }
 [t:template,n:3W_droog_archer_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog archer reveal";
+	specializes = 3W_droog_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_droog archer reveal";
-	specializes = 3W_droog_archer_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -335,13 +335,13 @@
 }
 [t:template,n:3W_droog_archer_reveal_act]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog archer reveal_act";
+	specializes = 3W_droog_archer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_droog archer reveal_act";
-	specializes = 3W_droog_archer_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -476,11 +476,13 @@
 }
 [t:template,n:3W_droog_grunt]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog grunt";
+	specializes = 3W_droog_grunt_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -501,8 +503,6 @@
 			}
 		}
 	}
-	doc = "3W_droog grunt";
-	specializes = 3W_droog_grunt_base;
 }
 [t:template,n:3W_droog_grunt_boss_01]
 {
@@ -619,13 +619,13 @@
 }
 [t:template,n:3W_droog_grunt_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog grunt reveal";
+	specializes = 3W_droog_grunt_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_droog grunt reveal";
-	specializes = 3W_droog_grunt_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -662,13 +662,13 @@
 }
 [t:template,n:3W_droog_grunt_reveal_act]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog grunt reveal activate";
+	specializes = 3W_droog_grunt_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_droog grunt reveal activate";
-	specializes = 3W_droog_grunt_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -810,11 +810,13 @@
 }
 [t:template,n:3W_droog_mage]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog mage";
+	specializes = 3W_droog_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
 	[common]
 	{
 		[template_triggers]
@@ -835,18 +837,16 @@
 			}
 		}
 	}
-	doc = "3W_droog mage";
-	specializes = 3W_droog_mage_base;
 }
 [t:template,n:3W_droog_mage_reveal]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog mage reveal";
+	specializes = 3W_droog_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_droog mage reveal";
-	specializes = 3W_droog_mage_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -883,13 +883,13 @@
 }
 [t:template,n:3W_droog_mage_reveal_act]
 {
+	category_name = "3W_evil_a";
+	doc = "3W_droog mage reveal activate";
+	specializes = 3W_droog_mage_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_a";
-	doc = "3W_droog mage reveal activate";
-	specializes = 3W_droog_mage_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit

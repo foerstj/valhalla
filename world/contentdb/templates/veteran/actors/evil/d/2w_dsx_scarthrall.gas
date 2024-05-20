@@ -274,11 +274,13 @@
 }
 [t:template,n:2W_ranged_scarthrall]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_ranged_scarthrall";
+	specializes = 2W_base_ranged_scarthrall;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -297,12 +299,17 @@
 			}
 		}
 	}
-	doc = "2W_dsx_ranged_scarthrall";
-	specializes = 2W_base_ranged_scarthrall;
 }
 [t:template,n:2W_scarthrall_ranged_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "2W_dsx_scarthrall_ranged_summon";
+	specializes = 2W_base_ranged_scarthrall;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -320,13 +327,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "2W_dsx_scarthrall_ranged_summon";
-	specializes = 2W_base_ranged_scarthrall;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
 	}
 	[inventory]
 	{

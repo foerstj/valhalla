@@ -501,11 +501,13 @@
 }
 [t:template,n:3W_troll_forest]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_troll forest";
+	specializes = 3W_troll_forest_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -526,12 +528,17 @@
 			}
 		}
 	}
-	doc = "3W_troll forest";
-	specializes = 3W_troll_forest_base;
 }
 [t:template,n:3W_troll_forest_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] troll forest";
+	specializes = 3W_troll_forest_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -551,13 +558,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] troll forest";
-	specializes = 3W_troll_forest_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

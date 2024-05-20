@@ -334,11 +334,13 @@
 }
 [t:template,n:3W_gremal_killer]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_Killer Gremal";
+	specializes = 3W_gremal_killer_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -359,12 +361,17 @@
 			}
 		}
 	}
-	doc = "3W_Killer Gremal";
-	specializes = 3W_gremal_killer_base;
 }
 [t:template,n:3W_gremal_killer_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] Killer Gremal";
+	specializes = 3W_gremal_killer_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -384,13 +391,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] Killer Gremal";
-	specializes = 3W_gremal_killer_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

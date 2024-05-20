@@ -88,11 +88,13 @@
 }
 [t:template,n:3W_dsx_phrak_jungle]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_phrak_jungle";
+	specializes = 3W_dsx_phrak_jungle_base;
 	[aspect]
 	{
 	  f scale_base = 0.634960;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -113,8 +115,6 @@
 			}
 		}
 	}
-	doc = "3W_dsx_phrak_jungle";
-	specializes = 3W_dsx_phrak_jungle_base;
 }
 [t:template,n:3W_dsx_phrak_piercer]
 {

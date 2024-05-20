@@ -374,6 +374,13 @@
 [t:template,n:3W_dsx_rune_guardian_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "3W_dsx_rune_guardian_summon";
+	specializes = 3W_rune_guardian_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.349291;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -393,13 +400,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_dsx_rune_guardian_summon";
-	specializes = 3W_rune_guardian_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.349291;
 	}
 	[inventory]
 	{
@@ -611,6 +611,13 @@
 [t:template,n:3W_dsx_rune_guardian_r_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "3W_dsx_rune_guardian_r_summon";
+	specializes = 3W_rune_guardian_r_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.349291;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -630,13 +637,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "3W_dsx_rune_guardian_r_summon";
-	specializes = 3W_rune_guardian_r_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.349291;
 	}
 	[inventory]
 	{
@@ -969,11 +969,13 @@
 }
 [t:template,n:3W_dsx_rune_guardian_boss]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_rune_guardian_boss";
+	specializes = 3W_dsx_rune_guardian_boss_base;
 	[aspect]
 	{
 	  f scale_base = 1.984251;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1000,16 +1002,16 @@
 			}
 		}
 	}
-	doc = "3W_dsx_rune_guardian_boss";
-	specializes = 3W_dsx_rune_guardian_boss_base;
 }
 [t:template,n:3W_dsx_rune_guardian_boss_mp]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_rune_guardian_boss";
+	specializes = 3W_dsx_rune_guardian_boss_base;
 	[aspect]
 	{
 	  f scale_base = 1.984251;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -1036,8 +1038,6 @@
 			}
 		}
 	}
-	doc = "3W_dsx_rune_guardian_boss";
-	specializes = 3W_dsx_rune_guardian_boss_base;
 	[mind]
 	{
 		jat_startup = jat_none;

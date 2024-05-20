@@ -130,11 +130,13 @@
 }
 [t:template,n:3W_dsx_drake]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_drake";
+	specializes = 3W_dsx_drake_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -155,8 +157,6 @@
 			}
 		}
 	}
-	doc = "3W_dsx_drake";
-	specializes = 3W_dsx_drake_base;
 }
 [t:template,n:3W_dsx_drake_feathered]
 {
@@ -528,11 +528,13 @@
 }
 [t:template,n:3W_dsx_drake_death_two]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_dsx_drake_death_two";
+	specializes = 3W_dsx_drake_death_two_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -563,8 +565,6 @@
 			}
 		}
 	}
-	doc = "3W_dsx_drake_death_two";
-	specializes = 3W_dsx_drake_death_two_base;
 }
 [t:template,n:3W_dsx_drake_death_two_boss]
 {

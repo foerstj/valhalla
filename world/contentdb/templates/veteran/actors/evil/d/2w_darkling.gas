@@ -220,11 +220,13 @@
 }
 [t:template,n:2W_darkling]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_darkling";
+	specializes = 2W_darkling_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -244,12 +246,17 @@
 			}
 		}
 	}
-	doc = "2W_darkling";
-	specializes = 2W_darkling_base;
 }
 [t:template,n:2W_darkling_summon]
 {
 	category_name = "2W_evil_d";
+	doc = "[summon] darkling";
+	specializes = 2W_darkling_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.259921;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -269,13 +276,6 @@
 			}
 		}
 	}
-	doc = "[summon] darkling";
-	specializes = 2W_darkling_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.259921;
-	}
 	[inventory]
 	{
 		selected_active_location = il_active_primary_spell;
@@ -294,13 +294,13 @@
 }
 [t:template,n:2W_darkling_reveal]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_revealing darkling";
+	specializes = 2W_darkling_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_revealing darkling";
-	specializes = 2W_darkling_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit
@@ -435,11 +435,13 @@
 }
 [t:template,n:2W_darkling_forest]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_darkling_forest";
+	specializes = 2W_darkling_forest_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -459,18 +461,16 @@
 			}
 		}
 	}
-	doc = "2W_darkling_forest";
-	specializes = 2W_darkling_forest_base;
 }
 [t:template,n:2W_darkling_forest_reveal]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_revealing darkling_forest";
+	specializes = 2W_darkling_forest_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
-	doc = "2W_revealing darkling_forest";
-	specializes = 2W_darkling_forest_base;
 	[mind]
 	{
 		jat_startup = world\ai\jobs\common\job_startup_reveal.skrit

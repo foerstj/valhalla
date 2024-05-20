@@ -154,26 +154,6 @@
 [t:template,n:3W_lava_spirit]
 {
 	category_name = "3W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_red(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_ray_red(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "3W_lava_spirit";
 	specializes = 3W_base_lava_spirit;
 	[actor]
@@ -200,6 +180,26 @@
 		attack_range = 0.5;
 		damage_max = 599;
 		damage_min = 450.5;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_ray_red(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -339,11 +339,13 @@
 }
 [t:template,n:3W_lava_spirit_magic]
 {
+	category_name = "3W_evil_d";
+	doc = "3W_lava_spirit magic";
+	specializes = 3W_lava_spirit_magic_base;
 	[aspect]
 	{
 	  f scale_base = 1.587401;
 	}
-	category_name = "3W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -364,12 +366,17 @@
 			}
 		}
 	}
-	doc = "3W_lava_spirit magic";
-	specializes = 3W_lava_spirit_magic_base;
 }
 [t:template,n:3W_lava_spirit_magic_summon]
 {
 	category_name = "3W_evil_d";
+	doc = "[summon] lava_spirit";
+	specializes = 3W_lava_spirit_magic_base;
+	[aspect]
+	{
+		experience_value = 0;
+	  f scale_base = 1.587401;
+	}
 	[common]
 	{
 		[template_triggers]
@@ -389,13 +396,6 @@
 			  b single_shot = true;
 			}
 		}
-	}
-	doc = "[summon] lava_spirit";
-	specializes = 3W_lava_spirit_magic_base;
-	[aspect]
-	{
-		experience_value = 0;
-	  f scale_base = 1.587401;
 	}
 	[inventory]
 	{

@@ -159,19 +159,6 @@
 [t:template,n:2W_dsx_lava_spirit]
 {
 	category_name = "2W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "2W_dsx_lava_spirit";
 	specializes = base_lava_spirit;
 	[actor]
@@ -198,6 +185,19 @@
 		attack_range = 0.5;
 		damage_max = 335.1;
 		damage_min = 220.3;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
@@ -268,11 +268,13 @@
 }
 [t:template,n:2W_dsx_lava_spirit_magic]
 {
+	category_name = "2W_evil_d";
+	doc = "2W_dsx_lava_spirit magic";
+	specializes = 2W_dsx_lava_spirit_magic_base;
 	[aspect]
 	{
 	  f scale_base = 1.259921;
 	}
-	category_name = "2W_evil_d";
 	[common]
 	{
 		[template_triggers]
@@ -286,6 +288,4 @@
 			}
 		}
 	}
-	doc = "2W_dsx_lava_spirit magic";
-	specializes = 2W_dsx_lava_spirit_magic_base;
 }

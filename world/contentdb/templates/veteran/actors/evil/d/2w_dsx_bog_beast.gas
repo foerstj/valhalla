@@ -125,19 +125,6 @@
 [t:template,n:2W_dsx_bog_beast]
 {
 	category_name = "2W_evil_d";
-	[common]
-	{
-		[template_triggers]
-		{
-			[*]
-			{
-				condition* = receive_world_message("WE_ENTERED_WORLD");
-				action* = call_sfx_script("unique_light_cyan(sgx)");
-			  b no_trig_bits = true;
-			  b single_shot = true;
-			}
-		}
-	}
 	doc = "2W_dsx_bog_beast";
 	specializes = 2W_dsx_bog_beast_base;
 	[actor]
@@ -169,6 +156,19 @@
 		attack_range = 0.5;
 		damage_max = 282.2;
 		damage_min = 194.4;
+	}
+	[common]
+	{
+		[template_triggers]
+		{
+			[*]
+			{
+				condition* = receive_world_message("WE_ENTERED_WORLD");
+				action* = call_sfx_script("unique_light_cyan(sgx)");
+			  b no_trig_bits = true;
+			  b single_shot = true;
+			}
+		}
 	}
 	[defend]
 	{
